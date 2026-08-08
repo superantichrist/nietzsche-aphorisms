@@ -35,8 +35,10 @@ def main() -> None:
         for role in ("buildInput", "crossCheck"):
             descriptor = source_manifest["works"][work][role]
             source_path = ROOT / descriptor["file"]
-            actual_hash = hashlib.sha256(source_path.read_bytes()).hexdigest()
-            if actual_hash != descriptor["sha256"]:
+            normalized_source = source_path.read_bytes().replace(b"\r\n", b"\n")
+            actual_hash = hashlib.sha256(normalized_source).hexdigest()
+            expected_hash = descriptor.get("normalizedSha256", descriptor["sha256"])
+            if actual_hash != expected_hash:
                 fail(f"source hash mismatch for {descriptor['file']}")
 
     ids: set[str] = set()

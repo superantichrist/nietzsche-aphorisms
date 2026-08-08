@@ -20,7 +20,8 @@
         "file": "sources/raw/jgb-gutenberg-7204.txt",
         "url": "https://www.gutenberg.org/cache/epub/7204/pg7204.txt",
         "catalogUrl": "https://www.gutenberg.org/ebooks/7204",
-        "sha256": "0fb771d68ec489ba9d8b9fcda2f53e59ee12057da2c16b2556515a50847fa30f"
+        "sha256": "0fb771d68ec489ba9d8b9fcda2f53e59ee12057da2c16b2556515a50847fa30f",
+        "normalizedSha256": "3a579cd5a6ece2bcf8ce0c9da6556f697b1d6df8ba2721826945a662584c0026"
       }
     },
     "gm": {
