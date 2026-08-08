@@ -1,0 +1,10 @@
+{
+  "name": "오늘의 니체",
+  "short_name": "오늘의 니체",
+  "description": "니체의 독일어 원문과 직접 만든 한국어 번역",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#15110d",
+  "theme_color": "#15110d",
+  "lang": "ko"
+}

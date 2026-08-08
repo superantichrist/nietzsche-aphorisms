@@ -1,0 +1,19 @@
+{
+  "name": "nietzsche-aphorisms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nietzsche's German text, Korean translations, a mobile reader, and Scriptable widget data.",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "python scripts/build_data.py && vite --host 0.0.0.0",
+    "build:data": "python scripts/build_data.py",
+    "build": "npm run build:data && vite build && python scripts/copy_static.py",
+    "validate": "python scripts/validate_data.py",
+    "check": "npm run build && npm run validate"
+  },
+  "devDependencies": {
+    "vite": "8.0.13"
+  }
+}

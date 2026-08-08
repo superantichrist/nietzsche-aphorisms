@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#15110d" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="니체의 독일어 원문과 직접 만든 한국어 번역을 출전과 함께 읽는 모바일 아카이브." />
+    <meta property="og:title" content="오늘의 니체" />
+    <meta property="og:description" content="선악의 저편과 도덕의 계보, 독일어 원문에서 만나는 오늘의 한 문장." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://superantichrist.github.io/nietzsche-aphorisms/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://superantichrist.github.io/nietzsche-aphorisms/og.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>오늘의 니체</title>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <main class="shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="오늘의 니체 처음으로">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>
+            <strong>오늘의 니체</strong>
+            <small>NIETZSCHE · IM ORIGINAL</small>
+          </span>
+        </a>
+        <button class="icon-button" id="open-search" type="button" aria-label="구절 검색">
+          <span aria-hidden="true">⌕</span>
+          <span class="desktop-label">검색</span>
+        </button>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="kicker">EIN GEDANKE FÜR HEUTE</p>
+        <h1 id="page-title">오늘, 한 문장만<br />오래 바라보기.</h1>
+        <p class="intro-copy">선악의 저편과 도덕의 계보에서 길어 올린 독일어 원문. 출전을 잃지 않은 채 천천히 읽습니다.</p>
+      </section>
+
+      <nav class="filters" aria-label="작품 선택">
+        <button class="filter active" type="button" data-work="all">전체</button>
+        <button class="filter" type="button" data-work="jgb">선악의 저편</button>
+        <button class="filter" type="button" data-work="gm">도덕의 계보</button>
+      </nav>
+
+      <section class="quote-card" aria-live="polite" aria-busy="true" id="quote-card">
+        <div class="quote-topline">
+          <span id="quote-number">ARCHIVE · —</span>
+          <span class="translation-badge" id="translation-badge">불러오는 중</span>
+        </div>
+
+        <div class="ornament" aria-hidden="true">§</div>
+        <blockquote class="quote-korean" id="quote-korean">말은 아직 어둠 속에서 걸어오고 있습니다.</blockquote>
+
+        <div class="german-wrap" id="german-wrap">
+          <div class="language-label">
+            <span>DEUTSCH · ORIGINAL</span>
+            <button id="toggle-german" type="button" aria-expanded="true">원문 숨기기</button>
+          </div>
+          <blockquote class="quote-german" id="quote-german"></blockquote>
+        </div>
+
+        <div class="source-row">
+          <div>
+            <p id="source-work">—</p>
+            <p id="source-location">—</p>
+          </div>
+          <a id="source-link" href="#" target="_blank" rel="noreferrer">원전 ↗</a>
+        </div>
+
+        <div class="quote-actions" aria-label="구절 이동">
+          <button id="previous" type="button"><span aria-hidden="true">←</span> 이전</button>
+          <button class="random-button" id="random" type="button"><span aria-hidden="true">✦</span> 랜덤 구절</button>
+          <button id="next" type="button">다음 <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <div class="utility-row">
+        <button id="share" type="button">이 구절 공유</button>
+        <span id="permalink-status" role="status"></span>
+      </div>
+
+      <section class="about" aria-labelledby="about-title">
+        <p class="section-number">01 · THE ARCHIVE</p>
+        <h2 id="about-title">문장을 떼어내되,<br />출전은 떼어내지 않습니다.</h2>
+        <div class="about-grid">
+          <p>두 작품의 독일어 원문을 작품·부·절·문단·문장 단위로 나누고, 원문에서 만든 안정 ID를 부여했습니다. 번역이 고쳐져도 ID는 바뀌지 않습니다.</p>
+          <dl>
+            <div><dt id="stat-total">—</dt><dd>전체 구절</dd></div>
+            <div><dt id="stat-jgb">—</dt><dd>선악의 저편</dd></div>
+            <div><dt id="stat-gm">—</dt><dd>도덕의 계보</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <p class="footer-title">NIETZSCHE APHORISMS</p>
+          <p>독일어 원문이 정본이며 한국어는 이 프로젝트의 직접 번역입니다. 번역 초안은 계속 교정됩니다.</p>
+        </div>
+        <nav aria-label="자료 링크">
+          <a href="./data/manifest.json">JSON</a>
+          <a href="./scriptable/NietzscheToday.js">Scriptable</a>
+          <a href="https://github.com/superantichrist/nietzsche-aphorisms">GitHub</a>
+        </nav>
+      </footer>
+    </main>
+
+    <div class="search-panel" id="search-panel" hidden>
+      <div class="search-sheet" role="dialog" aria-modal="true" aria-labelledby="search-title">
+        <div class="search-header">
+          <div>
+            <p class="kicker">DURCHSUCHEN</p>
+            <h2 id="search-title">구절 검색</h2>
+          </div>
+          <button class="icon-button" id="close-search" type="button" aria-label="검색 닫기">×</button>
+        </div>
+        <label class="search-input-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" autocomplete="off" placeholder="독일어 또는 한국어 검색" />
+        </label>
+        <p class="search-count" id="search-count">검색어를 입력하세요.</p>
+        <div class="search-results" id="search-results"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

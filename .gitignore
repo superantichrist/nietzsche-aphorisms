@@ -1,0 +1,9 @@
+/node_modules
+/dist/
+/.vinext/
+/.wrangler/
+*.log
+.DS_Store
+.env
+.env.*
+translations/batches/

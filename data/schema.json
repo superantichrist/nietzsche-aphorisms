@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nietzsche quote corpus",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "work",
+      "workTitleDe",
+      "workTitleKo",
+      "part",
+      "section",
+      "paragraph",
+      "german",
+      "korean"
+    ],
+    "properties": {
+      "id": { "type": "string", "minLength": 12 },
+      "work": { "enum": ["jgb", "gm"] },
+      "workTitleDe": { "type": "string" },
+      "workTitleKo": { "type": "string" },
+      "part": { "type": "string" },
+      "partTitleDe": { "type": "string" },
+      "partTitleKo": { "type": "string" },
+      "section": { "type": "string" },
+      "paragraph": { "type": "integer", "minimum": 0 },
+      "sentence": { "type": "integer", "minimum": 0 },
+      "german": { "type": "string", "minLength": 24 },
+      "korean": { "type": "string" },
+      "translationStatus": { "enum": ["pending", "draft", "reviewed"] },
+      "sourceUrl": { "type": "string", "format": "uri" }
+    }
+  }
+}
