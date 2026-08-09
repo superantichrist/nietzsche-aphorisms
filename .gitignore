@@ -1,8 +1,11 @@
 /node_modules
 /dist/
+/.venv-translate/
 /.vinext/
 /.wrangler/
 *.log
+*.pyc
+__pycache__/
 .DS_Store
 .env
 .env.*
