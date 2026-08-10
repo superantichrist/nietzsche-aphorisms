@@ -15,7 +15,8 @@ const elements = Object.fromEntries(
     "german-wrap", "toggle-german", "source-work", "source-location", "source-link",
     "previous", "next", "random", "share", "permalink-status", "open-search",
     "close-search", "search-panel", "search-input", "search-count", "search-results",
-    "stat-total", "stat-jgb", "stat-gm",
+    "stat-total", "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw",
+    "stat-translated", "stat-pending",
   ].map((id) => [id, document.getElementById(id)])
 );
 
@@ -47,13 +48,17 @@ function applyFilter(work, { keepCurrent = false } = {}) {
 }
 
 function locationLabel(quote) {
-  const part = quote.part === "Vorrede" ? "서문" : quote.part === "Nachgesang" ? "후가" : `제${quote.part}부`;
-  const section = ["Vorrede", "Nachgesang"].includes(quote.section) ? "" : ` · §${quote.section}`;
-  return `${part}${section} · 문단 ${quote.paragraph + 1}`;
+  const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
+  const unnumbered = new Set(["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"]);
+  const section = unnumbered.has(quote.section) ? "" : ` · §${quote.section}`;
+  const title = quote.sectionTitleDe ? ` · ${quote.sectionTitleDe}` : "";
+  return `${part}${section}${title} · 문단 ${quote.paragraph + 1}`;
 }
 
 function updateGermanVisibility() {
   const hasSeparateKorean = Boolean(state.current?.korean);
+  elements["german-wrap"].hidden = !hasSeparateKorean;
+  if (!hasSeparateKorean) return;
   const visible = state.showGerman || !hasSeparateKorean;
   elements["quote-german"].hidden = !visible;
   elements["german-wrap"].classList.toggle("collapsed", !visible);
@@ -210,6 +215,11 @@ async function init() {
     elements["stat-total"].textContent = state.manifest.quoteCount.toLocaleString("ko-KR");
     elements["stat-jgb"].textContent = state.manifest.works.jgb.count.toLocaleString("ko-KR");
     elements["stat-gm"].textContent = state.manifest.works.gm.count.toLocaleString("ko-KR");
+    elements["stat-ac"].textContent = state.manifest.works.ac.count.toLocaleString("ko-KR");
+    elements["stat-gd"].textContent = state.manifest.works.gd.count.toLocaleString("ko-KR");
+    elements["stat-fw"].textContent = state.manifest.works.fw.count.toLocaleString("ko-KR");
+    elements["stat-translated"].textContent = state.manifest.translatedCount.toLocaleString("ko-KR");
+    elements["stat-pending"].textContent = state.manifest.pendingTranslationCount.toLocaleString("ko-KR");
 
     const requestedId = new URL(window.location.href).searchParams.get("q");
     const requested = requestedId && state.quotes.find((quote) => quote.id === requestedId);

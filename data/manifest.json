@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "corpusVersion": "7da918039cdd5142",
-  "dataVersion": "9406428ec42f2088",
-  "quoteCount": 2974,
+  "corpusVersion": "f43de84149790034",
+  "dataVersion": "f99899659495506c",
+  "quoteCount": 5387,
   "translatedCount": 2974,
-  "pendingTranslationCount": 0,
+  "pendingTranslationCount": 2413,
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",
@@ -15,26 +15,59 @@
       "titleDe": "Zur Genealogie der Moral",
       "titleKo": "도덕의 계보",
       "count": 1261
+    },
+    "ac": {
+      "titleDe": "Der Antichrist",
+      "titleKo": "안티크리스트",
+      "count": 439
+    },
+    "gd": {
+      "titleDe": "Götzen-Dämmerung",
+      "titleKo": "우상의 황혼",
+      "count": 486
+    },
+    "fw": {
+      "titleDe": "Die fröhliche Wissenschaft",
+      "titleKo": "즐거운 학문",
+      "count": 1488
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 2974,
-      "bytes": 2590603,
-      "sha256": "354eee96a96c66c2cf0d498079db68fbec41620658f0a23aada35ac493178ae3"
+      "count": 5387,
+      "bytes": 4429694,
+      "sha256": "a4796470697478d3bb85001081ff0ed7c05887d524fbe3cea9be96342d57ed5c"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1713,
-      "bytes": 1457407,
-      "sha256": "d751ddadd55c9a52405923718f7a4f57963c26969a3f86b699144b113c7b7113"
+      "bytes": 1491667,
+      "sha256": "cc028895538bad4ef00ab8a2be893ea2e52b8c635c5b051be12f6482c638c316"
     },
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1133199,
-      "sha256": "1d5f1b45d9aba80d6a90ba776984387c91c43cc6ab2f670e491359ddc6c9adbe"
+      "bytes": 1158419,
+      "sha256": "c20c1205a62e599979f49618c21e4ae7c7ea207cacf8dd1c78ed74d9ec39824c"
+    },
+    "ac": {
+      "path": "data/ac.json",
+      "count": 439,
+      "bytes": 322193,
+      "sha256": "66c386c24be060267ad3549a5cbbe8bdbd4842d59b6bc1859a558fc13a109510"
+    },
+    "gd": {
+      "path": "data/gd.json",
+      "count": 486,
+      "bytes": 367363,
+      "sha256": "6d0a05608e56882124501761e3801fba1ff85689048ef952f2f3832647f7423b"
+    },
+    "fw": {
+      "path": "data/fw.json",
+      "count": 1488,
+      "bytes": 1090064,
+      "sha256": "1bda6ce528ac3bfe0d7a188aaeb1ff3d0146b122611ed645bca8ed2fdd8fda8c"
     }
   },
   "sources": "sources/sources.json"

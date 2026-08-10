@@ -4,7 +4,7 @@
 const SITE_URL = "https://superantichrist.github.io/nietzsche-aphorisms/";
 const MANIFEST_URL = `${SITE_URL}data/manifest.json`;
 const QUOTES_URL = `${SITE_URL}data/quotes.json`;
-const WORK_FILTER = "all"; // "all" | "jgb" | "gm"
+const WORK_FILTER = "all"; // "all" | "jgb" | "gm" | "ac" | "gd" | "fw"
 const REQUEST_TIMEOUT_SECONDS = 12;
 
 const fm = FileManager.local();
@@ -134,9 +134,17 @@ function quoteForDate(date, quotes) {
 }
 
 function sourceLabel(quote) {
-  const part = quote.part === "Vorrede" ? "서문" : quote.part === "Nachgesang" ? "후가" : `제${quote.part}부`;
-  const section = quote.section === "Vorrede" || quote.section === "Nachgesang" ? "" : ` §${quote.section}`;
-  return `${quote.workTitleKo || (quote.work === "jgb" ? "선악의 저편" : "도덕의 계보")} · ${part}${section}`;
+  const titles = {
+    jgb: "선악의 저편",
+    gm: "도덕의 계보",
+    ac: "안티크리스트",
+    gd: "우상의 황혼",
+    fw: "즐거운 학문",
+  };
+  const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
+  const unnumbered = ["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"];
+  const section = unnumbered.includes(quote.section) ? "" : ` §${quote.section}`;
+  return `${quote.workTitleKo || titles[quote.work] || quote.work} · ${part}${section}`;
 }
 
 function addText(stack, value, font, color, lineLimit, scale) {
@@ -213,7 +221,7 @@ function makeWidget(quote) {
 }
 
 let quotes = await loadQuotes();
-if (WORK_FILTER === "jgb" || WORK_FILTER === "gm") {
+if (["jgb", "gm", "ac", "gd", "fw"].includes(WORK_FILTER)) {
   const filtered = quotes.filter((quote) => quote.work === WORK_FILTER);
   if (filtered.length) quotes = filtered;
 }

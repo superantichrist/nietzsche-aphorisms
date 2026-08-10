@@ -40,6 +40,48 @@
         "publication": "Second edition, Leipzig: C. G. Naumann, 1892",
         "sha256": "0d64d5380ed3e3f213f16879dfce97928357100ad1e7d57da24df4d5e416b218"
       }
+    },
+    "ac": {
+      "title": "Der Antichrist. Fluch auf das Christenthum",
+      "publication": "Written 1888; first published in Nietzsche's Werke, Leipzig: C. G. Naumann, 1895",
+      "canonicalUrl": "https://www.nietzschesource.org/texts/eKGWB/AC",
+      "buildInput": {
+        "file": "sources/raw/ac-ekgwb-mirror.md",
+        "acquisitionUrl": "https://github.com/uva39/Nietzsche-KR-Translation/blob/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EA%B3%B5%EC%8B%9D%20%EC%9C%A0%EA%B3%A0/Der%20Antichrist.md",
+        "sha256": "34e88fbcd5f7a69d0c38856f4cb99edaf38474b6e7bd4d14c3704e77cf634d10"
+      },
+      "crossCheck": {
+        "scanUrl": "https://commons.wikimedia.org/wiki/File:Nietzsche%27s_Werke,_VIII.djvu",
+        "publication": "Nietzsche's Werke, Band VIII, Leipzig: C. G. Naumann, 1906"
+      }
+    },
+    "gd": {
+      "title": "Götzen-Dämmerung oder Wie man mit dem Hammer philosophirt",
+      "publication": "Leipzig: C. G. Naumann, 1889",
+      "canonicalUrl": "https://www.nietzschesource.org/texts/eKGWB/GD",
+      "buildInput": {
+        "file": "sources/raw/gd-ekgwb-mirror.md",
+        "acquisitionUrl": "https://github.com/uva39/Nietzsche-KR-Translation/blob/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EA%B3%B5%EA%B0%9C%20%EC%B6%9C%ED%8C%90/G%C3%B6tzen-D%C3%A4mmerung.md",
+        "sha256": "6c0ccf9876a4470d884451bd3af66ae90486d90d265134488d573ae17510c88f"
+      },
+      "crossCheck": {
+        "scanUrl": "https://commons.wikimedia.org/wiki/File:Nietzsche%27s_Werke,_VIII.djvu",
+        "publication": "Nietzsche's Werke, Band VIII, Leipzig: C. G. Naumann, 1906"
+      }
+    },
+    "fw": {
+      "title": "Die fröhliche Wissenschaft (la gaya scienza)",
+      "publication": "New edition, Leipzig: E. W. Fritzsch, 1887",
+      "canonicalUrl": "https://www.nietzschesource.org/texts/eKGWB/FW",
+      "buildInput": {
+        "file": "sources/raw/fw-ekgwb-mirror.md",
+        "acquisitionUrl": "https://github.com/uva39/Nietzsche-KR-Translation/blob/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EA%B3%B5%EA%B0%9C%20%EC%B6%9C%ED%8C%90/Die%20fr%C3%B6hliche%20Wissenschaft.md",
+        "sha256": "54b699c99e87a61d5a0b3095a936e0263a7449c739a621242dda3d1e60d0a2a9"
+      },
+      "crossCheck": {
+        "scanUrl": "https://commons.wikimedia.org/wiki/File:Die_fr%C3%B6hliche_Wissenschaft-1887-Nietzsche.djvu",
+        "publication": "Leipzig: E. W. Fritzsch, 1887"
+      }
     }
   }
 }
