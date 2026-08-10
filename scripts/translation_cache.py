@@ -90,7 +90,7 @@ def main() -> None:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     export_parser = subparsers.add_parser("export", help="write pending quote records as NDJSON")
-    export_parser.add_argument("--work", choices=("jgb", "gm"))
+    export_parser.add_argument("--work", choices=("jgb", "gm", "ac", "gd", "fw"))
     export_parser.add_argument("--limit", type=int, default=100)
     export_parser.add_argument("--output", default="translations/batches/pending.ndjson")
     export_parser.set_defaults(func=export_batch)
