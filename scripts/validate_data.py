@@ -100,7 +100,7 @@ def main() -> None:
     source_manifest = json.loads((ROOT / "sources" / "sources.json").read_text(encoding="utf-8"))
     required = {
         "id", "work", "workTitleDe", "workTitleKo", "part", "section",
-        "paragraph", "paragraphCount", "sentence", "german", "korean",
+        "paragraph", "paragraphCount", "sentence", "german", "korean", "footnotes",
     }
 
     if len(quotes) < 5_000:
@@ -136,6 +136,17 @@ def main() -> None:
             fail(f"too-long German unit {quote['id']}: {len(quote['german'])} chars")
         if not quote.get("sourceUrl", "").startswith("https://www.nietzschesource.org/"):
             fail(f"missing canonical source URL in {quote['id']}")
+        if not isinstance(quote["footnotes"], list):
+            fail(f"invalid footnotes in {quote['id']}")
+        for footnote in quote["footnotes"]:
+            if (
+                not isinstance(footnote, dict)
+                or not isinstance(footnote.get("label"), str)
+                or not footnote["label"].strip()
+                or not isinstance(footnote.get("text"), str)
+                or not footnote["text"].strip()
+            ):
+                fail(f"invalid footnote in {quote['id']}")
 
         korean = quote["korean"].strip()
         if korean:
@@ -164,6 +175,9 @@ def main() -> None:
 
     if manifest.get("translatedCount") != len(translated_ids):
         fail("manifest translatedCount does not match translated records")
+    reviewed_count = sum(quote.get("translationStatus") == "reviewed" for quote in quotes)
+    if manifest.get("reviewedCount") != reviewed_count:
+        fail("manifest reviewedCount does not match reviewed records")
     if manifest.get("pendingTranslationCount") != len(quotes) - len(translated_ids):
         fail("manifest pendingTranslationCount does not match pending records")
 
@@ -174,6 +188,11 @@ def main() -> None:
             fail(f"data/{work}.json does not match quotes.json")
         if manifest["works"][work]["count"] != len(work_file):
             fail(f"manifest count mismatch for {work}")
+        expected_reviewed = sum(
+            quote.get("translationStatus") == "reviewed" for quote in work_file
+        )
+        if manifest["works"][work].get("reviewedCount") != expected_reviewed:
+            fail(f"manifest reviewedCount mismatch for {work}")
 
     check_section_coverage(sections)
     counts = ", ".join(f"{work.upper()} {work_counts[work]:,}" for work in WORKS)

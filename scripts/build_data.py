@@ -532,6 +532,7 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                     quote_id = stable_id(work, section_data["part"], section_data["section"], paragraph_index, german)
                     translation = translations.get(quote_id, {})
                     korean = translation.get("korean", "") if isinstance(translation, dict) else str(translation)
+                    footnotes = translation.get("footnotes", []) if isinstance(translation, dict) else []
                     record = {
                         "id": quote_id,
                         "work": work,
@@ -548,6 +549,7 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                         "german": german,
                         "korean": korean.strip(),
                         "translationStatus": translation.get("status", "pending") if isinstance(translation, dict) else "draft",
+                        "footnotes": footnotes,
                         "sourceUrl": source_url(work, section_data["part"], section_data["section"]),
                     }
                     by_work[work].append(record)
@@ -591,18 +593,23 @@ def main() -> None:
     data_identity = json.dumps(quotes, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     data_version = hashlib.sha256(data_identity.encode("utf-8")).hexdigest()[:16]
     translated = sum(bool(quote["korean"]) for quote in quotes)
+    reviewed = sum(quote["translationStatus"] == "reviewed" for quote in quotes)
     manifest = {
         "schemaVersion": 2,
         "corpusVersion": corpus_version,
         "dataVersion": data_version,
         "quoteCount": len(quotes),
         "translatedCount": translated,
+        "reviewedCount": reviewed,
         "pendingTranslationCount": len(quotes) - translated,
         "works": {
             work: {
                 "titleDe": WORKS[work]["title_de"],
                 "titleKo": WORKS[work]["title_ko"],
                 "count": len(by_work[work]),
+                "reviewedCount": sum(
+                    quote["translationStatus"] == "reviewed" for quote in by_work[work]
+                ),
             }
             for work in WORK_ORDER
         },
@@ -619,7 +626,7 @@ def main() -> None:
     print(
         f"Built {len(quotes):,} quotes "
         f"({', '.join(f'{work.upper()} {len(by_work[work]):,}' for work in WORK_ORDER)}; "
-        f"Korean {translated:,}/{len(quotes):,}) - corpus {corpus_version}, data {data_version}"
+        f"Korean {translated:,}/{len(quotes):,}, reviewed {reviewed:,}) - corpus {corpus_version}, data {data_version}"
     )
 
 

@@ -15,7 +15,8 @@
       "paragraphCount",
       "sentence",
       "german",
-      "korean"
+      "korean",
+      "footnotes"
     ],
     "properties": {
       "id": { "type": "string", "minLength": 12 },
@@ -33,6 +34,18 @@
       "german": { "type": "string", "minLength": 24 },
       "korean": { "type": "string" },
       "translationStatus": { "enum": ["pending", "draft", "reviewed"] },
+      "footnotes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["label", "text"],
+          "properties": {
+            "label": { "type": "string", "minLength": 1 },
+            "text": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        }
+      },
       "sourceUrl": { "type": "string", "format": "uri" }
     }
   }

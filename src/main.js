@@ -13,10 +13,11 @@ const elements = Object.fromEntries(
   [
     "quote-card", "quote-number", "translation-badge", "quote-korean", "quote-german",
     "german-wrap", "toggle-german", "source-work", "source-location", "source-link",
-    "previous", "next", "random", "share", "permalink-status", "open-search",
+    "footnotes-wrap", "footnotes", "previous", "next", "random", "copy-quote",
+    "copy-question", "share", "permalink-status", "open-search",
     "close-search", "search-panel", "search-input", "search-count", "search-results",
     "stat-total", "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw",
-    "stat-translated", "stat-pending",
+    "stat-translated", "stat-reviewed", "stat-pending",
   ].map((id) => [id, document.getElementById(id)])
 );
 
@@ -78,7 +79,9 @@ function showQuote(quote, { historyMode = "replace" } = {}) {
   const translated = Boolean(quote.korean);
 
   elements["quote-number"].textContent = `ARCHIVE · ${String(globalIndex).padStart(4, "0")}`;
-  elements["translation-badge"].textContent = translated ? "한국어 번역 초안" : "번역 준비 중";
+  elements["translation-badge"].textContent = quote.translationStatus === "reviewed"
+    ? "감수 완료"
+    : translated ? "한국어 번역 초안" : "번역 준비 중";
   elements["translation-badge"].classList.toggle("pending", !translated);
   elements["quote-korean"].textContent = translated ? quote.korean : quote.german;
   elements["quote-korean"].classList.toggle("german-fallback", !translated);
@@ -86,12 +89,74 @@ function showQuote(quote, { historyMode = "replace" } = {}) {
   elements["source-work"].textContent = `${quote.workTitleKo} · ${quote.workTitleDe}`;
   elements["source-location"].textContent = locationLabel(quote);
   elements["source-link"].href = quote.sourceUrl;
+  const footnotes = Array.isArray(quote.footnotes) ? quote.footnotes : [];
+  elements.footnotes.replaceChildren();
+  footnotes.forEach((footnote) => {
+    const item = document.createElement("li");
+    const label = document.createElement("strong");
+    const text = document.createElement("span");
+    label.textContent = footnote.label;
+    text.textContent = footnote.text;
+    item.append(label, text);
+    elements.footnotes.append(item);
+  });
+  elements["footnotes-wrap"].hidden = footnotes.length === 0;
   elements["quote-card"].setAttribute("aria-busy", "false");
   updateGermanVisibility();
 
   const url = new URL(window.location.href);
   url.searchParams.set("q", quote.id);
   window.history[historyMode === "push" ? "pushState" : "replaceState"]({ quoteId: quote.id }, "", url);
+}
+
+function footnoteText(quote) {
+  const footnotes = Array.isArray(quote.footnotes) ? quote.footnotes : [];
+  if (!footnotes.length) return "";
+  return `\n\n[각주]\n${footnotes.map((note, index) => `${index + 1}. ${note.label}: ${note.text}`).join("\n")}`;
+}
+
+function quoteContext(quote) {
+  return `[한국어 번역]\n${quote.korean || "(미번역)"}\n\n[독일어 원문]\n${quote.german}\n\n[출전]\n프리드리히 니체, 《${quote.workTitleKo}》 ${locationLabel(quote)}${footnoteText(quote)}\n\n[영구 링크]\n${window.location.href}`;
+}
+
+async function writeClipboard(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.append(textarea);
+  textarea.select();
+  const copied = document.execCommand("copy");
+  textarea.remove();
+  if (!copied) throw new Error("Clipboard unavailable");
+}
+
+function showUtilityStatus(message) {
+  window.clearTimeout(showUtilityStatus.timer);
+  elements["permalink-status"].textContent = message;
+  showUtilityStatus.timer = window.setTimeout(() => {
+    elements["permalink-status"].textContent = "";
+  }, 2400);
+}
+
+async function copyCurrent(questionMode = false) {
+  const quote = state.current;
+  if (!quote) return;
+  const context = quoteContext(quote);
+  const text = questionMode
+    ? `다음 니체 구절을 독일어 원문과 작품의 문맥을 기준으로 검토하고 설명해 주세요. 번역의 뉘앙스, 핵심 개념, 필요한 역사·문헌 배경도 구분해서 알려 주세요.\n\n${context}\n\n[추가 질문]\n`
+    : context;
+  try {
+    await writeClipboard(text);
+    showUtilityStatus(questionMode ? "질문용 내용과 원문을 복사했습니다." : "번역과 원문을 복사했습니다.");
+  } catch (error) {
+    showUtilityStatus("복사하지 못했습니다.");
+  }
 }
 
 function move(step) {
@@ -113,20 +178,19 @@ function randomQuote() {
 async function shareCurrent() {
   const quote = state.current;
   if (!quote) return;
-  const text = `${quote.korean || quote.german}\n— 프리드리히 니체, ${quote.workTitleKo} ${locationLabel(quote)}`;
+  const text = quoteContext(quote);
   const url = window.location.href;
   try {
     if (navigator.share) {
       await navigator.share({ title: "오늘의 니체", text, url });
       elements["permalink-status"].textContent = "공유했습니다.";
     } else {
-      await navigator.clipboard.writeText(`${text}\n${url}`);
-      elements["permalink-status"].textContent = "링크를 복사했습니다.";
+      await writeClipboard(text);
+      showUtilityStatus("번역과 원문을 복사했습니다.");
     }
   } catch (error) {
-    if (error.name !== "AbortError") elements["permalink-status"].textContent = "공유하지 못했습니다.";
+    if (error.name !== "AbortError") showUtilityStatus("공유하지 못했습니다.");
   }
-  window.setTimeout(() => { elements["permalink-status"].textContent = ""; }, 2200);
 }
 
 function openSearch() {
@@ -178,6 +242,8 @@ function bindEvents() {
   elements.previous.addEventListener("click", () => move(-1));
   elements.next.addEventListener("click", () => move(1));
   elements.random.addEventListener("click", () => showQuote(randomQuote(), { historyMode: "push" }));
+  elements["copy-quote"].addEventListener("click", () => copyCurrent(false));
+  elements["copy-question"].addEventListener("click", () => copyCurrent(true));
   elements.share.addEventListener("click", shareCurrent);
   elements["toggle-german"].addEventListener("click", () => {
     state.showGerman = !state.showGerman;
@@ -224,6 +290,7 @@ async function init() {
     elements["stat-gd"].textContent = state.manifest.works.gd.count.toLocaleString("ko-KR");
     elements["stat-fw"].textContent = state.manifest.works.fw.count.toLocaleString("ko-KR");
     elements["stat-translated"].textContent = state.manifest.translatedCount.toLocaleString("ko-KR");
+    elements["stat-reviewed"].textContent = state.manifest.reviewedCount.toLocaleString("ko-KR");
     elements["stat-pending"].textContent = state.manifest.pendingTranslationCount.toLocaleString("ko-KR");
 
     const requestedId = new URL(window.location.href).searchParams.get("q");

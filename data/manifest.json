@@ -1,73 +1,79 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "f43de84149790034",
-  "dataVersion": "f286ce12fd18c822",
+  "dataVersion": "3b7a292fd8cbda46",
   "quoteCount": 5387,
   "translatedCount": 5387,
+  "reviewedCount": 439,
   "pendingTranslationCount": 0,
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",
       "titleKo": "선악의 저편",
-      "count": 1713
+      "count": 1713,
+      "reviewedCount": 0
     },
     "gm": {
       "titleDe": "Zur Genealogie der Moral",
       "titleKo": "도덕의 계보",
-      "count": 1261
+      "count": 1261,
+      "reviewedCount": 0
     },
     "ac": {
       "titleDe": "Der Antichrist",
       "titleKo": "안티크리스트",
-      "count": 439
+      "count": 439,
+      "reviewedCount": 439
     },
     "gd": {
       "titleDe": "Götzen-Dämmerung",
       "titleKo": "우상의 황혼",
-      "count": 486
+      "count": 486,
+      "reviewedCount": 0
     },
     "fw": {
       "titleDe": "Die fröhliche Wissenschaft",
       "titleKo": "즐거운 학문",
-      "count": 1488
+      "count": 1488,
+      "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
       "count": 5387,
-      "bytes": 5432461,
-      "sha256": "df19408da31f2874eb289f1575c14e7db161b3f72d370d9a61bb2392d515e158"
+      "bytes": 5547477,
+      "sha256": "46c70ca1f1e563b782913edf1b2e45b2b36a19c41c12c012202f73d177d5eb3e"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1713,
-      "bytes": 1524267,
-      "sha256": "f613edcb5318fb7117b9473d0d7bf42719a4a057e0084136b005ebc6602c0e7e"
+      "bytes": 1549962,
+      "sha256": "bd1809e91c7b43b34ee3eab437fd61d6a15be71ad0ed169734ee2d5db8d1cf73"
     },
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1182402,
-      "sha256": "3f476ae92a297f46f38c9335895c89d10db2b613b2391798758e510b8f982f83"
+      "bytes": 1201317,
+      "sha256": "4330d7f39d2e65e9ae1f2e5781d4c58a15ed19de3691d92a87dcf696c1229720"
     },
     "ac": {
       "path": "data/ac.json",
       "count": 439,
-      "bytes": 512639,
-      "sha256": "35ea6824324098f523e8fc60aac07e52e1e3c3444d63af12c0112c8a6ba96d0e"
+      "bytes": 553435,
+      "sha256": "95b17223aa1267e6b9ddd4bb31001b42afb58bc8d32cd9059e8b886cbe5883be"
     },
     "gd": {
       "path": "data/gd.json",
       "count": 486,
-      "bytes": 560670,
-      "sha256": "4e1d1ee8777a4ce251c1f1de2623cdced6f3e1a44265d13c019ff3493fb8c6e0"
+      "bytes": 567960,
+      "sha256": "93b22be2251bb572a854331fbaac0b71a986f3766d873c612df1dcf9328af5d0"
     },
     "fw": {
       "path": "data/fw.json",
       "count": 1488,
-      "bytes": 1652495,
-      "sha256": "2fb5e7c2ce432e37a0f0116124cba9ece5ff1b1791a39256102dd4d5d47d8901"
+      "bytes": 1674815,
+      "sha256": "5d45733da94f003d135ee3a9acdeb9bae5a79f9d747012a78c252b6e9315e515"
     }
   },
   "sources": "sources/sources.json"

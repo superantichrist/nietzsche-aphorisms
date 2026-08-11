@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections import Counter
 from pathlib import Path
 
 
@@ -56,6 +57,42 @@ def export_batch(args: argparse.Namespace) -> None:
     print(f"Exported {len(pending)} pending records to {output}.")
 
 
+def export_review_batch(args: argparse.Namespace) -> None:
+    cache = read_cache()["translations"]
+    review_items = []
+    for quote in read_quotes():
+        if args.work and quote["work"] != args.work:
+            continue
+        translation = cache.get(quote["id"], {})
+        if not translation.get("korean") or translation.get("status") == "reviewed":
+            continue
+        review_items.append(
+            {
+                "id": quote["id"],
+                "work": quote["work"],
+                "part": quote["part"],
+                "section": quote["section"],
+                "paragraph": quote["paragraph"],
+                "sentence": quote["sentence"],
+                "german": quote["german"],
+                "korean": translation["korean"],
+                "status": "reviewed",
+                "notes": translation.get("notes", ""),
+                "footnotes": translation.get("footnotes", []),
+            }
+        )
+        if len(review_items) >= args.limit:
+            break
+
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(
+        "".join(json.dumps(item, ensure_ascii=False) + "\n" for item in review_items),
+        encoding="utf-8",
+    )
+    print(f"Exported {len(review_items)} draft records for review to {output}.")
+
+
 def import_batch(args: argparse.Namespace) -> None:
     quotes = {quote["id"]: quote for quote in read_quotes()}
     payload = read_cache()
@@ -73,16 +110,46 @@ def import_batch(args: argparse.Namespace) -> None:
             raise SystemExit(f"Line {line_number}: German source mismatch for {quote_id}")
         if not korean:
             continue
+        footnotes = item.get("footnotes", [])
+        if not isinstance(footnotes, list) or any(
+            not isinstance(note, dict)
+            or not str(note.get("label", "")).strip()
+            or not str(note.get("text", "")).strip()
+            for note in footnotes
+        ):
+            raise SystemExit(f"Line {line_number}: invalid footnotes for {quote_id}")
+        status = item.get("status", "draft")
+        if status not in {"draft", "reviewed"}:
+            raise SystemExit(f"Line {line_number}: invalid status for {quote_id}")
+        notes = str(item.get("notes", "")).strip()
+        if status == "reviewed" and "통독 감수" not in notes:
+            notes = f"{notes} · 통독 감수".strip(" ·")
         translations[quote_id] = {
             "korean": korean,
-            "status": item.get("status", "draft"),
-            "notes": item.get("notes", ""),
+            "status": status,
+            "notes": notes,
+            "footnotes": footnotes,
         }
         imported += 1
 
     payload["translations"] = dict(sorted(translations.items()))
     CACHE.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Imported {imported} translations into {CACHE}.")
+
+
+def review_status(_args: argparse.Namespace) -> None:
+    cache = read_cache()["translations"]
+    counts: dict[str, Counter] = {}
+    for quote in read_quotes():
+        status = cache.get(quote["id"], {}).get("status", "pending")
+        counts.setdefault(quote["work"], Counter())[status] += 1
+    for work in ("jgb", "gm", "ac", "gd", "fw"):
+        work_counts = counts.get(work, Counter())
+        total = sum(work_counts.values())
+        print(
+            f"{work.upper()}: reviewed {work_counts['reviewed']:,}/{total:,}; "
+            f"draft {work_counts['draft']:,}; pending {work_counts['pending']:,}"
+        )
 
 
 def main() -> None:
@@ -95,9 +162,18 @@ def main() -> None:
     export_parser.add_argument("--output", default="translations/batches/pending.ndjson")
     export_parser.set_defaults(func=export_batch)
 
+    review_parser = subparsers.add_parser("review", help="write translated draft records for editorial review")
+    review_parser.add_argument("--work", choices=("jgb", "gm", "ac", "gd", "fw"))
+    review_parser.add_argument("--limit", type=int, default=100)
+    review_parser.add_argument("--output", default="translations/batches/review.ndjson")
+    review_parser.set_defaults(func=export_review_batch)
+
     import_parser = subparsers.add_parser("import", help="merge translated NDJSON into the stable cache")
     import_parser.add_argument("input")
     import_parser.set_defaults(func=import_batch)
+
+    status_parser = subparsers.add_parser("status", help="show editorial review progress")
+    status_parser.set_defaults(func=review_status)
 
     args = parser.parse_args()
     args.func(args)

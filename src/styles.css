@@ -225,6 +225,20 @@ blockquote { margin: 0; }
 .language-label button { border: 0; background: transparent; color: var(--muted); font: 11px Arial, sans-serif; cursor: pointer; }
 .quote-german { margin-top: 14px; color: #c9c0b2; font-size: clamp(15px, 3.4vw, 18px); font-style: italic; line-height: 1.65; }
 
+.footnotes {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  padding: 18px 20px;
+  border-left: 2px solid rgba(201, 163, 92, 0.45);
+  background: rgba(201, 163, 92, 0.045);
+}
+.footnotes > p { margin: 0 0 12px; color: var(--gold); font: 9px Arial, sans-serif; letter-spacing: 0.16em; }
+.footnotes ol { display: grid; gap: 10px; margin: 0; padding-left: 20px; }
+.footnotes li { padding-left: 4px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.footnotes li strong { display: inline; margin-right: 6px; color: #d9ccb4; font-weight: 600; }
+.footnotes li span { color: var(--muted); }
+
 .source-row {
   position: relative;
   z-index: 1;
@@ -264,6 +278,7 @@ blockquote { margin: 0; }
 .quote-actions .random-button { background: #a57e3f; border-color: #c09b5f; color: #17110b; font-weight: 700; }
 
 .utility-row { display: flex; min-height: 56px; align-items: center; justify-content: space-between; gap: 14px; }
+.utility-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; }
 .utility-row button { min-height: 38px; padding: 0 13px; border: 0; color: var(--muted); background: transparent; }
 #permalink-status { color: var(--gold); font: 11px Arial, sans-serif; }
 
@@ -315,6 +330,9 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
   .ornament { margin-top: 36px; }
   .quote-actions { grid-template-columns: 1fr 1fr; }
   .quote-actions .random-button { grid-column: 1 / -1; grid-row: 1; }
+  .utility-row { align-items: flex-start; flex-direction: column; padding-top: 6px; }
+  .utility-actions { width: 100%; }
+  .utility-actions button { flex: 1 1 auto; }
   .about { margin-top: 76px; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   footer { align-items: flex-start; flex-direction: column; }
