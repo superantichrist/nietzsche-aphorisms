@@ -52,7 +52,12 @@ function locationLabel(quote) {
   const unnumbered = new Set(["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"]);
   const section = unnumbered.has(quote.section) ? "" : ` · §${quote.section}`;
   const title = quote.sectionTitleDe ? ` · ${quote.sectionTitleDe}` : "";
-  return `${part}${section}${title} · 문단 ${quote.paragraph + 1}`;
+  const paragraph = Number.isInteger(quote.paragraph) ? quote.paragraph : 0;
+  const sentenceIndex = Number.isInteger(quote.sentence) ? quote.sentence : 0;
+  const position = quote.paragraphCount === 1
+    ? `구절 ${sentenceIndex + 1}`
+    : `문단 ${paragraph + 1} · 문장 ${sentenceIndex + 1}`;
+  return `${part}${section}${title} · ${position}`;
 }
 
 function updateGermanVisibility() {

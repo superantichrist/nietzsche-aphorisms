@@ -526,6 +526,7 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
         source_path = ROOT / metadata["source_file"]
         sections = parse_markdown_work(source_path, work)
         for section_data in sections:
+            paragraph_count = len(section_data["paragraphs"])
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
                 for sentence_index, german in enumerate(quote_units_for_work(paragraph, work)):
                     quote_id = stable_id(work, section_data["part"], section_data["section"], paragraph_index, german)
@@ -542,6 +543,7 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                         "section": section_data["section"],
                         "sectionTitleDe": section_data.get("section_title_de", ""),
                         "paragraph": paragraph_index,
+                        "paragraphCount": paragraph_count,
                         "sentence": sentence_index,
                         "german": german,
                         "korean": korean.strip(),
@@ -586,11 +588,11 @@ def main() -> None:
 
     corpus_identity = "\n".join(f"{quote['id']}\0{quote['german']}" for quote in quotes)
     corpus_version = hashlib.sha256(corpus_identity.encode("utf-8")).hexdigest()[:16]
-    data_identity = "\n".join(f"{quote['id']}\0{quote['german']}\0{quote['korean']}" for quote in quotes)
+    data_identity = json.dumps(quotes, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     data_version = hashlib.sha256(data_identity.encode("utf-8")).hexdigest()[:16]
     translated = sum(bool(quote["korean"]) for quote in quotes)
     manifest = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "corpusVersion": corpus_version,
         "dataVersion": data_version,
         "quoteCount": len(quotes),

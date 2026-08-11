@@ -37,13 +37,14 @@
   "part": "IV",
   "section": "146",
   "paragraph": 0,
+  "paragraphCount": 1,
   "sentence": 0,
   "german": "Wer mit Ungeheuern kämpft, ...",
   "korean": "괴물과 싸우는 사람은 ..."
 }
 ```
 
-ID는 `work + part + section + paragraph + 정규화한 German`의 SHA-256으로 만든다. 번역을 수정하거나 다시 생성해도 ID와 독일어 출전은 변하지 않는다. `corpusVersion`은 독일어 corpus, `dataVersion`은 한국어를 포함한 배포 데이터 버전이다.
+`paragraphCount`가 1이면 화면에 절 안의 `구절 n`을 표시하고, 2 이상이면 `문단 n · 문장 n`을 표시한다. ID는 `work + part + section + paragraph + 정규화한 German`의 SHA-256으로 만든다. 번역이나 위치 표시 메타데이터를 수정해도 ID와 독일어 출전은 변하지 않는다. `corpusVersion`은 독일어 corpus, `dataVersion`은 한국어와 위치 메타데이터를 포함한 배포 데이터 버전이다.
 
 ## 로컬 빌드
 

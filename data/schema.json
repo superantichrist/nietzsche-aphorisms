@@ -12,6 +12,8 @@
       "part",
       "section",
       "paragraph",
+      "paragraphCount",
+      "sentence",
       "german",
       "korean"
     ],
@@ -26,6 +28,7 @@
       "section": { "type": "string" },
       "sectionTitleDe": { "type": "string" },
       "paragraph": { "type": "integer", "minimum": 0 },
+      "paragraphCount": { "type": "integer", "minimum": 1 },
       "sentence": { "type": "integer", "minimum": 0 },
       "german": { "type": "string", "minLength": 24 },
       "korean": { "type": "string" },

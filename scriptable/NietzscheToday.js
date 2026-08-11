@@ -24,6 +24,8 @@ const EMERGENCY_QUOTES = [
     part: "IV",
     section: "146",
     paragraph: 0,
+    paragraphCount: 1,
+    sentence: 0,
     german: "Wer mit Ungeheuern kämpft, mag zusehn, dass er nicht dabei zum Ungeheuer wird.",
     korean: "괴물과 싸우는 사람은 그 싸움 속에서 자신도 괴물이 되지 않도록 살펴야 한다.",
   },
@@ -34,6 +36,8 @@ const EMERGENCY_QUOTES = [
     part: "IV",
     section: "146",
     paragraph: 0,
+    paragraphCount: 1,
+    sentence: 1,
     german: "Und wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein.",
     korean: "네가 오랫동안 심연을 들여다보면, 심연 또한 네 안을 들여다본다.",
   },
@@ -44,6 +48,8 @@ const EMERGENCY_QUOTES = [
     part: "Vorrede",
     section: "1",
     paragraph: 0,
+    paragraphCount: 1,
+    sentence: 0,
     german: "Wir sind uns unbekannt, wir Erkennenden, wir selbst uns selbst: das hat seinen guten Grund.",
     korean: "우리는 우리 자신에게 낯설다. 인식하는 우리조차 자기 자신을 알지 못한다. 그럴 만한 이유가 있다.",
   },
@@ -54,6 +60,8 @@ const EMERGENCY_QUOTES = [
     part: "III",
     section: "28",
     paragraph: 0,
+    paragraphCount: 1,
+    sentence: 0,
     german: "Lieber will noch der Mensch das Nichts wollen, als nicht wollen.",
     korean: "인간은 아무것도 의지하지 않기보다는 차라리 무를 의지하려 한다.",
   },
@@ -147,6 +155,15 @@ function sourceLabel(quote) {
   return `${quote.workTitleKo || titles[quote.work] || quote.work} · ${part}${section}`;
 }
 
+function positionLabel(quote) {
+  const paragraph = Number.isInteger(quote.paragraph) ? quote.paragraph : 0;
+  const sentence = Number.isInteger(quote.sentence) ? quote.sentence : 0;
+  const paragraphCount = Number.isInteger(quote.paragraphCount) ? quote.paragraphCount : 1;
+  return paragraphCount === 1
+    ? `구절 ${sentence + 1}`
+    : `문단 ${paragraph + 1} · 문장 ${sentence + 1}`;
+}
+
 function addText(stack, value, font, color, lineLimit, scale) {
   const text = stack.addText(value);
   text.font = font;
@@ -212,7 +229,7 @@ function makeWidget(quote) {
 
   if (!isSmall) {
     widget.addSpacer(3);
-    addText(widget, hasKorean ? "독일어 원문 · 직접 번역 초안" : "독일어 원문 · 번역 준비 중", Font.systemFont(8), muted, 1, 0.8);
+    addText(widget, positionLabel(quote), Font.systemFont(8), muted, 1, 0.8);
   }
 
   const nextRefresh = new Date(Date.now() + 5 * 60 * 1000);

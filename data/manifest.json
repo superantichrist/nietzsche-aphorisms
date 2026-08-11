@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "corpusVersion": "f43de84149790034",
-  "dataVersion": "5309e52e4c42d2cb",
+  "dataVersion": "f286ce12fd18c822",
   "quoteCount": 5387,
   "translatedCount": 5387,
   "pendingTranslationCount": 0,
@@ -36,38 +36,38 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 5387,
-      "bytes": 5329991,
-      "sha256": "83dce6e1ad54d5045243fa10f515a32fd38b0d1c359c239d865244b660b46afa"
+      "bytes": 5432461,
+      "sha256": "df19408da31f2874eb289f1575c14e7db161b3f72d370d9a61bb2392d515e158"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1713,
-      "bytes": 1491667,
-      "sha256": "cc028895538bad4ef00ab8a2be893ea2e52b8c635c5b051be12f6482c638c316"
+      "bytes": 1524267,
+      "sha256": "f613edcb5318fb7117b9473d0d7bf42719a4a057e0084136b005ebc6602c0e7e"
     },
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1158419,
-      "sha256": "c20c1205a62e599979f49618c21e4ae7c7ea207cacf8dd1c78ed74d9ec39824c"
+      "bytes": 1182402,
+      "sha256": "3f476ae92a297f46f38c9335895c89d10db2b613b2391798758e510b8f982f83"
     },
     "ac": {
       "path": "data/ac.json",
       "count": 439,
-      "bytes": 504282,
-      "sha256": "7de852cebf7dec879c82dfe4bdf54f79bcd1fb6d3dc8fcf3dea3199d2efdd452"
+      "bytes": 512639,
+      "sha256": "35ea6824324098f523e8fc60aac07e52e1e3c3444d63af12c0112c8a6ba96d0e"
     },
     "gd": {
       "path": "data/gd.json",
       "count": 486,
-      "bytes": 551436,
-      "sha256": "faa8867fc167e15eb5d7a9cc02a86f9140a3fcac2d2921e79bfb4668e89ad186"
+      "bytes": 560670,
+      "sha256": "4e1d1ee8777a4ce251c1f1de2623cdced6f3e1a44265d13c019ff3493fb8c6e0"
     },
     "fw": {
       "path": "data/fw.json",
       "count": 1488,
-      "bytes": 1624199,
-      "sha256": "f560ba6a35118bf6cd66a39b751f1e0fc3ffb06977d13f815b810b05eb08a72e"
+      "bytes": 1652495,
+      "sha256": "2fb5e7c2ce432e37a0f0116124cba9ece5ff1b1791a39256102dd4d5d47d8901"
     }
   },
   "sources": "sources/sources.json"

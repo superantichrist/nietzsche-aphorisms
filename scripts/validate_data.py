@@ -100,7 +100,7 @@ def main() -> None:
     source_manifest = json.loads((ROOT / "sources" / "sources.json").read_text(encoding="utf-8"))
     required = {
         "id", "work", "workTitleDe", "workTitleKo", "part", "section",
-        "paragraph", "german", "korean",
+        "paragraph", "paragraphCount", "sentence", "german", "korean",
     }
 
     if len(quotes) < 5_000:
@@ -124,6 +124,12 @@ def main() -> None:
             fail(f"invalid work {quote['work']}")
         if not isinstance(quote["paragraph"], int) or quote["paragraph"] < 0:
             fail(f"invalid paragraph in {quote['id']}")
+        if not isinstance(quote["paragraphCount"], int) or quote["paragraphCount"] < 1:
+            fail(f"invalid paragraph count in {quote['id']}")
+        if quote["paragraph"] >= quote["paragraphCount"]:
+            fail(f"paragraph exceeds paragraph count in {quote['id']}")
+        if not isinstance(quote["sentence"], int) or quote["sentence"] < 0:
+            fail(f"invalid sentence in {quote['id']}")
         if len(quote["german"]) < 24:
             fail(f"too-short German unit {quote['id']}: {quote['german']!r}")
         if len(quote["german"]) > 700:
