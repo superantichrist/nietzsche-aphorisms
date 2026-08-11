@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "b60aebe41e31d135",
-  "dataVersion": "96c97d0e2e797ca0",
+  "dataVersion": "ea1c10038d280a59",
   "quoteCount": 5393,
   "translatedCount": 5393,
-  "reviewedCount": 2306,
+  "reviewedCount": 2406,
   "pendingTranslationCount": 0,
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",
       "titleKo": "선악의 저편",
       "count": 1717,
-      "reviewedCount": 1379
+      "reviewedCount": 1479
     },
     "gm": {
       "titleDe": "Zur Genealogie der Moral",
@@ -42,14 +42,14 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 5393,
-      "bytes": 5738402,
-      "sha256": "1f8badb21686aa25d48fb3b7daea2f94bf3e0f03a80ea39aa0baf07503688572"
+      "bytes": 5749658,
+      "sha256": "44f1173c8422b2cfa3d57f5180a4c95ad277f2abfb9bb8ebc3fe8fbf0c847852"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1717,
-      "bytes": 1695163,
-      "sha256": "5863697cccc275cddcc8ed71eb54d69ca820b74988150872979001d88fe415b8"
+      "bytes": 1706419,
+      "sha256": "7b575b02d647f11092708acd3d44ebcedec1312d9e54fa0ad2a90ceebaff3b58"
     },
     "gm": {
       "path": "data/gm.json",
