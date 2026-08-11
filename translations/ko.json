@@ -20901,68 +20901,101 @@
     },
     "jgb-100-442b0fca6e67": {
       "korean": "우리 모두는 자기 앞에서 실제보다 단순한 척한다. 그렇게 다른 사람들에게서 벗어나 휴식한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-101-6958de0382f4": {
-      "korean": "오늘날 인식하는 자는 자신을 신이 동물이 된 존재라고 쉽게 느낄 수 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "오늘날의 인식자는 자기를 ‘동물이 된 신’이라고 느끼기 쉽다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "동물이 된 신",
+          "text": "신의 인간화를 뜻하는 ‘성육신’ 공식을 뒤집어, 인식하는 인간이 자기 안의 동물성과 신적 관점을 함께 의식한다는 도발적 조어다."
+        }
+      ]
     },
     "jgb-102-4a0338489b47": {
       "korean": "‘뭐라고? 심지어 너를 사랑할 만큼 겸손하다고? 아니면 어리석다고? 아니면—아니면—’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-102-db72895ebbff": {
       "korean": "상대도 나를 사랑한다는 사실을 발견하면 사랑하는 자는 본래 사랑받는 존재에 대한 환상에서 깨어나야 한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-103-3aab6b62e41c": {
       "korean": "행복 속의 위험.—‘이제 모든 것이 내게 좋은 결과를 가져온다. 이제 나는 모든 운명을 사랑한다. 누가 내 운명이 되고 싶은가?’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-104-8d4fc6856256": {
-      "korean": "오늘날 그리스도교도가 우리를 불태우지 못하게 막는 것은 인간애가 아니라 그들의 인간애가 지닌 무력함이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "오늘날의 그리스도교인들이 우리를—불태우지 못하게 막는 것은 그들의 인간애가 아니라 그 인간애의 무력함이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "불태우다",
+          "text": "이단 화형의 역사를 겨냥한 반어다. 니체는 현대 그리스도교인의 관용을 도덕적 진보가 아니라 신앙의 힘이 약해진 결과라고 비꼰다."
+        }
+      ]
     },
     "jgb-105-f6c1199c8fe8": {
       "korean": "그래서 ‘자유정신’ 유형에는 교회를 향한 깊은 몰이해가 속한다. 그것이 그의 부자유다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-105-f856e5b293fa": {
-      "korean": "자유정신, ‘인식의 경건한 자’에게는 경건하지 않은 기만보다 경건한 기만이 그의 취향, 곧 그의 ‘경건함’에 더 거슬린다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "자유정신, 곧 ‘인식에 경건한 자’에게는 불경한 기만보다 경건한 기만이 훨씬 더 취향에—그의 ‘경건함’에—거슬린다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어·라틴어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "pia fraus와 impia fraus",
+          "text": "라틴어로 각각 ‘경건한 기만’과 ‘불경한 기만’. 선한 종교적 목적을 위해 거짓을 허용하는 태도가 진리에 헌신한 자유정신에게는 노골적인 거짓보다 더 불쾌하다는 뜻이다."
+        }
+      ]
     },
     "jgb-106-6d5000165bd1": {
       "korean": "음악을 통해 정열은 자기 자신을 향유한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-107-406ee11d574a": {
       "korean": "일단 결단한 뒤에는 아무리 훌륭한 반대 근거에도 귀를 닫는다. 강한 성격의 징표다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-107-6937c3ad0bd5": {
       "korean": "그러므로 이따금 어리석고자 하는 의지다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-108-48e75c1e04cd": {
       "korean": "도덕적 현상은 전혀 없고, 오직 현상에 대한 도덕적 해석만 있다…",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-109-c8bcb20348b5": {
-      "korean": "범죄자는 자기 행위에 미치지 못하는 경우가 흔하다. 그는 그 행위를 축소하고 비방한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "범죄자는 흔히 자기 행위의 크기를 감당하지 못한다. 그래서 그 행위를 깎아내리고 중상한다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "행위를 감당하지 못하는 범죄자",
+          "text": "범죄를 미화하는 말이라기보다, 행위자가 자기 행위의 의미와 결과를 직시하지 못하고 사후에 축소·왜곡할 수 있다는 심리적 역설이다."
+        }
+      ]
     },
     "jgb-11-08292e677deb": {
       "korean": "이 오만하고 열광적인 운동은 회색빛 노인다운 개념으로 아무리 대담하게 변장했어도 하나의 청춘이었다. 이 운동을 진지하게 받아들이거나 심지어 도덕적으로 분개하며 다루는 것보다 더 부당한 일은 없다. 아무튼 사람들은 나이를 먹었고 꿈은 흩어졌다.",
@@ -21132,58 +21165,84 @@
     },
     "jgb-110-f2f37303a921": {
       "korean": "범죄자의 변호인은 그 행위가 지닌 아름다운 공포를 범죄자에게 유리하게 돌릴 만큼 뛰어난 예술가인 경우가 드물다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-111-34e0cb380811": {
       "korean": "우리의 허영은 바로 자부심이 상했을 때 가장 상처 입히기 어렵다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-112-d030ef9631bb": {
       "korean": "믿는 것이 아니라 바라보도록 예정되었다고 느끼는 사람에게 모든 신자는 너무 시끄럽고 집요하다. 그는 그들을 물리친다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-113-7d97b886ac49": {
       "korean": "‘그의 마음을 얻고 싶은가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-113-c6a6d1214f57": {
       "korean": "그렇다면 그 앞에서 당황한 척하라—’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-114-60e553727b7e": {
-      "korean": "성적 사랑에 대한 엄청난 기대와 그 기대 속의 수치심이 여자들의 모든 관점을 처음부터 망친다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "성적 사랑에 거는 엄청난 기대와, 그 기대에 뒤섞인 수치심이 여성들의 모든 시야를 처음부터 흐려 놓는다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "여성의 성적 사랑",
+          "text": "여성 전체의 심리를 하나로 단정하는 니체의 성별 유형론이다. 특정 시대의 성적 억압과 수치심을 포착할 수는 있어도 모든 여성에게 적용되는 경험적 법칙은 아니다."
+        }
+      ]
     },
     "jgb-115-7c154bbf0559": {
-      "korean": "사랑이나 증오가 함께하지 않는 곳에서 여자는 평범하게 행동한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "사랑이나 증오가 함께 연기하지 않는 곳에서 여성은 평범하게 연기한다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "여성에 대한 잠언",
+          "text": "감정의 극단이 없으면 여성은 평범하다는 니체의 성차별적 일반화다. spielen의 ‘작용하다’와 ‘연기하다’라는 중의성을 살렸다."
+        }
+      ]
     },
     "jgb-116-58becc3b3c05": {
       "korean": "우리 삶의 위대한 시대는 우리 안의 악을 우리 안의 최선으로 다시 이름 붙일 용기를 얻는 곳에 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-117-e467e2cf63a6": {
       "korean": "하나의 정동을 극복하려는 의지도 결국 다른 하나 또는 여러 정동의 의지일 뿐이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-118-3ecd6cc54b94": {
       "korean": "감탄에는 순진함이 있다. 자기도 언젠가 감탄의 대상이 될 수 있다는 생각을 아직 해 보지 않은 사람이 그것을 지닌다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-119-4f0fe12b2a8c": {
-      "korean": "오물을 향한 혐오가 너무 커서 우리 자신을 씻는 것, 우리 자신을 ‘정당화하는 것’을 막을 수도 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "더러움에 대한 혐오가 너무 커져서, 도리어 우리 자신을 씻는 일—우리 자신을 ‘정당화하는’ 일—을 가로막을 수도 있다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "씻음과 정당화",
+          "text": "자기 변호를 위해 비열한 사정이나 추한 세부까지 들춰내야 한다면, 결백을 밝히기보다 침묵을 택할 수 있다는 역설이다. ‘정당화’에는 종교적 의인(義認)의 울림도 있다."
+        }
+      ]
     },
     "jgb-12-004c868955c3": {
       "korean": "우리끼리 말하자면, 그렇다고 ‘영혼’ 자체를 없애거나 가장 오래되고 존중받는 가설 가운데 하나를 포기할 필요는 전혀 없다. ‘영혼’을 건드리자마자 그것을 잃어버리곤 하는 자연주의자들의 서투름을 따를 필요는 없다.",
@@ -21239,63 +21298,95 @@
     },
     "jgb-120-88703c4fa4d3": {
       "korean": "관능은 흔히 사랑의 성장을 앞질러 뿌리를 약하게 남기고 쉽게 뽑히게 한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-121-1f8ebb67d67d": {
-      "korean": "신이 작가가 되고 싶을 때 그리스어를 배웠고, 그것도 더 잘 배우지는 않았다는 사실에는 섬세한 맛이 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "신이 작가가 되려 할 때 그리스어를 배웠다는 것, 그리고 그리스어를 그보다 더 잘 배우지는 않았다는 것에는 절묘한 맛이 있다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "신의 그리스어",
+          "text": "신약성서는 고전 그리스어보다 당시의 공용어인 코이네 그리스어로 쓰였다. 성서의 모든 말이 신에게서 직접 영감받았다는 축자영감설과, 고전문헌학자가 그 문체를 낮게 평가한 사실을 겹쳐 풍자한다."
+        }
+      ]
     },
     "jgb-122-601360518a0c": {
       "korean": "어떤 사람이 칭찬을 기뻐하는 것은 마음의 예의일 뿐이며, 바로 정신의 허영과 정반대다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-123-efaf700aa9bd": {
-      "korean": "동거도 타락했다. 결혼 때문에.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "내연 관계조차 타락해 버렸다—결혼 때문에.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "Concubinat",
+          "text": "혼인 밖에서 지속되는 동거·내연 관계를 뜻한다. 결혼이 성적 관계를 도덕적으로 타락시켰다는 식으로 통념을 뒤집는 잠언이다."
+        }
+      ]
     },
     "jgb-124-e6fdcd53ea0e": {
       "korean": "화형대 위에서도 환호하는 사람은 고통을 이긴 것이 아니라 고통을 예상한 곳에서 고통을 느끼지 않은 사실에 승리한다. 하나의 비유다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-125-e557d3ef8bb1": {
       "korean": "누군가에 관해 새로 배워야 할 때 우리는 그가 안겨 준 불편의 값을 그에게 혹독하게 치르게 한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-126-942c1c909ae2": {
-      "korean": "한 민족은 대여섯 명의 위대한 인간에게 이르기 위해 자연이 택하는 우회로다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "한 민족은 여섯, 일곱 명의 위대한 인간에게 이르기 위해 자연이 택하는 우회로다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "민족이라는 우회로",
+          "text": "민족 전체의 가치를 소수의 ‘위대한 인간’을 산출하는 데 종속시키는 니체의 엘리트주의적 역사관이다. 다음 문장은 자연이 결국 그 위대한 인간들마저 지나쳐 간다고 다시 비튼다."
+        }
+      ]
     },
     "jgb-126-edae85113ab0": {
       "korean": "그렇다. 그리고 그들을 우회해 지나가기 위한 길이기도 하다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-127-1448868d30ae": {
-      "korean": "진정한 모든 여자에게 학문은 수치심에 어긋난다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "모든 ‘제대로 된 여성’에게 학문은 수치심을 거스르는 일이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "‘제대로 된 여성’",
+          "text": "학문적 탐구와 여성의 수치심을 본질적으로 대립시키는 니체의 성차별적 유형화다. 따옴표는 원문에 없지만, 편집상 이 규범적 여성상을 비판적으로 드러내기 위해 표시했다."
+        }
+      ]
     },
     "jgb-127-30b14a6dcf20": {
       "korean": "그들에게 학문은 자기 피부 아래, 더 나쁘게는 옷과 치장 아래를 들여다보려는 것처럼 느껴진다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-128-ad6d81f47b36": {
       "korean": "네가 가르치려는 진리가 추상적일수록 감각도 더욱 그 진리로 유혹해야 한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-129-232761ac3d34": {
       "korean": "악마는 신을 바라보는 가장 넓은 관점을 지녔기에 신에게서 그토록 멀리 떨어져 있다. 악마는 인식의 가장 오래된 벗이므로.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-13-26790ebbce08": {
       "korean": "생리학자들은 자기보존 충동을 유기체의 핵심 충동으로 설정하는 일을 다시 생각해 보아야 한다.",
@@ -21339,63 +21430,90 @@
     },
     "jgb-130-2ca8d694f990": {
       "korean": "재능이 약해질 때, 자신이 무엇을 할 수 있는지 보여 주기를 멈출 때 그 사람이 어떤 존재인지 드러나기 시작한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-130-3cb0ee4c34d1": {
       "korean": "재능도 하나의 치장이며, 치장은 하나의 은신처이기도 하다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-131-00a151a860c8": {
-      "korean": "남녀는 서로를 속인다. 근본적으로 자기 자신만을 존중하고 사랑하기 때문이다. 더 듣기 좋게 말하면 자기 자신의 이상만을 사랑하기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "남성과 여성은 서로에 대해 착각한다. 근본적으로는 오직 자기 자신만을 존중하고 사랑하기 때문이다—좀 더 듣기 좋게 말하면, 자기 자신의 이상을 사랑하기 때문이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": []
     },
     "jgb-131-f010a1ab9078": {
-      "korean": "그래서 남자는 여자가 평화롭기를 원한다. 그러나 여자는 평화로운 모습을 아무리 익혔어도 고양이처럼 본질적으로 평화롭지 않다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "그래서 남자는 여성이 평온하기를 원한다. 그러나 바로 여성은 평온해 보이는 법을 아무리 능숙하게 익혔더라도, 고양이처럼 본질적으로 평온하지 않다는 것이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "여성과 고양이",
+          "text": "여성을 겉으로는 평온하지만 본질적으로 분쟁적인 존재로 비유한 성차별적 고정관념이다. 남녀의 실제 본성을 입증하는 진술이 아니라 니체의 잠언적 유형화다."
+        }
+      ]
     },
     "jgb-132-0ef06aa1be83": {
       "korean": "사람은 자신의 덕 때문에 가장 제대로 벌을 받는다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-133-f090ab92a03e": {
       "korean": "자기 이상으로 가는 길을 찾지 못하는 사람은 이상이 없는 사람보다 더 경솔하고 뻔뻔하게 산다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-134-e831b140bca9": {
-      "korean": "모든 신빙성과 떳떳한 양심과 진리라는 외관은 감각에서 비로소 온다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "모든 신빙성, 모든 거리낌 없는 확신, 진리가 눈앞에 명백하다는 모든 느낌은 비로소 감각에서 온다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": []
     },
     "jgb-135-9dcff53cf100": {
-      "korean": "바리새주의는 선한 인간의 타락이 아니다. 오히려 상당 부분 모든 선함의 조건이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "바리새주의는 선한 인간에게 생긴 퇴화가 아니다. 오히려 상당한 몫의 바리새주의가 모든 ‘선함’의 조건이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "바리새주의",
+          "text": "통상 위선적 율법주의를 뜻하는 말로 쓰인다. 니체는 선하다는 자기 확신과 도덕적 구별 자체에 어느 정도의 자기기만과 우월감이 필요하다고 역설한다."
+        }
+      ]
     },
     "jgb-136-60525f162832": {
       "korean": "한 사람은 자기 생각의 산파를 찾고, 다른 사람은 자기가 도울 사람을 찾는다. 그렇게 좋은 대화가 생겨난다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-137-dc6f9ad42b28": {
       "korean": "학자와 예술가를 대할 때에는 서로 반대 방향으로 오판하기 쉽다. 뛰어난 학자 뒤에서는 평범한 인간을 발견하는 일이 드물지 않고, 평범한 예술가 뒤에서는 오히려 아주 뛰어난 인간을 자주 발견한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-138-526f50edd75c": {
       "korean": "우리는 깨어 있을 때도 꿈속에서처럼 행동한다. 먼저 우리가 상대하는 인간을 발명하고 꾸며 낸 뒤 곧바로 그 사실을 잊는다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-139-6fd592527b1f": {
-      "korean": "복수와 사랑에서 여자는 남자보다 더 야만적이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "복수와 사랑에서 여성은 남성보다 더 야만적이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "여성의 야만성",
+          "text": "사랑과 복수에서 여성 전체가 남성보다 더 야만적이라고 단정하는 니체의 성차별적 잠언이다. 경험적으로 검증된 성별 차이가 아니다."
+        }
+      ]
     },
     "jgb-14-24ba55c61fe9": {
       "korean": "물리학에는 눈과 손가락이 자기편에 있고, 눈앞의 증거와 손에 잡히는 확실성이 자기편에 있다. 이것은 평민적인 근본 취향을 지닌 시대에 마술처럼 매혹하고 설득하며 확신시킨다. 그런 시대는 영원히 민중적인 감각주의의 진리 규범을 본능적으로 따르기 때문이다.",
@@ -21450,62 +21568,111 @@
       "footnotes": []
     },
     "jgb-140-27b43297f5cc": {
-      "korean": "수수께끼 같은 충고.—‘끈이 끊어지지 않게 하려면 먼저 그것을 이로 물어야 한다.’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "수수께끼로 된 충고.—‘인연의 끈을 끊고 싶지 않거든—먼저 이를 악물어라.’",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "Band와 beissen",
+          "text": "Band는 물리적 끈이자 관계의 유대를 뜻한다. 유대를 지키려면 고통을 견디며 ‘이를 악물어야’ 한다는 말장난과 각운이다."
+        }
+      ]
     },
     "jgb-141-b675595c06ed": {
       "korean": "하복부는 인간이 자신을 쉽사리 신으로 여기지 못하게 하는 이유다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-142-a896cfed9245": {
-      "korean": "내가 들은 가장 정숙한 말은 이것이다. ‘진정한 사랑에서는 영혼이 육체를 감싼다.’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "내가 들어 본 가장 정숙한 말. ‘진정한 사랑에서는 육체를 감싸는 것이 영혼이다.’",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 프랑스어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "영혼이 육체를 감싼다",
+          "text": "보통 육체가 영혼을 담는다고 말하는 관계를 뒤집어, 진정한 사랑에서는 정신적 사랑이 육체적 관계 전체를 감싼다는 프랑스어 잠언이다."
+        }
+      ]
     },
     "jgb-143-19bc2fd16e9e": {
       "korean": "우리가 가장 잘하는 것을 우리의 허영은 우리가 가장 힘들게 해내는 것으로 인정받고 싶어 한다. 어떤 도덕의 기원에 관하여.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-144-b1751c343666": {
-      "korean": "여자에게 학문적 성향이 있다면 대개 그의 성적 본성에 무언가 제대로 되지 않은 것이 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "여성에게 학문적 성향이 있다면, 대개 그 여성의 성적 본성에는 무언가 ‘정상적이지 않은’ 것이 있다는 말이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "학문과 여성의 성적 본성",
+          "text": "학문하는 여성을 성적으로 비정상인 존재로 병리화하는 19세기 성차별적 편견이다. 현대 의학이나 심리학의 판단이 아니며, 다음 문장의 불임·남성성 연결도 같은 고정관념에 속한다."
+        }
+      ]
     },
     "jgb-144-cf248804ccc4": {
-      "korean": "불임은 이미 취향을 어느 정도 남성적으로 만드는 경향이 있다. 실례지만 남자는 ‘아이를 낳지 못하는 동물’이므로.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "불임만으로도 이미 취향이 어느 정도 남성적으로 기울게 된다는 것이다. 실례를 무릅쓰고 말하자면, 남자는 ‘아이를 낳지 못하는 동물’이기 때문이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "불임과 남성성",
+          "text": "임신·출산 능력을 여성성의 기준으로 삼고 불임을 남성적 취향과 연결한 근거 없는 성별 본질주의다. 불임의 의학적 의미나 개인의 성 정체성을 설명하지 않는다."
+        }
+      ]
     },
     "jgb-145-d62b0d12bbac": {
-      "korean": "남자와 여자를 전체적으로 비교하면 이렇게 말할 수 있다. 여자에게 둘째 역할을 맡으려는 본능이 없었다면 치장의 천재성도 없었을 것이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "남성과 여성을 전체적으로 비교하면 이렇게 말할 수 있다는 것이다. 여성에게 ‘두 번째 역할’을 맡는 본능이 없었다면 치장의 천재성도 없었을 것이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "두 번째 역할",
+          "text": "여성을 남성에 뒤이은 종속적 존재이자 자신을 장식해 보여 주는 존재로 규정한 성차별적 위계다. 보편적 성별 본능을 기술한 말이 아니다."
+        }
+      ]
     },
     "jgb-146-009e0b432b98": {
       "korean": "괴물과 싸우는 사람은 그 싸움 속에서 자신도 괴물이 되지 않도록 살펴야 한다.",
-      "status": "draft"
+      "status": "reviewed",
+      "notes": "통독 감수",
+      "footnotes": []
     },
     "jgb-146-836d5055eea3": {
       "korean": "네가 오랫동안 심연을 들여다보면, 심연 또한 네 안을 들여다본다.",
-      "status": "draft"
+      "status": "reviewed",
+      "notes": "통독 감수",
+      "footnotes": []
     },
     "jgb-147-833653a355ee": {
-      "korean": "옛 피렌체 이야기에서, 더구나 삶에서 나온 말. ‘착한 여자든 나쁜 여자든 매를 원한다.’ 사케티, 제86화.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "옛 피렌체 단편소설에서, 더구나—삶에서 나온 말. ‘착한 여자든 나쁜 여자든 몽둥이를 원한다.’ 사케티, 제86화.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어·이탈리아어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "사케티의 속담",
+          "text": "14세기 작가 프랑코 사케티의 제86화에 인용된 여성 폭력 속담이다. 원작 화자는 곧 ‘나쁜 여자에게만 몽둥이가 필요하고 착한 여자에게는 필요 없다’고 속담을 수정하지만, 니체는 그 문맥을 잘라낸 형태를 다른 2차 문헌에서 가져왔다. 여성 폭력을 정당화하는 문구로 인용해서는 안 된다."
+        }
+      ]
     },
     "jgb-148-8a6460bbe303": {
-      "korean": "이웃을 꾀어 자기를 좋게 생각하게 한 뒤 그 이웃의 의견을 독실하게 믿는 솜씨에서 누가 여자와 겨룰 수 있는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "다른 사람을 유혹해 자신을 좋게 보게 만든 뒤, 그 사람의 평가를 다시 독실하게 믿는 이 솜씨에서 누가 여성들과 겨룰 수 있겠는가?—",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "여성의 자기기만",
+          "text": "타인의 호평을 유도한 뒤 그 평가를 자기 정체성의 권위로 받아들인다는 심리를 여성 전체의 특성으로 돌린 성차별적 일반화다."
+        }
+      ]
     },
     "jgb-149-952b096d3b91": {
       "korean": "한 시대가 악하다고 느끼는 것은 대개 예전에 선하다고 느낀 것의 시대착오적인 잔향, 더 오래된 이상의 격세유전이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-15-569325f6c916": {
       "korean": "떳떳한 양심으로 생리학을 연구하려면, 감각기관이 관념론 철학에서 말하는 의미의 현상이 아니라고 주장해야 한다. 감각기관이 현상이라면 원인이 될 수 없기 때문이다!",
@@ -21560,53 +21727,84 @@
       "footnotes": []
     },
     "jgb-150-060ac8ae5595": {
-      "korean": "영웅 주변에서는 모든 것이 비극이 되고 반신 주변에서는 모든 것이 사티로스극이 된다. 그렇다면 신 주변에서는 모든 것이—어떤가? 어쩌면 ‘세계’가 되는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "영웅의 주위에서는 모든 것이 비극이 되고, 반신의 주위에서는 모든 것이 사티로스극이 된다. 그렇다면 신의 주위에서는 모든 것이—어떤가? 어쩌면 ‘세계’가 되는가?—",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "사티로스극",
+          "text": "고대 그리스 비극 공연 뒤에 상연되던 익살스럽고 외설적인 짧은 극. 영웅·반신·신의 관점이 각각 주변 세계의 장르 자체를 바꾼다는 비유다."
+        }
+      ]
     },
     "jgb-151-64e235f6f8b0": {
       "korean": "재능을 갖는 것만으로는 충분하지 않다. 그것을 가져도 좋다는 여러분의 허락도 받아야 한다. 어떤가, 벗들이여?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-152-731d5774eab9": {
-      "korean": "‘인식의 나무가 서 있는 곳은 언제나 낙원이다.’ 가장 늙은 뱀과 가장 젊은 뱀이 그렇게 말한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "‘인식의 나무가 서 있는 곳은 언제나 낙원이다.’ 가장 오래된 뱀도 가장 젊은 뱀도 그렇게 말한다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "인식의 나무와 뱀",
+          "text": "창세기의 선악을 알게 하는 나무와 뱀을 뒤집는다. 성서에서는 인식이 낙원 추방을 부르지만, ‘뱀들’에게는 인식이 있는 곳이 곧 낙원이다."
+        }
+      ]
     },
     "jgb-153-47491a09ec88": {
       "korean": "사랑으로 행해지는 것은 언제나 선과 악의 저편에서 일어난다.",
-      "status": "draft"
+      "status": "reviewed",
+      "notes": "통독 감수",
+      "footnotes": []
     },
     "jgb-154-7606fd6780b4": {
-      "korean": "반론과 곁길로 새기, 명랑한 불신과 조롱하려는 욕망은 건강의 징표다. 모든 무조건적인 것은 병리학에 속한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "반론, 옆길로 뛰어드는 일, 명랑한 불신, 조롱하려는 욕구는 건강의 징후다. 모든 무조건적인 것은 병리의 영역에 속한다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "병리",
+          "text": "절대적 확신과 무조건적 복종을 경직된 정신의 ‘질병’에 빗댄 철학적 은유다. 임상 진단 기준을 제시하는 문장이 아니다."
+        }
+      ]
     },
     "jgb-155-10dacaa76867": {
       "korean": "비극적인 것을 느끼는 감각은 관능성과 함께 오르내린다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-156-ce18e4339509": {
       "korean": "광기는 개인에게서는 드문 일이지만 집단과 정당과 민족과 시대에서는 규칙이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-157-47a5ae893176": {
-      "korean": "자살에 대한 생각은 강력한 위안이다. 그 생각으로 수많은 고약한 밤을 무사히 건넌다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "자살할 수도 있다는 생각은 강력한 위안이 되기도 한다. 그 생각을 붙들고 수많은 괴로운 밤을 무사히 건널 수 있다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "자살 사고에 관한 잠언",
+          "text": "극심한 상황에서 ‘언제든 끝낼 수 있다’는 관념이 역설적으로 버티게 할 수 있다는 심리 묘사다. 자살을 권하거나 안전한 해결책으로 제시하는 문장이 아니다. 이 구절이 현재 자신의 상황처럼 느껴진다면 문학적 해석보다 먼저 가까운 사람이나 지역의 응급·상담 지원에 즉시 도움을 요청해야 한다."
+        }
+      ]
     },
     "jgb-158-e29ad95ffb2f": {
       "korean": "우리의 가장 강한 충동, 우리 안의 폭군에게는 이성뿐 아니라 양심도 복종한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-159-3467f189bd1e": {
       "korean": "좋은 일이든 나쁜 일이든 되갚아야 한다. 그러나 왜 하필 우리에게 좋은 일이나 나쁜 일을 한 바로 그 사람에게 갚아야 하는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-16-108a6177eff0": {
       "korean": "철학자는 어쩌면 그에게 이렇게 일러 줄 것이다. ‘선생, 당신이 착각하지 않았을 가능성은 낮습니다. 그런데 무엇 때문에 반드시 진리여야 합니까?’",
@@ -21675,58 +21873,84 @@
     },
     "jgb-160-434b19e34470": {
       "korean": "자신의 인식을 남에게 전하는 순간 우리는 이미 그것을 충분히 사랑하지 않는다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-161-d239dd3c8bc1": {
       "korean": "시인은 자기 체험에 부끄러움이 없다. 그것을 착취한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-162-7a0fa4b6400a": {
       "korean": "‘우리의 이웃은 곁에 있는 사람이 아니라 그 사람의 이웃이다.’ 모든 민족은 그렇게 생각한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-163-94001622337f": {
-      "korean": "사랑은 사랑하는 자의 높고 숨은 성질, 희귀하고 예외적인 면을 빛 속으로 끌어낸다. 그런 점에서 사랑은 그에게서 규칙적인 것이 무엇인지 쉽게 속인다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "사랑은 사랑하는 사람의 고귀하고 숨은 성질, 곧 그에게서 드물고 예외적인 것을 빛 속으로 끌어낸다. 그런 만큼 사랑은 그 사람의 평소 모습이 무엇인지 쉽게 착각하게 한다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": []
     },
     "jgb-164-25877b5c9283": {
-      "korean": "예수는 자신의 유대인들에게 말했다. ‘율법은 종을 위한 것이었다. 내가 그의 아들로서 신을 사랑하듯 신을 사랑하라!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "예수는 자기 유대인들에게 말했다. ‘율법은 종들을 위한 것이었다—내가 신의 아들로서 그를 사랑하듯, 너희도 신을 사랑하라!",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "니체가 예수에게 돌린 말",
+          "text": "복음서에 그대로 나오는 예수의 실제 인용문이 아니다. 마태복음 22장의 사랑 계명과 요한복음 15장의 종·친구·아들 모티프를 니체가 결합해, 사랑을 도덕과 율법의 저편에 놓는 예수상을 만든 패러디다."
+        }
+      ]
     },
     "jgb-164-69b7a68f5178": {
       "korean": "신의 아들인 우리와 도덕이 무슨 상관인가!’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-165-3af72b59f897": {
       "korean": "모든 정당을 보며.—목자는 언제나 앞장서는 숫양도 필요로 한다. 그렇지 않으면 이따금 자신이 숫양이 되어야 한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-166-6a5dde5654e9": {
-      "korean": "입으로는 거짓말할 수 있어도 그때 짓는 입 모양은 여전히 진실을 말한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "입으로는 얼마든지 거짓말할 수 있다. 그러나 그때 짓는 낯짝은 여전히 진실을 말한다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "Mund와 Maul",
+          "text": "Mund는 사람의 ‘입’, Maul은 짐승의 ‘주둥이’이자 사람의 입을 낮춰 부르는 말이다. 말의 내용은 속여도 무의식적인 표정은 진실을 드러낸다는 대조다."
+        }
+      ]
     },
     "jgb-167-22dfa0de4eda": {
       "korean": "냉혹한 인간에게 다정함은 부끄러운 것이며 소중한 것이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-168-d17e60158ace": {
-      "korean": "그리스도교는 에로스에게 독을 마시게 했다. 에로스는 죽지 않았지만 악덕으로 타락했다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "그리스도교는 에로스에게 독을 마시게 했다—에로스는 그 독으로 죽지는 않았지만, 악덕으로 변질되었다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "에로스의 변질",
+          "text": "성적 욕망을 죄로 억압한 결과 욕망이 사라진 것이 아니라 오히려 ‘악덕’의 형태로 병들고 왜곡되었다는 그리스도교 비판이다."
+        }
+      ]
     },
     "jgb-169-d845dd96de62": {
       "korean": "자기 이야기를 많이 하는 것도 자신을 숨기는 수단일 수 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-17-a856bcbd24aa": {
       "korean": "결국 ‘그것이 생각한다’라는 말만으로도 이미 지나치게 많은 일을 했다. 이 ‘그것’조차 그 과정에 대한 하나의 해석을 포함하며 과정 자체에 속하지 않는다.",
@@ -21765,53 +21989,73 @@
     },
     "jgb-170-0fbe7e440689": {
       "korean": "칭찬에는 비난보다 더 많은 집요함이 들어 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-171-acdb12419944": {
-      "korean": "인식하는 인간에게 연민은 거의 우스워 보인다. 키클롭스에게 달린 섬세한 손처럼.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "인식하는 인간에게 붙은 연민은 거의 우스꽝스럽게 보인다. 키클롭스에게 달린 섬세한 두 손처럼.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "키클롭스",
+          "text": "그리스 신화의 외눈박이 거인. 거칠고 거대한 인식의 힘에 섬세한 연민이 어울리지 않는 듯 보인다는 비유이며, 연민의 불가능성을 단정한다기보다 부조화된 외관을 강조한다."
+        }
+      ]
     },
     "jgb-172-0326a1dd904c": {
       "korean": "인간애 때문에 이따금 아무나 한 사람을 끌어안는다. 모든 사람을 끌어안을 수는 없기 때문이다. 그러나 하필 그 사람에게 이 사실을 알려서는 안 된다…",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-173-b4cb8d2ce5c8": {
       "korean": "하찮게 여기는 동안에는 미워하지 않는다. 동등하거나 더 높게 평가할 때 비로소 미워한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-174-b8314907a8d5": {
-      "korean": "공리주의자들이여, 여러분도 모든 유용한 것을 그저 자신의 성향을 실어 나르는 수레로 사랑한다. 여러분도 사실 그 바퀴 소리를 견디기 어려워하지 않는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "공리주의자들이여, 너희도 모든 ‘유용한 것’을 그저 자기 성향을 실어 나르는 수레로서 사랑하는 것이 아닌가—사실 너희도 그 수레바퀴의 소음은 견딜 수 없어 하지 않는가?",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어·라틴어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "utile",
+          "text": "라틴어로 ‘유용한 것’. 공리주의자도 유용성 자체를 사랑하는 것이 아니라 자기 욕구를 운반하는 수단으로 이용한다는 비판이다."
+        }
+      ]
     },
     "jgb-175-04f69cbda9e0": {
       "korean": "결국 사람은 욕망의 대상을 사랑하는 것이 아니라 자신의 욕망을 사랑한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-176-6e9aa1713f19": {
       "korean": "다른 사람의 허영은 그것이 우리의 허영에 거슬릴 때만 우리 취향에 거슬린다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-177-dd3c4101f890": {
       "korean": "‘진실성’이 무엇인지에 관해 아직 충분히 진실했던 사람은 어쩌면 아무도 없었다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-178-7eaab93b1c2b": {
       "korean": "사람들은 영리한 사람의 어리석음을 믿어 주지 않는다. 얼마나 큰 인권의 손실인가!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-179-b35287a21f67": {
       "korean": "우리 행동의 결과는 그 사이 우리가 ‘개선되었다’는 사실에 아랑곳하지 않고 우리의 머리채를 움켜잡는다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-18-a3fb0e30216e": {
       "korean": "수백 번 논박된 ‘자유의지’ 이론이 아직 살아남은 것은 오직 이 매력 덕분인 듯하다. 그 이론을 논박할 만큼 자신이 강하다고 느끼는 누군가가 자꾸 나타나는 것이다.",
@@ -21827,23 +22071,32 @@
     },
     "jgb-180-e512338db604": {
       "korean": "거짓말에도 순진함이 있다. 그것은 어떤 것을 선의로 믿고 있다는 징표다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-181-b1214a59be85": {
-      "korean": "저주받는 곳에서 축복하는 것은 비인간적이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "자기가 저주받는 바로 그 자리에서 축복하는 것은 비인간적인 일이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "저주하는 자를 축복하다",
+          "text": "원수를 사랑하고 저주하는 자를 축복하라는 그리스도교 윤리를 겨냥한다. 인간적 반응을 넘어선 행위를 ‘비인간적’이라 부르는 말은 찬양과 비판의 양쪽으로 읽힐 수 있다."
+        }
+      ]
     },
     "jgb-182-79e6a7642fcf": {
       "korean": "우월한 사람의 친근함은 똑같이 되돌려 줄 수 없기에 분노를 일으킨다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-183-2c4b04f36a4f": {
       "korean": "‘네가 내게 거짓말했다는 사실이 아니라, 이제 내가 너를 믿지 못한다는 사실이 나를 뒤흔들었다.’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-184-852580221b2c": {
       "korean": "악의처럼 보이는 선의의 오만이 있다.",
@@ -30485,28 +30738,38 @@
     },
     "jgb-95-28513efd9c6b": {
       "korean": "자신의 비도덕성을 부끄러워하는 것은, 끝에 이르면 자신의 도덕성까지 부끄러워하게 되는 계단의 한 단계다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-96-8c17a2dcb73c": {
-      "korean": "오디세우스가 나우시카와 헤어졌듯 삶과 헤어져야 한다. 사랑하기보다는 축복하면서.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "오디세우스가 나우시카와 헤어졌듯 삶과 헤어져야 한다—사랑에 매달리기보다 축복하면서.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 독일어 원문 대조 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "오디세우스와 나우시카",
+          "text": "《오디세이아》에서 난파한 오디세우스를 구해 준 파이아케스 공주 나우시카는 그에게 호감을 품지만, 오디세우스는 고향으로 떠난다. 삶을 소유하려 매달리기보다 감사와 축복 속에서 떠나는 죽음을 비유한다."
+        }
+      ]
     },
     "jgb-97-7a1a36f12893": {
       "korean": "뭐라고? 위대한 인간이라고? 내 눈에는 언제나 자기 이상을 연기하는 배우만 보인다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-98-573dff6019f7": {
       "korean": "양심을 길들이면 양심은 우리를 물면서 동시에 입 맞춘다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-99-99e983939b51": {
       "korean": "실망한 자가 말한다.—‘나는 메아리를 기다렸으나 칭찬만 들었다—’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-nachgesang-01551c484b0c": {
       "korean": "오 삶의 정오여! 두 번째 젊음이여! / 오 여름 정원이여! / 서서 살피고 기다리는 불안한 행복이여! / 벗들을 기다리며 밤낮으로 준비했나니, / 새로운 벗들이여!",
