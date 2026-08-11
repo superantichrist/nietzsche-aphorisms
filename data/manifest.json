@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "corpusVersion": "f43de84149790034",
-  "dataVersion": "1b633e54c6e7fbb1",
-  "quoteCount": 5387,
-  "translatedCount": 5387,
-  "reviewedCount": 925,
+  "corpusVersion": "b60aebe41e31d135",
+  "dataVersion": "39cff021302705c6",
+  "quoteCount": 5393,
+  "translatedCount": 5393,
+  "reviewedCount": 1131,
   "pendingTranslationCount": 0,
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",
       "titleKo": "선악의 저편",
-      "count": 1713,
-      "reviewedCount": 0
+      "count": 1717,
+      "reviewedCount": 204
     },
     "gm": {
       "titleDe": "Zur Genealogie der Moral",
@@ -34,22 +34,22 @@
     "fw": {
       "titleDe": "Die fröhliche Wissenschaft",
       "titleKo": "즐거운 학문",
-      "count": 1488,
-      "reviewedCount": 0
+      "count": 1490,
+      "reviewedCount": 2
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 5387,
-      "bytes": 5591571,
-      "sha256": "1dbc653e2ea35644d5d15a19a85c380849748ddccdfeda7190ae1f48b4cacc8b"
+      "count": 5393,
+      "bytes": 5606878,
+      "sha256": "3217fe3f0af591cee401b73b86a4391cd93e80fb8165b7926dbc21aa0d7f99c7"
     },
     "jgb": {
       "path": "data/jgb.json",
-      "count": 1713,
-      "bytes": 1549962,
-      "sha256": "bd1809e91c7b43b34ee3eab437fd61d6a15be71ad0ed169734ee2d5db8d1cf73"
+      "count": 1717,
+      "bytes": 1563639,
+      "sha256": "0187f3d55358fae79270690506f1f686cdb088ee96e7fcdb5d68a0e27b5823b4"
     },
     "gm": {
       "path": "data/gm.json",
@@ -71,9 +71,9 @@
     },
     "fw": {
       "path": "data/fw.json",
-      "count": 1488,
-      "bytes": 1674815,
-      "sha256": "5d45733da94f003d135ee3a9acdeb9bae5a79f9d747012a78c252b6e9315e515"
+      "count": 1490,
+      "bytes": 1676445,
+      "sha256": "8d97ecf416e3d0cc556eb491cb53be94bc9573c17921f37d6e5b6d52bd27c5b1"
     }
   },
   "sources": "sources/sources.json"

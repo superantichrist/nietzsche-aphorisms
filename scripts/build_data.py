@@ -387,6 +387,34 @@ def parse_markdown_work(path: Path, work: str) -> list[dict]:
             work=work,
             poem=part in {"Nachgesang", "Vorspiel", "Anhang"},
         )
+        # JGB §8 ends with a two-line Latin acclamation. Each verse is too
+        # short to stand alone under the quote filter, but together they are
+        # the punch line of the aphorism and must not disappear from the
+        # corpus. Keep the existing prose paragraph (and therefore its ID)
+        # intact while packing the two verse lines as one traceable unit.
+        if (
+            work == "jgb"
+            and event["section"] == "8"
+            and len(blocks) >= 3
+            and blocks[1] == "adventavit asinus"
+            and blocks[2] == "pulcher et fortissimus."
+        ):
+            blocks = [blocks[0], normalize_space(f"{blocks[1]} / {blocks[2]}"), *blocks[3:]]
+        # The last three lines of the comic verse in JGB §228 form one
+        # syntactic and rhythmic unit. Packing them keeps the short French
+        # punch line without changing the IDs of the preceding verse lines.
+        if (
+            work == "jgb"
+            and event["section"] == "228"
+            and len(blocks) >= 7
+            and blocks[4:7]
+            == [
+                "Unbegeistert, ungespässig,",
+                "Unverwüstlich-mittelmässig,",
+                "Sans genie et sans esprit!",
+            ]
+        ):
+            blocks = [*blocks[:4], normalize_space(" / ".join(blocks[4:7])), *blocks[7:]]
         if not blocks:
             raise ValueError(f"Empty {work} {part} {event['section']}")
         sections.append(
@@ -406,6 +434,16 @@ ABBREVIATIONS = (
     "Dr.", "Prof.", "resp.", "etc.", "u. s. w.", "u. a.", "z. B.", "d. h.",
     "vergl.", "vgl.", "S.", "Bd.", "Nr.", "sc.", "ca.", "ff.",
 )
+
+# Short refrains and closing verse lines that are semantically complete even
+# though they fall below the general quote-size threshold. Dialogue cues such
+# as "— Weiter!" remain excluded from the random quote pool.
+PRESERVE_SHORT_UNITS = {
+    "— Ist das noch deutsch? —",
+    "— Ist Das noch deutsch?",
+    "Mir zu sieben neuen Muth.",
+    "Flamme bin ich sicherlich.",
+}
 
 
 def protect_abbreviations(text: str, extra: tuple[str, ...] = ()) -> str:
@@ -469,7 +507,10 @@ def sentence_units(
     max_chars: int = 500,
     extra_abbreviations: tuple[str, ...] = (),
 ) -> list[str]:
-    protected = protect_abbreviations(normalize_space(paragraph), extra_abbreviations)
+    normalized = normalize_space(paragraph)
+    if normalized in PRESERVE_SHORT_UNITS:
+        return [normalized]
+    protected = protect_abbreviations(normalized, extra_abbreviations)
     raw = re.split(r"(?<=[.!?…])(?:[”’\"])?\s+(?=(?:[„‚\"(\[])?[A-ZÄÖÜ—–-])", protected)
     restored = [part.replace("∯", ".") for part in raw]
     expanded: list[str] = []
