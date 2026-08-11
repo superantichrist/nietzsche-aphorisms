@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "b60aebe41e31d135",
-  "dataVersion": "8878a46761afddc0",
+  "dataVersion": "d37d2e493a29fe6a",
   "quoteCount": 5393,
   "translatedCount": 5393,
-  "reviewedCount": 2844,
+  "reviewedCount": 2944,
   "pendingTranslationCount": 0,
   "works": {
     "jgb": {
@@ -17,7 +17,7 @@
       "titleDe": "Zur Genealogie der Moral",
       "titleKo": "도덕의 계보",
       "count": 1261,
-      "reviewedCount": 200
+      "reviewedCount": 300
     },
     "ac": {
       "titleDe": "Der Antichrist",
@@ -42,8 +42,8 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 5393,
-      "bytes": 5784780,
-      "sha256": "f9163b0c08ae0ba0634e738e1d2e9443dcc35992cc6110ee5d88ae1dee70ea72"
+      "bytes": 5790519,
+      "sha256": "e287c4d150cdfdf5e058c455ce7fc1f7e049a170590488d5bfcf6979a738a28e"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -54,8 +54,8 @@
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1224604,
-      "sha256": "f88a3489bd91beb8e937eae715f20e2524aa3ac89e43abe2e36a0e3b03cefcf4"
+      "bytes": 1230343,
+      "sha256": "63e45a319d783f538436d8ccf1da41601f3849c9698d313dbeeacb33b6370cd5"
     },
     "ac": {
       "path": "data/ac.json",
