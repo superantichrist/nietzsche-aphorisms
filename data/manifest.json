@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "f43de84149790034",
-  "dataVersion": "c7de3e9e72c31029",
+  "dataVersion": "1b633e54c6e7fbb1",
   "quoteCount": 5387,
   "translatedCount": 5387,
-  "reviewedCount": 639,
+  "reviewedCount": 925,
   "pendingTranslationCount": 0,
   "works": {
     "jgb": {
@@ -29,7 +29,7 @@
       "titleDe": "Götzen-Dämmerung",
       "titleKo": "우상의 황혼",
       "count": 486,
-      "reviewedCount": 200
+      "reviewedCount": 486
     },
     "fw": {
       "titleDe": "Die fröhliche Wissenschaft",
@@ -42,8 +42,8 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 5387,
-      "bytes": 5565494,
-      "sha256": "bfb70c6279393ff6e01021c2ab0025b1f97b0a17e5a12606d935f41218c5fe87"
+      "bytes": 5591571,
+      "sha256": "1dbc653e2ea35644d5d15a19a85c380849748ddccdfeda7190ae1f48b4cacc8b"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -66,8 +66,8 @@
     "gd": {
       "path": "data/gd.json",
       "count": 486,
-      "bytes": 585977,
-      "sha256": "9483a937d7bb47b3e2918b0272d769079b45df5219ba977d0a701d172fb41f2a"
+      "bytes": 612054,
+      "sha256": "305fb62e3c5261b408ef9e1632ac387e23d6224933161b6e377bb1042a24c44d"
     },
     "fw": {
       "path": "data/fw.json",
