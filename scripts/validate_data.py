@@ -41,7 +41,7 @@ def check_source_hashes(source_manifest: dict) -> None:
 
 def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
     jgb_numbered = {section for _, section in sections["jgb"] if section[0].isdigit()}
-    expected_jgb = numbered(1, 296) | {"65a", "73a"}
+    expected_jgb = numbered(1, 296) | {"65a", "73a", "237a"}
     if jgb_numbered != expected_jgb:
         fail("JGB numbered section coverage mismatch")
 
@@ -181,6 +181,18 @@ def main() -> None:
         fail("manifest reviewedCount does not match reviewed records")
     if manifest.get("pendingTranslationCount") != len(quotes) - len(translated_ids):
         fail("manifest pendingTranslationCount does not match pending records")
+
+    jgb_237a = [
+        quote
+        for quote in quotes
+        if quote["id"] == "jgb-237-243eadd853a7"
+    ]
+    if (
+        len(jgb_237a) != 1
+        or jgb_237a[0]["section"] != "237a"
+        or not jgb_237a[0]["sourceUrl"].endswith("/JGB-237a")
+    ):
+        fail("JGB 237a display citation or legacy stable ID mismatch")
 
     for work in WORKS:
         work_file = json.loads((DATA / f"{work}.json").read_text(encoding="utf-8"))

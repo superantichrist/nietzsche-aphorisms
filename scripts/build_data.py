@@ -382,6 +382,20 @@ def parse_markdown_work(path: Path, work: str) -> list[dict]:
             part, title_de, title_ko = "Anhang", "Gesetz wider das Christenthum", "그리스도교에 반대하는 법"
         elif work == "ac" and part == "Vorrede":
             part, title_de, title_ko = "Haupttext", "Der Antichrist", "본문"
+        section = event["section"]
+        id_section = section
+        # The source snapshot repeats the printed number 237. Scholarly
+        # editions distinguish the prose aphorism following the seven short
+        # poems as JGB 237a. Expose that traceable citation without changing
+        # the already published stable ID, whose identity section remains
+        # 237 for this one legacy record.
+        if (
+            work == "jgb"
+            and part == "VII"
+            and section == "237"
+            and any(item["part"] == part and item["section"] == "237" for item in sections)
+        ):
+            section = "237a"
         blocks = body_blocks(
             lines[event["body_start"] : next_index],
             work=work,
@@ -422,7 +436,8 @@ def parse_markdown_work(path: Path, work: str) -> list[dict]:
                 "part": part,
                 "part_title_de": title_de,
                 "part_title_ko": title_ko,
-                "section": event["section"],
+                "section": section,
+                "id_section": id_section,
                 "section_title_de": event.get("title_de", ""),
                 "paragraphs": blocks,
             }
@@ -570,7 +585,13 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
             paragraph_count = len(section_data["paragraphs"])
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
                 for sentence_index, german in enumerate(quote_units_for_work(paragraph, work)):
-                    quote_id = stable_id(work, section_data["part"], section_data["section"], paragraph_index, german)
+                    quote_id = stable_id(
+                        work,
+                        section_data["part"],
+                        section_data.get("id_section", section_data["section"]),
+                        paragraph_index,
+                        german,
+                    )
                     translation = translations.get(quote_id, {})
                     korean = translation.get("korean", "") if isinstance(translation, dict) else str(translation)
                     footnotes = translation.get("footnotes", []) if isinstance(translation, dict) else []
