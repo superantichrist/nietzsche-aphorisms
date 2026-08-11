@@ -29908,118 +29908,161 @@
     },
     "jgb-272-a40f4c4f281e": {
       "korean": "고귀함의 표지. 우리의 의무를 모두의 의무로 낮출 생각을 결코 하지 않는 것, 자기 책임을 넘기거나 나누려 하지 않는 것, 특권과 그 행사를 의무에 포함하는 것.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-273-1355ccc84273": {
       "korean": "그때까지 늘 희극을 하도록 선고받았다는 조급함과 의식 — 전쟁조차 희극이며 모든 수단이 목적을 감추듯 감춘다 — 은 모든 교제를 망친다. 이런 인간은 고독과 고독이 지닌 가장 유독한 것을 안다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-273-aaf1f641619e": {
-      "korean": "위대한 것을 향해 애쓰는 인간은 길에서 만나는 모두를 수단, 지체와 장애물 또는 잠깐의 휴식처로 본다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "위대한 것을 향해 나아가는 인간은 자기 길에서 만나는 모든 사람을 수단으로, 지체시키는 것과 장애물로 — 또는 잠시 몸을 누이는 쉼터로 바라본다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "타인의 도구화",
+          "text": "위대한 목적을 추구하는 사람의 시선에서 타인이 수단·장애물·휴식처로만 보인다는 진단이다. 이를 그대로 윤리적 모범으로 받아들이면 타인을 그 자체의 목적이 아닌 도구로 취급하게 된다는 문제가 생긴다."
+        }
+      ]
     },
     "jgb-273-f76ff7f296e0": {
       "korean": "동료 인간을 향한 그 특유의 고귀한 선량함은 높은 곳에 올라 지배할 때에야 가능하다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-274-41f655fb7563": {
       "korean": "기다리는 자의 문제. — 문제의 해결이 잠든 더 높은 인간이 알맞은 때에 행동, 말하자면 ‘폭발’하기까지에는 행운과 예측할 수 없는 많은 것이 필요하다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-274-7e1196367ea9": {
       "korean": "평균적으로는 일어나지 않는다. 지구 곳곳에 자신이 무엇을 기다리는지 거의 모르는 기다리는 자들이 앉아 있으며, 헛되이 기다린다는 것은 더더욱 모른다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-274-868134f27d59": {
       "korean": "때로 행동할 ‘허락’을 주는 우연인 깨우는 외침이 너무 늦게 온다. 가만히 앉아 있는 동안 가장 좋은 젊음과 힘을 이미 써 버린 뒤다. 얼마나 많은 사람이 ‘벌떡 일어서는’ 순간 팔다리는 잠들었고 정신은 이미 너무 무거워진 것을 공포 속에 발견했는가!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-274-cffca0e65c2b": {
       "korean": "‘너무 늦었다.’ 그는 자신을 믿지 못하게 되어 이제 영원히 쓸모없어진 채 말했다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-274-e16d0fa8dbbb": {
-      "korean": "— 천재는 어쩌면 그리 드물지 않다. 그러나 적절한 때를 지배하고 우연의 앞머리를 붙잡기 위해 필요한 500개의 손이 드물다!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "— 천재 자체는 어쩌면 그다지 드물지 않다. 하지만 카이로스, 곧 ‘알맞은 때’를 장악하고 우연의 앞머리를 낚아채는 데 필요한 오백 개의 손이 드문 것이다!",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "카이로스와 우연의 앞머리",
+          "text": "그리스어 kairos는 행동에 결정적인 ‘적절한 순간’을 뜻한다. 기회의 신 카이로스가 앞머리만 있고 뒷머리는 없는 모습으로 표현된 전통을 떠올리게 하며, 지나가기 전에 붙잡아야 한다는 비유다."
+        }
+      ]
     },
     "jgb-274-e1eeba42dc75": {
       "korean": "— 천재의 왕국에서 넓은 의미의 ‘손 없는 라파엘로’는 예외가 아니라 규칙이 아닐까?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-275-a92d31fd3ee2": {
       "korean": "인간의 높은 면을 보려 하지 않는 자는 그 사람의 낮고 전경에 놓인 것을 더욱 날카롭게 바라본다 — 그로써 자신을 드러낸다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-276-068868663718": {
       "korean": "온갖 상처와 상실에서 낮고 거친 영혼은 고귀한 영혼보다 형편이 낫다. 고귀한 영혼의 위험은 더 클 수밖에 없고, 삶의 조건이 다양하므로 사고와 몰락의 가능성마저 엄청나다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-276-b3d7b191d65c": {
-      "korean": "— 도마뱀은 잃은 발가락이 다시 자란다. 인간은 그렇지 않다. —",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "— 도마뱀에게서는 잃어버린 발가락이 다시 자라지만, 인간은 그렇지 않다. —",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "재생의 비유",
+          "text": "니체는 섬세하고 복잡한 인간일수록 상실을 회복하기 어렵다는 비유로 쓴다. 많은 도마뱀은 꼬리를 재생하지만 발가락 재생은 종에 따라 제한적이므로, 문장을 일반 생물학적 사실로 받아들일 필요는 없다."
+        }
+      ]
     },
     "jgb-277-8c08bcf3897e": {
       "korean": "영원히 괴로운 ‘너무 늦음!’ — 완성된 모든 것의 우울!…",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-277-f863dea62fd8": {
       "korean": "— 나쁘기도 하지! 또 옛 이야기다! 집을 다 지은 뒤에야 짓기 — 전에 반드시 알았어야 할 것을 그 과정에서 배웠음을 문득 깨닫는다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-278-0b87a79a8d17": {
       "korean": "말하기만 하라. 내가 가진 것을 그대에게 내놓겠다! — ‘쉬라고? 쉬라고?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-278-13c4cca3ee1f": {
-      "korean": "— 나그네여, 그대는 누구인가? 조롱도 사랑도 없이 짐작할 수 없는 눈으로 길을 가는 그대를 본다. 모든 깊이에서 만족하지 못한 채 빛으로 돌아온 측연추처럼 젖고 슬픈 눈 — 저 아래에서 무엇을 찾았는가? —",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "— 나그네여, 그대는 누구인가? 조롱도 사랑도 없이, 속을 헤아릴 수 없는 눈으로 자기 길을 가는 그대를 나는 본다. 어떤 깊이도 재지 못한 채 다시 빛으로 올라온 다림추처럼 젖고 슬픈 눈 — 그것은 저 아래에서 무엇을 찾았는가?",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "다림추",
+          "text": "Senkblei는 줄 끝에 납을 매달아 수직이나 깊이를 재는 도구다. 깊은 곳마다 내려갔다가 젖은 채 올라오지만 끝내 만족하지 못하는 탐구자의 눈을 비유한다."
+        }
+      ]
     },
     "jgb-278-57f5d8d54a9f": {
       "korean": "오 호기심 많은 자여, 무슨 말을 하는가!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-278-74465d546495": {
       "korean": "그대가 누구든 지금 무엇이 마음에 드는가? 무엇이 그대를 쉬게 하는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-278-865b7226077c": {
       "korean": "여기서 쉬어라. 이곳은 누구에게나 너그럽다. — 기운을 차려라!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-278-93ced68235e4": {
       "korean": "하지만 내게 주시오, 부탁이니 — —’ 무엇을? 무엇을? 말하라! — ‘가면 하나를 더! 두 번째 가면을!’…",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-278-de1b40917953": {
       "korean": "한숨 쉬지 않는 가슴, 혐오를 숨기는 입술, 이제 느리게만 움켜쥐는 손을 지닌 그대는 누구인가? 무엇을 했는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-279-6262e01c3000": {
       "korean": "깊이 슬픈 인간은 행복할 때 정체를 드러낸다. 질투 때문에 행복을 으깨고 질식시키려는 듯 붙잡는 방식이 있다. — 아, 행복이 달아난다는 것을 너무 잘 안다!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-28-043e8c665027": {
       "korean": "플라톤이 부정했던 그리스인의 삶을 아리스토파네스 없이 어떻게 견딜 수 있었겠는가!",
@@ -30114,233 +30157,299 @@
     },
     "jgb-280-05173366dcb1": {
       "korean": "‘나빠! 나빠! 뭐라고? 그는 — 뒤로 가지 않는가?’ — 그렇다!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-280-076334189a2d": {
       "korean": "그는 크게 도약하려는 모든 사람처럼 뒤로 간다. — —",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-280-9b77683dceac": {
       "korean": "그러나 그것을 불평한다면 그를 잘못 이해한 것이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-281-18211d867995": {
       "korean": "— 어쩌면 그 안에 수수께끼가 있는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-281-3d0e23d606da": {
       "korean": "나 자신에 관해 어떤 확정된 것을 믿기를 꺼리는 마음이 내 안에 있는 것이 틀림없다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-281-4fe49bd3098f": {
       "korean": "— ‘사람들이 나를 믿을까? 하지만 나는 믿어 주기를 요구한다. 나는 언제나 나 자신을 나쁘게만 생각했고, 나 자신에 관해서도 서투르게만 생각했다. 아주 드물고 강제된 경우에만, 언제나 ‘사안’을 즐기지 않고 ‘나’에게서 벗어날 준비가 된 채, 결과를 믿지 않고 그렇게 했다. 자기 인식의 가능성을 향한 꺾을 수 없는 불신이 나를 이끌어 이론가들이 허용하는 ‘직접적 인식’이라는 개념 자체를,",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-281-659ccb0c63b3": {
       "korean": "— 어쩌면 내가 속한 종을 드러내는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-281-a67817bdbf1e": {
       "korean": "— 그러나 내게는 드러내지 않는다. 내가 바라던 대로다. —’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-281-abfe49392081": {
       "korean": "형용 모순으로 느끼게 했다. — 이 사실 전체는 내가 나에 관해 아는 것 중 거의 가장 확실하다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-281-e81c462b8449": {
       "korean": "아마도. 그러나 다행히 내 이빨로 물 것은 아니다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-282-2379ba9798e2": {
-      "korean": "‘그런데 무슨 일을 겪었는가?’ — ‘모르겠소.’ 그가 머뭇거리며 말했다. ‘어쩌면 하르피이아들이 내 식탁 위로 날아갔는지도.’ 오늘날 온화하고 절제하며 과묵한 사람이 갑자기 광분하여 접시를 깨고 식탁을 뒤엎고 외치고 날뛰며 모두를 모욕한 뒤, 끝내 부끄러워하며 자신에게 분노한 채 곁으로 물러나는 일이 때때로 있다. — 어디로? 무엇 때문에? 외따로 굶어 죽으려고?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "‘그런데 그대에게 무슨 일이 있었는가?’ — ‘모르겠소.’ 그가 머뭇거리며 말했다. ‘어쩌면 하르피이아들이 내 식탁 위를 날아간 것인지도 모르지.’ — 오늘날에는 온화하고 절제하며 내성적인 사람이 갑자기 광분해 접시를 깨고 식탁을 뒤엎으며 고함치고 날뛰고 세상 모든 사람을 모욕한 뒤, 마침내 부끄러워하고 자신에게 분노한 채 외딴 곳으로 물러나는 일이 이따금 벌어진다. — 어디로? 무엇 때문에? 홀로 굶어 죽으려고?",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "하르피이아",
+          "text": "그리스 신화에서 사람의 음식을 빼앗거나 더럽히는 새 몸의 괴물들이다. 자신에게 맞지 않는 시대의 ‘식탁’에서 정신적으로 먹을 것을 찾지 못한 사람의 갑작스러운 혐오를 형상화한다."
+        }
+      ]
     },
     "jgb-282-4904fc77c56a": {
       "korean": "— 높고 까다로운 영혼의 욕망을 지녀 자기 식탁이 차려지고 음식이 준비된 것을 좀처럼 보지 못하는 자에게 위험은 언제나 컸다. 오늘날에는 비범하게 크다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-282-6b55c7f1f3e8": {
       "korean": "자기 기억에 질식하려고?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-282-6fd50d079fb5": {
       "korean": "— 우리 모두 어울리지 않는 식탁에 앉아 본 적이 있을 것이다. 먹이기 가장 어려운 우리 가운데 가장 정신적인 자는 음식과 식탁 이웃을 갑자기 알아보고 실망하여 생기는 저 위험한 소화불량 — 후식의 혐오 — 을 안다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-282-a5ec89ec6d9b": {
       "korean": "한 그릇에서 함께 먹고 싶지 않은 시끄럽고 천민적인 시대에 던져진 그는 굶주림과 목마름으로, 끝내 그래도 ‘손을 댄다면’ 갑작스러운 혐오로 쉽게 몰락한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-283-c9e275b04a76": {
       "korean": "— ‘그가 나를 칭찬한다. 그러니 내 말이 옳다고 인정한다.’ 이 나귀 같은 추론은 우리 은둔자의 생애 절반을 망친다. 나귀들을 이웃과 친구로 데려오기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-283-d0f8dc049f1a": {
       "korean": "이 진정한 취향과 도덕성의 사치를 허용하려면 정신의 바보들 사이가 아니라, 오해와 잘못조차 그 섬세함 때문에 즐거움을 주는 사람들 사이에서 살아야 한다. — 아니면 비싼 대가를 치른다!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-283-f52600c1067e": {
       "korean": "애초에 칭찬하려 한다면 언제나 동의하지 않는 곳에서만 칭찬하는 것은 섬세하고 고귀한 자기 지배다. — 그렇지 않으면 자기 자신을 칭찬하는 셈이어서 훌륭한 취향에 어긋난다. 물론 줄곧 오해받을 정중한 구실과 계기를 주는 자기 지배다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-284-24949e61c135": {
       "korean": "자기 정념과 찬반을 뜻대로 지니거나 지니지 않고, 몇 시간 동안 그쪽으로 내려갈 것. 말처럼, 흔히 나귀처럼 올라탈 것. — 그 불과 어리석음을 모두 이용할 줄 알아야 하기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-284-367e863df672": {
       "korean": "우리에게 고독은 덕이다. 인간과 인간이 접촉하는 ‘사회’에서는 필연적으로 불결해질 수밖에 없음을 알아맞히는, 청결의 숭고한 성향과 충동이기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-284-3cc314a1fbc8": {
       "korean": "장난스럽고 명랑한 악덕인 예의를 동반자로 선택할 것.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-284-718af11962fe": {
       "korean": "300개의 전경과 검은 안경도 지킬 것. 아무도 우리 눈을, 더구나 우리의 ‘근거’를 들여다보아서는 안 되는 경우가 있기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-284-ad71453083bf": {
       "korean": "용기, 통찰, 공감, 고독이라는 네 덕의 주인으로 남을 것.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-284-b88947a101d8": {
       "korean": "모든 공동체는 어떤 식으로든, 어디서든, 언젠가 — ‘비속하게’ 만든다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-284-e3fb62e920a2": {
-      "korean": "엄청나고 자부심 강한 평정 속에 살 것. 언제나 피안에서 —.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "거대하고 긍지 높은 평정 속에서 살 것. 언제나 저 너머에 머물 것 —.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "immer jenseits",
+          "text": "종교적 ‘피안’에 산다는 뜻보다, 찬반의 정념과 사회적 소란에서 거리를 두고 언제나 그 ‘너머’에 서 있으라는 말이다. 작품 제목의 ‘선과 악 너머’도 울린다."
+        }
+      ]
     },
     "jgb-285-41cc10575d82": {
       "korean": "‘한 정신이 이해되기까지 몇 세기가 필요한가?’ — 이것도 척도이며, 정신과 별에 필요한 서열과 예법을 만든다. —",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-285-50dee84aa6e1": {
       "korean": "별의 왕국에서 일어나는 것과 같은 일이 일어난다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-285-64ee358eab0a": {
       "korean": "가장 큰 사건과 사상 — 가장 큰 사상은 가장 큰 사건이다 — 은 가장 늦게 이해된다. 그와 동시대의 세대는 그런 사건을 체험하지 않고 — 곁을 지나 살아간다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-285-eab0c3f765e1": {
       "korean": "가장 먼 별의 빛은 인간에게 가장 늦게 온다. 빛이 오기 전에는 인간은 그곳에 — 별이 있음을 부정한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-286-397849543098": {
       "korean": "— 그러나 반대 유형의 인간도 높은 곳에 서서 전망이 트여 있지만 — 아래를 내려다본다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-286-4e94f83df883": {
       "korean": "‘여기서는 전망이 트이고 정신이 고양된다.’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-287-0a0a77c70bf4": {
       "korean": "여기서 결정하고 서열을 정하는 것은 작품이 아니라 믿음이다. 오래된 종교 공식을 새롭고 깊은 의미로 다시 쓰자면, 고귀한 영혼이 자신에 관해 지닌 어떤 근본 확신, 찾거나 발견할 수 없고 어쩌면 잃을 수도 없는 어떤 것이 결정한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-287-11c0e996e99c": {
       "korean": "오늘날 예술가와 학자 가운데 작품으로 고귀한 것을 향한 깊은 욕망이 자신을 몰아간다는 것을 드러내는 자가 충분히 많다. 그러나 고귀한 것을 향한 이 필요는 고귀한 영혼 자체의 필요와 근본적으로 다르며, 바로 고귀함의 결여를 웅변적으로 위험하게 드러내는 표지다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-287-3938113d2b2c": {
       "korean": "— 그를 입증하는 것은 행위가 아니다. 행위는 언제나 다의적이고 헤아릴 수 없다. ‘작품’도 아니다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-287-3e237c3d04bd": {
       "korean": "— 고귀한 영혼은 자신을 경외한다. —",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-287-b9e4ab96bf2e": {
       "korean": "모든 것이 불투명하고 납빛으로 변하는, 시작된 천민 지배의 무겁고 흐린 하늘 아래서 고귀한 인간은 무엇으로 자신을 드러내며 우리는 무엇으로 알아보는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-287-ed167b04b3a0": {
       "korean": "— 무엇이 고귀한가? 오늘날 ‘고귀하다’라는 말은 우리에게 아직 무엇을 뜻하는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-288-57f960cb1c17": {
       "korean": "어떻게 움직이고 돌며 배신하는 눈 앞에 손을 가리든(— 마치 손은 배신하지 않는 것처럼!) 피할 수 없이 정신을 지닌 사람들이 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-288-595f76dd6fe3": {
-      "korean": "알아야 했던 갈리아니의 말처럼 ‘덕은 열광’이기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "왜냐하면, 이 점을 알 만했던 갈리아니의 말처럼 ‘덕은 열광’이기 때문이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "vertu est enthousiasme",
+          "text": "프랑스어로 ‘덕은 열광이다’라는 뜻이다. 페르디난도 갈리아니는 18세기 이탈리아의 성직자·경제사상가·재담가로, 니체가 가면과 위트의 대가로 높이 평가했다."
+        }
+      ]
     },
     "jgb-288-92e78a88565e": {
       "korean": "— 끝내 그들이 숨기는 것, 곧 정신을 가졌음이 언제나 드러난다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-288-e3edca45bc44": {
       "korean": "가능한 한 오래 속이고 자신보다 어리석은 체하는 가장 섬세한 수단의 하나 — 일상생활에서는 우산만큼이나 바람직한 일이다 — 는 열광이다. 덕 같은 그 부속물까지 포함해서.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-289-07d8b9bad7ae": {
       "korean": "은둔자의 글에서는 언제나 황야의 메아리, 속삭이는 어조와 고독의 수줍은 곁눈질도 들린다. 그의 가장 강한 말, 외침에서조차 새롭고 더 위험한 종류의 침묵과 숨김이 울린다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-289-9e54db5120cd": {
-      "korean": "모든 철학은 전경의 철학이다 — 은둔자는 이렇게 판단한다. ‘그가 여기서 멈춰 뒤와 주위를 돌아보고, 더 깊이 파지 않고 삽을 내려놓았다는 데는 자의적인 것이 있다. 불신하는 것도 있다.’ 모든 철학은 또 하나의 철학을 숨기고, 모든 견해는 은신처이며 모든 말은 가면이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "모든 철학은 전경의 철학이다 — 이것이 은둔자의 판단이다. ‘철학자가 바로 여기서 멈추어 뒤를 돌아보고 주위를 둘러보았다는 것, 여기서 더 깊이 파지 않고 삽을 내려놓았다는 것에는 어떤 자의성이 있다 — 거기에는 어떤 불신도 있다.’ 모든 철학은 또 하나의 철학을 숨긴다. 모든 견해는 또한 은신처이고, 모든 말은 또한 가면이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "전경과 가면",
+          "text": "니체는 철학자의 명시적 명제를 최종 진리라기보다 더 깊은 충동과 관점을 숨기는 전경으로 본다. 따라서 텍스트 해석은 ‘가면 뒤의 단 하나의 비밀’을 찾는 일보다, 겹겹의 관점과 자기은폐를 추적하는 일이 된다."
+        }
+      ]
     },
     "jgb-289-bd840d6b681b": {
       "korean": "밤낮으로 해마다 자기 영혼과 친밀하게 다투고 대화하며 홀로 앉아 있던 자, 미궁이거나 금광일 수 있는 동굴에서 동굴 곰이나 보물 탐색자, 보물지기와 용이 된 자의 개념은 끝내 특유의 어스름한 색, 깊이와 부패가 함께 풍기는 냄새, 지나가는 모두에게 차갑게 불어닥치는 전달할 수 없고 불쾌한 어떤 것을 얻는다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-289-e7acabe2964a": {
       "korean": "— 그렇다, 철학자가 ‘최종적이고 진정한’ 견해를 가질 수 있는지, 그에게 모든 동굴 뒤에 더 깊은 동굴이 놓여 있고 놓여 있어야 하는지 — 하나의 표면 위에 더 넓고 낯설고 풍요로운 세계가, 모든 근거 뒤와 모든 ‘근거 제시’ 아래에 심연이 있는지 의심할 것이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-289-f551bbc7619f": {
       "korean": "은둔자는 어떤 철학자도 — 철학자는 언제나 우선 은둔자였다고 해 보자 — 책에서 자신의 진정한 최종 견해를 표현했다고 믿지 않는다. 자기 안에 품은 것을 숨기려고 바로 책을 쓰는 것이 아닌가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-29-2f4e57b84611": {
       "korean": "그럴 충분한 권리가 있지만 꼭 그래야 할 필요는 없는 사람이 독립을 시도한다면, 그는 아마 강할 뿐 아니라 거의 흥에 겨울 만큼 대담하다는 사실을 입증한다.",
@@ -30368,108 +30477,144 @@
     },
     "jgb-290-79d21afc6e77": {
       "korean": "오해받으면 허영이 고통받을지 모른다. 그러나 이해받으면 마음과 공감이 고통받으며 늘 말한다. ‘아, 왜 그대들도 나처럼 어렵게 살려 하는가?’",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-290-8b481209f06f": {
       "korean": "모든 깊은 사상가는 오해받는 것보다 이해받는 것을 더 두려워한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-291-8ec31dd06b07": {
       "korean": "다양하고 거짓되고 인위적이고 불투명한 동물인 인간, 힘보다 간계와 영리함 때문에 다른 동물에게 섬뜩한 인간은 영혼을 한번 단순한 것으로 즐기려고 떳떳한 양심을 발명했다. 도덕 전체는 영혼을 바라보며 즐길 수 있게 하는 대담하고 긴 위조다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-291-be28f817a292": {
       "korean": "이 관점에서는 사람들이 보통 믿는 것보다 훨씬 많은 것이 ‘예술’이라는 개념에 속할지 모른다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-292-ba61c0ad3b49": {
       "korean": "철학자란 끊임없이 비범한 것을 체험하고 보고 듣고 의심하고 희망하고 꿈꾸는 인간이다. 자기 사상이 바깥에서, 위와 아래에서 오는 사건과 번개처럼 자신을 내리친다. 어쩌면 그 자신이 새로운 번개를 밴 뇌우이며, 주위에서 늘 우르릉거리고 웅성대고 갈라지며 섬뜩한 일이 벌어지는 운명적인 인간이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-292-c9d4457d0db0": {
       "korean": "철학자란 아, 자주 자신에게서 달아나고 자신을 두려워하지만 — 너무 호기심이 많아 거듭 ‘자신에게 돌아올’ 수밖에 없는 존재다…",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-293-16f3ed3397e6": {
-      "korean": "그런 몽상가 무리에서 ‘연민’이라 세례받은 것의 남자답지 못함이 언제나 가장 먼저 눈에 띈다고 나는 생각한다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "그런 열광자들의 무리에서 ‘연민’이라는 이름으로 세례받은 것의 비남성성은 언제나 가장 먼저 눈에 띈다고 나는 생각한다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "연민과 ‘비남성성’",
+          "text": "니체는 연민을 나약함과 여성성에 결부하는 당대의 성별 규범을 사용한다. ‘비남성적’이라는 규정이 연민의 실제 가치나 특정 성별의 본성을 입증하는 것은 아니다."
+        }
+      ]
     },
     "jgb-293-1f4ab96e63d1": {
       "korean": "연민을 설교하기까지 하는 자의 연민은!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-293-ad5fc90bfaa4": {
       "korean": "오늘날 유럽 거의 어디에나 고통에 대한 병적인 민감함과 과민함, 불쾌하게 절제되지 않는 불평, 종교와 철학의 잡동사니로 더 높은 것처럼 꾸미려는 유약함이 있다. — 고통을 향한 정식 숭배가 있다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-293-b5d35b365a5e": {
       "korean": "— 연민을 지닌다면, 자! 이 연민에는 가치가 있다!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-293-d8052162273d": {
       "korean": "— 나쁜 취향의 이 최신 유형을 강하고 철저히 추방해야 한다. 이에 맞서 좋은 부적 ‘즐거운 지식’을 가슴과 목에 두르기를 바란다. — 독일인이 이해하기 쉽게 말하면 ‘명랑한 학문’이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-293-f909ef1dc80e": {
       "korean": "그러나 고통받는 자의 연민이 무슨 상관인가!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-293-facbdc5528b2": {
-      "korean": "‘이것이 마음에 든다. 내 것으로 삼아 지키고 모두에게 맞서 방어하겠다’고 말하는 남자, 한 가지 일을 이끌고 결단을 관철하며 사상에 충실하고 여자를 붙들며 대담한 자를 벌하고 쓰러뜨릴 수 있는 남자, 자기 분노와 칼을 지녀 약하고 고통받고 억눌린 자와 동물까지 기꺼이 그에게 와 본래 속하는 남자, 요컨대 본래 주인인 남자가,",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "‘이것이 마음에 든다. 이것을 내 것으로 삼아 지키고 누구에게든 맞서 방어하겠다’고 말하는 남자, 한 가지 일을 이끌고 결단을 관철하며 하나의 사상에 충실하고, 여자를 붙들어 두며 무모한 자를 벌해 쓰러뜨릴 수 있는 남자, 자기 분노와 자기 칼을 지니고 약한 자와 고통받는 자와 곤궁한 자, 심지어 동물까지도 기꺼이 그에게 모여들어 본성상 그의 보호 아래 속하는 남자, 요컨대 본성상 주인인 남자가,",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "가부장적 ‘주인’의 형상",
+          "text": "남성이 여성·약자·동물을 소유하고 보호하는 자연적 주인이라는 가부장적 위계를 전제한다. 특히 ‘여자를 붙들어 두다’라는 표현은 여성을 독립된 주체가 아니라 남성의 지배 대상으로 둔다."
+        }
+      ]
     },
     "jgb-294-0734c705ad6d": {
       "korean": "신들은 조롱을 좋아한다. 성스러운 행위 중에도 웃음을 참지 못하는 듯하다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-294-44b3bfcf5898": {
-      "korean": "올림포스적 악덕. — 진정 영국인답게 생각하는 모든 머리에게 웃음의 평판을 나쁘게 만들려 한 철학자 — ‘웃음은 모든 생각하는 머리가 극복하려 애쓸 인간 본성의 나쁜 결함이다’(홉스) — 에 맞서, 나는 철학자를 그 웃음의 서열에 따라, 황금빛 웃음을 지을 수 있는 자에 이르기까지 서열화하고 싶다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "올림포스적 악덕. — 진정한 영국인답게 모든 사유하는 사람들 사이에서 웃음의 평판을 떨어뜨리려 한 저 철학자 — ‘웃음은 인간 본성의 몹쓸 결함이며, 사유하는 사람이라면 누구나 이를 극복하려 애쓸 것이다’(홉스) — 에 맞서, 나는 철학자들을 그들이 웃을 수 있는 수준에 따라, 황금빛 웃음을 지을 수 있는 자들에 이르기까지 서열화해 보고 싶다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "홉스와 웃음",
+          "text": "홉스는 웃음을 타인에 대한 갑작스러운 우월감과 연결했다. 니체는 이 엄숙한 불신을 뒤집어, 자신과 모든 진지한 것을 함께 웃어넘길 수 있는 능력을 철학자의 높은 등급으로 삼는다."
+        }
+      ]
     },
     "jgb-294-5ba534060051": {
       "korean": "여러 추론이 내게 강요하듯 신들도 철학한다고 해 보자. 그들이 모든 진지한 것을 희생시키며 초인간적이고 새로운 방식으로 웃을 줄도 안다고 나는 의심하지 않는다!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-1e8252fab964": {
       "korean": "더 다정하고 깨지기 쉽고 부서졌지만 아직 이름 없는 희망, 새로운 의지와 흐름, 새로운 반감과 역류로 가득해진다… 그런데 벗들이여, 나는 무엇을 하는가? 누구를 그대들에게 말하고 있는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-268dad854ec8": {
       "korean": "그러나 그런 신은 이 존엄한 잡동사니와 과시를 아무 데도 쓸 줄 모른다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-3112702bc8f3": {
       "korean": "그는 말할 것이다. ‘이것은 너와 네 부류, 그 밖에 필요한 자들을 위해 간직하라!",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-34173f3b0e3e": {
       "korean": "탁하고 두꺼운 얼음 아래의 선량함 한 방울과 달콤한 정신성을 알아맞히고, 진흙과 모래의 감옥에 오래 묻힌 모든 금 알갱이를 찾는 점지팡이인 마음의 천재다. 그 손길을 받은 사람은 누구나 더 풍요롭게 떠난다. 은총과 놀라움을 받은 것도, 낯선 재화로 행복하고 짓눌린 것도 아니라 자기 자신이 더 풍요로워지고 이전보다 새로워진다. 열리고 해빙의 바람을 맞아 속을 들여다보인 채, 어쩌면 더 불확실하고,",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-4ad5549a14a1": {
       "korean": "내가 이 의심스러운 정신과 신의 이름조차 말하지 않을 만큼 자신을 잊었는가? 그가 누구인지 그대들이 이미 스스로 알아맞힌 것이 아니라면 말이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-59bb65e13539": {
       "korean": "나는 인간을 좋아한다. 그를 어떻게 더 앞으로 나아가게 하고 지금보다 더 강하고 사악하고 깊게 만들지 자주 생각한다.’ — ‘더 강하고 사악하고 깊게?’ 나는 놀라 물었다.",
@@ -30478,18 +30623,21 @@
     },
     "jgb-295-5bbfbcce2504": {
       "korean": "디오니소스가 철학자이며 따라서 신들도 철학한다는 것부터 위험하지 않은 새 소식이며 바로 철학자 사이에서 불신을 일으킬지 모른다. — 벗들인 그대들 사이에서는 반대가 이미 덜하다. 다만 너무 늦고 때에 맞지 않은 소식일 수 있다. 그대들이 오늘날 신과 신들을 믿기 싫어한다고 내게 누가 알려 주었기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-5be4c4845896": {
       "korean": "내 이야기의 솔직함은 그대들의 엄격한 귀가 언제나 좋아하는 것보다 더 멀리 나아가야 할지도 모른다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-5c0077ed0b3d": {
       "korean": "인간의 관습에 따라 아름답고 장엄한 과시와 덕의 이름을 그에게 붙여도 된다면, 그의 탐구와 발견의 용기, 대담한 정직함, 진실성과 지혜 사랑을 크게 칭송해야 할 것이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-7194c55e10f1": {
       "korean": "여기서 동시에 알 수 있다. 이 신에게는 수치심만 부족한 것이 아니다. — 몇몇 점에서는 신들 모두가 우리 인간에게 배워도 좋다고 추측할 충분한 이유가 있다.",
@@ -30502,19 +30650,27 @@
       "notes": "Codex 직접 번역"
     },
     "jgb-295-785b638a420c": {
-      "korean": "그에게 제물을 바친 자다. 내가 그때 한 일을 이해한 사람을 찾지 못했기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "korean": "그에게 제물을 바친 마지막 사람이었다. 내가 그때 무엇을 했는지 이해한 사람을 단 한 명도 찾지 못했기 때문이다.",
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": [
+        {
+          "label": "디오니소스에게 바친 첫 열매",
+          "text": "니체가 자신의 초기 저작 《비극의 탄생》을 가리키는 자전적 언급이다. 그는 그 책을 디오니소스적 예술과 삶의 긍정을 복원하려 한 최초의 봉헌으로 다시 해석한다."
+        }
+      ]
     },
     "jgb-295-7c4792188f4b": {
       "korean": "어릴 때부터 늘 길 위와 타향에 있던 사람 누구에게나 그렇듯, 기묘하고 위험한 정신 여럿이 내 길을 가로질렀다. 무엇보다 방금 말한 자가 거듭 나타났다. 다름 아닌 저 위대하고 다의적인 시험하는 신 디오니소스다. 알다시피 나는 한때 깊은 은밀함과 경외 속에서 첫 열매를 그에게 바쳤다. 내 생각에는 내가 마지막으로,",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-7f28d2f73caa": {
       "korean": "분명 앞서 말한 신은 그런 대화에서 더 멀리, 훨씬 더 멀리 나아갔고 언제나 나보다 여러 걸음 앞섰다…",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-9380285770db": {
       "korean": "‘그렇다.’ 그가 다시 말했다. ‘더 강하고 사악하고 깊게. 또한 더 아름답게.’ — 시험하는 신은 방금 매혹적인 예의를 베푼 듯 알키온 같은 미소를 지었다.",
@@ -30523,8 +30679,9 @@
     },
     "jgb-295-94137ad89bd5": {
       "korean": "그사이 나는 이 신의 철학을 많이, 너무 많이, 앞서 말했듯 입에서 입으로 더 배웠다. 디오니소스 신의 마지막 제자이자 입문자인 내가 이제 마침내 벗들인 그대들에게 허락된 만큼 이 철학을 조금 맛보게 해도 되겠는가?",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-d4c1492fd7b6": {
       "korean": "우리 인간은 — 더 인간적이다…",
@@ -30533,13 +30690,15 @@
     },
     "jgb-295-db3e26d968bd": {
       "korean": "더 내밀하고 철저히 따르도록 강제하는 모습으로 보일 줄 아는 것이다. — 모든 시끄럽고 자만하는 것을 침묵시키고 귀 기울이는 법을 가르치는 마음의 천재, 거친 영혼을 매끈하게 하고 새로운 갈망을 맛보게 하는 천재 — 깊은 하늘이 비치도록 거울처럼 고요히 누우려는 갈망 —, 투박하고 성급한 손에 머뭇거리며 더 우아하게 잡는 법을 가르치는 천재, 숨겨지고 잊힌 보물,",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-e2e14a738eab": {
       "korean": "마음의 천재, 저 위대한 숨은 자, 시험하는 신이자 양심의 타고난 피리 부는 사나이가 지닌 마음의 천재. 그의 목소리는 모든 영혼의 지하 세계로 내려가며, 유혹의 배려와 주름이 담기지 않은 말이나 시선이 없다. 그의 거장다운 솜씨는 자기 모습이 아니라 따르는 자들이 그에게 더 가까이 밀려가고,",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-295-eb0fac0d325f": {
       "korean": "나는 — 내 벗은 몸을 가릴 이유가 없다!’ 짐작하겠지만 이런 종류의 신과 철학자에게는 어쩌면 수치심이 부족하다.",
@@ -30548,8 +30707,9 @@
     },
     "jgb-295-f4f2b1efc0d2": {
       "korean": "당연히 낮은 목소리로 해야 한다. 은밀하고 새롭고 낯설고 기묘하고 섬뜩한 여러 일을 다루기 때문이다.",
-      "status": "draft",
-      "notes": "Codex 직접 번역"
+      "status": "reviewed",
+      "notes": "Codex 직접 번역 · 통독 감수",
+      "footnotes": []
     },
     "jgb-296-462759871d86": {
       "korean": "아, 언제나 물러가고 소진된 뇌우와 누렇게 늙은 감정뿐이다!",
