@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "b60aebe41e31d135",
-  "dataVersion": "54c4d7de3c5af05d",
+  "dataVersion": "97c4d825e7352752",
   "quoteCount": 5393,
   "translatedCount": 5393,
-  "reviewedCount": 4205,
+  "reviewedCount": 4305,
   "pendingTranslationCount": 0,
   "works": {
     "jgb": {
@@ -35,15 +35,15 @@
       "titleDe": "Die fröhliche Wissenschaft",
       "titleKo": "즐거운 학문",
       "count": 1490,
-      "reviewedCount": 302
+      "reviewedCount": 402
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
       "count": 5393,
-      "bytes": 5884246,
-      "sha256": "d55ddfa7dfb2f8b0f2b302113831a2c5542c20a69a7d5695fdd0136ee67d9630"
+      "bytes": 5889423,
+      "sha256": "4a494a639d50e067b44adf68a8b5248b353e1ef7931cde5254a9e0c3a4dd1dd4"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -72,8 +72,8 @@
     "fw": {
       "path": "data/fw.json",
       "count": 1490,
-      "bytes": 1691730,
-      "sha256": "cf10fb73e25dcbb4c9866ad6c325e9d7f44f9425a70044237a801f1a3c4a0785"
+      "bytes": 1696907,
+      "sha256": "d0935a20700af83bf875caec1e96263a076c4ce2f74a8436ffca3295b3c9bd76"
     }
   },
   "sources": "sources/sources.json"
