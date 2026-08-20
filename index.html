@@ -28,10 +28,16 @@
             <small>NIETZSCHE · IM ORIGINAL</small>
           </span>
         </a>
-        <button class="icon-button" id="open-search" type="button" aria-label="구절 검색">
-          <span aria-hidden="true">⌕</span>
-          <span class="desktop-label">검색</span>
-        </button>
+        <div class="header-actions">
+          <button class="icon-button" id="open-toc" type="button" aria-label="작품 목차 열기">
+            <span aria-hidden="true">☷</span>
+            <span class="desktop-label">목차</span>
+          </button>
+          <button class="icon-button" id="open-search" type="button" aria-label="구절 검색">
+            <span aria-hidden="true">⌕</span>
+            <span class="desktop-label">검색</span>
+          </button>
+        </div>
       </header>
 
       <section class="intro" aria-labelledby="page-title">
@@ -76,7 +82,10 @@
             <p id="source-work">—</p>
             <p id="source-location">—</p>
           </div>
-          <a id="source-link" href="#" target="_blank" rel="noreferrer">원전 ↗</a>
+          <div class="source-links">
+            <button id="open-current-toc" type="button">목차에서 보기</button>
+            <a id="source-link" href="#" target="_blank" rel="noreferrer">원전 ↗</a>
+          </div>
         </div>
 
         <div class="quote-actions" aria-label="구절 이동">
@@ -99,7 +108,7 @@
         <p class="section-number">01 · THE ARCHIVE</p>
         <h2 id="about-title">문장을 떼어내되,<br />출전은 떼어내지 않습니다.</h2>
         <div class="about-grid">
-          <p>다섯 작품의 독일어 원문을 작품·부·절·문단·문장 단위로 나누고, 원문에서 만든 안정 ID를 부여했습니다. 번역이 고쳐져도 ID는 바뀌지 않습니다. 전체 5,393개 레코드에 독일어 원문에서 직접 만든 한국어 번역을 수록하고 작품별로 통독 감수하고 있습니다.</p>
+          <p>다섯 작품의 독일어 원문을 작품·부·절·문단·문장 단위로 나누고, 원문에서 만든 안정 ID를 부여했습니다. 번역이 고쳐져도 ID는 바뀌지 않습니다. 전체 5,395개 레코드에 독일어 원문에서 직접 만든 한국어 번역을 수록하고 전량 통독 감수했습니다.</p>
           <dl>
             <div><dt id="stat-total">—</dt><dd>전체 구절</dd></div>
             <div><dt id="stat-jgb">—</dt><dd>선악의 저편</dd></div>
@@ -126,6 +135,22 @@
         </nav>
       </footer>
     </main>
+
+    <div class="toc-panel" id="toc-panel" hidden>
+      <div class="toc-sheet" role="dialog" aria-modal="true" aria-labelledby="toc-title">
+        <div class="toc-header">
+          <div>
+            <p class="kicker">INHALTSVERZEICHNIS</p>
+            <h2 id="toc-title">작품 목차</h2>
+            <p>작품과 부를 고른 뒤 원하는 절로 바로 이동합니다.</p>
+          </div>
+          <button class="icon-button" id="close-toc" type="button" aria-label="목차 닫기">×</button>
+        </div>
+        <nav class="toc-works" id="toc-works" aria-label="목차 작품 선택"></nav>
+        <p class="toc-summary" id="toc-summary" aria-live="polite"></p>
+        <div class="toc-content" id="toc-content"></div>
+      </div>
+    </div>
 
     <div class="search-panel" id="search-panel" hidden>
       <div class="search-sheet" role="dialog" aria-modal="true" aria-labelledby="search-title">

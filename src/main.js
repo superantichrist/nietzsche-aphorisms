@@ -6,7 +6,18 @@ const state = {
   manifest: null,
   current: null,
   work: "all",
+  tocWork: "jgb",
   showGerman: localStorage.getItem("showGerman") !== "false",
+};
+
+const WORK_ORDER = ["jgb", "gm", "ac", "gd", "fw"];
+const UNNUMBERED_SECTIONS = new Set(["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"]);
+const SECTION_LABELS = {
+  Vorrede: "서문",
+  Nachgesang: "후가",
+  "Wahre-Welt": "‘참된 세계’가 마침내 우화가 된 과정",
+  Hammer: "망치가 말하다",
+  Gesetz: "그리스도교에 반대하는 법",
 };
 
 const elements = Object.fromEntries(
@@ -14,7 +25,8 @@ const elements = Object.fromEntries(
     "quote-card", "quote-number", "translation-badge", "quote-korean", "quote-german",
     "german-wrap", "toggle-german", "source-work", "source-location", "source-link",
     "footnotes-wrap", "footnotes", "previous", "next", "random", "copy-quote",
-    "copy-question", "share", "permalink-status", "open-search",
+    "copy-question", "share", "permalink-status", "open-search", "open-toc",
+    "open-current-toc", "close-toc", "toc-panel", "toc-works", "toc-summary", "toc-content",
     "close-search", "search-panel", "search-input", "search-count", "search-results",
     "stat-total", "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw",
     "stat-translated", "stat-reviewed", "stat-pending",
@@ -35,7 +47,7 @@ function todayKey() {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 }
 
-function applyFilter(work, { keepCurrent = false } = {}) {
+function setWorkFilter(work) {
   state.work = work;
   state.filtered = work === "all" ? state.quotes : state.quotes.filter((quote) => quote.work === work);
   document.querySelectorAll(".filter").forEach((button) => {
@@ -43,6 +55,10 @@ function applyFilter(work, { keepCurrent = false } = {}) {
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
   });
+}
+
+function applyFilter(work, { keepCurrent = false } = {}) {
+  setWorkFilter(work);
   if (!keepCurrent || !state.current || !state.filtered.includes(state.current)) {
     showQuote(state.filtered[fnv1a(`${todayKey()}:${work}`) % state.filtered.length]);
   }
@@ -50,8 +66,7 @@ function applyFilter(work, { keepCurrent = false } = {}) {
 
 function locationLabel(quote) {
   const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
-  const unnumbered = new Set(["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"]);
-  const section = unnumbered.has(quote.section) ? "" : ` · §${quote.section}`;
+  const section = UNNUMBERED_SECTIONS.has(quote.section) ? "" : ` · §${quote.section}`;
   const title = quote.sectionTitleDe ? ` · ${quote.sectionTitleDe}` : "";
   const paragraph = Number.isInteger(quote.paragraph) ? quote.paragraph : 0;
   const sentenceIndex = Number.isInteger(quote.sentence) ? quote.sentence : 0;
@@ -193,16 +208,147 @@ async function shareCurrent() {
   }
 }
 
+function sectionHeading(quote) {
+  const base = UNNUMBERED_SECTIONS.has(quote.section)
+    ? (SECTION_LABELS[quote.section] || quote.section)
+    : `§${quote.section}`;
+  return quote.sectionTitleDe ? `${base} · ${quote.sectionTitleDe}` : base;
+}
+
+function sameSection(left, right) {
+  return Boolean(left && right)
+    && left.work === right.work
+    && left.part === right.part
+    && left.section === right.section;
+}
+
+function tocGroups(work) {
+  const parts = new Map();
+  state.quotes.filter((quote) => quote.work === work).forEach((quote) => {
+    if (!parts.has(quote.part)) {
+      parts.set(quote.part, {
+        key: quote.part,
+        titleKo: quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part),
+        titleDe: quote.partTitleDe || "",
+        sections: new Map(),
+      });
+    }
+    const part = parts.get(quote.part);
+    if (!part.sections.has(quote.section)) {
+      part.sections.set(quote.section, { first: quote, count: 0 });
+    }
+    part.sections.get(quote.section).count += 1;
+  });
+  return [...parts.values()].map((part) => ({ ...part, sections: [...part.sections.values()] }));
+}
+
+function renderToc(work) {
+  state.tocWork = work;
+  elements["toc-works"].replaceChildren();
+  WORK_ORDER.forEach((workKey) => {
+    const first = state.quotes.find((quote) => quote.work === workKey);
+    if (!first) return;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = first.workTitleKo;
+    button.classList.toggle("active", workKey === work);
+    button.setAttribute("aria-pressed", String(workKey === work));
+    button.addEventListener("click", () => renderToc(workKey));
+    elements["toc-works"].append(button);
+  });
+
+  const groups = tocGroups(work);
+  const sectionCount = groups.reduce((total, part) => total + part.sections.length, 0);
+  const quoteCount = groups.reduce(
+    (total, part) => total + part.sections.reduce((subtotal, section) => subtotal + section.count, 0),
+    0
+  );
+  const firstQuote = groups[0]?.sections[0]?.first;
+  elements["toc-summary"].textContent = firstQuote
+    ? `${firstQuote.workTitleKo} · ${sectionCount.toLocaleString("ko-KR")}개 절 · ${quoteCount.toLocaleString("ko-KR")}개 구절`
+    : "목차가 없습니다.";
+
+  elements["toc-content"].replaceChildren();
+  const fragment = document.createDocumentFragment();
+  groups.forEach((part) => {
+    const section = document.createElement("section");
+    section.className = "toc-part";
+    const heading = document.createElement("div");
+    heading.className = "toc-part-heading";
+    const title = document.createElement("h3");
+    title.textContent = part.titleKo;
+    heading.append(title);
+    if (part.titleDe && part.titleDe !== part.titleKo) {
+      const original = document.createElement("p");
+      original.textContent = part.titleDe;
+      heading.append(original);
+    }
+    const list = document.createElement("div");
+    list.className = "toc-sections";
+    part.sections.forEach((item) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "toc-section";
+      const active = sameSection(item.first, state.current);
+      button.classList.toggle("current", active);
+      if (active) button.setAttribute("aria-current", "location");
+      const label = document.createElement("strong");
+      label.textContent = sectionHeading(item.first);
+      const count = document.createElement("span");
+      count.textContent = `${item.count.toLocaleString("ko-KR")}개`;
+      button.append(label, count);
+      button.addEventListener("click", () => {
+        setWorkFilter(work);
+        showQuote(item.first, { historyMode: "push" });
+        closeToc(false);
+        elements["quote-card"].scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      list.append(button);
+    });
+    section.append(heading, list);
+    fragment.append(section);
+  });
+  elements["toc-content"].append(fragment);
+}
+
+function syncModalState() {
+  const open = !elements["search-panel"].hidden || !elements["toc-panel"].hidden;
+  document.body.classList.toggle("modal-open", open);
+}
+
+function openToc() {
+  if (!state.quotes.length) {
+    showUtilityStatus("목차를 불러오는 중입니다.");
+    return;
+  }
+  if (!elements["search-panel"].hidden) closeSearch(false);
+  const work = state.current?.work || (WORK_ORDER.includes(state.work) ? state.work : state.tocWork);
+  renderToc(work);
+  elements["toc-panel"].hidden = false;
+  syncModalState();
+  window.setTimeout(() => {
+    elements["close-toc"].focus();
+    elements["toc-content"].querySelector(".toc-section.current")?.scrollIntoView({ block: "center" });
+  }, 30);
+}
+
+function closeToc(restoreFocus = true) {
+  elements["toc-panel"].hidden = true;
+  syncModalState();
+  if (restoreFocus) elements["open-toc"].focus();
+}
+
 function openSearch() {
+  if (!elements["toc-panel"].hidden) closeToc(false);
   elements["search-panel"].hidden = false;
-  document.body.classList.add("modal-open");
+  syncModalState();
   window.setTimeout(() => elements["search-input"].focus(), 30);
 }
 
-function closeSearch() {
+function closeSearch(restoreFocus = true) {
   elements["search-panel"].hidden = true;
-  document.body.classList.remove("modal-open");
-  elements["open-search"].focus();
+  syncModalState();
+  if (restoreFocus) elements["open-search"].focus();
 }
 
 function runSearch(query) {
@@ -251,6 +397,12 @@ function bindEvents() {
     updateGermanVisibility();
   });
   elements["open-search"].addEventListener("click", openSearch);
+  elements["open-toc"].addEventListener("click", openToc);
+  elements["open-current-toc"].addEventListener("click", openToc);
+  elements["close-toc"].addEventListener("click", () => closeToc());
+  elements["toc-panel"].addEventListener("click", (event) => {
+    if (event.target === elements["toc-panel"]) closeToc();
+  });
   elements["close-search"].addEventListener("click", closeSearch);
   elements["search-panel"].addEventListener("click", (event) => {
     if (event.target === elements["search-panel"]) closeSearch();
@@ -261,7 +413,10 @@ function bindEvents() {
     searchTimer = setTimeout(() => runSearch(event.target.value), 130);
   });
   window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !elements["search-panel"].hidden) closeSearch();
+    if (event.key === "Escape") {
+      if (!elements["toc-panel"].hidden) closeToc();
+      else if (!elements["search-panel"].hidden) closeSearch();
+    }
     if (/INPUT|TEXTAREA/.test(document.activeElement?.tagName)) return;
     if (event.key === "ArrowLeft") move(-1);
     if (event.key === "ArrowRight") move(1);
