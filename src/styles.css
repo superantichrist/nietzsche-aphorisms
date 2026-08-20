@@ -325,9 +325,15 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
 .toc-summary { margin: 17px 0 4px; color: var(--gold); font: 10px Arial, sans-serif; letter-spacing: 0.04em; }
 .toc-content { display: grid; gap: 30px; }
 .toc-part { padding-top: 27px; border-top: 1px solid var(--line); }
-.toc-part-heading { display: grid; gap: 5px; margin-bottom: 14px; }
-.toc-part-heading h3 { margin: 0; color: #e3d8c5; font-size: 19px; font-weight: 400; line-height: 1.4; }
-.toc-part-heading p { margin: 0; color: var(--muted); font-size: 11px; font-style: italic; line-height: 1.5; }
+.toc-part-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 14px; cursor: pointer; list-style: none; }
+.toc-part-heading::-webkit-details-marker { display: none; }
+.toc-part-copy { display: grid; min-width: 0; gap: 5px; }
+.toc-part-copy strong { color: #e3d8c5; font-size: 19px; font-weight: 400; line-height: 1.4; }
+.toc-part-copy small { color: var(--muted); font-size: 11px; font-style: italic; line-height: 1.5; }
+.toc-part-count { flex: 0 0 auto; color: var(--gold); font: 9px Arial, sans-serif; }
+.toc-part-count::after { content: " ＋"; }
+.toc-part[open] .toc-part-count::after { content: " －"; }
+.toc-part:not([open]) .toc-part-heading { margin-bottom: 0; }
 .toc-sections { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 7px; }
 .toc-section { display: flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 12px; border: 1px solid rgba(201, 163, 92, 0.14); background: rgba(255,255,255,0.018); text-align: left; cursor: pointer; }
 .toc-section:hover { border-color: rgba(201, 163, 92, 0.4); }

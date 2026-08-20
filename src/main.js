@@ -10,7 +10,7 @@ const state = {
   showGerman: localStorage.getItem("showGerman") !== "false",
 };
 
-const WORK_ORDER = ["jgb", "gm", "ac", "gd", "fw"];
+const WORK_ORDER = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf"];
 const UNNUMBERED_SECTIONS = new Set(["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"]);
 const SECTION_LABELS = {
   Vorrede: "서문",
@@ -28,7 +28,7 @@ const elements = Object.fromEntries(
     "copy-question", "share", "permalink-status", "open-search", "open-toc",
     "open-current-toc", "close-toc", "toc-panel", "toc-works", "toc-summary", "toc-content",
     "close-search", "search-panel", "search-input", "search-count", "search-results",
-    "stat-total", "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw",
+    "stat-total", "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw", "stat-za", "stat-eh", "stat-nf",
     "stat-translated", "stat-reviewed", "stat-pending",
   ].map((id) => [id, document.getElementById(id)])
 );
@@ -66,7 +66,9 @@ function applyFilter(work, { keepCurrent = false } = {}) {
 
 function locationLabel(quote) {
   const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
-  const section = UNNUMBERED_SECTIONS.has(quote.section) ? "" : ` · §${quote.section}`;
+  const section = quote.sectionLabel
+    ? ` · ${quote.sectionLabel}`
+    : UNNUMBERED_SECTIONS.has(quote.section) ? "" : ` · §${quote.section}`;
   const title = quote.sectionTitleDe ? ` · ${quote.sectionTitleDe}` : "";
   const paragraph = Number.isInteger(quote.paragraph) ? quote.paragraph : 0;
   const sentenceIndex = Number.isInteger(quote.sentence) ? quote.sentence : 0;
@@ -209,9 +211,9 @@ async function shareCurrent() {
 }
 
 function sectionHeading(quote) {
-  const base = UNNUMBERED_SECTIONS.has(quote.section)
+  const base = quote.sectionLabel || (UNNUMBERED_SECTIONS.has(quote.section)
     ? (SECTION_LABELS[quote.section] || quote.section)
-    : `§${quote.section}`;
+    : `§${quote.section}`);
   return quote.sectionTitleDe ? `${base} · ${quote.sectionTitleDe}` : base;
 }
 
@@ -270,40 +272,57 @@ function renderToc(work) {
 
   elements["toc-content"].replaceChildren();
   const fragment = document.createDocumentFragment();
-  groups.forEach((part) => {
-    const section = document.createElement("section");
+  const lazyParts = groups.length > 20;
+  groups.forEach((part, partIndex) => {
+    const section = document.createElement("details");
     section.className = "toc-part";
-    const heading = document.createElement("div");
+    const activePart = part.sections.some((item) => sameSection(item.first, state.current));
+    section.open = !lazyParts || activePart || (state.current?.work !== work && partIndex === 0);
+    const heading = document.createElement("summary");
     heading.className = "toc-part-heading";
-    const title = document.createElement("h3");
+    const copy = document.createElement("span");
+    copy.className = "toc-part-copy";
+    const title = document.createElement("strong");
     title.textContent = part.titleKo;
-    heading.append(title);
+    copy.append(title);
     if (part.titleDe && part.titleDe !== part.titleKo) {
-      const original = document.createElement("p");
+      const original = document.createElement("small");
       original.textContent = part.titleDe;
-      heading.append(original);
+      copy.append(original);
     }
+    const partCount = document.createElement("span");
+    partCount.className = "toc-part-count";
+    partCount.textContent = `${part.sections.length.toLocaleString("ko-KR")}개 절`;
+    heading.append(copy, partCount);
     const list = document.createElement("div");
     list.className = "toc-sections";
-    part.sections.forEach((item) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "toc-section";
-      const active = sameSection(item.first, state.current);
-      button.classList.toggle("current", active);
-      if (active) button.setAttribute("aria-current", "location");
-      const label = document.createElement("strong");
-      label.textContent = sectionHeading(item.first);
-      const count = document.createElement("span");
-      count.textContent = `${item.count.toLocaleString("ko-KR")}개`;
-      button.append(label, count);
-      button.addEventListener("click", () => {
-        setWorkFilter(work);
-        showQuote(item.first, { historyMode: "push" });
-        closeToc(false);
-        elements["quote-card"].scrollIntoView({ behavior: "smooth", block: "center" });
+    const renderPartSections = () => {
+      if (list.dataset.rendered) return;
+      part.sections.forEach((item) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "toc-section";
+        const active = sameSection(item.first, state.current);
+        button.classList.toggle("current", active);
+        if (active) button.setAttribute("aria-current", "location");
+        const label = document.createElement("strong");
+        label.textContent = sectionHeading(item.first);
+        const count = document.createElement("span");
+        count.textContent = `${item.count.toLocaleString("ko-KR")}개`;
+        button.append(label, count);
+        button.addEventListener("click", () => {
+          setWorkFilter(work);
+          showQuote(item.first, { historyMode: "push" });
+          closeToc(false);
+          elements["quote-card"].scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+        list.append(button);
       });
-      list.append(button);
+      list.dataset.rendered = "true";
+    };
+    if (section.open) renderPartSections();
+    section.addEventListener("toggle", () => {
+      if (section.open) renderPartSections();
     });
     section.append(heading, list);
     fragment.append(section);
@@ -444,6 +463,9 @@ async function init() {
     elements["stat-ac"].textContent = state.manifest.works.ac.count.toLocaleString("ko-KR");
     elements["stat-gd"].textContent = state.manifest.works.gd.count.toLocaleString("ko-KR");
     elements["stat-fw"].textContent = state.manifest.works.fw.count.toLocaleString("ko-KR");
+    elements["stat-za"].textContent = state.manifest.works.za.count.toLocaleString("ko-KR");
+    elements["stat-eh"].textContent = state.manifest.works.eh.count.toLocaleString("ko-KR");
+    elements["stat-nf"].textContent = state.manifest.works.nf.count.toLocaleString("ko-KR");
     elements["stat-translated"].textContent = state.manifest.translatedCount.toLocaleString("ko-KR");
     elements["stat-reviewed"].textContent = state.manifest.reviewedCount.toLocaleString("ko-KR");
     elements["stat-pending"].textContent = state.manifest.pendingTranslationCount.toLocaleString("ko-KR");

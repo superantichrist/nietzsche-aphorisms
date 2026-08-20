@@ -1,11 +1,12 @@
 {
   "schemaVersion": 2,
-  "corpusVersion": "924c92272e658dc0",
-  "dataVersion": "59aeb73c79c3cd80",
-  "quoteCount": 5395,
-  "translatedCount": 5395,
+  "corpusVersion": "cc5fb030eb9fcd2a",
+  "dataVersion": "e24ffffaaa8ca62b",
+  "quoteCount": 17962,
+  "translatedCount": 5465,
+  "widgetQuoteCount": 5465,
   "reviewedCount": 5395,
-  "pendingTranslationCount": 0,
+  "pendingTranslationCount": 12497,
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",
@@ -36,44 +37,86 @@
       "titleKo": "즐거운 학문",
       "count": 1492,
       "reviewedCount": 1492
+    },
+    "za": {
+      "titleDe": "Also sprach Zarathustra",
+      "titleKo": "차라투스트라는 이렇게 말했다",
+      "count": 3588,
+      "reviewedCount": 0
+    },
+    "eh": {
+      "titleDe": "Ecce homo",
+      "titleKo": "이 사람을 보라",
+      "count": 577,
+      "reviewedCount": 0
+    },
+    "nf": {
+      "titleDe": "Nachgelassene Fragmente 1885–1888",
+      "titleKo": "후기 유고 1885–1888",
+      "count": 8402,
+      "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 5395,
-      "bytes": 5953248,
-      "sha256": "67b6b5a8013eba89744e3c45f8a92dffc99d3d43cb8e563a906e9d8999820aa1"
+      "count": 17962,
+      "bytes": 15580234,
+      "sha256": "05f4cee4c97827806db9b1fe1a55575a580c7ecca0530d014267edb4e0a1fbe8"
+    },
+    "widget": {
+      "path": "data/widget.json",
+      "count": 5465,
+      "bytes": 4522255,
+      "sha256": "9707ef547afdaaa60c1603ef31380cd8016a5897dd53554d8dcb184bd89cefa3"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1717,
-      "bytes": 1718254,
-      "sha256": "4451cad7f05effc6aa3f91feaf03025cb182e03e12e729f892c8c942902d6231"
+      "bytes": 1783500,
+      "sha256": "fd5d875e687f0eb8b4ef2f4fdf28377de29ec098086e22e2797b1c076cf633ec"
     },
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1308785,
-      "sha256": "322c55e281169a0c530935cc2fb82756251ac4d1838190937f9aeedf73a75ac2"
+      "bytes": 1356703,
+      "sha256": "a4db3b7e14b6d3221068de3946c79c31b22cd8a108419386d81603ff97ccf307"
     },
     "ac": {
       "path": "data/ac.json",
       "count": 439,
-      "bytes": 553435,
-      "sha256": "95b17223aa1267e6b9ddd4bb31001b42afb58bc8d32cd9059e8b886cbe5883be"
+      "bytes": 570117,
+      "sha256": "d42be6094d648f9af8f4d788267baeead8058e4f1ca4d0b197313e9cfa7c7c0f"
     },
     "gd": {
       "path": "data/gd.json",
       "count": 486,
-      "bytes": 612054,
-      "sha256": "305fb62e3c5261b408ef9e1632ac387e23d6224933161b6e377bb1042a24c44d"
+      "bytes": 630522,
+      "sha256": "17540cb727a7af8830bc887284adaa0445f239e500b09a4b96b1a9e21da234b5"
     },
     "fw": {
       "path": "data/fw.json",
       "count": 1492,
-      "bytes": 1760732,
-      "sha256": "5b5a79a68e9d8cd0c2c48432d7c6faf3be1bdcab8f069b776f2c9bb30e7336e6"
+      "bytes": 1817428,
+      "sha256": "3843cc1887a0d38e851fd2ed83f96d9436379430fd0057a99ccc7d59035f4fa5"
+    },
+    "za": {
+      "path": "data/za.json",
+      "count": 3588,
+      "bytes": 2505670,
+      "sha256": "bf5822e2ced663d2327783ecd3904263864626864e316d42926dd48228113971"
+    },
+    "eh": {
+      "path": "data/eh.json",
+      "count": 577,
+      "bytes": 476745,
+      "sha256": "7b814b2242881f5a2f5b00a2b063fa4127e569a0a0742864bd1ecef4ebb0dd53"
+    },
+    "nf": {
+      "path": "data/nf.json",
+      "count": 8402,
+      "bytes": 6439570,
+      "sha256": "c0f0538ab1fe6677b23318ba284a01d4f6602989f2c37e7af2a85bdc7b87f68a"
     }
   },
   "sources": "sources/sources.json"

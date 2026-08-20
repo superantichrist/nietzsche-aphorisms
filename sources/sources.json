@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "edition": {
     "name": "Digitale Kritische Gesamtausgabe Werke und Briefe (eKGWB)",
     "editors": "Giorgio Colli, Mazzino Montinari; digital edition edited by Paolo D’Iorio",
@@ -82,6 +82,42 @@
       "crossCheck": {
         "scanUrl": "https://commons.wikimedia.org/wiki/File:Die_fr%C3%B6hliche_Wissenschaft-1887-Nietzsche.djvu",
         "publication": "Leipzig: E. W. Fritzsch, 1887"
+      }
+    },
+    "za": {
+      "title": "Also sprach Zarathustra. Ein Buch für Alle und Keinen",
+      "publication": "Parts I–III: 1883–1884; Part IV privately printed in 1885",
+      "canonicalUrl": "https://www.nietzschesource.org/texts/eKGWB/Za",
+      "buildInput": {
+        "manifest": "sources/extended_sources.json",
+        "files": [
+          "sources/raw/za-i-ekgwb-mirror.md",
+          "sources/raw/za-ii-ekgwb-mirror.md",
+          "sources/raw/za-iii-ekgwb-mirror.md",
+          "sources/raw/za-iv-ekgwb-mirror.md"
+        ],
+        "snapshotCommit": "2e7114646ef4cff4010a736a35efa32aad71fe75"
+      }
+    },
+    "eh": {
+      "title": "Ecce homo. Wie man wird, was man ist",
+      "publication": "Written 1888; first published in 1908",
+      "canonicalUrl": "https://www.nietzschesource.org/texts/eKGWB/EH",
+      "buildInput": {
+        "manifest": "sources/extended_sources.json",
+        "files": ["sources/raw/eh-ekgwb-mirror.md"],
+        "snapshotCommit": "2e7114646ef4cff4010a736a35efa32aad71fe75"
+      }
+    },
+    "nf": {
+      "title": "Nachgelassene Fragmente 1885–1888",
+      "publication": "Posthumous fragments in the Colli–Montinari critical edition, grouped by notebook and fragment number",
+      "canonicalUrl": "https://www.nietzschesource.org/texts/eKGWB/NF",
+      "editorialNote": "This corpus preserves the critical-edition Nachlass numbering and does not reproduce the editorial compilation Der Wille zur Macht.",
+      "buildInput": {
+        "manifest": "sources/extended_sources.json",
+        "filePattern": "sources/raw/nf-1885-*.md through sources/raw/nf-1888-*.md",
+        "snapshotCommit": "2e7114646ef4cff4010a736a35efa32aad71fe75"
       }
     }
   }

@@ -43,6 +43,26 @@ WORKS = {
         "title_ko": "즐거운 학문",
         "source_file": "sources/raw/fw-ekgwb-mirror.md",
     },
+    "za": {
+        "title_de": "Also sprach Zarathustra",
+        "title_ko": "차라투스트라는 이렇게 말했다",
+        "source_files": [
+            "sources/raw/za-i-ekgwb-mirror.md",
+            "sources/raw/za-ii-ekgwb-mirror.md",
+            "sources/raw/za-iii-ekgwb-mirror.md",
+            "sources/raw/za-iv-ekgwb-mirror.md",
+        ],
+    },
+    "eh": {
+        "title_de": "Ecce homo",
+        "title_ko": "이 사람을 보라",
+        "source_file": "sources/raw/eh-ekgwb-mirror.md",
+    },
+    "nf": {
+        "title_de": "Nachgelassene Fragmente 1885–1888",
+        "title_ko": "후기 유고 1885–1888",
+        "source_glob": "sources/raw/nf-*.md",
+    },
 }
 
 WORK_ORDER = tuple(WORKS)
@@ -98,6 +118,115 @@ FW_PARTS = {
     "Anhang": ("Anhang", "부록 — 자유로운 새 왕자의 노래"),
 }
 
+ZA_PARTS = {
+    "I": ("Erster Theil", "제1부"),
+    "II": ("Zweiter Theil", "제2부"),
+    "III": ("Dritter Theil", "제3부"),
+    "IV": ("Vierter und letzter Theil", "제4부"),
+}
+
+ZA_CHAPTERS = {
+    "Zarathustra’s Vorrede": ("Vorrede", "차라투스트라의 서문"),
+    "Von den drei Verwandlungen": ("Verwandlungen", "세 가지 변신에 관하여"),
+    "Von den Lehrstühlen der Tugend": ("Lehrstuehle", "덕을 가르치는 강단에 관하여"),
+    "Von den Hinterweltlern": ("Hinterweltler", "배후세계를 믿는 자들에 관하여"),
+    "Von den Verächtern des Leibes": ("Leib", "몸을 경멸하는 자들에 관하여"),
+    "Von den Freuden- und Leidenschaften": ("Freuden", "기쁨과 열정에 관하여"),
+    "Vom bleichen Verbrecher": ("Verbrecher", "창백한 범죄자에 관하여"),
+    "Vom Lesen und Schreiben": ("Lesen", "읽기와 쓰기에 관하여"),
+    "Vom Baum am Berge": ("Baum", "산 위의 나무에 관하여"),
+    "Von den Predigern des Todes": ("Prediger", "죽음을 설교하는 자들에 관하여"),
+    "Vom Krieg und Kriegsvolke": ("Krieg", "전쟁과 전사들에 관하여"),
+    "Vom neuen Götzen": ("Goetzen", "새로운 우상에 관하여"),
+    "Von den Fliegen des Marktes": ("Fliegen", "시장의 파리들에 관하여"),
+    "Von der Keuschheit": ("Keuschheit", "순결에 관하여"),
+    "Vom Freunde": ("Freund", "벗에 관하여"),
+    "Von tausend und Einem Ziele": ("Ziele", "천 개와 하나의 목표에 관하여"),
+    "Von der Nächstenliebe": ("Naechstenliebe", "이웃 사랑에 관하여"),
+    "Vom Wege des Schaffenden": ("Schaffenden", "창조하는 자의 길에 관하여"),
+    "Von alten und jungen Weiblein": ("Weiblein", "늙은 여인과 젊은 여인에 관하여"),
+    "Vom Biss der Natter": ("Natter", "독사의 물림에 관하여"),
+    "Von Kind und Ehe": ("Kind-Ehe", "아이와 결혼에 관하여"),
+    "Vom freien Tode": ("Tod", "자유로운 죽음에 관하여"),
+    "Von der schenkenden Tugend": ("Tugend", "베푸는 덕에 관하여"),
+    "Das Kind mit dem Spiegel": ("Kind", "거울을 든 아이"),
+    "Auf den glückseligen Inseln": ("Inseln", "행복의 섬들에서"),
+    "Von den Mitleidigen": ("Mitleidige", "연민하는 자들에 관하여"),
+    "Von den Priestern": ("Priester", "사제들에 관하여"),
+    "Von den Tugendhaften": ("Tugendhaften", "덕 있는 자들에 관하여"),
+    "Vom Gesindel": ("Gesindel", "천민에 관하여"),
+    "Von den Taranteln": ("Taranteln", "타란툴라들에 관하여"),
+    "Von den berühmten Weisen": ("Weise", "유명한 현자들에 관하여"),
+    "Das Nachtlied": ("Nachtlied", "밤의 노래"),
+    "Das Tanzlied": ("Tanzlied", "춤의 노래"),
+    "Das Grablied": ("Grablied", "무덤의 노래"),
+    "Von der Selbst-Ueberwindung": ("Selbst-Ueberwindung", "자기 극복에 관하여"),
+    "Von den Erhabenen": ("Erhabene", "숭고한 자들에 관하여"),
+    "Vom Lande der Bildung": ("Bildung", "교양의 나라에 관하여"),
+    "Von der unbefleckten Erkenntniss": ("Erkenntniss", "티 없는 인식에 관하여"),
+    "Von den Gelehrten": ("Gelehrte", "학자들에 관하여"),
+    "Von den Dichtern": ("Dichter", "시인들에 관하여"),
+    "Von grossen Ereignissen": ("Ereignisse", "큰 사건들에 관하여"),
+    "Der Wahrsager": ("Wahrsager", "예언자"),
+    "Von der Erlösung": ("Erloesung", "구원에 관하여"),
+    "Von der Menschen-Klugheit": ("Klugheit", "인간적 영리함에 관하여"),
+    "Die stillste Stunde": ("Stunde", "가장 고요한 시간"),
+    "Der Wanderer": ("Wanderer", "방랑자"),
+    "Von Gesicht und Räthsel": ("Gesicht", "환영과 수수께끼에 관하여"),
+    "Von der Seligkeit wider Willen": ("Seligkeit", "뜻하지 않은 행복에 관하여"),
+    "Vor Sonnen-Aufgang": ("Sonnen-Aufgang", "해 뜨기 전에"),
+    "Von der verkleinernden Tugend": ("Tugend", "왜소하게 만드는 덕에 관하여"),
+    "Auf dem Oelberge": ("Oelberge", "올리브산에서"),
+    "Vom Vorübergehen": ("Voruebergehen", "그냥 지나쳐 감에 관하여"),
+    "Von den Abtrünnigen": ("Abtruennigen", "배교자들에 관하여"),
+    "Die Heimkehr": ("Heimkehr", "귀향"),
+    "Von den drei Bösen": ("Boesen", "세 가지 악에 관하여"),
+    "Vom Geist der Schwere": ("Geist-Schwere", "중력의 영에 관하여"),
+    "Von alten und neuen Tafeln": ("Tafeln", "낡은 서판과 새로운 서판에 관하여"),
+    "Der Genesende": ("Genesende", "회복 중인 자"),
+    "Von der grossen Sehnsucht": ("Sehnsucht", "위대한 동경에 관하여"),
+    "Das andere Tanzlied": ("Tanzlied", "또 하나의 춤 노래"),
+    "Die sieben Siegel. (Oder: das Ja- und Amen-Lied.)": ("Siegel", "일곱 봉인 — 또는 ‘예’와 ‘아멘’의 노래"),
+    "Das Honig-Opfer": ("Honig", "꿀 제물"),
+    "Der Nothschrei": ("Nothschrei", "위급한 외침"),
+    "Gespräch mit den Königen": ("Koenige", "왕들과의 대화"),
+    "Der Blutegel": ("Blutegel", "거머리"),
+    "Der Zauberer": ("Zauberer", "마술사"),
+    "Ausser Dienst": ("Dienst", "은퇴하여"),
+    "Der hässlichste Mensch": ("Haesslichste", "가장 추한 인간"),
+    "Der freiwillige Bettler": ("Bettler", "자발적 거지"),
+    "Der Schatten": ("Schatten", "그림자"),
+    "Mittags": ("Mittag", "정오"),
+    "Die Begrüssung": ("Begruessung", "환영"),
+    "Das Abendmahl": ("Abendmahl", "만찬"),
+    "Vom höheren Menschen": ("Mensch", "더 높은 인간에 관하여"),
+    "Das Lied der Schwermuth": ("Schwermuth", "우울의 노래"),
+    "Von der Wissenschaft": ("Wissenschaft", "학문에 관하여"),
+    "Unter Töchtern der Wüste": ("Wuesten", "사막의 딸들 사이에서"),
+    "Die Erweckung": ("Erweckung", "각성"),
+    "Das Eselsfest": ("Eselsfest", "나귀 축제"),
+    "Das Nachtwandler-Lied": ("Nachtwandler", "몽유병자의 노래"),
+    "Das Zeichen": ("Zeichen", "징표"),
+}
+
+EH_PARTS = {
+    "Vorwort": ("Vorwort", "서문"),
+    "Warum ich so weise bin": ("Weise", "나는 왜 이토록 현명한가"),
+    "Warum ich so klug bin": ("Klug", "나는 왜 이토록 영리한가"),
+    "Warum ich so gute Bücher schreibe": ("Bücher", "나는 왜 이토록 좋은 책을 쓰는가"),
+    "Die Geburt der Tragödie": ("GT", "비극의 탄생"),
+    "Die Unzeitgemässen": ("Unzeitgemaesse", "반시대적 고찰들"),
+    "Menschliches, Allzumenschliches": ("MA", "인간적인, 너무나 인간적인"),
+    "Morgenröthe": ("M", "아침놀"),
+    "Die fröhliche Wissenschaft": ("FW", "즐거운 학문"),
+    "Also sprach Zarathustra": ("Za", "차라투스트라는 이렇게 말했다"),
+    "Jenseits von Gut und Böse": ("JGB", "선악의 저편"),
+    "Genealogie der Moral": ("GM", "도덕의 계보"),
+    "Götzen-Dämmerung": ("GD", "우상의 황혼"),
+    "Der Fall Wagner": ("WA", "바그너의 경우"),
+    "Warum ich ein Schicksal bin": ("Schicksal", "나는 왜 하나의 운명인가"),
+}
+
 PARTS_BY_WORK = {
     "jgb": JGB_PARTS,
     "gm": GM_PARTS,
@@ -141,6 +270,22 @@ def clean_markdown(value: str) -> str:
 def clean_new_markdown(value: str) -> str:
     """Flatten eKGWB correction markers without changing legacy corpus IDs."""
     value = html.unescape(value)
+    correction_label = r"\[Nach KGW/KGB Nachberichte\]\([^)]*\)"
+    value = re.sub(
+        rf"\s*\*Erratum:\*.*?\*lies:\*(.*?)\]\(javascript:;\)\s*{correction_label}",
+        "",
+        value,
+    )
+    value = re.sub(
+        rf"\s*\*Erratum:\*.*?\*lies:\*(.*?)\s*{correction_label}",
+        "",
+        value,
+    )
+    value = re.sub(
+        r"\s*\*lies:\*\d+\[\d+\]\s*\[Nach KGW Nachberichte\]\([^)]*\).*$",
+        "",
+        value,
+    )
     value = re.sub(r"&lt;(.*?)&gt;", r"\1", value)
     value = re.sub(r"\s*\|\s*", " ", value).strip()
     return clean_markdown(value)
@@ -206,13 +351,22 @@ def body_blocks(lines: list[str], *, work: str, poem: bool = False) -> list[str]
             continue
         if stripped.startswith("#"):
             continue
-        if stripped.startswith(("*Erratum:*", "*lies:*", "[eKGWB Berichtigung]", "[Nach KGW/KGB Nachberichte]")):
+        if stripped.startswith(("*Erratum:*", "*lies:*", "[eKGWB Berichtigung]", "[Nach KGW")):
             while cleaned_lines and not cleaned_lines[-1]:
                 cleaned_lines.pop()
             correction_gap = True
             continue
-        cleaned = clean_new_markdown(stripped) if work in {"ac", "gd", "fw"} else clean_markdown(stripped)
-        if not cleaned or DATE_LINE_RE.match(cleaned) or cleaned in {"Der Antichrist", "Götzen-Dämmerung"}:
+        cleaned = clean_new_markdown(stripped) if work in {"ac", "gd", "fw", "za", "eh", "nf"} else clean_markdown(stripped)
+        if (
+            not cleaned
+            or DATE_LINE_RE.match(cleaned)
+            or cleaned in {"Der Antichrist", "Götzen-Dämmerung", "Leipzig"}
+            or cleaned.startswith("Verlag von ")
+            or (
+                work == "za"
+                and re.match(r"^(?:Zarathustra,|Also sprach Zarathustra\s+\d+\s+p[.])", cleaned)
+            )
+        ):
             continue
         correction_gap = False
         cleaned_lines.append(cleaned)
@@ -454,6 +608,322 @@ def parse_markdown_work(path: Path, work: str) -> list[dict]:
     return sections
 
 
+def generic_linked_headings(lines: list[str]) -> list[dict]:
+    headings: list[dict] = []
+    for index, line in enumerate(lines):
+        match = PART_LINK_RE.match(line.strip())
+        if not match:
+            continue
+        title = clean_new_markdown(match.group(1)).rstrip(".")
+        headings.append({"index": index, "body_start": index + 1, "title": title})
+    return headings
+
+
+def numbered_heading_events(lines: list[str], start: int, end: int) -> list[dict]:
+    events: list[dict] = []
+    for index in range(start, end):
+        match = SECTION_RE.match(lines[index].strip())
+        if not match:
+            continue
+        label = clean_new_markdown(match.group(1)).strip(" .")
+        if label.isdigit():
+            events.append({"index": index, "body_start": index + 1, "number": label})
+    return events
+
+
+def section_record(
+    *,
+    part: str,
+    part_title_de: str,
+    part_title_ko: str,
+    section: str,
+    section_label: str,
+    section_title_de: str,
+    section_title_ko: str,
+    paragraphs: list[str],
+    source_url_value: str,
+) -> dict:
+    return {
+        "part": part,
+        "part_title_de": part_title_de,
+        "part_title_ko": part_title_ko,
+        "section": section,
+        "section_label": section_label,
+        "section_title_de": section_title_de,
+        "section_title_ko": section_title_ko,
+        "paragraphs": paragraphs,
+        "source_url": source_url_value,
+    }
+
+
+def parse_zarathustra() -> list[dict]:
+    sections: list[dict] = []
+    files = WORKS["za"]["source_files"]
+    if len(files) != len(ZA_PARTS):
+        raise ValueError("Zarathustra source file/part count mismatch")
+    for part, source_file in zip(ZA_PARTS, files):
+        path = ROOT / source_file
+        lines = path.read_text(encoding="utf-8-sig").splitlines()
+        headings = generic_linked_headings(lines)
+        known_titles = set(ZA_CHAPTERS)
+        unknown = [
+            heading["title"]
+            for heading in headings
+            if heading["title"] not in known_titles and heading["title"] != "Die Reden Zarathustra’s"
+        ]
+        if unknown:
+            raise ValueError(f"Unmapped Zarathustra headings in {path}: {unknown}")
+
+        part_title_de, part_title_ko = ZA_PARTS[part]
+        first_chapter_index = next(heading["index"] for heading in headings if heading["title"] in known_titles)
+        if part != "I":
+            prelude_start = next(
+                (
+                    index
+                    for index, line in enumerate(lines[:first_chapter_index])
+                    if index > 20 and line.strip().startswith(("„", "Ach,"))
+                ),
+                None,
+            )
+            if prelude_start is not None:
+                prelude = body_blocks(lines[prelude_start:first_chapter_index], work="za")
+                if prelude:
+                    sections.append(
+                        section_record(
+                            part=part,
+                            part_title_de=part_title_de,
+                            part_title_ko=part_title_ko,
+                            section="Vorspruch",
+                            section_label=f"{part_title_ko} 머리글",
+                            section_title_de="Vorspruch",
+                            section_title_ko=f"{part_title_ko} 머리글",
+                            paragraphs=prelude,
+                            source_url_value=f"https://www.nietzschesource.org/eKGWB/Za-{part}",
+                        )
+                    )
+
+        for position, heading in enumerate(headings):
+            if heading["title"] not in known_titles:
+                continue
+            next_index = headings[position + 1]["index"] if position + 1 < len(headings) else len(lines)
+            slug, title_ko = ZA_CHAPTERS[heading["title"]]
+            numbered_events = numbered_heading_events(lines, heading["body_start"], next_index)
+            if numbered_events:
+                for event_position, event in enumerate(numbered_events):
+                    body_end = (
+                        numbered_events[event_position + 1]["index"]
+                        if event_position + 1 < len(numbered_events)
+                        else next_index
+                    )
+                    paragraphs = body_blocks(lines[event["body_start"] : body_end], work="za")
+                    if not paragraphs:
+                        raise ValueError(f"Empty Za {part} {slug}-{event['number']}")
+                    sections.append(
+                        section_record(
+                            part=part,
+                            part_title_de=part_title_de,
+                            part_title_ko=part_title_ko,
+                            section=f"{slug}-{event['number']}",
+                            section_label=f"{title_ko} · §{event['number']}",
+                            section_title_de=heading["title"],
+                            section_title_ko=title_ko,
+                            paragraphs=paragraphs,
+                            source_url_value=(
+                                f"https://www.nietzschesource.org/eKGWB/Za-{part}-{slug}-{event['number']}"
+                            ),
+                        )
+                    )
+            else:
+                paragraphs = body_blocks(lines[heading["body_start"] : next_index], work="za")
+                if not paragraphs:
+                    raise ValueError(f"Empty Za {part} {slug}")
+                sections.append(
+                    section_record(
+                        part=part,
+                        part_title_de=part_title_de,
+                        part_title_ko=part_title_ko,
+                        section=slug,
+                        section_label=title_ko,
+                        section_title_de=heading["title"],
+                        section_title_ko=title_ko,
+                        paragraphs=paragraphs,
+                        source_url_value=f"https://www.nietzschesource.org/eKGWB/Za-{part}-{slug}",
+                    )
+                )
+    return sections
+
+
+def parse_ecce_homo(path: Path) -> list[dict]:
+    lines = path.read_text(encoding="utf-8-sig").splitlines()
+    headings = generic_linked_headings(lines)
+    known_titles = set(EH_PARTS)
+    unknown = [heading["title"] for heading in headings if heading["title"] not in known_titles and heading["title"] != "Inhalt"]
+    if unknown:
+        raise ValueError(f"Unmapped Ecce homo headings in {path}: {unknown}")
+
+    sections: list[dict] = []
+    contents_heading = next(heading for heading in headings if heading["title"] == "Inhalt")
+    next_after_contents = headings[headings.index(contents_heading) + 1]
+    prelude_start = next(
+        index
+        for index in range(contents_heading["body_start"], next_after_contents["index"])
+        if lines[index].strip().startswith("An diesem vollkommnen Tage")
+    )
+    prelude = body_blocks(lines[prelude_start:next_after_contents["index"]], work="eh")
+    sections.append(
+        section_record(
+            part="Vorspruch",
+            part_title_de="Vorspruch",
+            part_title_ko="머리글",
+            section="Vorspruch",
+            section_label="머리글",
+            section_title_de="Vorspruch",
+            section_title_ko="머리글",
+            paragraphs=prelude,
+            source_url_value="https://www.nietzschesource.org/eKGWB/EH",
+        )
+    )
+
+    for position, heading in enumerate(headings):
+        if heading["title"] not in known_titles:
+            continue
+        next_index = headings[position + 1]["index"] if position + 1 < len(headings) else len(lines)
+        slug, title_ko = EH_PARTS[heading["title"]]
+        numbered_events = numbered_heading_events(lines, heading["body_start"], next_index)
+        if not numbered_events:
+            paragraphs = body_blocks(lines[heading["body_start"] : next_index], work="eh")
+            if not paragraphs:
+                raise ValueError(f"Empty unnumbered EH section {heading['title']}")
+            sections.append(
+                section_record(
+                    part=slug,
+                    part_title_de=heading["title"],
+                    part_title_ko=title_ko,
+                    section="Text",
+                    section_label=title_ko,
+                    section_title_de=heading["title"],
+                    section_title_ko=title_ko,
+                    paragraphs=paragraphs,
+                    source_url_value=f"https://www.nietzschesource.org/eKGWB/EH-{slug}",
+                )
+            )
+            continue
+        for event_position, event in enumerate(numbered_events):
+            body_end = (
+                numbered_events[event_position + 1]["index"]
+                if event_position + 1 < len(numbered_events)
+                else next_index
+            )
+            paragraphs = body_blocks(lines[event["body_start"] : body_end], work="eh")
+            if not paragraphs:
+                raise ValueError(f"Empty EH {slug}-{event['number']}")
+            sections.append(
+                section_record(
+                    part=slug,
+                    part_title_de=heading["title"],
+                    part_title_ko=title_ko,
+                    section=event["number"],
+                    section_label=f"§{event['number']}",
+                    section_title_de="",
+                    section_title_ko="",
+                    paragraphs=paragraphs,
+                    source_url_value=f"https://www.nietzschesource.org/eKGWB/EH-{slug}-{event['number']}",
+                )
+            )
+    return sections
+
+
+NF_FILE_RE = re.compile(r"nf-(188[5-8])-(\d{2})[.]md$")
+NF_FRAGMENT_RE = re.compile(r"^\[((\d+)\[(\d+)\])\]\(javascript:;\)\s*$")
+
+
+def parse_late_nachlass() -> list[dict]:
+    sections: list[dict] = []
+    paths = sorted(RAW.glob("nf-*.md"))
+    if not paths:
+        raise ValueError("No late Nachlass source files found")
+    for path in paths:
+        file_match = NF_FILE_RE.match(path.name)
+        if not file_match:
+            continue
+        year, expected_group = file_match.groups()
+        raw_lines = path.read_text(encoding="utf-8-sig").splitlines()
+        lines: list[str] = []
+        for line in raw_lines:
+            malformed_heading = re.match(
+                r"^\[(\d+\[\d+\]) \*Erratum:\*\]\(javascript:;\)\s+\[(.*)$",
+                line.strip(),
+            )
+            if malformed_heading:
+                lines.extend(
+                    [
+                        f"[{malformed_heading.group(1)}](javascript:;)",
+                        malformed_heading.group(2),
+                    ]
+                )
+            else:
+                lines.append(line)
+        events: list[dict] = []
+        for index, line in enumerate(lines):
+            match = NF_FRAGMENT_RE.match(line.strip())
+            if not match:
+                continue
+            citation, group, fragment = match.groups()
+            if int(group) != int(expected_group):
+                raise ValueError(f"Unexpected group {group} in {path}")
+            events.append(
+                {
+                    "index": index,
+                    "body_start": index + 1,
+                    "citation": citation,
+                    "group": group,
+                    "fragment": fragment,
+                }
+            )
+        if not events:
+            raise ValueError(f"No Nachlass fragments found in {path}")
+        for position, event in enumerate(events):
+            next_index = events[position + 1]["index"] if position + 1 < len(events) else len(lines)
+            paragraphs = body_blocks(lines[event["body_start"] : next_index], work="nf")
+            joined_paragraphs: list[str] = []
+            for paragraph in paragraphs:
+                if (
+                    joined_paragraphs
+                    and paragraph[:1].islower()
+                    and not re.search(r"[.!?…][”’\"]?$", joined_paragraphs[-1])
+                ):
+                    joined_paragraphs[-1] = normalize_space(f"{joined_paragraphs[-1]} {paragraph}")
+                else:
+                    joined_paragraphs.append(paragraph)
+            paragraphs = [
+                paragraph
+                for paragraph in joined_paragraphs
+                if len(paragraph) >= 40
+                and len(paragraph.split()) >= 5
+                and not (
+                    len(paragraph) < 120
+                    and (paragraph.count("(") != paragraph.count(")") or paragraph.count("[") != paragraph.count("]"))
+                )
+            ]
+            if not paragraphs:
+                continue
+            citation = event["citation"]
+            sections.append(
+                section_record(
+                    part=f"{year}-{event['group']}",
+                    part_title_de=f"Nachgelassene Fragmente {year} · Gruppe {event['group']}",
+                    part_title_ko=f"{year}년 · 노트군 {event['group']}",
+                    section=citation,
+                    section_label=citation,
+                    section_title_de="",
+                    section_title_ko="",
+                    paragraphs=paragraphs,
+                    source_url_value=f"https://www.nietzschesource.org/eKGWB/NF-{year},{citation}",
+                )
+            )
+    return sections
+
+
 ABBREVIATIONS = (
     "Dr.", "Prof.", "resp.", "etc.", "u. s. w.", "u. a.", "z. B.", "d. h.",
     "vergl.", "vgl.", "S.", "Bd.", "Nr.", "sc.", "ca.", "ff.",
@@ -588,8 +1058,14 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
 
     for work in WORK_ORDER:
         metadata = WORKS[work]
-        source_path = ROOT / metadata["source_file"]
-        sections = parse_markdown_work(source_path, work)
+        if work == "za":
+            sections = parse_zarathustra()
+        elif work == "eh":
+            sections = parse_ecce_homo(ROOT / metadata["source_file"])
+        elif work == "nf":
+            sections = parse_late_nachlass()
+        else:
+            sections = parse_markdown_work(ROOT / metadata["source_file"], work)
         for section_data in sections:
             paragraph_count = len(section_data["paragraphs"])
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
@@ -613,7 +1089,9 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                         "partTitleDe": section_data["part_title_de"],
                         "partTitleKo": section_data["part_title_ko"],
                         "section": section_data["section"],
+                        "sectionLabel": section_data.get("section_label", ""),
                         "sectionTitleDe": section_data.get("section_title_de", ""),
+                        "sectionTitleKo": section_data.get("section_title_ko", ""),
                         "paragraph": paragraph_index,
                         "paragraphCount": paragraph_count,
                         "sentence": sentence_index,
@@ -621,7 +1099,11 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                         "korean": korean.strip(),
                         "translationStatus": translation.get("status", "pending") if isinstance(translation, dict) else "draft",
                         "footnotes": footnotes,
-                        "sourceUrl": source_url(work, section_data["part"], section_data["section"]),
+                        "sourceUrl": (
+                            section_data["source_url"]
+                            if "source_url" in section_data
+                            else source_url(work, section_data["part"], section_data["section"])
+                        ),
                     }
                     by_work[work].append(record)
 
@@ -659,6 +1141,17 @@ def main() -> None:
     for work in WORK_ORDER:
         write_json(DATA / f"{work}.json", by_work[work], compact=True)
 
+    widget_fields = (
+        "id", "work", "workTitleKo", "part", "partTitleKo", "section", "sectionLabel",
+        "paragraph", "paragraphCount", "sentence", "german", "korean",
+    )
+    widget_quotes = [
+        {field: quote[field] for field in widget_fields}
+        for quote in quotes
+        if quote["korean"]
+    ]
+    write_json(DATA / "widget.json", widget_quotes, compact=True)
+
     corpus_identity = "\n".join(f"{quote['id']}\0{quote['german']}" for quote in quotes)
     corpus_version = hashlib.sha256(corpus_identity.encode("utf-8")).hexdigest()[:16]
     data_identity = json.dumps(quotes, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
@@ -671,6 +1164,7 @@ def main() -> None:
         "dataVersion": data_version,
         "quoteCount": len(quotes),
         "translatedCount": translated,
+        "widgetQuoteCount": len(widget_quotes),
         "reviewedCount": reviewed,
         "pendingTranslationCount": len(quotes) - translated,
         "works": {
@@ -686,6 +1180,7 @@ def main() -> None:
         },
         "files": {
             "quotes": file_descriptor(DATA / "quotes.json", len(quotes)),
+            "widget": file_descriptor(DATA / "widget.json", len(widget_quotes)),
             **{
                 work: file_descriptor(DATA / f"{work}.json", len(by_work[work]))
                 for work in WORK_ORDER

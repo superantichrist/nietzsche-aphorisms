@@ -13,3 +13,11 @@ Nietzsche Source는 eKGWB가 독일어 표준 비평판의 디지털판이며, �
 원저자 Friedrich Nietzsche는 1900년에 사망했고 이 원저작들은 19세기에 쓰이거나 출판되었다. 원저작 텍스트의 퍼블릭 도메인 상태와 별개로, 각 디지털 제공처의 편집·플랫폼·배포 조건은 해당 제공처의 고지를 따른다. Nietzsche Source는 사이트 콘텐츠에 CC BY-NC-ND 4.0 조건을 고지한다. 이 프로젝트는 비상업적 읽기·연구 프로젝트이며 출처와 판본을 유지한다.
 
 정확한 URL, 스냅샷 커밋, 파일 해시는 [`sources.json`](sources.json)에 있다.
+
+## 확장 코퍼스
+
+- 《Also sprach Zarathustra》 제1–4부
+- 《Ecce homo》
+- 1885–1888년 《Nachgelassene Fragmente》 전체 노트군
+
+확장 원문도 같은 eKGWB 기반 미러의 고정 커밋을 사용한다. 42개 입력 파일의 개별 취득 URL·바이트 수·SHA-256은 [`extended_sources.json`](extended_sources.json)에 기록했다. 후기 유고는 사후 편집 선집인 《Der Wille zur Macht》의 배열을 따르지 않고, Colli–Montinari 비평판의 `연도, 노트군[단편]` 번호를 그대로 보존한다.

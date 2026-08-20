@@ -1,10 +1,10 @@
 // 오늘의 니체 — Scriptable widget
-// GitHub Pages의 작은 manifest만 확인하고, dataVersion이 바뀔 때만 전체 JSON을 다시 받습니다.
+// GitHub Pages의 작은 manifest만 확인하고, dataVersion이 바뀔 때만 위젯용 JSON을 다시 받습니다.
 
 const SITE_URL = "https://superantichrist.github.io/nietzsche-aphorisms/";
 const MANIFEST_URL = `${SITE_URL}data/manifest.json`;
-const QUOTES_URL = `${SITE_URL}data/quotes.json`;
-const WORK_FILTER = "all"; // "all" | "jgb" | "gm" | "ac" | "gd" | "fw"
+const WIDGET_DATA_URL = `${SITE_URL}data/widget.json`;
+const WORK_FILTER = "all"; // "all" | "jgb" | "gm" | "ac" | "gd" | "fw" | "za" | "eh" | "nf"
 const REQUEST_TIMEOUT_SECONDS = 12;
 
 const fm = FileManager.local();
@@ -111,7 +111,7 @@ async function loadQuotes() {
 
   if (needsDownload) {
     try {
-      const downloaded = await requestJSON(QUOTES_URL);
+      const downloaded = await requestJSON(WIDGET_DATA_URL);
       if (!validQuotes(downloaded)) throw new Error("Downloaded corpus did not pass validation");
       writeJSON(quotesCachePath, downloaded);
       if (remoteManifest) writeJSON(manifestCachePath, remoteManifest);
@@ -148,10 +148,15 @@ function sourceLabel(quote) {
     ac: "안티크리스트",
     gd: "우상의 황혼",
     fw: "즐거운 학문",
+    za: "차라투스트라는 이렇게 말했다",
+    eh: "이 사람을 보라",
+    nf: "후기 유고 1885–1888",
   };
   const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
   const unnumbered = ["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"];
-  const section = unnumbered.includes(quote.section) ? "" : ` §${quote.section}`;
+  const section = quote.sectionLabel
+    ? ` · ${quote.sectionLabel}`
+    : unnumbered.includes(quote.section) ? "" : ` §${quote.section}`;
   return `${quote.workTitleKo || titles[quote.work] || quote.work} · ${part}${section}`;
 }
 
@@ -238,10 +243,11 @@ function makeWidget(quote) {
 }
 
 let quotes = await loadQuotes();
-if (["jgb", "gm", "ac", "gd", "fw"].includes(WORK_FILTER)) {
+if (["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf"].includes(WORK_FILTER)) {
   const filtered = quotes.filter((quote) => quote.work === WORK_FILTER);
   if (filtered.length) quotes = filtered;
 }
+
 
 const selected = quoteForDate(new Date(), quotes);
 const widget = makeWidget(selected);

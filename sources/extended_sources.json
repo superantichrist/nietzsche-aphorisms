@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/uva39/Nietzsche-KR-Translation",
+  "commit": "2e7114646ef4cff4010a736a35efa32aad71fe75",
+  "editionBasis": "Digitale Kritische Gesamtausgabe Werke und Briefe (eKGWB)",
+  "files": [
+    {
+      "file": "sources/raw/za-i-ekgwb-mirror.md",
+      "repositoryPath": "독일어 텍스트/공개 출판/Also sprach Zarathustra I.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EA%B3%B5%EA%B0%9C%20%EC%B6%9C%ED%8C%90/Also%20sprach%20Zarathustra%20I.md",
+      "bytes": 123999,
+      "sha256": "d08b022417106f3995c917e425b2c8d477aef56449eb3dd6692487b196fdd5fd"
+    },
+    {
+      "file": "sources/raw/za-ii-ekgwb-mirror.md",
+      "repositoryPath": "독일어 텍스트/공개 출판/Also sprach Zarathustra II.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EA%B3%B5%EA%B0%9C%20%EC%B6%9C%ED%8C%90/Also%20sprach%20Zarathustra%20II.md",
+      "bytes": 121242,
+      "sha256": "0201f4df65b163888cfffedf3e3017375fddd334be74b6a68ffa772516ba8421"
+    },
+    {
+      "file": "sources/raw/za-iii-ekgwb-mirror.md",
+      "repositoryPath": "독일어 텍스트/공개 출판/Also sprach Zarathustra III.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EA%B3%B5%EA%B0%9C%20%EC%B6%9C%ED%8C%90/Also%20sprach%20Zarathustra%20III.md",
+      "bytes": 146539,
+      "sha256": "547e15b6db67bf3f6c08e82e6ee579820f616a6777bb432c8a37af0d3fd3585c"
+    },
+    {
+      "file": "sources/raw/za-iv-ekgwb-mirror.md",
+      "repositoryPath": "독일어 텍스트/미공개 출판/Also sprach Zarathustra IV.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%AF%B8%EA%B3%B5%EA%B0%9C%20%EC%B6%9C%ED%8C%90/Also%20sprach%20Zarathustra%20IV.md",
+      "bytes": 164127,
+      "sha256": "a3e1ee9b57d4599eb3314834faefe130d6abe21c36661b2d875983b3835eb19f"
+    },
+    {
+      "file": "sources/raw/eh-ekgwb-mirror.md",
+      "repositoryPath": "독일어 텍스트/공식 유고/Ecce Homo.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EA%B3%B5%EC%8B%9D%20%EC%9C%A0%EA%B3%A0/Ecce%20Homo.md",
+      "bytes": 208437,
+      "sha256": "8bc618a8f4094fd4e3ad4bc4067dc19835c5bb8eabe90fe09e42ef3c4984c64a"
+    },
+    {
+      "file": "sources/raw/nf-1885-01.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 1.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%201.md",
+      "bytes": 99028,
+      "sha256": "e3651310e7c399e18d6b3222b6ef7c0b77885796d0a6ffe18746474fdb9374a0"
+    },
+    {
+      "file": "sources/raw/nf-1885-02.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 2.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%202.md",
+      "bytes": 195715,
+      "sha256": "7e10bbcbe0bec7f5959bde3e8e6a2b27eeb7c43cd555f3c87b340690d59d439e"
+    },
+    {
+      "file": "sources/raw/nf-1885-34.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 34.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2034.md",
+      "bytes": 181076,
+      "sha256": "cbc29f208a7ffee33921c13ff1b0372200035b722197808b905c53dbad9dbaae"
+    },
+    {
+      "file": "sources/raw/nf-1885-35.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 35.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2035.md",
+      "bytes": 84880,
+      "sha256": "add577eade8808025349c44b5104c688109ccdaaed17bd148b3b60dd16e93071"
+    },
+    {
+      "file": "sources/raw/nf-1885-36.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 36.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2036.md",
+      "bytes": 53934,
+      "sha256": "3f78272ad5b455ffa0dd055356b3fd3995e5a8d448f82ab084b2146b3705ec04"
+    },
+    {
+      "file": "sources/raw/nf-1885-37.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 37.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2037.md",
+      "bytes": 48262,
+      "sha256": "04d1c1fe607739bc290dfe55529a3bf033493eafcb65c40edefeee8b1c7ef4f6"
+    },
+    {
+      "file": "sources/raw/nf-1885-38.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 38.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2038.md",
+      "bytes": 47160,
+      "sha256": "a6b5c72ff775658c6fa3fd7325a884171706b5e80de4616e6351f33b7210bbc3"
+    },
+    {
+      "file": "sources/raw/nf-1885-39.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 39.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2039.md",
+      "bytes": 18067,
+      "sha256": "8fd2bc3f1de8c25560aa1ee323f13f750e77a1aa54668e5a36c53540cdac10ca"
+    },
+    {
+      "file": "sources/raw/nf-1885-40.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 40.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2040.md",
+      "bytes": 92736,
+      "sha256": "6065faa333696f9a9a52c474146873319a549d33b9fbe001a00e81132bea5d2c"
+    },
+    {
+      "file": "sources/raw/nf-1885-41.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 41.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2041.md",
+      "bytes": 49219,
+      "sha256": "dbb2e08e88b05e8e1a0b4c156977ae4391e16f45f9b786f7600a9f9b15422f17"
+    },
+    {
+      "file": "sources/raw/nf-1885-42.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 42.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2042.md",
+      "bytes": 10766,
+      "sha256": "ad81aefa00609a9a40cde98b8ecee4f47028b2223d9ddb28868815bf49ff271f"
+    },
+    {
+      "file": "sources/raw/nf-1885-43.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 43.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2043.md",
+      "bytes": 10250,
+      "sha256": "b64d45e3c45dd2838e7494aceecaec0f055166273237914b50a187c92dda7408"
+    },
+    {
+      "file": "sources/raw/nf-1885-44.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 44.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2044.md",
+      "bytes": 6137,
+      "sha256": "4075b28bcd58fdba66f132ee3a5ab3d887aa745ced0c219861bedec47e9f5363"
+    },
+    {
+      "file": "sources/raw/nf-1885-45.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1885, Gruppe 45.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201885%2C%20Gruppe%2045.md",
+      "bytes": 2665,
+      "sha256": "e86102c33e8fcf89514589b87d4cf13c9da53259133ce40a592d10acdb3b94a0"
+    },
+    {
+      "file": "sources/raw/nf-1886-03.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1886, Gruppe 3.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201886%2C%20Gruppe%203.md",
+      "bytes": 6201,
+      "sha256": "337f6beee738bb00d5cdbbb9804bb7e140d5821dcc7ace7e7ab834431118f7b1"
+    },
+    {
+      "file": "sources/raw/nf-1886-04.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1886, Gruppe 4.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201886%2C%20Gruppe%204.md",
+      "bytes": 13195,
+      "sha256": "0a31922489421ab10862c18cd6595a5ee5225b4efd85f4cb3009cfe008d689bb"
+    },
+    {
+      "file": "sources/raw/nf-1886-05.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1886, Gruppe 5.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201886%2C%20Gruppe%205.md",
+      "bytes": 79942,
+      "sha256": "7ff84631ddf83f44597019a2d33ddeed02f59f4e7ef307738df777a0c93ed083"
+    },
+    {
+      "file": "sources/raw/nf-1886-06.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1886, Gruppe 6.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201886%2C%20Gruppe%206.md",
+      "bytes": 23190,
+      "sha256": "3f7f3de23c5986874fdc3720873a246ee478792d5aad37621105ca07cc6091a1"
+    },
+    {
+      "file": "sources/raw/nf-1886-07.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1886, Gruppe 7.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201886%2C%20Gruppe%207.md",
+      "bytes": 114064,
+      "sha256": "fe266116e44a87c0eefe62d814ed91947c24dc9da2afe17491579affe58273ce"
+    },
+    {
+      "file": "sources/raw/nf-1887-08.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1887, Gruppe 8.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201887%2C%20Gruppe%208.md",
+      "bytes": 22288,
+      "sha256": "9967e3d33c4e2adbfe61b8c7ba12554e4d69fa4cce04e6c02b71afe6814e7dd8"
+    },
+    {
+      "file": "sources/raw/nf-1887-09.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1887, Gruppe 9.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201887%2C%20Gruppe%209.md",
+      "bytes": 202528,
+      "sha256": "123470f0735bce018095a3e3103dc1d1b526adfac06466db8873538cf135bfd3"
+    },
+    {
+      "file": "sources/raw/nf-1887-10.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1887, Gruppe 10.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201887%2C%20Gruppe%2010.md",
+      "bytes": 248267,
+      "sha256": "67dc0ff465232776e5830c783dfcf84b26ce28cfed9e7b38dda82ddd81d8564c"
+    },
+    {
+      "file": "sources/raw/nf-1887-11.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1887, Gruppe 11.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201887%2C%20Gruppe%2011.md",
+      "bytes": 312887,
+      "sha256": "46a8b795bf6c6e76da92afebdb1f508dc92f3e0f21d1061b1cbac879cc1ff055"
+    },
+    {
+      "file": "sources/raw/nf-1888-12.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 12.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2012.md",
+      "bytes": 26516,
+      "sha256": "a617eca03e958f5d265c6a5ea90422fd0149aae309925df4652b6981967e5f34"
+    },
+    {
+      "file": "sources/raw/nf-1888-13.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 13.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2013.md",
+      "bytes": 3845,
+      "sha256": "112bee13dd459c38eb4c4ae83510eea3bc955fe38dea0c4d1ff3acb386f7828d"
+    },
+    {
+      "file": "sources/raw/nf-1888-14.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 14.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2014.md",
+      "bytes": 303627,
+      "sha256": "6fd5273b2f4e2870fba2819ed7a162b3291403d5d457b6a6bb766b7e675b3bad"
+    },
+    {
+      "file": "sources/raw/nf-1888-15.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 15.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2015.md",
+      "bytes": 135741,
+      "sha256": "326942df42d9d65b7880cd4837a420e4c22521ab1aa2f3b65a3e41b81a8892d0"
+    },
+    {
+      "file": "sources/raw/nf-1888-16.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 16.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2016.md",
+      "bytes": 56438,
+      "sha256": "8bc67936b5d5b16d338e545815fc563ed63f9b213e61edd82ef2d692d3165a75"
+    },
+    {
+      "file": "sources/raw/nf-1888-17.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 17.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2017.md",
+      "bytes": 20448,
+      "sha256": "d781f1af64f558271ced57fd64777cc69a432ce9313cac2fd0b18c38ce4616de"
+    },
+    {
+      "file": "sources/raw/nf-1888-18.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 18.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2018.md",
+      "bytes": 11785,
+      "sha256": "256c94be6961ece13c04bfc70d4f59a8b9e71ceb9e77eef4c85ace19bc071f99"
+    },
+    {
+      "file": "sources/raw/nf-1888-19.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 19.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2019.md",
+      "bytes": 13426,
+      "sha256": "132f0a5298aa34e67302e946563cfcb7ec0ab073b7eab2ec9feb4f479c7b76d3"
+    },
+    {
+      "file": "sources/raw/nf-1888-20.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 20.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2020.md",
+      "bytes": 25929,
+      "sha256": "ac049d5269ca90fd8e1057398acabcfbfebccd57681b8ef84ae202844efdd10a"
+    },
+    {
+      "file": "sources/raw/nf-1888-21.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 21.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2021.md",
+      "bytes": 10528,
+      "sha256": "117811b3d4dc44c95135ba6936534c3b18ebbecb64298c2dec4110d66fb7f50e"
+    },
+    {
+      "file": "sources/raw/nf-1888-22.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 22.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2022.md",
+      "bytes": 22227,
+      "sha256": "54be8fe03e6c0537f3b780dbfffe9d52aec2dbeebe526a15dafd9f08f9d500d5"
+    },
+    {
+      "file": "sources/raw/nf-1888-23.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 23.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2023.md",
+      "bytes": 26240,
+      "sha256": "8d56fd4a54a4a2389eab03ebd938c9882310744f804f34fa793586d3ec607d86"
+    },
+    {
+      "file": "sources/raw/nf-1888-24.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 24.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2024.md",
+      "bytes": 38288,
+      "sha256": "9da361725005698ae8445d4b16c886fcbec636f6301d6427de9da7fe8bde1bff"
+    },
+    {
+      "file": "sources/raw/nf-1888-25.md",
+      "repositoryPath": "독일어 텍스트/노트 유고/NF 1888, Gruppe 25.md",
+      "acquisitionUrl": "https://raw.githubusercontent.com/uva39/Nietzsche-KR-Translation/2e7114646ef4cff4010a736a35efa32aad71fe75/%EB%8F%85%EC%9D%BC%EC%96%B4%20%ED%85%8D%EC%8A%A4%ED%8A%B8/%EB%85%B8%ED%8A%B8%20%EC%9C%A0%EA%B3%A0/NF%201888%2C%20Gruppe%2025.md",
+      "bytes": 19440,
+      "sha256": "8b857bdfdad068c729a158db93035dc4117b7261ba0772d533cb160e7dd6a8f3"
+    }
+  ]
+}

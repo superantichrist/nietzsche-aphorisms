@@ -12,7 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-WORKS = ("jgb", "gm", "ac", "gd", "fw")
+WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf")
+LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 
 
 def fail(message: str) -> None:
@@ -37,6 +38,21 @@ def check_source_hashes(source_manifest: dict) -> None:
             expected_hash = descriptor.get("normalizedSha256", descriptor["sha256"])
             if actual_hash != expected_hash:
                 fail(f"source hash mismatch for {descriptor['file']}")
+
+    extended_manifest = json.loads(
+        (ROOT / "sources" / "extended_sources.json").read_text(encoding="utf-8")
+    )
+    if extended_manifest.get("commit") != "2e7114646ef4cff4010a736a35efa32aad71fe75":
+        fail("unexpected extended source snapshot commit")
+    if len(extended_manifest.get("files", [])) != 42:
+        fail("extended source manifest must describe 42 files")
+    for descriptor in extended_manifest["files"]:
+        source_path = ROOT / descriptor["file"]
+        if not source_path.is_file():
+            fail(f"missing extended source snapshot {descriptor['file']}")
+        actual_hash = hashlib.sha256(source_path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+        if actual_hash != descriptor["sha256"]:
+            fail(f"extended source hash mismatch for {descriptor['file']}")
 
 
 def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
@@ -90,6 +106,30 @@ def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
                     f"extra={sorted(found - expected_sections)[:8]}"
                 )
 
+    za_expected_counts = {"I": 34, "II": 23, "III": 61, "IV": 59}
+    for part, expected_count in za_expected_counts.items():
+        found = {section for found_part, section in sections["za"] if found_part == part}
+        if len(found) != expected_count:
+            fail(f"ZA {part} section coverage mismatch: {len(found)}/{expected_count}")
+
+    eh_expected_counts = {
+        "Vorspruch": 1, "Vorwort": 4, "Weise": 8, "Klug": 10, "Bücher": 6,
+        "GT": 4, "Unzeitgemaesse": 3, "MA": 6, "M": 2, "FW": 1, "Za": 8,
+        "JGB": 2, "GM": 1, "GD": 3, "WA": 4, "Schicksal": 9,
+    }
+    for part, expected_count in eh_expected_counts.items():
+        found = {section for found_part, section in sections["eh"] if found_part == part}
+        if len(found) != expected_count:
+            fail(f"EH {part} section coverage mismatch: {len(found)}/{expected_count}")
+
+    nf_sections = sections["nf"]
+    if len({part for part, _ in nf_sections}) != 37 or len(nf_sections) != 2_644:
+        fail("late Nachlass group or fragment coverage mismatch")
+    if any(not re.fullmatch(r"188[5-8]-\d+", part) for part, _ in nf_sections):
+        fail("invalid late Nachlass group key")
+    if any(not re.fullmatch(r"\d+\[\d+\]", section) for _, section in nf_sections):
+        fail("invalid late Nachlass fragment citation")
+
 
 def main() -> None:
     quotes = json.loads((DATA / "quotes.json").read_text(encoding="utf-8"))
@@ -103,8 +143,8 @@ def main() -> None:
         "paragraph", "paragraphCount", "sentence", "german", "korean", "footnotes",
     }
 
-    if len(quotes) < 5_000:
-        fail(f"expected at least 5,000 quote units, found {len(quotes)}")
+    if len(quotes) < 17_900:
+        fail(f"expected at least 17,900 quote units, found {len(quotes)}")
     if manifest.get("quoteCount") != len(quotes):
         fail("manifest quoteCount does not match quotes.json")
     check_source_hashes(source_manifest)
@@ -168,6 +208,12 @@ def main() -> None:
             "translation cache ID mismatch: "
             f"missing={len(translated_ids - cache_ids)}, orphaned={len(cache_ids - translated_ids)}"
         )
+    widget_quotes = json.loads((DATA / "widget.json").read_text(encoding="utf-8"))
+    widget_ids = {quote["id"] for quote in widget_quotes}
+    if widget_ids != translated_ids or len(widget_quotes) != len(translated_ids):
+        fail("widget data must contain every translated quote exactly once")
+    if manifest.get("widgetQuoteCount") != len(widget_quotes):
+        fail("manifest widgetQuoteCount does not match widget.json")
     for quote_id, translation in translation_cache.items():
         if not translation.get("korean", "").strip():
             fail(f"blank translation cache entry {quote_id}")
@@ -179,8 +225,13 @@ def main() -> None:
     reviewed_count = sum(quote.get("translationStatus") == "reviewed" for quote in quotes)
     if manifest.get("reviewedCount") != reviewed_count:
         fail("manifest reviewedCount does not match reviewed records")
-    if reviewed_count != len(quotes):
-        fail(f"editorial review incomplete: {reviewed_count}/{len(quotes)}")
+    legacy_count = sum(quote["work"] in LEGACY_REVIEWED_WORKS for quote in quotes)
+    legacy_reviewed = sum(
+        quote["work"] in LEGACY_REVIEWED_WORKS and quote.get("translationStatus") == "reviewed"
+        for quote in quotes
+    )
+    if legacy_reviewed != legacy_count:
+        fail(f"previously reviewed corpus regressed: {legacy_reviewed}/{legacy_count}")
     if manifest.get("pendingTranslationCount") != len(quotes) - len(translated_ids):
         fail("manifest pendingTranslationCount does not match pending records")
 
