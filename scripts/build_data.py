@@ -362,6 +362,15 @@ def parse_markdown_work(path: Path, work: str) -> list[dict]:
             named_section_number += 1
             part, title_de, title_ko = current_part
             blocks = body_blocks(lines[event["body_start"] : next_index], work=work, poem=True)
+            # This poem has a subtitle before its thirty verse lines, so the
+            # five-line packer leaves its short final line on its own. Keep
+            # that conclusion by attaching it to the preceding verse unit.
+            if (
+                event["title_de"] == "Rimus remedium"
+                and len(blocks) >= 2
+                and blocks[-1] == "Der gienge drauf!"
+            ):
+                blocks = [*blocks[:-2], normalize_space(f"{blocks[-2]} / {blocks[-1]}")]
             if blocks:
                 sections.append(
                     {

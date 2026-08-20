@@ -6,7 +6,7 @@
 - `Zur Genealogie der Moral`: eKGWB/Colli–Montinari 계열 전사본. C. G. Naumann 1892년 제2판 스캔의 Internet Archive OCR과 장·절·주요 구절을 대조한다.
 - `Der Antichrist`: eKGWB/Colli–Montinari 계열 전사본. 1906년 *Nietzsche's Werke*, Band VIII 스캔과 대조한다.
 - `Götzen-Dämmerung`: eKGWB/Colli–Montinari 계열 전사본. 1906년 *Nietzsche's Werke*, Band VIII 스캔과 대조한다.
-- `Die fröhliche Wissenschaft`: eKGWB/Colli–Montinari 계열 전사본. E. W. Fritzsch 1887년 신판 스캔과 대조한다.
+- `Die fröhliche Wissenschaft`: eKGWB/Colli–Montinari 계열 전사본. E. W. Fritzsch 1887년 신판 스캔과 대조한다. 부록시 10번에서 전사본 추출 과정에 붙어 버린 행 경계는 1887년 스캔과 교정 완료된 독일어 전사를 대조해 복원했으며, 어휘와 역사적 철자는 바꾸지 않았다.
 
 Nietzsche Source는 eKGWB가 독일어 표준 비평판의 디지털판이며, 각 작품·장·절에 안정적인 주소를 부여한다고 설명한다. 개별 JSON 레코드의 `sourceUrl`은 이 안정 주소를 가리킨다.
 

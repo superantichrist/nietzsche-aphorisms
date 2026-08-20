@@ -2819,25 +2819,65 @@ Oder: Wie kranke Dichter sich trösten.
   
   
 
-Aus deinem Munde,Du speichelflüssige Hexe Zeit,Tropft langsam Stund’ auf Stunde.Umsonst, dass all mein Ekel schreit:„Fluch, Fluch dem Schlunde
+Aus deinem Munde,
+
+Du speichelflüssige Hexe Zeit,
+
+Tropft langsam Stund’ auf Stunde.
+
+Umsonst, dass all mein Ekel schreit:
+
+„Fluch, Fluch dem Schlunde
 
 Der Ewigkeit!“
 
-Welt — ist von Erz:Ein glühender Stier, — der hört kein Schrein.Mit fliegenden Dolchen schreibt der SchmerzMir in’s Gebein:
+Welt — ist von Erz:
 
-„Welt hat kein Herz,Und Dummheit wär’s, ihr gram drum sein!“
+Ein glühender Stier, — der hört kein Schrein.
 
-Giess alle Mohne,Giess, Fieber! Gift mir in’s Gehirn!Zu lang schon prüfst du mir Hand und Stirn.Was frägst du? Was? „Zu welchem — Lohne?“
+Mit fliegenden Dolchen schreibt der Schmerz
 
-— — Ha! Fluch der Dirn’Und ihrem Hohne!
+Mir in’s Gebein:
 
-Nein! Komm zurück!Draussen ist’s kalt, ich höre regnen —Ich sollte dir zärtlicher begegnen?— Nimm! Hier ist Gold: wie glänzt das Stück! —
+„Welt hat kein Herz,
 
-Dich heissen „Glück“?Dich, Fieber, segnen? —
+Und Dummheit wär’s, ihr gram drum sein!“
 
-Die Thür springt auf!Der Regen sprüht nach meinem Bette!Wind löscht das Licht, — Unheil in Hauf’!— Wer jetzt nicht hundert **Reime** hätte,
+Giess alle Mohne,
 
-Ich wette, wette,Der gienge drauf!
+Giess, Fieber! Gift mir in’s Gehirn!
+
+Zu lang schon prüfst du mir Hand und Stirn.
+
+Was frägst du? Was? „Zu welchem — Lohne?“
+
+— — Ha! Fluch der Dirn’
+
+Und ihrem Hohne!
+
+Nein! Komm zurück!
+
+Draussen ist’s kalt, ich höre regnen —
+
+Ich sollte dir zärtlicher begegnen?
+
+— Nimm! Hier ist Gold: wie glänzt das Stück! —
+
+Dich heissen „Glück“?
+
+Dich, Fieber, segnen? —
+
+Die Thür springt auf!
+
+Der Regen sprüht nach meinem Bette!
+
+Wind löscht das Licht, — Unheil in Hauf’!
+
+— Wer jetzt nicht hundert **Reime** hätte,
+
+Ich wette, wette,
+
+Der gienge drauf!
 
 [„Mein Glück!“](javascript:;)
 -----------------------------

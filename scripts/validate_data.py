@@ -179,6 +179,8 @@ def main() -> None:
     reviewed_count = sum(quote.get("translationStatus") == "reviewed" for quote in quotes)
     if manifest.get("reviewedCount") != reviewed_count:
         fail("manifest reviewedCount does not match reviewed records")
+    if reviewed_count != len(quotes):
+        fail(f"editorial review incomplete: {reviewed_count}/{len(quotes)}")
     if manifest.get("pendingTranslationCount") != len(quotes) - len(translated_ids):
         fail("manifest pendingTranslationCount does not match pending records")
 
