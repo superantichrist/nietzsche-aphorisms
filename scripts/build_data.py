@@ -227,6 +227,26 @@ EH_PARTS = {
     "Warum ich ein Schicksal bin": ("Schicksal", "나는 왜 하나의 운명인가"),
 }
 
+# EH-Klug §7 contains the complete "An der Brücke stand" poem.  The source
+# snapshot stores every verse as a separate Markdown line, including several
+# lines that are deliberately too short for the general prose block parser.
+# Keep the canonical line order here so the parser can preserve the poem
+# without silently discarding those short lines.
+EH_VENICE_VERSE_LINES = (
+    "An der Brücke stand",
+    "jüngst ich in brauner Nacht.",
+    "Fernher kam Gesang:",
+    "goldener Tropfen quoll’s",
+    "über die zitternde Fläche weg.",
+    "Gondeln, Lichter, Musik —",
+    "trunken schwamm’s in die Dämmrung hinaus…",
+    "Meine Seele, ein Saitenspiel,",
+    "sang sich, unsichtbar berührt,",
+    "heimlich ein Gondellied dazu,",
+    "zitternd vor bunter Seligkeit.",
+    "— Hörte Jemand ihr zu?…",
+)
+
 PARTS_BY_WORK = {
     "jgb": JGB_PARTS,
     "gm": GM_PARTS,
@@ -288,7 +308,9 @@ def clean_new_markdown(value: str) -> str:
     )
     value = re.sub(r"&lt;(.*?)&gt;", r"\1", value)
     value = re.sub(r"\s*\|\s*", " ", value).strip()
-    return clean_markdown(value)
+    value = clean_markdown(value)
+    # The eKGWB Markdown mirror joins this bold-span boundary without a space.
+    return value.replace("Obhutzeigte", "Obhut zeigte")
 
 
 def heading_info(raw_heading: str, work: str) -> tuple[str, str, str] | None:
@@ -814,7 +836,47 @@ def parse_ecce_homo(path: Path) -> list[dict]:
                 if event_position + 1 < len(numbered_events)
                 else next_index
             )
-            paragraphs = body_blocks(lines[event["body_start"] : body_end], work="eh")
+            section_lines = lines[event["body_start"] : body_end]
+            paragraphs = body_blocks(section_lines, work="eh")
+            if slug == "Klug" and event["number"] == "7":
+                cleaned_source_lines = {
+                    clean_new_markdown(line.strip())
+                    for line in section_lines
+                    if line.strip()
+                }
+                missing_verses = [
+                    line for line in EH_VENICE_VERSE_LINES
+                    if line not in cleaned_source_lines
+                ]
+                if missing_verses:
+                    raise ValueError(
+                        "Incomplete EH-Klug-7 Venice poem in source snapshot: "
+                        f"{missing_verses}"
+                    )
+                verse_lines = set(EH_VENICE_VERSE_LINES)
+                paragraphs = [
+                    paragraph for paragraph in paragraphs
+                    if paragraph not in verse_lines
+                ]
+                paragraphs.extend(
+                    (
+                        normalize_space(" / ".join(EH_VENICE_VERSE_LINES[:7])),
+                        normalize_space(" / ".join(EH_VENICE_VERSE_LINES[7:])),
+                    )
+                )
+            if slug == "Klug" and event["number"] == "9":
+                # Keep the long Ritschl aside inside one balanced parenthesis.
+                # A generic length split otherwise leaves two independently
+                # displayed quotation records with unmatched brackets.
+                ritschl_marker = " (Ritschl —"
+                balanced_paragraphs: list[str] = []
+                for paragraph in paragraphs:
+                    if ritschl_marker in paragraph:
+                        lead, aside = paragraph.split(ritschl_marker, 1)
+                        balanced_paragraphs.extend((lead.strip(), f"(Ritschl —{aside}".strip()))
+                    else:
+                        balanced_paragraphs.append(paragraph)
+                paragraphs = balanced_paragraphs
             if not paragraphs:
                 raise ValueError(f"Empty EH {slug}-{event['number']}")
             sections.append(

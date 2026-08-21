@@ -222,6 +222,40 @@ def main() -> None:
                 f"split German ordinal across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
+    if any("Obhutzeigte" in quote["german"] for quote in quotes):
+        fail("joined eKGWB emphasis boundary remains in German corpus: Obhutzeigte")
+
+    eh_venice = [
+        quote for quote in quotes
+        if quote["work"] == "eh" and quote["part"] == "Klug" and quote["section"] == "7"
+    ]
+    verse_units = [
+        quote["german"] for quote in eh_venice
+        if "An der Brücke stand" in quote["german"]
+        or "Meine Seele, ein Saitenspiel" in quote["german"]
+    ]
+    expected_verse_lines = (
+        "An der Brücke stand", "jüngst ich in brauner Nacht.",
+        "Fernher kam Gesang:", "goldener Tropfen quoll’s",
+        "über die zitternde Fläche weg.", "Gondeln, Lichter, Musik —",
+        "trunken schwamm’s in die Dämmrung hinaus…",
+        "Meine Seele, ein Saitenspiel,", "sang sich, unsichtbar berührt,",
+        "heimlich ein Gondellied dazu,", "zitternd vor bunter Seligkeit.",
+        "— Hörte Jemand ihr zu?…",
+    )
+    if len(verse_units) != 2 or any(
+        line not in " ".join(verse_units) for line in expected_verse_lines
+    ):
+        fail("EH-Klug §7 Venice poem is incomplete or incorrectly packed")
+    eh_klug_nine = [
+        quote for quote in quotes
+        if quote["work"] == "eh" and quote["part"] == "Klug" and quote["section"] == "9"
+    ]
+    if any(
+        quote["german"].count("(") != quote["german"].count(")")
+        for quote in eh_klug_nine
+    ):
+        fail("EH-Klug §9 contains an independently displayed unbalanced aside")
     if cache_ids != translated_ids:
         fail(
             "translation cache ID mismatch: "
