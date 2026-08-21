@@ -1095,7 +1095,12 @@ def protect_ordinal_continuations(text: str) -> str:
     )
 
 
-def split_long(text: str, max_chars: int = 500) -> list[str]:
+def split_long(
+    text: str,
+    max_chars: int = 500,
+    *,
+    prefer_strong_boundaries: bool = False,
+) -> list[str]:
     if len(text) <= max_chars:
         return [text]
     result: list[str] = []
@@ -1103,9 +1108,19 @@ def split_long(text: str, max_chars: int = 500) -> list[str]:
     while len(remaining) > max_chars:
         window = remaining[: max_chars + 1]
         candidates: list[tuple[int, int]] = []
-        for match in re.finditer(r"(?:;|:|,| —| –)\s+", window):
-            if match.end() >= int(max_chars * 0.48):
-                candidates.append((match.end(), match.end()))
+        boundary_patterns = (
+            (r"(?:;|:| —| –)\s+", r",\s+")
+            if prefer_strong_boundaries
+            else (r"(?:;|:|,| —| –)\s+",)
+        )
+        for pattern in boundary_patterns:
+            candidates = [
+                (match.end(), match.end())
+                for match in re.finditer(pattern, window)
+                if match.end() >= int(max_chars * 0.48)
+            ]
+            if candidates:
+                break
         cut = candidates[-1][0] if candidates else window.rfind(" ", int(max_chars * 0.65))
         if cut <= 0:
             cut = max_chars
@@ -1148,6 +1163,7 @@ def sentence_units(
     max_chars: int = 500,
     extra_abbreviations: tuple[str, ...] = (),
     protect_ordinals: bool = False,
+    prefer_strong_boundaries: bool = False,
 ) -> list[str]:
     normalized = normalize_space(paragraph)
     if normalized in PRESERVE_SHORT_UNITS:
@@ -1159,7 +1175,13 @@ def sentence_units(
     restored = [part.replace("∯", ".") for part in raw]
     expanded: list[str] = []
     for part in restored:
-        expanded.extend(split_long(part, max_chars=max_chars))
+        expanded.extend(
+            split_long(
+                part,
+                max_chars=max_chars,
+                prefer_strong_boundaries=prefer_strong_boundaries,
+            )
+        )
     return merge_tiny(expanded)
 
 
@@ -1167,7 +1189,7 @@ def quote_units(paragraph: str) -> list[str]:
     return sentence_units(paragraph)
 
 
-def quote_units_for_work(paragraph: str, work: str) -> list[str]:
+def quote_units_for_work(paragraph: str, work: str, part: str = "") -> list[str]:
     if work in {"jgb", "gm"}:
         return quote_units(paragraph)
     units = sentence_units(
@@ -1175,6 +1197,7 @@ def quote_units_for_work(paragraph: str, work: str) -> list[str]:
         max_chars=650,
         extra_abbreviations=("St.", "V."),
         protect_ordinals=work in {"za", "eh", "nf"},
+        prefer_strong_boundaries=work == "eh" and part == "Za",
     )
     packed: list[str] = []
     current = ""
@@ -1224,7 +1247,9 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
         for section_data in sections:
             paragraph_count = len(section_data["paragraphs"])
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
-                for sentence_index, german in enumerate(quote_units_for_work(paragraph, work)):
+                for sentence_index, german in enumerate(
+                    quote_units_for_work(paragraph, work, section_data["part"])
+                ):
                     quote_id = stable_id(
                         work,
                         section_data["part"],

@@ -310,6 +310,25 @@ def main() -> None:
         or eh_january_verse[0]["paragraphCount"] != 3
     ):
         fail("EH-FW January poem is incomplete or incorrectly packed")
+    eh_za_quotes = [
+        quote for quote in quotes
+        if quote["work"] == "eh" and quote["part"] == "Za"
+    ]
+    for current, following in zip(eh_za_quotes, eh_za_quotes[1:]):
+        same_source_paragraph = (
+            current["section"] == following["section"]
+            and current["paragraph"] == following["paragraph"]
+            and following["sentence"] == current["sentence"] + 1
+        )
+        if (
+            same_source_paragraph
+            and current["german"].rstrip().endswith(",")
+            and following["german"][:1].islower()
+        ):
+            fail(
+                "EH-Za long sentence was split at a weak comma boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
     if cache_ids != translated_ids:
         fail(
             "translation cache ID mismatch: "
