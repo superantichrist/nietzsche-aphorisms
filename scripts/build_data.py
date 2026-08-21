@@ -253,6 +253,17 @@ EH_READER_VERSE_LINES = (
     "— denn nicht wollt ihr mit feiger Hand einem Faden nachtasten; und wo ihr errathen könnt, da hasst ihr es, zu erschliessen…",
 )
 
+EH_JANUARY_VERSE_LINES = (
+    "Der du mit dem Flammenspeere",
+    "Meiner Seele Eis zertheilt,",
+    "Dass sie brausend nun zum Meere",
+    "Ihrer höchsten Hoffnung eilt:",
+    "Heller stets und stets gesunder,",
+    "Frei im liebevollsten Muss —",
+    "Also preist sie deine Wunder,",
+    "Schönster Januarius!",
+)
+
 PARTS_BY_WORK = {
     "jgb": JGB_PARTS,
     "gm": GM_PARTS,
@@ -823,7 +834,32 @@ def parse_ecce_homo(path: Path) -> list[dict]:
         slug, title_ko = EH_PARTS[heading["title"]]
         numbered_events = numbered_heading_events(lines, heading["body_start"], next_index)
         if not numbered_events:
-            paragraphs = body_blocks(lines[heading["body_start"] : next_index], work="eh")
+            section_lines = lines[heading["body_start"] : next_index]
+            paragraphs = body_blocks(section_lines, work="eh")
+            if slug == "FW":
+                cleaned_source_lines = {
+                    clean_new_markdown(line.strip())
+                    for line in section_lines
+                    if line.strip()
+                }
+                missing_verses = [
+                    line for line in EH_JANUARY_VERSE_LINES
+                    if line not in cleaned_source_lines
+                ]
+                if missing_verses:
+                    raise ValueError(
+                        "Incomplete EH-FW January poem in source snapshot: "
+                        f"{missing_verses}"
+                    )
+                verse_lines = set(EH_JANUARY_VERSE_LINES)
+                paragraphs = [
+                    paragraph for paragraph in paragraphs
+                    if paragraph not in verse_lines and paragraph != "(„la gaya scienza“)"
+                ]
+                paragraphs.insert(
+                    1,
+                    normalize_space(" / ".join(EH_JANUARY_VERSE_LINES)),
+                )
             if not paragraphs:
                 raise ValueError(f"Empty unnumbered EH section {heading['title']}")
             sections.append(

@@ -293,6 +293,23 @@ def main() -> None:
         or "heiligen Geist des Lebens.“" not in chastity_quote[0]
     ):
         fail("EH-Bücher §5 chastity quotation is split or incomplete")
+    eh_january_verse = [
+        quote for quote in quotes
+        if quote["work"] == "eh" and quote["part"] == "FW"
+        and "Der du mit dem Flammenspeere" in quote["german"]
+    ]
+    expected_january_lines = (
+        "Der du mit dem Flammenspeere", "Meiner Seele Eis zertheilt,",
+        "Dass sie brausend nun zum Meere", "Ihrer höchsten Hoffnung eilt:",
+        "Heller stets und stets gesunder,", "Frei im liebevollsten Muss —",
+        "Also preist sie deine Wunder,", "Schönster Januarius!",
+    )
+    if (
+        len(eh_january_verse) != 1
+        or any(line not in eh_january_verse[0]["german"] for line in expected_january_lines)
+        or eh_january_verse[0]["paragraphCount"] != 3
+    ):
+        fail("EH-FW January poem is incomplete or incorrectly packed")
     if cache_ids != translated_ids:
         fail(
             "translation cache ID mismatch: "
