@@ -14,6 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf")
 LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
+ORDINAL_CONTINUATION_RE = re.compile(
+    r"^(?:Jahrhundert(?:s|e|en)?|"
+    r"Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b"
+)
 
 
 def fail(message: str) -> None:
@@ -203,6 +207,21 @@ def main() -> None:
         work_counts[quote["work"]] += 1
 
     cache_ids = set(translation_cache)
+    for current, following in zip(quotes, quotes[1:]):
+        same_paragraph = all(
+            current[field] == following[field]
+            for field in ("work", "part", "section", "paragraph")
+        )
+        if (
+            current["work"] in {"za", "eh", "nf"}
+            and same_paragraph
+            and re.search(r"\b\d{1,2}\.$", current["german"])
+            and ORDINAL_CONTINUATION_RE.match(following["german"])
+        ):
+            fail(
+                f"split German ordinal across quote boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
     if cache_ids != translated_ids:
         fail(
             "translation cache ID mismatch: "

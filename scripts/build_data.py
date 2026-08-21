@@ -948,6 +948,23 @@ def protect_abbreviations(text: str, extra: tuple[str, ...] = ()) -> str:
     return protected
 
 
+ORDINAL_CONTINUATIONS = (
+    "Jahrhundert", "Jahrhunderts", "Jahrhunderte", "Jahrhunderten",
+    "Januar", "Februar", "März", "April", "Mai", "Juni",
+    "Juli", "August", "September", "Oktober", "November", "Dezember",
+)
+
+
+def protect_ordinal_continuations(text: str) -> str:
+    """Keep German ordinals with a following century or month name."""
+    continuations = "|".join(map(re.escape, ORDINAL_CONTINUATIONS))
+    return re.sub(
+        rf"\b(\d{{1,2}})\.(?=\s+(?:{continuations})\b)",
+        r"\1∯",
+        text,
+    )
+
+
 def split_long(text: str, max_chars: int = 500) -> list[str]:
     if len(text) <= max_chars:
         return [text]
@@ -1000,11 +1017,14 @@ def sentence_units(
     *,
     max_chars: int = 500,
     extra_abbreviations: tuple[str, ...] = (),
+    protect_ordinals: bool = False,
 ) -> list[str]:
     normalized = normalize_space(paragraph)
     if normalized in PRESERVE_SHORT_UNITS:
         return [normalized]
     protected = protect_abbreviations(normalized, extra_abbreviations)
+    if protect_ordinals:
+        protected = protect_ordinal_continuations(protected)
     raw = re.split(r"(?<=[.!?…])(?:[”’\"])?\s+(?=(?:[„‚\"(\[])?[A-ZÄÖÜ—–-])", protected)
     restored = [part.replace("∯", ".") for part in raw]
     expanded: list[str] = []
@@ -1020,7 +1040,12 @@ def quote_units(paragraph: str) -> list[str]:
 def quote_units_for_work(paragraph: str, work: str) -> list[str]:
     if work in {"jgb", "gm"}:
         return quote_units(paragraph)
-    units = sentence_units(paragraph, max_chars=650, extra_abbreviations=("St.",))
+    units = sentence_units(
+        paragraph,
+        max_chars=650,
+        extra_abbreviations=("St.",),
+        protect_ordinals=work in {"za", "eh", "nf"},
+    )
     packed: list[str] = []
     current = ""
     for unit in units:
