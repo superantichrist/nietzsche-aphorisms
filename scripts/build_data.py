@@ -316,7 +316,11 @@ def clean_new_markdown(value: str) -> str:
     value = re.sub(r"\s*\|\s*", " ", value).strip()
     value = clean_markdown(value)
     # The eKGWB Markdown mirror joins this bold-span boundary without a space.
-    return value.replace("Obhutzeigte", "Obhut zeigte")
+    return (
+        value
+        .replace("Obhutzeigte", "Obhut zeigte")
+        .replace("Wagner’sgehabt", "Wagner’s gehabt")
+    )
 
 
 def heading_info(raw_heading: str, work: str) -> tuple[str, str, str] | None:

@@ -231,8 +231,13 @@ def main() -> None:
                 f"split abbreviated name across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
-    if any("Obhutzeigte" in quote["german"] for quote in quotes):
-        fail("joined eKGWB emphasis boundary remains in German corpus: Obhutzeigte")
+    joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt")
+    if any(
+        token in quote["german"]
+        for quote in quotes
+        for token in joined_boundaries
+    ):
+        fail("joined eKGWB emphasis boundary remains in German corpus")
 
     eh_venice = [
         quote for quote in quotes
