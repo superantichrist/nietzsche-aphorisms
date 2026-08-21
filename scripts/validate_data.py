@@ -222,6 +222,15 @@ def main() -> None:
                 f"split German ordinal across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
+        if (
+            current["work"] in {"za", "eh", "nf"}
+            and same_paragraph
+            and re.search(r"\bV[.]$", current["german"])
+        ):
+            fail(
+                f"split abbreviated name across quote boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
     if any("Obhutzeigte" in quote["german"] for quote in quotes):
         fail("joined eKGWB emphasis boundary remains in German corpus: Obhutzeigte")
 
@@ -256,6 +265,29 @@ def main() -> None:
         for quote in eh_klug_nine
     ):
         fail("EH-Klug §9 contains an independently displayed unbalanced aside")
+    eh_reader_verse = [
+        quote["german"] for quote in quotes
+        if quote["work"] == "eh" and quote["part"] == "Bücher"
+        and quote["section"] == "3" and "Euch, den kühnen Suchern" in quote["german"]
+    ]
+    if len(eh_reader_verse) != 1 or any(
+        line not in eh_reader_verse[0]
+        for line in (
+            "Euch, den kühnen Suchern", "euch, den Räthsel-Trunkenen",
+            "wo ihr errathen könnt, da hasst ihr es, zu erschliessen",
+        )
+    ):
+        fail("EH-Bücher §3 reader verse is incomplete or incorrectly packed")
+    chastity_quote = [
+        quote["german"] for quote in quotes
+        if quote["work"] == "eh" and quote["part"] == "Bücher"
+        and quote["section"] == "5" and "die Predigt der Keuschheit" in quote["german"]
+    ]
+    if (
+        len(chastity_quote) != 1
+        or "heiligen Geist des Lebens.“" not in chastity_quote[0]
+    ):
+        fail("EH-Bücher §5 chastity quotation is split or incomplete")
     if cache_ids != translated_ids:
         fail(
             "translation cache ID mismatch: "

@@ -247,6 +247,12 @@ EH_VENICE_VERSE_LINES = (
     "— Hörte Jemand ihr zu?…",
 )
 
+EH_READER_VERSE_LINES = (
+    "Euch, den kühnen Suchern, Versuchern, und wer je sich mit listigen Segeln auf furchtbare Meere einschiffte, —",
+    "euch, den Räthsel-Trunkenen, den Zwielicht-Frohen, deren Seele mit Flöten zu jedem Irrschlunde gelockt wird:",
+    "— denn nicht wollt ihr mit feiger Hand einem Faden nachtasten; und wo ihr errathen könnt, da hasst ihr es, zu erschliessen…",
+)
+
 PARTS_BY_WORK = {
     "jgb": JGB_PARTS,
     "gm": GM_PARTS,
@@ -877,6 +883,28 @@ def parse_ecce_homo(path: Path) -> list[dict]:
                     else:
                         balanced_paragraphs.append(paragraph)
                 paragraphs = balanced_paragraphs
+            if slug == "Bücher" and event["number"] == "3":
+                reader_verses = set(EH_READER_VERSE_LINES)
+                if not reader_verses.issubset(set(paragraphs)):
+                    raise ValueError("Incomplete EH-Bücher-3 reader verse in source snapshot")
+                paragraphs = [
+                    paragraph for paragraph in paragraphs
+                    if paragraph not in reader_verses
+                ] + [normalize_space(" / ".join(EH_READER_VERSE_LINES))]
+            if slug == "Bücher" and event["number"] == "5":
+                # Keep the two-sentence quotation about chastity together so
+                # every independently displayed unit has both quotation marks.
+                quotation_marker = " Der Satz heisst: „die Predigt der Keuschheit"
+                quoted_paragraphs: list[str] = []
+                for paragraph in paragraphs:
+                    if quotation_marker in paragraph:
+                        lead, quotation = paragraph.split(quotation_marker, 1)
+                        quoted_paragraphs.extend(
+                            (lead.strip(), f"Der Satz heisst: „die Predigt der Keuschheit{quotation}".strip())
+                        )
+                    else:
+                        quoted_paragraphs.append(paragraph)
+                paragraphs = quoted_paragraphs
             if not paragraphs:
                 raise ValueError(f"Empty EH {slug}-{event['number']}")
             sections.append(
@@ -1105,7 +1133,7 @@ def quote_units_for_work(paragraph: str, work: str) -> list[str]:
     units = sentence_units(
         paragraph,
         max_chars=650,
-        extra_abbreviations=("St.",),
+        extra_abbreviations=("St.", "V."),
         protect_ordinals=work in {"za", "eh", "nf"},
     )
     packed: list[str] = []
