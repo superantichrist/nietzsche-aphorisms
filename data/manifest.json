@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "beeec43442ba75b5",
-  "dataVersion": "91922cc6d1385b55",
+  "dataVersion": "605579508cb3bb00",
   "quoteCount": 17954,
-  "translatedCount": 5739,
-  "widgetQuoteCount": 5739,
-  "reviewedCount": 5699,
-  "pendingTranslationCount": 12215,
+  "translatedCount": 5772,
+  "widgetQuoteCount": 5772,
+  "reviewedCount": 5732,
+  "pendingTranslationCount": 12182,
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",
@@ -48,7 +48,7 @@
       "titleDe": "Ecce homo",
       "titleKo": "이 사람을 보라",
       "count": 570,
-      "reviewedCount": 304
+      "reviewedCount": 337
     },
     "nf": {
       "titleDe": "Nachgelassene Fragmente 1885–1888",
@@ -61,14 +61,14 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 17954,
-      "bytes": 15728393,
-      "sha256": "c5a0147fbb286ef1bec5304b446910252a74d37e0d9d4b83f5d0297a1de153fa"
+      "bytes": 15746410,
+      "sha256": "16482bd395ec3117883979f92bcd953230f719361d2f4a37d9c4eb3d57c47e74"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 5739,
-      "bytes": 4811966,
-      "sha256": "823c12b15f45c8a15eb3710ff0763cb75991c8cbd131750d722dcde77085c1a3"
+      "count": 5772,
+      "bytes": 4845959,
+      "sha256": "906aa0c68a25d6f15ae7d61fd77b9197fe13eb2155b192614be27a53acb7d272"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -109,8 +109,8 @@
     "eh": {
       "path": "data/eh.json",
       "count": 570,
-      "bytes": 625418,
-      "sha256": "def579165d2ab405d54f8f4fa9ee51e4aba8da07961903b8e222ea295eec9368"
+      "bytes": 643435,
+      "sha256": "57e36d4a685d8023c1048166e87401ce8709ecd42ba225f3b1f0e0342305975b"
     },
     "nf": {
       "path": "data/nf.json",
