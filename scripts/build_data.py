@@ -67,6 +67,7 @@ WORKS = {
 }
 
 WORK_ORDER = tuple(WORKS)
+WIDGET_SHARD_SIZE = 256
 
 JGB_PARTS = {
     "Vorrede": ("Vorrede", "서문"),
@@ -1323,6 +1324,27 @@ def main() -> None:
     ]
     write_json(DATA / "widget.json", widget_quotes, compact=True)
 
+    widget_shard_dir = DATA / "widget-shards"
+    widget_shard_works = {}
+    widget_offset = 0
+    for work in WORK_ORDER:
+        work_widget_quotes = [quote for quote in widget_quotes if quote["work"] == work]
+        shard_count = (len(work_widget_quotes) + WIDGET_SHARD_SIZE - 1) // WIDGET_SHARD_SIZE
+        for shard_index in range(shard_count):
+            start = shard_index * WIDGET_SHARD_SIZE
+            shard = work_widget_quotes[start : start + WIDGET_SHARD_SIZE]
+            write_json(
+                widget_shard_dir / f"{work}-{shard_index:03d}.json",
+                shard,
+                compact=True,
+            )
+        widget_shard_works[work] = {
+            "offset": widget_offset,
+            "count": len(work_widget_quotes),
+            "shardCount": shard_count,
+        }
+        widget_offset += len(work_widget_quotes)
+
     corpus_identity = "\n".join(f"{quote['id']}\0{quote['german']}" for quote in quotes)
     corpus_version = hashlib.sha256(corpus_identity.encode("utf-8")).hexdigest()[:16]
     data_identity = json.dumps(quotes, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
@@ -1338,6 +1360,14 @@ def main() -> None:
         "widgetQuoteCount": len(widget_quotes),
         "reviewedCount": reviewed,
         "pendingTranslationCount": len(quotes) - translated,
+        "widgetShards": {
+            "schemaVersion": 1,
+            "basePath": "data/widget-shards",
+            "shardSize": WIDGET_SHARD_SIZE,
+            "totalCount": len(widget_quotes),
+            "workOrder": list(WORK_ORDER),
+            "works": widget_shard_works,
+        },
         "works": {
             work: {
                 "titleDe": WORKS[work]["title_de"],

@@ -17,6 +17,8 @@ def main() -> None:
         for source in source_dir.glob("*"):
             if source.is_file():
                 shutil.copy2(source, target_dir / source.name)
+            elif source.is_dir():
+                shutil.copytree(source, target_dir / source.name, dirs_exist_ok=True)
     for filename in ("manifest.webmanifest", "robots.txt", ".nojekyll"):
         shutil.copy2(ROOT / filename, DIST / filename)
     print("Copied data and Scriptable assets into dist/.")

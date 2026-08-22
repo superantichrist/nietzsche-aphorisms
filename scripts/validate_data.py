@@ -340,6 +340,43 @@ def main() -> None:
         fail("widget data must contain every translated quote exactly once")
     if manifest.get("widgetQuoteCount") != len(widget_quotes):
         fail("manifest widgetQuoteCount does not match widget.json")
+    shard_catalog = manifest.get("widgetShards", {})
+    if (
+        shard_catalog.get("schemaVersion") != 1
+        or shard_catalog.get("basePath") != "data/widget-shards"
+        or shard_catalog.get("workOrder") != list(WORKS)
+        or shard_catalog.get("totalCount") != len(widget_quotes)
+    ):
+        fail("invalid widget shard catalog")
+    shard_size = shard_catalog.get("shardSize")
+    if not isinstance(shard_size, int) or shard_size < 1:
+        fail("invalid widget shard size")
+    reconstructed_widget_quotes = []
+    expected_offset = 0
+    for work in WORKS:
+        descriptor = shard_catalog.get("works", {}).get(work, {})
+        expected_work_quotes = [quote for quote in widget_quotes if quote["work"] == work]
+        expected_shard_count = (len(expected_work_quotes) + shard_size - 1) // shard_size
+        if descriptor != {
+            "offset": expected_offset,
+            "count": len(expected_work_quotes),
+            "shardCount": expected_shard_count,
+        }:
+            fail(f"invalid widget shard descriptor for {work}")
+        for shard_index in range(expected_shard_count):
+            shard_path = DATA / "widget-shards" / f"{work}-{shard_index:03d}.json"
+            if not shard_path.is_file():
+                fail(f"missing widget shard {shard_path.relative_to(ROOT)}")
+            shard = json.loads(shard_path.read_text(encoding="utf-8"))
+            expected_shard = expected_work_quotes[
+                shard_index * shard_size : (shard_index + 1) * shard_size
+            ]
+            if shard != expected_shard:
+                fail(f"widget shard mismatch in {shard_path.relative_to(ROOT)}")
+            reconstructed_widget_quotes.extend(shard)
+        expected_offset += len(expected_work_quotes)
+    if reconstructed_widget_quotes != widget_quotes:
+        fail("widget shards do not reconstruct widget.json exactly")
     for quote_id, translation in translation_cache.items():
         if not translation.get("korean", "").strip():
             fail(f"blank translation cache entry {quote_id}")

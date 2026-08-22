@@ -1,19 +1,25 @@
 // 오늘의 니체 — Scriptable widget
-// GitHub Pages의 작은 manifest만 확인하고, dataVersion이 바뀔 때만 위젯용 JSON을 다시 받습니다.
+// GitHub Pages의 작은 manifest를 확인하고, 선택된 구절이 든 조각만 내려받아 캐시합니다.
 
 const SITE_URL = "https://superantichrist.github.io/nietzsche-aphorisms/";
 const MANIFEST_URL = `${SITE_URL}data/manifest.json`;
 const WIDGET_DATA_URL = `${SITE_URL}data/widget.json`;
 const WORK_FILTER = "all"; // "all" | "jgb" | "gm" | "ac" | "gd" | "fw" | "za" | "eh" | "nf"
 const REQUEST_TIMEOUT_SECONDS = 12;
+const VALID_WORKS = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf"];
 
 const fm = FileManager.local();
 const cacheDirectory = fm.joinPath(fm.documentsDirectory(), "NietzscheToday");
 const quotesCachePath = fm.joinPath(cacheDirectory, "quotes-v1.json");
-const manifestCachePath = fm.joinPath(cacheDirectory, "manifest-v1.json");
+const manifestCachePath = fm.joinPath(cacheDirectory, "manifest-v2.json");
+const shardCacheDirectory = fm.joinPath(cacheDirectory, "shards-v1");
+const lastQuotesCachePath = fm.joinPath(cacheDirectory, "last-quotes-v1.json");
 
 if (!fm.fileExists(cacheDirectory)) {
   fm.createDirectory(cacheDirectory, true);
+}
+if (!fm.fileExists(shardCacheDirectory)) {
+  fm.createDirectory(shardCacheDirectory, true);
 }
 
 const EMERGENCY_QUOTES = [
@@ -88,31 +94,52 @@ async function requestJSON(url) {
   return await request.loadJSON();
 }
 
-function validQuotes(value) {
-  return Array.isArray(value)
-    && value.length > 100
-    && value.every((quote) => quote && typeof quote.id === "string" && typeof quote.german === "string");
+function validQuote(value) {
+  return Boolean(
+    value
+    && typeof value.id === "string"
+    && typeof value.work === "string"
+    && typeof value.german === "string"
+  );
 }
 
-async function loadQuotes() {
+function validQuotes(value, minimumLength = 1) {
+  return Array.isArray(value)
+    && value.length >= minimumLength
+    && value.every(validQuote);
+}
+
+function manifestVersion(manifest) {
+  return manifest && (manifest.dataVersion || manifest.corpusVersion);
+}
+
+function validShardCatalog(manifest) {
+  const catalog = manifest && manifest.widgetShards;
+  return Boolean(
+    manifestVersion(manifest)
+    && catalog
+    && catalog.schemaVersion === 1
+    && typeof catalog.basePath === "string"
+    && Number.isInteger(catalog.shardSize)
+    && catalog.shardSize > 0
+    && Number.isInteger(catalog.totalCount)
+    && catalog.totalCount > 0
+    && Array.isArray(catalog.workOrder)
+    && catalog.workOrder.length > 0
+    && catalog.works
+  );
+}
+
+async function loadLegacyQuotes(remoteManifest, cachedManifest) {
   let cachedQuotes = readJSON(quotesCachePath);
-  const cachedManifest = readJSON(manifestCachePath);
-  let remoteManifest = null;
-
-  try {
-    remoteManifest = await requestJSON(MANIFEST_URL);
-  } catch (error) {
-    console.log(`Manifest request failed; using cache: ${error}`);
-  }
-
-  const remoteVersion = remoteManifest && (remoteManifest.dataVersion || remoteManifest.corpusVersion);
-  const cachedVersion = cachedManifest && (cachedManifest.dataVersion || cachedManifest.corpusVersion);
-  const needsDownload = !validQuotes(cachedQuotes) || (remoteVersion && remoteVersion !== cachedVersion);
+  const remoteVersion = manifestVersion(remoteManifest);
+  const cachedVersion = manifestVersion(cachedManifest);
+  const needsDownload = !validQuotes(cachedQuotes, 100) || (remoteVersion && remoteVersion !== cachedVersion);
 
   if (needsDownload) {
     try {
       const downloaded = await requestJSON(WIDGET_DATA_URL);
-      if (!validQuotes(downloaded)) throw new Error("Downloaded corpus did not pass validation");
+      if (!validQuotes(downloaded, 100)) throw new Error("Downloaded corpus did not pass validation");
       writeJSON(quotesCachePath, downloaded);
       if (remoteManifest) writeJSON(manifestCachePath, remoteManifest);
       cachedQuotes = downloaded;
@@ -124,7 +151,7 @@ async function loadQuotes() {
     writeJSON(manifestCachePath, remoteManifest);
   }
 
-  if (validQuotes(cachedQuotes)) return cachedQuotes;
+  if (validQuotes(cachedQuotes, 100)) return cachedQuotes;
   console.log("No usable cache; using the embedded emergency set.");
   return EMERGENCY_QUOTES;
 }
@@ -133,12 +160,135 @@ function fiveMinuteSlot(date) {
   return Math.floor(date.getTime() / (5 * 60 * 1000));
 }
 
-function quoteForDate(date, quotes) {
+function slotHash(date) {
   let x = (fiveMinuteSlot(date) ^ 0x4e494554) >>> 0;
   x ^= x << 13;
   x ^= x >>> 17;
   x ^= x << 5;
-  return quotes[(x >>> 0) % quotes.length];
+  return x >>> 0;
+}
+
+function quoteForDate(date, quotes) {
+  return quotes[slotHash(date) % quotes.length];
+}
+
+function shardTarget(date, manifest) {
+  const catalog = manifest.widgetShards;
+  const filteredWork = VALID_WORKS.includes(WORK_FILTER) ? WORK_FILTER : null;
+  let work = filteredWork;
+  let localIndex;
+
+  if (work) {
+    const descriptor = catalog.works[work];
+    if (!descriptor || !Number.isInteger(descriptor.count) || descriptor.count < 1) return null;
+    localIndex = slotHash(date) % descriptor.count;
+  } else {
+    let globalIndex = slotHash(date) % catalog.totalCount;
+    for (const candidate of catalog.workOrder) {
+      const descriptor = catalog.works[candidate];
+      if (!descriptor || !Number.isInteger(descriptor.count)) return null;
+      if (globalIndex < descriptor.count) {
+        work = candidate;
+        localIndex = globalIndex;
+        break;
+      }
+      globalIndex -= descriptor.count;
+    }
+  }
+
+  if (!work || !Number.isInteger(localIndex)) return null;
+  const shardIndex = Math.floor(localIndex / catalog.shardSize);
+  return {
+    work,
+    shardIndex,
+    position: localIndex % catalog.shardSize,
+    url: `${SITE_URL}${catalog.basePath}/${work}-${String(shardIndex).padStart(3, "0")}.json`,
+  };
+}
+
+function lastQuoteKey() {
+  return VALID_WORKS.includes(WORK_FILTER) ? WORK_FILTER : "all";
+}
+
+function rememberQuote(quote) {
+  const remembered = readJSON(lastQuotesCachePath) || {};
+  remembered[lastQuoteKey()] = quote;
+  writeJSON(lastQuotesCachePath, remembered);
+}
+
+function lastRememberedQuote() {
+  const remembered = readJSON(lastQuotesCachePath) || {};
+  const quote = remembered[lastQuoteKey()];
+  return validQuote(quote) ? quote : null;
+}
+
+async function loadShardedQuote(date, manifest) {
+  const target = shardTarget(date, manifest);
+  if (!target) return null;
+  const cachePath = fm.joinPath(
+    shardCacheDirectory,
+    `${target.work}-${String(target.shardIndex).padStart(3, "0")}.json`
+  );
+  let cached = readJSON(cachePath);
+  const version = manifestVersion(manifest);
+  const exactCache = cached && cached.dataVersion === version && validQuotes(cached.quotes);
+
+  if (!exactCache) {
+    try {
+      const downloaded = await requestJSON(target.url);
+      if (!validQuotes(downloaded) || !downloaded.every((quote) => quote.work === target.work)) {
+        throw new Error("Downloaded shard did not pass validation");
+      }
+      cached = {
+        dataVersion: version,
+        corpusVersion: manifest.corpusVersion,
+        quotes: downloaded,
+      };
+      writeJSON(cachePath, cached);
+      console.log(`Cached ${target.work} shard ${target.shardIndex} (${downloaded.length} quotes).`);
+    } catch (error) {
+      console.log(`Shard download failed; using compatible cache: ${error}`);
+    }
+  }
+
+  const compatibleCache = cached
+    && validQuotes(cached.quotes)
+    && (cached.dataVersion === version || cached.corpusVersion === manifest.corpusVersion);
+  if (!compatibleCache) return null;
+  const quote = cached.quotes[target.position];
+  if (!validQuote(quote) || quote.work !== target.work) return null;
+  rememberQuote(quote);
+  return quote;
+}
+
+async function selectedQuote(date) {
+  const cachedManifest = readJSON(manifestCachePath);
+  let remoteManifest = null;
+  try {
+    remoteManifest = await requestJSON(MANIFEST_URL);
+    if (manifestVersion(remoteManifest)) writeJSON(manifestCachePath, remoteManifest);
+  } catch (error) {
+    console.log(`Manifest request failed; using cache: ${error}`);
+  }
+
+  const shardManifest = validShardCatalog(remoteManifest)
+    ? remoteManifest
+    : validShardCatalog(cachedManifest) ? cachedManifest : null;
+  if (shardManifest) {
+    const quote = await loadShardedQuote(date, shardManifest);
+    if (quote) return quote;
+    const remembered = lastRememberedQuote();
+    if (remembered) return remembered;
+  }
+
+  let quotes = await loadLegacyQuotes(remoteManifest, cachedManifest);
+  if (VALID_WORKS.includes(WORK_FILTER)) {
+    const filtered = quotes.filter((quote) => quote.work === WORK_FILTER);
+    if (filtered.length) quotes = filtered;
+  }
+  const quote = quoteForDate(date, quotes);
+  if (validQuote(quote)) rememberQuote(quote);
+  return quote;
 }
 
 function sourceLabel(quote) {
@@ -242,14 +392,7 @@ function makeWidget(quote) {
   return widget;
 }
 
-let quotes = await loadQuotes();
-if (["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf"].includes(WORK_FILTER)) {
-  const filtered = quotes.filter((quote) => quote.work === WORK_FILTER);
-  if (filtered.length) quotes = filtered;
-}
-
-
-const selected = quoteForDate(new Date(), quotes);
+const selected = await selectedQuote(new Date());
 const widget = makeWidget(selected);
 Script.setWidget(widget);
 

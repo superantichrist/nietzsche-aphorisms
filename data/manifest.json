@@ -7,6 +7,64 @@
   "widgetQuoteCount": 17949,
   "reviewedCount": 5749,
   "pendingTranslationCount": 0,
+  "widgetShards": {
+    "schemaVersion": 1,
+    "basePath": "data/widget-shards",
+    "shardSize": 256,
+    "totalCount": 17949,
+    "workOrder": [
+      "jgb",
+      "gm",
+      "ac",
+      "gd",
+      "fw",
+      "za",
+      "eh",
+      "nf"
+    ],
+    "works": {
+      "jgb": {
+        "offset": 0,
+        "count": 1717,
+        "shardCount": 7
+      },
+      "gm": {
+        "offset": 1717,
+        "count": 1261,
+        "shardCount": 5
+      },
+      "ac": {
+        "offset": 2978,
+        "count": 439,
+        "shardCount": 2
+      },
+      "gd": {
+        "offset": 3417,
+        "count": 486,
+        "shardCount": 2
+      },
+      "fw": {
+        "offset": 3903,
+        "count": 1492,
+        "shardCount": 6
+      },
+      "za": {
+        "offset": 5395,
+        "count": 3588,
+        "shardCount": 15
+      },
+      "eh": {
+        "offset": 8983,
+        "count": 565,
+        "shardCount": 3
+      },
+      "nf": {
+        "offset": 9548,
+        "count": 8401,
+        "shardCount": 33
+      }
+    }
+  },
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",

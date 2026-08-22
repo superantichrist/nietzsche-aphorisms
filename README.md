@@ -33,7 +33,8 @@
 - [`data/za.json`](data/za.json): 《차라투스트라는 이렇게 말했다》
 - [`data/eh.json`](data/eh.json): 《이 사람을 보라》
 - [`data/nf.json`](data/nf.json): 1885–1888년 후기 유고
-- [`data/widget.json`](data/widget.json): 번역이 있는 구절만 담은 Scriptable용 최소 데이터
+- [`data/widget.json`](data/widget.json): 번역이 있는 구절만 담은 Scriptable 호환용 전체 데이터
+- `data/widget-shards/`: Scriptable이 선택된 구절에 필요한 조각만 받는 작품별 분할 데이터
 - [`data/manifest.json`](data/manifest.json): 버전, 개수, 파일 크기, SHA-256
 - [`data/schema.json`](data/schema.json): 레코드 JSON Schema
 
@@ -83,7 +84,7 @@ python scripts/build_data.py
 
 [`scriptable/NietzscheToday.js`](scriptable/NietzscheToday.js)를 Scriptable 새 스크립트에 붙여 넣는다. 위젯은 5분 슬롯과 xorshift로 구절을 고르고 5분 뒤 갱신을 요청한다. iOS는 실제 갱신 시각을 보장하지 않는다.
 
-15MB가 넘는 웹용 전체 corpus 대신, 번역이 있는 구절과 위젯에 필요한 필드만 담은 `widget.json`을 사용한다. 작은 `manifest.json`의 `dataVersion`을 먼저 확인하고 버전이 바뀐 경우에만 다시 다운로드하며, 네트워크 실패 시 마지막 정상 캐시를 쓴다. 최초 실행도 오프라인이면 코드에 내장한 네 구절로 동작한다.
+작은 `manifest.json`을 먼저 확인한 뒤 5분 선택값이 속한 작품별 조각 하나만 내려받는다. 각 조각은 최대 256개 구절이며 버전·작품·조각 번호별로 캐시하므로, 데이터가 갱신되어도 13MB가 넘는 위젯 전체 JSON을 다시 받을 필요가 없다. 이전 배포와의 호환을 위해 `widget.json` 방식도 지원한다. 네트워크 실패 시 같은 corpus의 캐시 조각, 마지막 정상 구절, 내장 비상 구절 순서로 대체한다.
 
 ## 원문과 권리
 
