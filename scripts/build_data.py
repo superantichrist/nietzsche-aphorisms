@@ -11,11 +11,12 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
+from translation_sources import load_translations
+
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "sources" / "raw"
 DATA = ROOT / "data"
-TRANSLATIONS = ROOT / "translations" / "ko.json"
 
 WORKS = {
     "jgb": {
@@ -1211,16 +1212,6 @@ def quote_units_for_work(paragraph: str, work: str, part: str = "") -> list[str]
     if current:
         packed.append(current)
     return packed
-
-
-def load_translations() -> dict[str, dict]:
-    if not TRANSLATIONS.exists():
-        return {}
-    payload = json.loads(TRANSLATIONS.read_text(encoding="utf-8"))
-    translations = payload.get("translations", payload)
-    if not isinstance(translations, dict):
-        raise ValueError("translations/ko.json must contain an object map")
-    return translations
 
 
 def stable_id(work: str, part: str, section: str, paragraph: int, german: str) -> str:

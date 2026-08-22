@@ -8,6 +8,8 @@ import json
 import re
 from pathlib import Path
 
+from translation_sources import load_translations
+
 
 ROOT = Path(__file__).resolve().parents[1]
 TRANSLATIONS = ROOT / "translations" / "ko.json"
@@ -36,10 +38,6 @@ EDITORIAL_FOOTNOTE_RE = re.compile(
     r"자해\s*위험|위기지원|응급",
     re.I,
 )
-
-
-def load_cache() -> dict:
-    return json.loads(TRANSLATIONS.read_text(encoding="utf-8"))
 
 
 def editorial_footnotes(translations: dict) -> list[tuple[str, int, dict]]:
@@ -80,8 +78,7 @@ def main() -> None:
     parser.add_argument("--list", action="store_true", help="print every editorial footnote")
     args = parser.parse_args()
 
-    payload = load_cache()
-    translations = payload.get("translations", {})
+    translations = load_translations()
     errors = basic_errors(translations)
     findings = editorial_footnotes(translations)
 
@@ -99,7 +96,12 @@ def main() -> None:
                 footnote for index, footnote in enumerate(footnotes) if index not in indexes
             ]
         TRANSLATIONS.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+            json.dumps(
+                {"schemaVersion": 1, "translations": translations},
+                ensure_ascii=False,
+                indent=2,
+            )
+            + "\n",
             encoding="utf-8",
         )
         print(f"Removed {len(findings):,} editorial footnotes from {len(remove_by_id):,} quotes.")

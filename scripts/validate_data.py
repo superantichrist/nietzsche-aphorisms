@@ -9,6 +9,8 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from translation_sources import load_translations
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -138,9 +140,7 @@ def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
 def main() -> None:
     quotes = json.loads((DATA / "quotes.json").read_text(encoding="utf-8"))
     manifest = json.loads((DATA / "manifest.json").read_text(encoding="utf-8"))
-    translation_cache = json.loads(
-        (ROOT / "translations" / "ko.json").read_text(encoding="utf-8")
-    )["translations"]
+    translation_cache = load_translations()
     source_manifest = json.loads((ROOT / "sources" / "sources.json").read_text(encoding="utf-8"))
     required = {
         "id", "work", "workTitleDe", "workTitleKo", "part", "section",
