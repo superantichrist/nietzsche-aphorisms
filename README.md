@@ -65,7 +65,7 @@ npm run check
 npm run dev
 ```
 
-`npm run check`는 원문을 다시 파싱하고 작품별 JSON을 만든 뒤, 17,900개 이상 구절·ID 유일성·여덟 코퍼스의 절과 단편 범위·구절 길이·출전 URL·번역 상태·번역 캐시 대응을 검증한다. 원문 스냅샷을 다시 받을 때만 `python scripts/fetch_sources.py`와 `python scripts/fetch_extended_sources.py`를 사용한다. 빌드는 vendored 원문으로 재현되므로 평소에는 네트워크가 필요 없다.
+`npm run check`는 원문을 다시 파싱하고 작품별 JSON을 만든 뒤, 17,900개 이상 구절·ID 유일성·여덟 코퍼스의 절과 단편 범위·구절 길이·출전 URL·번역 상태·번역 캐시 대응을 검증한다. 번역 감사 단계는 미번역·기계번역 표식과 원문 밖의 현대적 판정을 덧붙이는 사용자 노출 각주도 차단한다. 원문 스냅샷을 다시 받을 때만 `python scripts/fetch_sources.py`와 `python scripts/fetch_extended_sources.py`를 사용한다. 빌드는 vendored 원문으로 재현되므로 평소에는 네트워크가 필요 없다.
 
 ## 한국어 번역 작업
 

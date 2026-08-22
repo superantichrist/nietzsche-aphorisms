@@ -12,7 +12,8 @@
     "fetch:sources": "python scripts/fetch_sources.py && python scripts/fetch_extended_sources.py",
     "build": "npm run build:data && vite build && python scripts/copy_static.py",
     "validate": "python scripts/validate_data.py",
-    "check": "npm run build && npm run validate"
+    "audit:translations": "python scripts/audit_translations.py",
+    "check": "npm run build && npm run validate && npm run audit:translations"
   },
   "devDependencies": {
     "vite": "8.0.13"

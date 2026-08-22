@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "7b81bd0cee4bdbe4",
-  "dataVersion": "b7b89120bf5dd4c6",
+  "dataVersion": "9b2ee0c7f29eb580",
   "quoteCount": 17949,
   "translatedCount": 17949,
   "widgetQuoteCount": 17949,
@@ -61,44 +61,44 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 17949,
-      "bytes": 19021053,
-      "sha256": "a1d036763dbe60ffcd13f3c183413e4d331809188f05984f82034bba52260a6d"
+      "bytes": 18919958,
+      "sha256": "21ba760087eefba349a67676eab2480864cc299fd7a76669b5162ccc12e5b6bd"
     },
     "widget": {
       "path": "data/widget.json",
       "count": 17949,
-      "bytes": 13754756,
-      "sha256": "264d263f1ac00ac10dddfebae1a60dcd053a79bf60694284e6be806063dac613"
+      "bytes": 13755011,
+      "sha256": "2cd86dd0174b285f879c9159499aced0d59210f1056a5a5cfaf485e37e7bc2d3"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1717,
-      "bytes": 1783500,
-      "sha256": "fd5d875e687f0eb8b4ef2f4fdf28377de29ec098086e22e2797b1c076cf633ec"
+      "bytes": 1750624,
+      "sha256": "1ae0c90ccba4d5f03c619dcae96a041f397f0b7b4e24752f734667c69eaf9c49"
     },
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1356703,
-      "sha256": "a4db3b7e14b6d3221068de3946c79c31b22cd8a108419386d81603ff97ccf307"
+      "bytes": 1335995,
+      "sha256": "58697c3d2ad215af06bb2de49c325d02113af6c6e5b5bede53463869ae10f1d9"
     },
     "ac": {
       "path": "data/ac.json",
       "count": 439,
-      "bytes": 570117,
-      "sha256": "d42be6094d648f9af8f4d788267baeead8058e4f1ca4d0b197313e9cfa7c7c0f"
+      "bytes": 563647,
+      "sha256": "92bf2066b7f1106ddbffe093c1b9883b8cbec429214cff15ad88707a1f20f8f2"
     },
     "gd": {
       "path": "data/gd.json",
       "count": 486,
-      "bytes": 630522,
-      "sha256": "17540cb727a7af8830bc887284adaa0445f239e500b09a4b96b1a9e21da234b5"
+      "bytes": 619193,
+      "sha256": "8a289a915350d350a9853ff71c27c347a67273f682977f25c51b8e198bfec415"
     },
     "fw": {
       "path": "data/fw.json",
       "count": 1492,
-      "bytes": 1817428,
-      "sha256": "3843cc1887a0d38e851fd2ed83f96d9436379430fd0057a99ccc7d59035f4fa5"
+      "bytes": 1797618,
+      "sha256": "5d5904b2a51f25fc325516be0095d4d8061b48f34a1d00bcddd96944fe497dad"
     },
     "za": {
       "path": "data/za.json",
@@ -109,14 +109,14 @@
     "eh": {
       "path": "data/eh.json",
       "count": 565,
-      "bytes": 746815,
-      "sha256": "565c505e97055b2eac3b981dd893a9bbc5cc75ecfd30180a3b1c8f7cdacdab72"
+      "bytes": 739197,
+      "sha256": "5e086134effeafb663b7443dbab63ded01b90a5e507adaf033c1cf5b4cea4253"
     },
     "nf": {
       "path": "data/nf.json",
       "count": 8401,
-      "bytes": 8923294,
-      "sha256": "52b6b37cba9309327b1a6382b40774c8f1ee9ebf6f78c4423419f2cc7bd9cde2"
+      "bytes": 8921010,
+      "sha256": "f8cf6d642644ba0c91c74d2ff2781cd617487b13346a6e36dd35ada26e5f4824"
     }
   },
   "sources": "sources/sources.json"
