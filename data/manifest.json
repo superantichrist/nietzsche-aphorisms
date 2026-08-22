@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "corpusVersion": "7b81bd0cee4bdbe4",
-  "dataVersion": "0593bccf8ab12434",
+  "dataVersion": "ceb2503f29355b99",
   "quoteCount": 17949,
-  "translatedCount": 15213,
-  "widgetQuoteCount": 15213,
+  "translatedCount": 15313,
+  "widgetQuoteCount": 15313,
   "reviewedCount": 5749,
-  "pendingTranslationCount": 2736,
+  "pendingTranslationCount": 2636,
   "works": {
     "jgb": {
       "titleDe": "Jenseits von Gut und Böse",
@@ -61,14 +61,14 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 17949,
-      "bytes": 18253084,
-      "sha256": "093bffc6d94a694de85dee5e162f7a835d78c17a73f87ba009a82f5cf81176fd"
+      "bytes": 18278351,
+      "sha256": "3834376b049077f7252ec8e15c9b013c704ef385576786b026f39e4b266f4c7e"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 15213,
-      "bytes": 11699400,
-      "sha256": "30fe416fd5e62bd4a6e1b28085145fb55125451dadf16df7f573cbf3e0649aa3"
+      "count": 15313,
+      "bytes": 11770013,
+      "sha256": "e3cae08ee437660bc580b304a3da4cc2c26f14bcac02216e5162286ec33e6fae"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -115,8 +115,8 @@
     "nf": {
       "path": "data/nf.json",
       "count": 8401,
-      "bytes": 8155325,
-      "sha256": "e0065db1e670d918a4f23f757ca3ce5f40b6a93abe9ab738cf467d2baa1a23b2"
+      "bytes": 8180592,
+      "sha256": "7afad01d419129a069fc85639636dba0c41c77d67abac3209a458ecc5eabcd87"
     }
   },
   "sources": "sources/sources.json"
