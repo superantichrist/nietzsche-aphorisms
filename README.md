@@ -1,6 +1,6 @@
-# 오늘의 니체 · Nietzsche Aphorisms
+# 오늘의 문장
 
-니체의 일곱 저작과 1885–1888년 후기 유고 독일어 원문을 출전 추적이 가능한 짧은 읽기 단위로 나눈 정적 데이터베이스, 모바일 웹, iPhone Scriptable 위젯입니다.
+니체와 쇼펜하우어의 독일어 원문을 출전 추적이 가능한 읽기 단위로 나눈 정적 데이터베이스, 모바일 웹, iPhone Scriptable 위젯입니다. 저장소 이름과 기존 Scriptable 파일명에는 이전 명칭이 호환성을 위해 남아 있습니다.
 
 공개 사이트: <https://superantichrist.github.io/nietzsche-aphorisms/>
 
@@ -16,15 +16,16 @@
 | Also sprach Zarathustra | 3,588 | 제1–4부 전체 |
 | Ecce homo | 565 | 머리글, 서문, 14개 장 전체 |
 | Nachgelassene Fragmente 1885–1888 | 8,401 | 37개 노트군 전체; 짧은 표제·미완 조각 제외 |
-| 합계 | 17,949 | 일곱 저작과 후기 유고의 독일어 전 범위 |
+| Parerga und Paralipomena | 7,086 | 1874년 제3판 제1·2권, 제2권 §1–413 및 원판 각주 |
+| 합계 | 25,035 | 니체 17,949개, 쇼펜하우어 7,086개 |
 
-기존 다섯 저작 5,395개 번역은 전량 독일어와 대조해 통독 감수했다. 새 세 코퍼스도 외부 기계번역 API나 현대 한국어 출판 번역을 사용하지 않고 Codex가 원문과 장 전체의 문맥에서 직접 옮겼다. 《이 사람을 보라》 565개 전체의 1차 번역을 완료했으며, 앞선 354개는 `reviewed`, 나머지 211개는 세심한 직접 번역을 거친 `draft`다. 《차라투스트라는 이렇게 말했다》 3,588개도 네 부 전체의 1차 직접 번역을 완료했다. 후기 유고 8,401개 역시 전체 1차 직접 번역을 완료했다. 전체 현황은 번역 17,949개, 감수 완료 5,749개, 미번역 0개다. 한국어는 별도 캐시에서 관리하므로 번역을 다듬어도 안정 ID와 독일어 출전은 바뀌지 않는다.
+니체 17,949개에는 직접 만든 한국어 번역이 있고 그중 5,749개는 감수를 마쳤다. 쇼펜하우어 7,086개는 빠른 첫 공개를 위해 독일어 원문과 판본·목차·각주만 먼저 제공하며 현재 한국어 번역은 `pending`이다. 이후 장 단위 문맥을 유지한 직접 번역을 증분으로 추가한다. 한국어는 별도 캐시에서 관리하므로 번역을 다듬어도 안정 ID와 독일어 출전은 바뀌지 않는다.
 
 모바일 웹에서는 작품 → 부/논문 → 절로 이어지는 목차를 열어 원하는 출전의 첫 구절로 바로 이동할 수 있다. 검색, 작품 필터, 앞뒤 이동, 원문 표시, 복사, 공유, 구절별 영구 링크도 지원한다.
 
 ## JSON
 
-- [`data/quotes.json`](data/quotes.json): 일곱 저작과 후기 유고 전체
+- [`data/quotes.json`](data/quotes.json): 두 저자의 전체 코퍼스
 - [`data/jgb.json`](data/jgb.json): 《선악의 저편》
 - [`data/gm.json`](data/gm.json): 《도덕의 계보》
 - [`data/ac.json`](data/ac.json): 《안티크리스트》
@@ -33,7 +34,8 @@
 - [`data/za.json`](data/za.json): 《차라투스트라는 이렇게 말했다》
 - [`data/eh.json`](data/eh.json): 《이 사람을 보라》
 - [`data/nf.json`](data/nf.json): 1885–1888년 후기 유고
-- [`data/widget.json`](data/widget.json): 번역이 있는 구절만 담은 Scriptable 호환용 전체 데이터
+- [`data/pp.json`](data/pp.json): 쇼펜하우어 《소품과 부록》 제1·2권
+- [`data/widget.json`](data/widget.json): 번역 여부와 무관한 Scriptable 호환용 전체 데이터
 - `data/widget-shards/`: Scriptable이 선택된 구절에 필요한 조각만 받는 작품별 분할 데이터
 - [`data/manifest.json`](data/manifest.json): 버전, 개수, 파일 크기, SHA-256
 - [`data/schema.json`](data/schema.json): 레코드 JSON Schema
@@ -41,6 +43,9 @@
 ```json
 {
   "id": "jgb-146-009e0b432b98",
+  "author": "nietzsche",
+  "authorNameDe": "Friedrich Nietzsche",
+  "authorNameKo": "프리드리히 니체",
   "work": "jgb",
   "workTitleDe": "Jenseits von Gut und Böse",
   "workTitleKo": "선악의 저편",
@@ -66,11 +71,11 @@ npm run check
 npm run dev
 ```
 
-`npm run check`는 원문을 다시 파싱하고 작품별 JSON을 만든 뒤, 17,900개 이상 구절·ID 유일성·여덟 코퍼스의 절과 단편 범위·구절 길이·출전 URL·번역 상태·번역 캐시 대응을 검증한다. 번역 감사 단계는 미번역·기계번역 표식과 원문 밖의 현대적 판정을 덧붙이는 사용자 노출 각주도 차단한다. 기본 번역 캐시는 `translations/ko.json`이며, 배포용 증분은 `translations/overrides/*.json`을 파일명 순서로 병합한다. 원문 스냅샷을 다시 받을 때만 `python scripts/fetch_sources.py`와 `python scripts/fetch_extended_sources.py`를 사용한다. 빌드는 vendored 원문으로 재현되므로 평소에는 네트워크가 필요 없다.
+`npm run check`는 원문을 다시 파싱하고 작품별 JSON을 만든 뒤, 25,000개 이상 구절·ID 유일성·아홉 코퍼스의 절과 단편 범위·구절 길이·출전 URL·번역 상태·번역 캐시 대응을 검증한다. 쇼펜하우어 EPUB의 해시, 45개 목차 부, 458개 절, 제2권 § 범위도 함께 확인한다. 기본 번역 캐시는 `translations/ko.json`이며, 배포용 증분은 `translations/overrides/*.json`을 파일명 순서로 병합한다. 빌드는 vendored 원문으로 재현되므로 평소에는 네트워크가 필요 없다.
 
 ## 한국어 번역 작업
 
-번역은 [`translations/ko.json`](translations/ko.json)에 ID별로 저장된다. 독일어 corpus를 다시 파싱해도 동일한 원문·출전의 ID는 유지된다. 원저자의 의미와 어조를 최우선으로 삼아 폭력적·성차별적·반종교적 표현도 현대의 가치에 맞춰 완화하거나 보정하지 않는다. 각주는 어원, 말놀이, 인명, 인용 전거와 역사적 배경처럼 원문 이해에 필요한 정보만 제공한다.
+번역은 [`translations/ko.json`](translations/ko.json)과 증분 override에 ID별로 저장된다. 독일어 corpus를 다시 파싱해도 동일한 원문·출전의 ID는 유지된다. 원저자의 의미와 어조를 최우선으로 삼아 폭력적·성차별적·반종교적 표현도 현대의 가치에 맞춰 완화하거나 보정하지 않는다. 각주는 어원, 말놀이, 인명, 인용 전거와 역사적 배경처럼 원문 이해에 필요한 정보만 제공한다.
 
 ```bash
 python scripts/translation_cache.py export --work eh --limit 100
@@ -84,7 +89,7 @@ python scripts/build_data.py
 
 [`scriptable/NietzscheToday.js`](scriptable/NietzscheToday.js)를 Scriptable 새 스크립트에 붙여 넣는다. 위젯은 5분 슬롯과 xorshift로 구절을 고르고 5분 뒤 갱신을 요청한다. iOS는 실제 갱신 시각을 보장하지 않는다.
 
-작은 `manifest.json`을 먼저 확인한 뒤 5분 선택값이 속한 작품별 조각 하나만 내려받는다. 각 조각은 최대 256개 구절이며 버전·작품·조각 번호별로 캐시하므로, 데이터가 갱신되어도 13MB가 넘는 위젯 전체 JSON을 다시 받을 필요가 없다. 이전 배포와의 호환을 위해 `widget.json` 방식도 지원한다. 네트워크 실패 시 같은 corpus의 캐시 조각, 마지막 정상 구절, 내장 비상 구절 순서로 대체한다.
+작은 `manifest.json`을 먼저 확인한 뒤 5분 선택값이 속한 작품별 조각 하나만 내려받는다. 각 조각은 최대 256개 구절이며 선별 목록이 아니라 전체 코퍼스를 나눈 전송 단위다. 번역이 없는 쇼펜하우어 구절도 선택 대상이고 그때는 독일어를 표시한다. 데이터가 갱신되어도 위젯 전체 JSON을 다시 받을 필요가 없으며 네트워크 실패 시 같은 corpus의 캐시 조각, 마지막 정상 구절, 내장 비상 구절 순서로 대체한다.
 
 ## 원문과 권리
 

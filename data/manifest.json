@@ -1,17 +1,17 @@
 {
-  "schemaVersion": 2,
-  "corpusVersion": "7b81bd0cee4bdbe4",
-  "dataVersion": "9b2ee0c7f29eb580",
-  "quoteCount": 17949,
+  "schemaVersion": 3,
+  "corpusVersion": "3b51f84ca9b68101",
+  "dataVersion": "ae235ca2fff2c2a1",
+  "quoteCount": 25035,
   "translatedCount": 17949,
-  "widgetQuoteCount": 17949,
+  "widgetQuoteCount": 25035,
   "reviewedCount": 5749,
-  "pendingTranslationCount": 0,
+  "pendingTranslationCount": 7086,
   "widgetShards": {
     "schemaVersion": 1,
     "basePath": "data/widget-shards",
     "shardSize": 256,
-    "totalCount": 17949,
+    "totalCount": 25035,
     "workOrder": [
       "jgb",
       "gm",
@@ -20,7 +20,8 @@
       "fw",
       "za",
       "eh",
-      "nf"
+      "nf",
+      "pp"
     ],
     "works": {
       "jgb": {
@@ -62,119 +63,197 @@
         "offset": 9548,
         "count": 8401,
         "shardCount": 33
+      },
+      "pp": {
+        "offset": 17949,
+        "count": 7086,
+        "shardCount": 28
       }
+    }
+  },
+  "authors": {
+    "nietzsche": {
+      "nameDe": "Friedrich Nietzsche",
+      "nameKo": "프리드리히 니체",
+      "count": 17949,
+      "works": [
+        "jgb",
+        "gm",
+        "ac",
+        "gd",
+        "fw",
+        "za",
+        "eh",
+        "nf"
+      ]
+    },
+    "schopenhauer": {
+      "nameDe": "Arthur Schopenhauer",
+      "nameKo": "아르투어 쇼펜하우어",
+      "count": 7086,
+      "works": [
+        "pp"
+      ]
     }
   },
   "works": {
     "jgb": {
+      "author": "nietzsche",
       "titleDe": "Jenseits von Gut und Böse",
       "titleKo": "선악의 저편",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 1717,
       "reviewedCount": 1717
     },
     "gm": {
+      "author": "nietzsche",
       "titleDe": "Zur Genealogie der Moral",
       "titleKo": "도덕의 계보",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 1261,
       "reviewedCount": 1261
     },
     "ac": {
+      "author": "nietzsche",
       "titleDe": "Der Antichrist",
       "titleKo": "안티크리스트",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 439,
       "reviewedCount": 439
     },
     "gd": {
+      "author": "nietzsche",
       "titleDe": "Götzen-Dämmerung",
       "titleKo": "우상의 황혼",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 486,
       "reviewedCount": 486
     },
     "fw": {
+      "author": "nietzsche",
       "titleDe": "Die fröhliche Wissenschaft",
       "titleKo": "즐거운 학문",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 1492,
       "reviewedCount": 1492
     },
     "za": {
+      "author": "nietzsche",
       "titleDe": "Also sprach Zarathustra",
       "titleKo": "차라투스트라는 이렇게 말했다",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 3588,
       "reviewedCount": 0
     },
     "eh": {
+      "author": "nietzsche",
       "titleDe": "Ecce homo",
       "titleKo": "이 사람을 보라",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 565,
       "reviewedCount": 354
     },
     "nf": {
+      "author": "nietzsche",
       "titleDe": "Nachgelassene Fragmente 1885–1888",
       "titleKo": "후기 유고 1885–1888",
+      "edition": "eKGWB",
+      "editor": "",
+      "transcriptionStatus": "검증 완료",
       "count": 8401,
+      "reviewedCount": 0
+    },
+    "pp": {
+      "author": "schopenhauer",
+      "titleDe": "Parerga und Paralipomena",
+      "titleKo": "소품과 부록",
+      "edition": "3. Auflage (1874)",
+      "editor": "Julius Frauenstädt",
+      "transcriptionStatus": "검증 중인 구조화 전사본",
+      "count": 7086,
       "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 17949,
-      "bytes": 18919958,
-      "sha256": "21ba760087eefba349a67676eab2480864cc299fd7a76669b5162ccc12e5b6bd"
+      "count": 25035,
+      "bytes": 32226537,
+      "sha256": "cb945de64dcc3038caab966032a4072b519653050c3cb7664fae56f03f5529d2"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 17949,
-      "bytes": 13755011,
-      "sha256": "2cd86dd0174b285f879c9159499aced0d59210f1056a5a5cfaf485e37e7bc2d3"
+      "count": 25035,
+      "bytes": 19855484,
+      "sha256": "8e8fd7173c9fa834aef0b4657c01d7b8a5e3e2d9f785318c0609610614d1883a"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1717,
-      "bytes": 1750624,
-      "sha256": "1ae0c90ccba4d5f03c619dcae96a041f397f0b7b4e24752f734667c69eaf9c49"
+      "bytes": 2202195,
+      "sha256": "33971d799c706a7ffd73a93eda35c6e46f8a1e86b14fd3453383ccef8ee24f9d"
     },
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1335995,
-      "sha256": "58697c3d2ad215af06bb2de49c325d02113af6c6e5b5bede53463869ae10f1d9"
+      "bytes": 1657550,
+      "sha256": "d6fafe13a414bf1983201ada573cc3b20ba0c7a58f1cf5e7126be0e85dbd9015"
     },
     "ac": {
       "path": "data/ac.json",
       "count": 439,
-      "bytes": 563647,
-      "sha256": "92bf2066b7f1106ddbffe093c1b9883b8cbec429214cff15ad88707a1f20f8f2"
+      "bytes": 678665,
+      "sha256": "14fd89e2db7ce9ecd293eebbac00c9c5821a0e6240adaa6656785fc1dcc1a01e"
     },
     "gd": {
       "path": "data/gd.json",
       "count": 486,
-      "bytes": 619193,
-      "sha256": "8a289a915350d350a9853ff71c27c347a67273f682977f25c51b8e198bfec415"
+      "bytes": 746525,
+      "sha256": "a42628bcd0540d7ac50404861f9c23d976b9ee8cedc30011e4a20dd0c506f746"
     },
     "fw": {
       "path": "data/fw.json",
       "count": 1492,
-      "bytes": 1797618,
-      "sha256": "5d5904b2a51f25fc325516be0095d4d8061b48f34a1d00bcddd96944fe497dad"
+      "bytes": 2188522,
+      "sha256": "8bb6b98123da42fe99faeef60fc937d5d1a297a8e9b1d80ca963f540f4765fe9"
     },
     "za": {
       "path": "data/za.json",
       "count": 3588,
-      "bytes": 3192695,
-      "sha256": "df88f849bd608ac88c2cee7841c24cdedb53fb4d17b75196a65942dba1fddd0b"
+      "bytes": 4025111,
+      "sha256": "4942347b3d7f4ffc3df4b737c0e9f18625005b53301bb829da88fb9548a8429a"
     },
     "eh": {
       "path": "data/eh.json",
       "count": 565,
-      "bytes": 739197,
-      "sha256": "5e086134effeafb663b7443dbab63ded01b90a5e507adaf033c1cf5b4cea4253"
+      "bytes": 887227,
+      "sha256": "5506dbbfb3e20a60b1888e6d283de7c9b5f821db68c060a1f22b2658aaf0c8cc"
     },
     "nf": {
       "path": "data/nf.json",
       "count": 8401,
-      "bytes": 8921010,
-      "sha256": "f8cf6d642644ba0c91c74d2ff2781cd617487b13346a6e36dd35ada26e5f4824"
+      "bytes": 10870042,
+      "sha256": "8bda45f04be6aa23c3d7ce491601e8c04860ba4e463696384c37dfa3f8bc0235"
+    },
+    "pp": {
+      "path": "data/pp.json",
+      "count": 7086,
+      "bytes": 8970724,
+      "sha256": "7393323030a5ecd75d00da3213c84ca96be800b4c61599baea6e56e7c7d9b198"
     }
   },
   "sources": "sources/sources.json"

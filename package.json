@@ -2,7 +2,7 @@
   "name": "nietzsche-aphorisms",
   "version": "1.0.0",
   "private": true,
-  "description": "Nietzsche's German text, Korean translations, a mobile reader, and Scriptable widget data.",
+  "description": "German philosophy texts, direct Korean translations, a mobile reader, and Scriptable widget data.",
   "engines": {
     "node": ">=22.13.0"
   },

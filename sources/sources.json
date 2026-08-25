@@ -1,10 +1,22 @@
 {
-  "schemaVersion": 2,
-  "edition": {
-    "name": "Digitale Kritische Gesamtausgabe Werke und Briefe (eKGWB)",
-    "editors": "Giorgio Colli, Mazzino Montinari; digital edition edited by Paolo D’Iorio",
-    "documentationUrl": "https://doc.nietzschesource.org/en/ekgwb",
-    "rightsUrl": "https://doc.nietzschesource.org/en/rights"
+  "schemaVersion": 3,
+  "editions": {
+    "nietzsche": {
+      "name": "Digitale Kritische Gesamtausgabe Werke und Briefe (eKGWB)",
+      "editors": "Giorgio Colli, Mazzino Montinari; digital edition edited by Paolo D’Iorio",
+      "documentationUrl": "https://doc.nietzschesource.org/en/ekgwb",
+      "rightsUrl": "https://doc.nietzschesource.org/en/rights"
+    },
+    "schopenhauerParerga1874": {
+      "name": "Parerga und Paralipomena, 3. Auflage",
+      "editor": "Julius Frauenstädt",
+      "publication": "Leipzig: F. A. Brockhaus, 1874",
+      "status": "Posthumously expanded edition; corrected reprint of the second edition",
+      "bibliographicRecord": "https://katalog.bibliothek.kit.edu/bib/788169",
+      "volume1Scan": "https://books.google.com/books?id=8g2CD8RLADQC",
+      "volume2Scan": "https://books.google.com/books?id=T4lhAAAAcAAJ",
+      "firstEditionCrossCheck": "https://sammlungen.ub.uni-frankfurt.de/schopenhauer/content/structure/10252941"
+    }
   },
   "works": {
     "jgb": {
@@ -118,6 +130,31 @@
         "manifest": "sources/extended_sources.json",
         "filePattern": "sources/raw/nf-1885-*.md through sources/raw/nf-1888-*.md",
         "snapshotCommit": "2e7114646ef4cff4010a736a35efa32aad71fe75"
+      }
+    },
+    "pp": {
+      "author": "Arthur Schopenhauer",
+      "title": "Parerga und Paralipomena",
+      "publication": "Third edition, edited by Julius Frauenstädt, Leipzig: F. A. Brockhaus, 1874",
+      "editionStatus": "The text includes posthumous additions incorporated by Frauenstädt. It must not be described as the 1851 first edition or as a purely author-final placement of every addition.",
+      "buildInput": {
+        "file": "sources/raw/pp-1874-virtual-library.epub",
+        "format": "EPUB 2 with structured XHTML",
+        "publisherMetadata": "The Virtual Library",
+        "sha256": "42b70273663391ce572b2ad20bb00f79caf7c76e89b9d6504eb794556d956819",
+        "normalizationNote": "The 828 undeclared &nbsp; entities are normalized to Unicode spaces before strict XML parsing; historical spelling and punctuation are otherwise preserved."
+      },
+      "qualityAudit": {
+        "xhtmlFiles": 60,
+        "contentParagraphs": 2581,
+        "numberedSections": "§§1–413, with 90a/90b and 103a/103b",
+        "referencedEditionNotes": 163,
+        "brokenInternalLinksAfterNormalization": 0,
+        "status": "Structured and complete enough for parsing, but transcription typos remain under scan-based verification."
+      },
+      "sourceScans": {
+        "volume1": "https://books.google.com/books?id=8g2CD8RLADQC",
+        "volume2": "https://books.google.com/books?id=T4lhAAAAcAAJ"
       }
     }
   }

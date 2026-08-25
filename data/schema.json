@@ -1,11 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Nietzsche quote corpus",
+  "title": "German philosophy sentence corpus",
   "type": "array",
   "items": {
     "type": "object",
     "required": [
       "id",
+      "author",
+      "authorNameDe",
+      "authorNameKo",
       "work",
       "workTitleDe",
       "workTitleKo",
@@ -20,9 +23,18 @@
     ],
     "properties": {
       "id": { "type": "string", "minLength": 12 },
-      "work": { "enum": ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf"] },
+      "author": { "enum": ["nietzsche", "schopenhauer"] },
+      "authorNameDe": { "type": "string", "minLength": 1 },
+      "authorNameKo": { "type": "string", "minLength": 1 },
+      "work": { "enum": ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"] },
       "workTitleDe": { "type": "string" },
       "workTitleKo": { "type": "string" },
+      "edition": { "type": "string" },
+      "editor": { "type": "string" },
+      "transcriptionStatus": { "type": "string" },
+      "volume": { "type": "string" },
+      "volumeTitleDe": { "type": "string" },
+      "volumeTitleKo": { "type": "string" },
       "part": { "type": "string" },
       "partTitleDe": { "type": "string" },
       "partTitleKo": { "type": "string" },
@@ -43,12 +55,15 @@
           "required": ["label", "text"],
           "properties": {
             "label": { "type": "string", "minLength": 1 },
-            "text": { "type": "string", "minLength": 1 }
+            "text": { "type": "string", "minLength": 1 },
+            "language": { "enum": ["de", "ko"] },
+            "kind": { "enum": ["source-edition", "editorial"] }
           },
           "additionalProperties": false
         }
       },
-      "sourceUrl": { "type": "string", "format": "uri" }
+      "sourceUrl": { "type": "string", "format": "uri" },
+      "sourceFile": { "type": "string" }
     }
   }
 }

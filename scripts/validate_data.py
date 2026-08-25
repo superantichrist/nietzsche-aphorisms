@@ -14,7 +14,7 @@ from translation_sources import load_translations
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf")
+WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp")
 LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 ORDINAL_CONTINUATION_RE = re.compile(
     r"^(?:Jahrhundert(?:s|e|en)?|"
@@ -39,7 +39,12 @@ def check_source_hashes(source_manifest: dict) -> None:
             source_path = ROOT / descriptor["file"]
             if not source_path.is_file():
                 fail(f"missing source snapshot {descriptor['file']}")
-            normalized_source = source_path.read_bytes().replace(b"\r\n", b"\n")
+            source_bytes = source_path.read_bytes()
+            normalized_source = (
+                source_bytes
+                if source_path.suffix.lower() == ".epub"
+                else source_bytes.replace(b"\r\n", b"\n")
+            )
             actual_hash = hashlib.sha256(normalized_source).hexdigest()
             expected_hash = descriptor.get("normalizedSha256", descriptor["sha256"])
             if actual_hash != expected_hash:
@@ -136,6 +141,14 @@ def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
     if any(not re.fullmatch(r"\d+\[\d+\]", section) for _, section in nf_sections):
         fail("invalid late Nachlass fragment citation")
 
+    pp_sections = sections["pp"]
+    pp_numbered = {section for _, section in pp_sections if section[:1].isdigit()}
+    expected_pp = numbered(1, 413) - {"90", "103"} | {"90a", "90b", "103a", "103b"}
+    if pp_numbered != expected_pp:
+        fail("Parerga numbered section coverage mismatch")
+    if len({part for part, _ in pp_sections}) != 45 or len(pp_sections) != 458:
+        fail("Parerga volume/chapter coverage mismatch")
+
 
 def main() -> None:
     quotes = json.loads((DATA / "quotes.json").read_text(encoding="utf-8"))
@@ -143,12 +156,12 @@ def main() -> None:
     translation_cache = load_translations()
     source_manifest = json.loads((ROOT / "sources" / "sources.json").read_text(encoding="utf-8"))
     required = {
-        "id", "work", "workTitleDe", "workTitleKo", "part", "section",
+        "id", "author", "authorNameDe", "authorNameKo", "work", "workTitleDe", "workTitleKo", "part", "section",
         "paragraph", "paragraphCount", "sentence", "german", "korean", "footnotes",
     }
 
-    if len(quotes) < 17_900:
-        fail(f"expected at least 17,900 quote units, found {len(quotes)}")
+    if len(quotes) < 25_000:
+        fail(f"expected at least 25,000 quote units, found {len(quotes)}")
     if manifest.get("quoteCount") != len(quotes):
         fail("manifest quoteCount does not match quotes.json")
     check_source_hashes(source_manifest)
@@ -167,6 +180,9 @@ def main() -> None:
         ids.add(quote["id"])
         if quote["work"] not in WORKS:
             fail(f"invalid work {quote['work']}")
+        expected_author = "schopenhauer" if quote["work"] == "pp" else "nietzsche"
+        if quote["author"] != expected_author:
+            fail(f"invalid author in {quote['id']}")
         if not isinstance(quote["paragraph"], int) or quote["paragraph"] < 0:
             fail(f"invalid paragraph in {quote['id']}")
         if not isinstance(quote["paragraphCount"], int) or quote["paragraphCount"] < 1:
@@ -179,7 +195,12 @@ def main() -> None:
             fail(f"too-short German unit {quote['id']}: {quote['german']!r}")
         if len(quote["german"]) > 700:
             fail(f"too-long German unit {quote['id']}: {len(quote['german'])} chars")
-        if not quote.get("sourceUrl", "").startswith("https://www.nietzschesource.org/"):
+        valid_source = (
+            quote.get("sourceUrl", "").startswith("https://www.nietzschesource.org/")
+            if quote["work"] != "pp"
+            else quote.get("sourceUrl", "").startswith("https://books.google.com/")
+        )
+        if not valid_source:
             fail(f"missing canonical source URL in {quote['id']}")
         if not isinstance(quote["footnotes"], list):
             fail(f"invalid footnotes in {quote['id']}")
@@ -336,8 +357,8 @@ def main() -> None:
         )
     widget_quotes = json.loads((DATA / "widget.json").read_text(encoding="utf-8"))
     widget_ids = {quote["id"] for quote in widget_quotes}
-    if widget_ids != translated_ids or len(widget_quotes) != len(translated_ids):
-        fail("widget data must contain every translated quote exactly once")
+    if widget_ids != ids or len(widget_quotes) != len(ids):
+        fail("widget data must contain every quote exactly once")
     if manifest.get("widgetQuoteCount") != len(widget_quotes):
         fail("manifest widgetQuoteCount does not match widget.json")
     shard_catalog = manifest.get("widgetShards", {})

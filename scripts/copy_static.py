@@ -9,6 +9,18 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 
 
+def copy_tree_merge(source: Path, target: Path) -> None:
+    """Merge a generated asset tree without requiring Python 3.8 copytree options."""
+    target.mkdir(parents=True, exist_ok=True)
+    for item in source.rglob("*"):
+        destination = target / item.relative_to(source)
+        if item.is_dir():
+            destination.mkdir(parents=True, exist_ok=True)
+        else:
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(item, destination)
+
+
 def main() -> None:
     for source_dir_name in ("data", "scriptable"):
         source_dir = ROOT / source_dir_name
@@ -18,7 +30,7 @@ def main() -> None:
             if source.is_file():
                 shutil.copy2(source, target_dir / source.name)
             elif source.is_dir():
-                shutil.copytree(source, target_dir / source.name, dirs_exist_ok=True)
+                copy_tree_merge(source, target_dir / source.name)
     for filename in ("manifest.webmanifest", "robots.txt", ".nojekyll"):
         shutil.copy2(ROOT / filename, DIST / filename)
     print("Copied data and Scriptable assets into dist/.")

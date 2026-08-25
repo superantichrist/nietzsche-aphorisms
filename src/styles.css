@@ -98,7 +98,6 @@ a { color: inherit; }
 .icon-button:hover { border-color: rgba(224, 189, 115, 0.52); }
 .desktop-label { font: 12px Arial, sans-serif; }
 
-.intro { padding: 66px 0 38px; }
 .kicker, .section-number {
   margin: 0 0 18px;
   color: var(--gold);
@@ -106,31 +105,12 @@ a { color: inherit; }
   letter-spacing: 0.22em;
 }
 
-.intro h1 {
-  margin: 0;
-  max-width: 680px;
-  font-size: clamp(42px, 10.5vw, 76px);
-  font-weight: 400;
-  line-height: 1.12;
-  letter-spacing: -0.065em;
-  text-wrap: balance;
-}
-
-.intro-copy {
-  max-width: 500px;
-  margin: 24px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-  word-break: keep-all;
-}
-
 .filters {
   display: flex;
   gap: 5px;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 18px;
+  margin: 18px 0;
   padding: 4px;
   overflow-x: auto;
   border: 1px solid var(--line);
@@ -256,6 +236,7 @@ blockquote { margin: 0; }
 .source-row p { margin: 0; }
 #source-work { color: #ddd2c0; font-size: 13px; line-height: 1.45; }
 #source-location { margin-top: 5px; color: var(--muted); font: 11px Arial, sans-serif; }
+#source-edition { margin-top: 5px; color: #81786b; font: 10px/1.45 Arial, sans-serif; }
 .source-links { display: flex; flex: 0 0 auto; align-items: center; gap: 13px; }
 .source-links button { padding: 0; border: 0; background: transparent; color: var(--muted); font: 11px Arial, sans-serif; cursor: pointer; }
 .source-row a { color: var(--gold); font: 11px Arial, sans-serif; text-decoration: none; }
@@ -368,7 +349,6 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
 
 @media (max-width: 620px) {
   .shell { width: min(100% - 24px, 760px); }
-  .intro { padding-top: 52px; }
   .desktop-label { display: none; }
   .icon-button { padding: 0 11px; }
   .quote-card { padding: 26px 22px 22px; }

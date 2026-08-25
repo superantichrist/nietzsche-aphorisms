@@ -1,12 +1,18 @@
-// 오늘의 니체 — Scriptable widget
+// 오늘의 문장 — Scriptable widget
 // GitHub Pages의 작은 manifest를 확인하고, 선택된 구절이 든 조각만 내려받아 캐시합니다.
 
 const SITE_URL = "https://superantichrist.github.io/nietzsche-aphorisms/";
 const MANIFEST_URL = `${SITE_URL}data/manifest.json`;
 const WIDGET_DATA_URL = `${SITE_URL}data/widget.json`;
-const WORK_FILTER = "all"; // "all" | "jgb" | "gm" | "ac" | "gd" | "fw" | "za" | "eh" | "nf"
+const WORK_FILTER = "all"; // "all" | "nietzsche" | "schopenhauer" | 작품 키(jgb, gm, ..., pp)
 const REQUEST_TIMEOUT_SECONDS = 12;
-const VALID_WORKS = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf"];
+const VALID_WORKS = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"];
+const VALID_AUTHORS = ["nietzsche", "schopenhauer"];
+const WORK_AUTHORS = {
+  jgb: "nietzsche", gm: "nietzsche", ac: "nietzsche", gd: "nietzsche",
+  fw: "nietzsche", za: "nietzsche", eh: "nietzsche", nf: "nietzsche",
+  pp: "schopenhauer",
+};
 
 const fm = FileManager.local();
 const cacheDirectory = fm.joinPath(fm.documentsDirectory(), "NietzscheToday");
@@ -175,6 +181,7 @@ function quoteForDate(date, quotes) {
 function shardTarget(date, manifest) {
   const catalog = manifest.widgetShards;
   const filteredWork = VALID_WORKS.includes(WORK_FILTER) ? WORK_FILTER : null;
+  const filteredAuthor = VALID_AUTHORS.includes(WORK_FILTER) ? WORK_FILTER : null;
   let work = filteredWork;
   let localIndex;
 
@@ -183,8 +190,16 @@ function shardTarget(date, manifest) {
     if (!descriptor || !Number.isInteger(descriptor.count) || descriptor.count < 1) return null;
     localIndex = slotHash(date) % descriptor.count;
   } else {
-    let globalIndex = slotHash(date) % catalog.totalCount;
-    for (const candidate of catalog.workOrder) {
+    const candidates = filteredAuthor
+      ? catalog.workOrder.filter((candidate) => WORK_AUTHORS[candidate] === filteredAuthor)
+      : catalog.workOrder;
+    const totalCount = candidates.reduce(
+      (total, candidate) => total + (catalog.works[candidate]?.count || 0),
+      0
+    );
+    if (totalCount < 1) return null;
+    let globalIndex = slotHash(date) % totalCount;
+    for (const candidate of candidates) {
       const descriptor = catalog.works[candidate];
       if (!descriptor || !Number.isInteger(descriptor.count)) return null;
       if (globalIndex < descriptor.count) {
@@ -207,7 +222,7 @@ function shardTarget(date, manifest) {
 }
 
 function lastQuoteKey() {
-  return VALID_WORKS.includes(WORK_FILTER) ? WORK_FILTER : "all";
+  return [...VALID_WORKS, ...VALID_AUTHORS].includes(WORK_FILTER) ? WORK_FILTER : "all";
 }
 
 function rememberQuote(quote) {
@@ -285,6 +300,9 @@ async function selectedQuote(date) {
   if (VALID_WORKS.includes(WORK_FILTER)) {
     const filtered = quotes.filter((quote) => quote.work === WORK_FILTER);
     if (filtered.length) quotes = filtered;
+  } else if (VALID_AUTHORS.includes(WORK_FILTER)) {
+    const filtered = quotes.filter((quote) => (quote.author || WORK_AUTHORS[quote.work]) === WORK_FILTER);
+    if (filtered.length) quotes = filtered;
   }
   const quote = quoteForDate(date, quotes);
   if (validQuote(quote)) rememberQuote(quote);
@@ -301,13 +319,16 @@ function sourceLabel(quote) {
     za: "차라투스트라는 이렇게 말했다",
     eh: "이 사람을 보라",
     nf: "후기 유고 1885–1888",
+    pp: "소품과 부록",
   };
   const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
   const unnumbered = ["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"];
   const section = quote.sectionLabel
     ? ` · ${quote.sectionLabel}`
     : unnumbered.includes(quote.section) ? "" : ` §${quote.section}`;
-  return `${quote.workTitleKo || titles[quote.work] || quote.work} · ${part}${section}`;
+  const authors = { nietzsche: "니체", schopenhauer: "쇼펜하우어" };
+  const author = quote.authorNameKo || authors[quote.author || WORK_AUTHORS[quote.work]] || "";
+  return `${author ? `${author} · ` : ""}${quote.workTitleKo || titles[quote.work] || quote.work} · ${part}${section}`;
 }
 
 function positionLabel(quote) {
@@ -353,7 +374,7 @@ function makeWidget(quote) {
   mark.font = Font.systemFont(7);
   mark.textColor = gold;
   header.addSpacer(6);
-  addText(header, "오늘의 니체", Font.semiboldSystemFont(isSmall ? 11 : 12), ivory, 1, 0.8);
+  addText(header, "오늘의 문장", Font.semiboldSystemFont(isSmall ? 11 : 12), ivory, 1, 0.8);
   header.addSpacer();
   addText(header, "§", Font.italicSystemFont(15), gold, 1, 1);
 

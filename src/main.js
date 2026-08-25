@@ -5,12 +5,12 @@ const state = {
   filtered: [],
   manifest: null,
   current: null,
-  work: "all",
+  filter: "all",
   tocWork: "jgb",
   showGerman: localStorage.getItem("showGerman") !== "false",
 };
 
-const WORK_ORDER = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf"];
+const WORK_ORDER = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"];
 const UNNUMBERED_SECTIONS = new Set(["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"]);
 const SECTION_LABELS = {
   Vorrede: "서문",
@@ -23,12 +23,13 @@ const SECTION_LABELS = {
 const elements = Object.fromEntries(
   [
     "quote-card", "quote-number", "translation-badge", "quote-korean", "quote-german",
-    "german-wrap", "toggle-german", "source-work", "source-location", "source-link",
+    "german-wrap", "toggle-german", "source-work", "source-location", "source-edition", "source-link",
     "footnotes-wrap", "footnotes", "previous", "next", "random", "copy-quote",
     "copy-question", "share", "permalink-status", "open-search", "open-toc",
     "open-current-toc", "close-toc", "toc-panel", "toc-works", "toc-summary", "toc-content",
     "close-search", "search-panel", "search-input", "search-count", "search-results",
-    "stat-total", "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw", "stat-za", "stat-eh", "stat-nf",
+    "stat-total", "stat-author-nietzsche", "stat-author-schopenhauer",
+    "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw", "stat-za", "stat-eh", "stat-nf", "stat-pp",
     "stat-translated", "stat-reviewed", "stat-pending",
   ].map((id) => [id, document.getElementById(id)])
 );
@@ -47,20 +48,25 @@ function todayKey() {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 }
 
-function setWorkFilter(work) {
-  state.work = work;
-  state.filtered = work === "all" ? state.quotes : state.quotes.filter((quote) => quote.work === work);
+function setFilter(filter) {
+  state.filter = filter;
+  const author = filter.startsWith("author:") ? filter.slice("author:".length) : "";
+  state.filtered = filter === "all"
+    ? state.quotes
+    : author
+      ? state.quotes.filter((quote) => quote.author === author)
+      : state.quotes.filter((quote) => quote.work === filter);
   document.querySelectorAll(".filter").forEach((button) => {
-    const active = button.dataset.work === work;
+    const active = button.dataset.filter === filter;
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
   });
 }
 
-function applyFilter(work, { keepCurrent = false } = {}) {
-  setWorkFilter(work);
+function applyFilter(filter, { keepCurrent = false } = {}) {
+  setFilter(filter);
   if (!keepCurrent || !state.current || !state.filtered.includes(state.current)) {
-    showQuote(state.filtered[fnv1a(`${todayKey()}:${work}`) % state.filtered.length]);
+    showQuote(state.filtered[fnv1a(`${todayKey()}:${filter}`) % state.filtered.length]);
   }
 }
 
@@ -103,8 +109,13 @@ function showQuote(quote, { historyMode = "replace" } = {}) {
   elements["quote-korean"].textContent = translated ? quote.korean : quote.german;
   elements["quote-korean"].classList.toggle("german-fallback", !translated);
   elements["quote-german"].textContent = quote.german;
-  elements["source-work"].textContent = `${quote.workTitleKo} · ${quote.workTitleDe}`;
+  elements["source-work"].textContent = `${quote.authorNameKo} · ${quote.workTitleKo} · ${quote.workTitleDe}`;
   elements["source-location"].textContent = locationLabel(quote);
+  elements["source-edition"].textContent = [
+    quote.edition,
+    quote.editor ? `편집 ${quote.editor}` : "",
+    quote.transcriptionStatus,
+  ].filter(Boolean).join(" · ");
   elements["source-link"].href = quote.sourceUrl;
   const footnotes = Array.isArray(quote.footnotes) ? quote.footnotes : [];
   elements.footnotes.replaceChildren();
@@ -133,7 +144,8 @@ function footnoteText(quote) {
 }
 
 function quoteContext(quote) {
-  return `[한국어 번역]\n${quote.korean || "(미번역)"}\n\n[독일어 원문]\n${quote.german}\n\n[출전]\n프리드리히 니체, 《${quote.workTitleKo}》 ${locationLabel(quote)}${footnoteText(quote)}\n\n[영구 링크]\n${window.location.href}`;
+  const edition = [quote.edition, quote.editor ? `편집 ${quote.editor}` : ""].filter(Boolean).join(" · ");
+  return `[한국어 번역]\n${quote.korean || "(미번역)"}\n\n[독일어 원문]\n${quote.german}\n\n[출전]\n${quote.authorNameKo}, 《${quote.workTitleKo}》 ${locationLabel(quote)}\n${edition}${footnoteText(quote)}\n\n[영구 링크]\n${window.location.href}`;
 }
 
 async function writeClipboard(text) {
@@ -166,7 +178,7 @@ async function copyCurrent(questionMode = false) {
   if (!quote) return;
   const context = quoteContext(quote);
   const text = questionMode
-    ? `다음 니체 구절을 독일어 원문과 작품의 문맥을 기준으로 검토하고 설명해 주세요. 번역의 뉘앙스, 핵심 개념, 필요한 역사·문헌 배경도 구분해서 알려 주세요.\n\n${context}\n\n[추가 질문]\n`
+    ? `다음 ${quote.authorNameKo} 구절을 독일어 원문과 작품의 문맥을 기준으로 검토하고 설명해 주세요. 번역의 뉘앙스, 핵심 개념, 필요한 역사·문헌 배경도 구분해서 알려 주세요.\n\n${context}\n\n[추가 질문]\n`
     : context;
   try {
     await writeClipboard(text);
@@ -199,7 +211,7 @@ async function shareCurrent() {
   const url = window.location.href;
   try {
     if (navigator.share) {
-      await navigator.share({ title: "오늘의 니체", text, url });
+      await navigator.share({ title: "오늘의 문장", text, url });
       elements["permalink-status"].textContent = "공유했습니다.";
     } else {
       await writeClipboard(text);
@@ -311,7 +323,7 @@ function renderToc(work) {
         count.textContent = `${item.count.toLocaleString("ko-KR")}개`;
         button.append(label, count);
         button.addEventListener("click", () => {
-          setWorkFilter(work);
+          setFilter(work);
           showQuote(item.first, { historyMode: "push" });
           closeToc(false);
           elements["quote-card"].scrollIntoView({ behavior: "smooth", block: "center" });
@@ -341,7 +353,7 @@ function openToc() {
     return;
   }
   if (!elements["search-panel"].hidden) closeSearch(false);
-  const work = state.current?.work || (WORK_ORDER.includes(state.work) ? state.work : state.tocWork);
+  const work = state.current?.work || (WORK_ORDER.includes(state.filter) ? state.filter : state.tocWork);
   renderToc(work);
   elements["toc-panel"].hidden = false;
   syncModalState();
@@ -378,7 +390,9 @@ function runSearch(query) {
     return;
   }
   const matches = state.quotes.filter((quote) =>
-    `${quote.german}\n${quote.korean}\n${quote.workTitleKo}`.toLocaleLowerCase("de").includes(normalized)
+    `${quote.german}\n${quote.korean}\n${quote.authorNameKo}\n${quote.authorNameDe}\n${quote.workTitleKo}`
+      .toLocaleLowerCase("de")
+      .includes(normalized)
   );
   elements["search-count"].textContent = `${matches.length.toLocaleString("ko-KR")}개 구절 · 상위 50개 표시`;
   const fragment = document.createDocumentFragment();
@@ -403,7 +417,7 @@ function runSearch(query) {
 }
 
 function bindEvents() {
-  document.querySelectorAll(".filter").forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.work)));
+  document.querySelectorAll(".filter").forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.filter)));
   elements.previous.addEventListener("click", () => move(-1));
   elements.next.addEventListener("click", () => move(1));
   elements.random.addEventListener("click", () => showQuote(randomQuote(), { historyMode: "push" }));
@@ -458,6 +472,8 @@ async function init() {
     [state.quotes, state.manifest] = await Promise.all([quotesResponse.json(), manifestResponse.json()]);
     state.filtered = state.quotes;
     elements["stat-total"].textContent = state.manifest.quoteCount.toLocaleString("ko-KR");
+    elements["stat-author-nietzsche"].textContent = state.manifest.authors.nietzsche.count.toLocaleString("ko-KR");
+    elements["stat-author-schopenhauer"].textContent = state.manifest.authors.schopenhauer.count.toLocaleString("ko-KR");
     elements["stat-jgb"].textContent = state.manifest.works.jgb.count.toLocaleString("ko-KR");
     elements["stat-gm"].textContent = state.manifest.works.gm.count.toLocaleString("ko-KR");
     elements["stat-ac"].textContent = state.manifest.works.ac.count.toLocaleString("ko-KR");
@@ -466,6 +482,7 @@ async function init() {
     elements["stat-za"].textContent = state.manifest.works.za.count.toLocaleString("ko-KR");
     elements["stat-eh"].textContent = state.manifest.works.eh.count.toLocaleString("ko-KR");
     elements["stat-nf"].textContent = state.manifest.works.nf.count.toLocaleString("ko-KR");
+    elements["stat-pp"].textContent = state.manifest.works.pp.count.toLocaleString("ko-KR");
     elements["stat-translated"].textContent = state.manifest.translatedCount.toLocaleString("ko-KR");
     elements["stat-reviewed"].textContent = state.manifest.reviewedCount.toLocaleString("ko-KR");
     elements["stat-pending"].textContent = state.manifest.pendingTranslationCount.toLocaleString("ko-KR");

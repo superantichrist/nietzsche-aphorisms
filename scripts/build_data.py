@@ -11,12 +11,24 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
+from parse_schopenhauer_epub import parse_parerga, strip_note_markers
 from translation_sources import load_translations
 
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "sources" / "raw"
 DATA = ROOT / "data"
+
+AUTHORS = {
+    "nietzsche": {
+        "name_de": "Friedrich Nietzsche",
+        "name_ko": "프리드리히 니체",
+    },
+    "schopenhauer": {
+        "name_de": "Arthur Schopenhauer",
+        "name_ko": "아르투어 쇼펜하우어",
+    },
+}
 
 WORKS = {
     "jgb": {
@@ -63,6 +75,15 @@ WORKS = {
         "title_de": "Nachgelassene Fragmente 1885–1888",
         "title_ko": "후기 유고 1885–1888",
         "source_glob": "sources/raw/nf-*.md",
+    },
+    "pp": {
+        "author": "schopenhauer",
+        "title_de": "Parerga und Paralipomena",
+        "title_ko": "소품과 부록",
+        "source_file": "sources/raw/pp-1874-virtual-library.epub",
+        "edition": "3. Auflage (1874)",
+        "editor": "Julius Frauenstädt",
+        "transcription_status": "검증 중인 구조화 전사본",
     },
 }
 
@@ -1228,20 +1249,31 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
 
     for work in WORK_ORDER:
         metadata = WORKS[work]
+        author_key = metadata.get("author", "nietzsche")
+        author = AUTHORS[author_key]
         if work == "za":
             sections = parse_zarathustra()
         elif work == "eh":
             sections = parse_ecce_homo(ROOT / metadata["source_file"])
         elif work == "nf":
             sections = parse_late_nachlass()
+        elif work == "pp":
+            sections = parse_parerga()
         else:
             sections = parse_markdown_work(ROOT / metadata["source_file"], work)
         for section_data in sections:
             paragraph_count = len(section_data["paragraphs"])
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
-                for sentence_index, german in enumerate(
-                    quote_units_for_work(paragraph, work, section_data["part"])
+                paragraph_text = paragraph["text"] if isinstance(paragraph, dict) else paragraph
+                source_notes = paragraph.get("source_notes", {}) if isinstance(paragraph, dict) else {}
+                for sentence_index, marked_german in enumerate(
+                    quote_units_for_work(paragraph_text, work, section_data["part"])
                 ):
+                    german, source_note_refs = (
+                        strip_note_markers(marked_german)
+                        if work == "pp"
+                        else (marked_german, [])
+                    )
                     quote_id = stable_id(
                         work,
                         section_data["part"],
@@ -1251,12 +1283,27 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                     )
                     translation = translations.get(quote_id, {})
                     korean = translation.get("korean", "") if isinstance(translation, dict) else str(translation)
-                    footnotes = translation.get("footnotes", []) if isinstance(translation, dict) else []
+                    editorial_footnotes = translation.get("footnotes", []) if isinstance(translation, dict) else []
+                    source_footnotes = [
+                        source_notes[ref]
+                        for ref in dict.fromkeys(source_note_refs)
+                        if ref in source_notes
+                    ]
+                    footnotes = source_footnotes + editorial_footnotes
                     record = {
                         "id": quote_id,
+                        "author": author_key,
+                        "authorNameDe": author["name_de"],
+                        "authorNameKo": author["name_ko"],
                         "work": work,
                         "workTitleDe": metadata["title_de"],
                         "workTitleKo": metadata["title_ko"],
+                        "edition": metadata.get("edition", "eKGWB"),
+                        "editor": metadata.get("editor", ""),
+                        "transcriptionStatus": metadata.get("transcription_status", "검증 완료"),
+                        "volume": section_data.get("volume", ""),
+                        "volumeTitleDe": section_data.get("volume_title_de", ""),
+                        "volumeTitleKo": section_data.get("volume_title_ko", ""),
                         "part": section_data["part"],
                         "partTitleDe": section_data["part_title_de"],
                         "partTitleKo": section_data["part_title_ko"],
@@ -1276,6 +1323,7 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                             if "source_url" in section_data
                             else source_url(work, section_data["part"], section_data["section"])
                         ),
+                        "sourceFile": section_data.get("source_file", metadata.get("source_file", "")),
                     }
                     by_work[work].append(record)
 
@@ -1314,13 +1362,12 @@ def main() -> None:
         write_json(DATA / f"{work}.json", by_work[work], compact=True)
 
     widget_fields = (
-        "id", "work", "workTitleKo", "part", "partTitleKo", "section", "sectionLabel",
+        "id", "author", "authorNameKo", "work", "workTitleKo", "part", "partTitleKo", "section", "sectionLabel",
         "paragraph", "paragraphCount", "sentence", "german", "korean",
     )
     widget_quotes = [
         {field: quote[field] for field in widget_fields}
         for quote in quotes
-        if quote["korean"]
     ]
     write_json(DATA / "widget.json", widget_quotes, compact=True)
 
@@ -1352,7 +1399,7 @@ def main() -> None:
     translated = sum(bool(quote["korean"]) for quote in quotes)
     reviewed = sum(quote["translationStatus"] == "reviewed" for quote in quotes)
     manifest = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "corpusVersion": corpus_version,
         "dataVersion": data_version,
         "quoteCount": len(quotes),
@@ -1368,10 +1415,26 @@ def main() -> None:
             "workOrder": list(WORK_ORDER),
             "works": widget_shard_works,
         },
+        "authors": {
+            author_key: {
+                "nameDe": author["name_de"],
+                "nameKo": author["name_ko"],
+                "count": sum(quote["author"] == author_key for quote in quotes),
+                "works": [
+                    work for work in WORK_ORDER
+                    if WORKS[work].get("author", "nietzsche") == author_key
+                ],
+            }
+            for author_key, author in AUTHORS.items()
+        },
         "works": {
             work: {
+                "author": WORKS[work].get("author", "nietzsche"),
                 "titleDe": WORKS[work]["title_de"],
                 "titleKo": WORKS[work]["title_ko"],
+                "edition": WORKS[work].get("edition", "eKGWB"),
+                "editor": WORKS[work].get("editor", ""),
+                "transcriptionStatus": WORKS[work].get("transcription_status", "검증 완료"),
                 "count": len(by_work[work]),
                 "reviewedCount": sum(
                     quote["translationStatus"] == "reviewed" for quote in by_work[work]
