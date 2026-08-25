@@ -531,6 +531,33 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB misreads the initial Fraktur B in Bucklichten as P; the independent transcription and the one-sided-view comparison read Bucklichten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "dans l’adversité de nos meileurs amis",
+      "to": "dans l’adversité de nos meilleurs amis",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB transposes letters in French meilleurs; the independent transcription and La Rochefoucauld's maxim read nos meilleurs amis."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "Welt als W. u. V. Bd. l, S. 345",
+      "to": "Welt als W. u. V. Bd. 1, S. 345",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the volume number 1 as a lowercase l; the independent transcription reads Bd. 1."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "vitae atque essentiae suac conservatricem, ac mala ingruentia vitantem et depellentum",
+      "to": "vitae atque essentiae suae conservatricem, ac mala ingruentia vitantem et depellentem",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads Latin suae as suac and depellentem as depellentum; the independent transcription and grammar preserve the accusative feminine forms."
     }
   ]
 }
