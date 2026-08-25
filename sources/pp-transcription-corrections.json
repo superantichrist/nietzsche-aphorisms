@@ -522,6 +522,15 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB drops the apostrophe in qu'il, misreads French se as so, and joins volontiers le; the independent transcription preserves the grammatical French sentence."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "wie der Mond und die Pucklichten",
+      "to": "wie der Mond und die Bucklichten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the initial Fraktur B in Bucklichten as P; the independent transcription and the one-sided-view comparison read Bucklichten."
     }
   ]
 }
