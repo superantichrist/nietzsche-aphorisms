@@ -477,6 +477,51 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB drops the prefix un- in unmöglichen; the argument and independent transcription say earlier thinkers have exhausted the impossible combinations."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "le mieux est l’ennemie du bien",
+      "to": "le mieux est l’ennemi du bien",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB adds a final e to French ennemi; the independent transcription and standard maxim read l'ennemi du bien."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "feriuntque smmos Fulgura montes",
+      "to": "feriuntque summos Fulgura montes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops the medial u in Latin summos; the independent transcription and Horace's ode read summos."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "est une pièce misérable, an mauvais opéra",
+      "to": "est une pièce misérable, un mauvais opéra",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads French un as an; the independent transcription and French grammar read un mauvais opéra."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "den durch vieljahriges Treiben und Trachten endlich erreichten Posten",
+      "to": "den durch vieljähriges Treiben und Trachten endlich erreichten Posten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops the umlaut in vieljähriges; the independent transcription reads vieljähriges."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary024.xhtml",
+      "page": "Band I, Kapitel V",
+      "from": "quil n’aime pas la promenade, sous le prétexte qu’il ne so promène pas volontiersle soir",
+      "to": "qu’il n’aime pas la promenade, sous le prétexte qu’il ne se promène pas volontiers le soir",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops the apostrophe in qu'il, misreads French se as so, and joins volontiers le; the independent transcription preserves the grammatical French sentence."
     }
   ]
 }
