@@ -350,6 +350,14 @@ def main() -> None:
         "Sehnsucht, ποθος,",
         "ελιλνωσκε",
         "von Taant, dem Aegypter",
+        "άπλους ό της αληθειας λογος εφυ",
+        "wo moglich aber sie noch",
+        "προηγειται τοινυν παντων",
+        "το βουλεσθαι. αί γαρ λογικαι δυναμεις",
+        "πεφυκασι",
+        "ipsa hominjs essentia",
+        "Mit großem Rechte sagt Helvetius",
+        "Quiconque so plaît",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]

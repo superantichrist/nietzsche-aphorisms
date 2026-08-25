@@ -252,6 +252,78 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA139",
       "reason": "The supplied EPUB misreads the second u in Taaut as n; the fixed scan search result clearly reads Taaut."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 141",
+      "from": "άπλους ό της αληθειας λογος εφυ",
+      "to": "ἁπλοῦς ὁ τῆς ἀληθείας λόγος ἔφυ",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA141",
+      "reason": "The supplied EPUB corrupts the initial breathing and loses most diacritics from the Greek maxim; the fixed scan preserves the phrase and its wording."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 142",
+      "from": "wo moglich aber sie noch",
+      "to": "wo möglich aber sie noch",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA142",
+      "reason": "The supplied EPUB drops the umlaut from möglich; the fixed scan search identifies the word as möglich."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 145",
+      "from": "προηγειται τοινυν παντων",
+      "to": "προηγεῖται τοίνυν πάντων",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA145",
+      "reason": "The supplied EPUB drops the diacritics from the Greek quotation from Clement of Alexandria; the fixed scan and cited source preserve the Greek wording."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 145",
+      "from": "το βουλεσθαι. αί γαρ λογικαι δυναμεις του βουλεσθαι διακονοι",
+      "to": "τὸ βούλεσθαι. αἱ γὰρ λογικαὶ δυνάμεις τοῦ βούλεσθαι διάκονοι",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA145",
+      "reason": "The supplied EPUB loses breathings and accents across the second span of Clement's Greek quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 145",
+      "from": "πεφυκασι",
+      "to": "πεφύκασι",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA145",
+      "reason": "The supplied EPUB drops the accent from the final verb in Clement's Greek quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 145",
+      "from": "ipsa hominjs essentia",
+      "to": "ipsa hominis essentia",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA145",
+      "reason": "The supplied EPUB misreads both i letters in the Latin hominis as j; the fixed scan search result clearly reads hominis."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 145",
+      "from": "Mit großem Rechte sagt Helvetius",
+      "to": "Mit großem Rechte sagte Helvetius",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA145",
+      "reason": "The supplied EPUB drops the final e from sagte; the fixed scan search result reads sagte Helvetius."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 145",
+      "from": "Quiconque so plaît",
+      "to": "Quiconque se plaît",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA145",
+      "reason": "The supplied EPUB misreads the French reflexive pronoun se as so; the fixed scan search result clearly reads Quiconque se plaît."
     }
   ]
 }
