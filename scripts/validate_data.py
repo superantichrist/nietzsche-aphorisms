@@ -296,6 +296,26 @@ def main() -> None:
                 f"split German citation abbreviation across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
+        if (
+            current["work"] == "pp"
+            and same_paragraph
+            and current["german"].endswith(" A.")
+            and following["german"].startswith("T. ")
+        ):
+            fail(
+                f"split German A. T. abbreviation across quote boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
+        if (
+            current["work"] == "pp"
+            and same_paragraph
+            and current["german"].endswith("(Eth.")
+            and following["german"].startswith("Pars ")
+        ):
+            fail(
+                f"split Spinoza Ethics citation across quote boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
     joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt")
     if any(
         token in quote["german"]

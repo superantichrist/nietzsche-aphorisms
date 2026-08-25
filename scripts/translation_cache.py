@@ -8,6 +8,8 @@ import json
 from collections import Counter
 from pathlib import Path
 
+from translation_sources import load_translations
+
 
 ROOT = Path(__file__).resolve().parents[1]
 QUOTES = ROOT / "data" / "quotes.json"
@@ -30,14 +32,14 @@ def read_cache() -> dict:
 
 
 def export_batch(args: argparse.Namespace) -> None:
-    cache = read_cache()["translations"]
+    translations = load_translations()
     pending = []
     for quote in read_quotes():
         if args.work and quote["work"] != args.work:
             continue
         if args.part and quote["part"] != args.part:
             continue
-        if cache.get(quote["id"], {}).get("korean"):
+        if quote.get("korean") or translations.get(quote["id"], {}).get("korean"):
             continue
         pending.append(
             {
@@ -60,14 +62,14 @@ def export_batch(args: argparse.Namespace) -> None:
 
 
 def export_review_batch(args: argparse.Namespace) -> None:
-    cache = read_cache()["translations"]
+    translations = load_translations()
     review_items = []
     for quote in read_quotes():
         if args.work and quote["work"] != args.work:
             continue
         if args.part and quote["part"] != args.part:
             continue
-        translation = cache.get(quote["id"], {})
+        translation = translations.get(quote["id"], {})
         if not translation.get("korean") or translation.get("status") == "reviewed":
             continue
         review_items.append(
@@ -142,10 +144,10 @@ def import_batch(args: argparse.Namespace) -> None:
 
 
 def review_status(_args: argparse.Namespace) -> None:
-    cache = read_cache()["translations"]
+    translations = load_translations()
     counts: dict[str, Counter] = {}
     for quote in read_quotes():
-        status = cache.get(quote["id"], {}).get("status", "pending")
+        status = translations.get(quote["id"], {}).get("status", "pending")
         counts.setdefault(quote["work"], Counter())[status] += 1
     for work in ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"):
         work_counts = counts.get(work, Counter())

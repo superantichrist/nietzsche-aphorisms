@@ -1091,6 +1091,7 @@ PP_CITATION_ABBREVIATIONS = (
     "Arist.", "Cic.", "Clem.", "Alex.", "Apulej.", "Jambl.", "Pyth.",
     "Diog.", "Laert.", "Herod.", "Schol.", "vit.",
     "adv.", "Math.", "math.", "eth.", "nat.", "Enn.", "a. a. O.",
+    "A. T.", "Eth. Pars",
 )
 
 # Short refrains and closing verse lines that are semantically complete even

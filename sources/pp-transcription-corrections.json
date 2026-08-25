@@ -54,6 +54,69 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA63",
       "reason": "The supplied EPUB misreads the capital O in the Latin Oportet as the digit zero."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, S. 338",
+      "from": "die Ouintessenz der ganzen Prellerei",
+      "to": "die Quintessenz der ganzen Prellerei",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA338",
+      "reason": "The supplied EPUB again misreads the initial Fraktur Q of Quintessenz as O."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 74",
+      "from": "die denkende und die aussgedehnte",
+      "to": "die denkende und die ausgedehnte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA74",
+      "reason": "The supplied EPUB duplicates the s in ausgedehnte; the fixed scan reads ausgedehnte."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 74",
+      "from": "causes occasionelles",
+      "to": "causes occasionnelles",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA74",
+      "reason": "The supplied EPUB drops an n from the first of two adjacent occurrences of the French occasionnelles."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 78",
+      "from": "El que no ha tenido an perro, no sahe lo que es querer y ser querido.",
+      "to": "El que no ha tenido un perro, no sabe lo que es querer y ser querido.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA78",
+      "reason": "The supplied EPUB misreads the Spanish un as an and sabe as sahe; Larra's source text and the fixed scan agree on un perro and sabe."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 79",
+      "from": "in der Perecption der Monaden",
+      "to": "in der Perception der Monaden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA79",
+      "reason": "The supplied EPUB transposes letters in Perception; the fixed scan reads Perception."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 83",
+      "from": "Metaphysik, Buch I, Katz. 4",
+      "to": "Metaphysik, Buch I, Kap. 4",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA83",
+      "reason": "The supplied EPUB misreads the citation abbreviation Kap. as Katz.; the fixed scan reads Kap. 4."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, § 124",
+      "from": "In meinem Hauptwerke (Bd. 2, Katz. 47)",
+      "to": "In meinem Hauptwerke (Bd. 2, Kap. 47)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ",
+      "reason": "The supplied EPUB misreads the citation abbreviation Kap. as Katz.; the passage refers to chapter 47 of volume two of Schopenhauer's main work."
     }
   ]
 }
