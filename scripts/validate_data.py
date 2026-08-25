@@ -324,6 +324,14 @@ def main() -> None:
     ):
         fail("joined eKGWB emphasis boundary remains in German corpus")
 
+    pp_stale_ocr_tokens = ("Achillesverse seiner Philosophie", "endlich entäuschte Geschlecht")
+    if any(
+        quote["work"] == "pp" and token in quote["german"]
+        for quote in quotes
+        for token in pp_stale_ocr_tokens
+    ):
+        fail("known Parerga transcription OCR error remains in German corpus")
+
     eh_venice = [
         quote for quote in quotes
         if quote["work"] == "eh" and quote["part"] == "Klug" and quote["section"] == "7"

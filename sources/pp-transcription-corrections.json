@@ -117,6 +117,24 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ",
       "reason": "The supplied EPUB misreads the citation abbreviation Kap. as Katz.; the passage refers to chapter 47 of volume two of Schopenhauer's main work."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 95",
+      "from": "Achillesverse seiner Philosophie",
+      "to": "Achillesferse seiner Philosophie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA95",
+      "reason": "The supplied EPUB misreads the initial Fraktur F in Achillesferse as V; the fixed scan clearly reads Achillesferse."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 101",
+      "from": "endlich entäuschte Geschlecht",
+      "to": "endlich enttäuschte Geschlecht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA101",
+      "reason": "The supplied EPUB drops the second t from enttäuschte; the fixed scan clearly reads enttäuschte."
     }
   ]
 }
