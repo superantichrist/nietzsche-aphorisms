@@ -316,6 +316,16 @@ def main() -> None:
                 f"split Spinoza Ethics citation across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
+        if (
+            current["work"] == "pp"
+            and same_paragraph
+            and current["german"].endswith(" u.")
+            and following["german"].startswith("A. m. ")
+        ):
+            fail(
+                f"split German u. A. m. abbreviation across quote boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
     joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt")
     if any(
         token in quote["german"]
@@ -324,7 +334,13 @@ def main() -> None:
     ):
         fail("joined eKGWB emphasis boundary remains in German corpus")
 
-    pp_stale_ocr_tokens = ("Achillesverse seiner Philosophie", "endlich entäuschte Geschlecht")
+    pp_stale_ocr_tokens = (
+        "Achillesverse seiner Philosophie",
+        "endlich entäuschte Geschlecht",
+        "feria, oomo le va",
+        "τον σεφον",
+        "der l. Aufl.",
+    )
     if any(
         quote["work"] == "pp" and token in quote["german"]
         for quote in quotes
