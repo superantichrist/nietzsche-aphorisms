@@ -107,19 +107,16 @@ a { color: inherit; }
 
 .filters {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
   margin: 18px 0;
   padding: 4px;
-  overflow-x: auto;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: 14px;
   background: rgba(9, 7, 6, 0.38);
-  scrollbar-width: none;
 }
 
-.filters::-webkit-scrollbar { display: none; }
 .filter {
   flex: 0 0 auto;
   padding: 10px 14px;
@@ -349,6 +346,15 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
 
 @media (max-width: 620px) {
   .shell { width: min(100% - 24px, 760px); }
+  .filters {
+    flex-wrap: nowrap;
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 999px;
+    scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar { display: none; }
   .desktop-label { display: none; }
   .icon-button { padding: 0 11px; }
   .quote-card { padding: 26px 22px 22px; }
