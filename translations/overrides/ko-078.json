@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "translations": {
+    "za-gesicht-2-d1385f6d0a77": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-sonnen-aufgang-19431a8963c3": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-tugend-3-55455a0393e1": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-oelberge-58e2106575a1": {
+      "korean": "차라투스트라는 이렇게 노래했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 노래를 맺는 후렴",
+      "footnotes": []
+    },
+    "za-abtruennigen-2-c8710661d7fe": {
+      "korean": "귀 있는 자는 들으라. —",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 성서 어법을 빌린 종결구",
+      "footnotes": [
+        {
+          "label": "귀 있는 자는 들으라",
+          "text": "복음서와 《요한계시록》에서 반복되는 ‘들을 귀 있는 자는 들으라’라는 명령의 어법을 따른다."
+        }
+      ]
+    },
+    "za-heimkehr-d7c33dcf871d": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-boesen-2-2e9088a9cea6": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-geist-schwere-2-c1075a0b5755": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-tafeln-30-d49c6986c434": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-sehnsucht-775154f91776": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-tanzlied-2-4e3d274c3916": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장을 맺는 후렴",
+      "footnotes": []
+    },
+    "za-tanzlied-3-091c47ffd51a": {
+      "korean": "하나!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 종소리를 세는 시행",
+      "footnotes": []
+    },
+    "za-tanzlied-3-492854917982": {
+      "korean": "오 인간이여! 귀 기울여라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 노래 첫 시행",
+      "footnotes": []
+    },
+    "za-tanzlied-3-2e32b629e198": {
+      "korean": "둘!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 종소리를 세는 시행",
+      "footnotes": []
+    },
+    "za-tanzlied-3-7b9bcf7a171e": {
+      "korean": "셋!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 종소리를 세는 시행",
+      "footnotes": []
+    },
+    "za-tanzlied-3-fc43ab303258": {
+      "korean": "넷!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 종소리를 세는 시행",
+      "footnotes": []
+    },
+    "za-tanzlied-3-a3cb828fca43": {
+      "korean": "다섯!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 종소리를 세는 시행",
+      "footnotes": []
+    },
+    "za-tanzlied-3-c24b7df0ea51": {
+      "korean": "‘세계는 깊다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 인접 시행과 이어지는 한밤의 노래",
+      "footnotes": []
+    },
+    "za-tanzlied-3-a4512d08eac3": {
+      "korean": "여섯!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 종소리를 세는 시행",
+      "footnotes": []
+    },
+    "za-tanzlied-3-c6b4c640e4d2": {
+      "korean": "일곱!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 한밤의 종소리를 세는 시행",
+      "footnotes": []
+    }
+  }
+}

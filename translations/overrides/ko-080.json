@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "translations": {
+    "za-zauberer-1-f286be2da0b5": {
+      "korean": "너에게, 가장 잔혹한 사냥꾼이여,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행의 Getroffen과 이어지는 호격",
+      "footnotes": []
+    },
+    "za-zauberer-1-fd7cb56cc7bc": {
+      "korean": "너 알 수 없는—신이여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 신의 미지성과 돌연한 호명을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-1a2cb51320e1": {
+      "korean": "더 깊이 쳐라,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 명령형의 폭력적 어조를 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-dfd959e000b0": {
+      "korean": "한 번 더 쳐라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 반복되는 명령형 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-69b15297c499": {
+      "korean": "이 고문은 무슨 뜻인가",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행과 이어지는 의문문",
+      "footnotes": []
+    },
+    "za-zauberer-1-5d3c0869b58d": {
+      "korean": "이가 무딘 화살들로?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · zähnestumpf의 기괴한 화살 이미지를 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-2b69185e0572": {
+      "korean": "왜 또 바라보는가,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 뒤따르는 세 시행과 이어지는 의문문",
+      "footnotes": []
+    },
+    "za-zauberer-1-2bbb82e6487f": {
+      "korean": "죽이려는 것은 아니고,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 죽음과 고문의 대비를 여는 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-f6451a2b5982": {
+      "korean": "그저 고문하고, 고문하려는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · martern의 반복을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-d95a529856a0": {
+      "korean": "무엇 때문에—나를 고문하는가,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 호격과 이어지는 의문문",
+      "footnotes": []
+    },
+    "za-zauberer-1-f6b896a5e478": {
+      "korean": "하하! 몰래 다가오는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 조롱과 경계가 섞인 감탄을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-d8dc053472e9": {
+      "korean": "이런 한밤중에",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 의문문을 수식하는 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-7e513ae6f16f": {
+      "korean": "무엇을 원하는가? 말하라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 연속된 명령과 질문을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-d56cbae4a849": {
+      "korean": "하! 벌써 너무 가까이 왔다!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 침입자의 근접에 대한 외침",
+      "footnotes": []
+    },
+    "za-zauberer-1-b390de93d053": {
+      "korean": "가라! 가라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 반복 명령을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-cd27834831dc": {
+      "korean": "너는 내가 숨 쉬는 소리를 듣고,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 침입자가 숨을 엿듣는 이미지를 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-0e744c047e04": {
+      "korean": "내 가슴에 귀를 대는구나,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · behorchen의 은밀한 엿듣기를 살림",
+      "footnotes": []
+    },
+    "za-zauberer-1-2ef8ba005419": {
+      "korean": "질투하는 자여—",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 질문으로 이어지는 호격",
+      "footnotes": []
+    },
+    "za-zauberer-1-2cf6b92596ec": {
+      "korean": "그런데 무엇을 질투하는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 질투의 대상을 되묻는 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-bb41ef0cfde6": {
+      "korean": "가라! 가라! 사다리는 무엇 하러?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 가슴으로 침입하는 사다리의 은유를 여는 시행",
+      "footnotes": []
+    }
+  }
+}

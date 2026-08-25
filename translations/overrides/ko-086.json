@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "translations": {
+    "za-wuesten-2-c4aa292fad52": {
+      "korean": "참으로 경이롭군!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 오아시스 장면으로 넘어가는 감탄",
+      "footnotes": []
+    },
+    "za-wuesten-2-c4ad29241b89": {
+      "korean": "이렇게 나는 여기 앉아 있다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 반복되는 자기 위치의 선언",
+      "footnotes": []
+    },
+    "za-wuesten-2-72db4ec79ebb": {
+      "korean": "사막 가까이에 있으면서 벌써",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 가까움과 멂의 역설을 여는 시행",
+      "footnotes": []
+    },
+    "za-wuesten-2-11c9c3c73481": {
+      "korean": "다시 사막에서 이토록 멀리,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행과 대구를 이룸",
+      "footnotes": []
+    },
+    "za-wuesten-2-66f9e9b42499": {
+      "korean": "곧 통째로 삼켜져",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 오아시스를 입과 배로 만드는 비유",
+      "footnotes": []
+    },
+    "za-wuesten-2-3b340f25ee64": {
+      "korean": "그 안으로 내가 떨어졌다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 벌어진 오아시스의 입으로 추락하는 시행",
+      "footnotes": []
+    },
+    "za-wuesten-2-468849cd99e8": {
+      "korean": "나의 학구적인 암시를?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 뒤따르는 고래 이야기, 곧 요나 암시를 가리킴",
+      "footnotes": [
+        {
+          "label": "학구적인 암시",
+          "text": "다음의 고래와 그 뱃속 손님은 구약성서의 요나 이야기를 익살스럽게 빗댄 것이다."
+        }
+      ]
+    },
+    "za-wuesten-2-98d95922924c": {
+      "korean": "그 배에 만세,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 고래의 배를 오아시스와 비교하는 시행",
+      "footnotes": []
+    },
+    "za-wuesten-2-60c8b01e1dcb": {
+      "korean": "그것이 이처럼",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음의 오아시스 배와 이어지는 조건절",
+      "footnotes": []
+    },
+    "za-wuesten-2-2c2a9095dd1c": {
+      "korean": "그곳은 그 어떤",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행과 함께 유럽의 의심 많음을 표현하도록 기존 초안을 교정",
+      "footnotes": []
+    },
+    "za-wuesten-2-968f62a260d8": {
+      "korean": "늙수그레한 아내보다도 의심에 중독되어 있다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · Ältlichen Eheweibchen의 조롱을 완화하지 않음",
+      "footnotes": []
+    },
+    "za-wuesten-2-2827de33357c": {
+      "korean": "신께서 그것을 고쳐 주시기를!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 기도문을 흉내 낸 후렴",
+      "footnotes": []
+    },
+    "za-wuesten-2-d9d9b356a0ca": {
+      "korean": "아멘!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 기도문 후렴",
+      "footnotes": []
+    },
+    "za-wuesten-2-9f3dcf4957d9": {
+      "korean": "이렇게 나는 여기 앉아 있다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 반복되는 자기 위치의 선언",
+      "footnotes": []
+    },
+    "za-wuesten-2-20d65fafa05a": {
+      "korean": "이 가장 작은 오아시스 안에,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 화자를 감싸는 장소",
+      "footnotes": []
+    },
+    "za-wuesten-2-60ec0b5a0e50": {
+      "korean": "대추야자 하나처럼,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 화자 자신을 남쪽 과일로 바꾸는 비유",
+      "footnotes": []
+    },
+    "za-wuesten-2-f97df616c463": {
+      "korean": "앞서 말한 남쪽 과일들과",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 대추야자를 가리키는 후속 시행",
+      "footnotes": []
+    },
+    "za-wuesten-2-67c8a61fe331": {
+      "korean": "닮게, 너무도 닮게",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · ähnlich의 과장된 반복을 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-c42692e047b2": {
+      "korean": "나는 여기 누워, 작은",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행의 곤충들과 이어지는 수동 구문",
+      "footnotes": []
+    },
+    "za-wuesten-2-701e40cced9e": {
+      "korean": "날개딱정벌레들이",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · Flügelkäfer의 작은 날벌레 이미지",
+      "footnotes": []
+    },
+    "za-wuesten-2-0a366130edd6": {
+      "korean": "내 둘레에서 춤추고 희롱하며,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · um- 동사의 반복 운동을 보존",
+      "footnotes": []
+    }
+  }
+}

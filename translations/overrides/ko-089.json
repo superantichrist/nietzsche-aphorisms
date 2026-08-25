@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "translations": {
+    "za-wuesten-2-55ca60655b56": {
+      "korean": "창백한 두두여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행의 명령이 향하는 이름의 호격",
+      "footnotes": []
+    },
+    "za-wuesten-2-9025bc2a8820": {
+      "korean": "—아니면 어쩌면",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다른 가능성을 꺼내는 미완 도입",
+      "footnotes": []
+    },
+    "za-wuesten-2-f611f4112d7d": {
+      "korean": "여기에는 제격일까?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행의 가능성을 묻는 표현",
+      "footnotes": []
+    },
+    "za-wuesten-2-80c6949c8846": {
+      "korean": "기름 부음 받은 격언 하나가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 종교적으로 엄숙한 말투를 희화화",
+      "footnotes": []
+    },
+    "za-wuesten-2-1715de9e892b": {
+      "korean": "장엄한 격려의 말 하나가?—",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 설교조의 장엄함을 익살스럽게 반복",
+      "footnotes": []
+    },
+    "za-wuesten-2-dd227c68c059": {
+      "korean": "하! 솟아올라라, 위엄이여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 위엄을 의인화해 불러내는 감탄",
+      "footnotes": []
+    },
+    "za-wuesten-2-a14a9eb6f90e": {
+      "korean": "불어라, 다시 불어라,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 명령의 반복 리듬 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-8a4cf9502180": {
+      "korean": "덕의 풀무여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 덕을 부풀리는 풀무의 희극적 비유",
+      "footnotes": []
+    },
+    "za-wuesten-2-8f8c2252101d": {
+      "korean": "하!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 노래의 짧은 감탄을 그대로 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-0df3364c394c": {
+      "korean": "한 번 더 포효하라,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 이어지는 도덕적 포효의 명령",
+      "footnotes": []
+    },
+    "za-wuesten-2-0c3be7467b1b": {
+      "korean": "도덕적으로 포효하라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 도덕 설교를 사자의 포효로 희화화",
+      "footnotes": []
+    },
+    "za-wuesten-2-ce7b32cbc7a4": {
+      "korean": "도덕적인 사자로서",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행의 덕의 울부짖음과 이어짐",
+      "footnotes": []
+    },
+    "za-wuesten-2-727a4cfa8ef1": {
+      "korean": "—덕의 울부짖음은,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 합성어 Tugend-Geheul의 조롱조를 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-3177026e9cbc": {
+      "korean": "지극히 사랑스러운 소녀들이여,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 청자들을 부르는 최상급 호격",
+      "footnotes": []
+    },
+    "za-wuesten-2-d9db5e7f3967": {
+      "korean": "그 무엇보다도",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음의 정의를 기다리는 미완 비교 구문",
+      "footnotes": []
+    },
+    "za-wuesten-2-4021aa742a00": {
+      "korean": "그리고 벌써 나는 서 있다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 덕의 자세를 취하는 화자의 갑작스러운 동작",
+      "footnotes": []
+    },
+    "za-wuesten-2-9effe6ad12ed": {
+      "korean": "유럽인으로서,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음과 앞의 시행에 이어지는 자기 규정",
+      "footnotes": []
+    },
+    "za-wuesten-2-426c096e28e0": {
+      "korean": "아멘!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 설교조를 흉내 낸 마감 후렴",
+      "footnotes": []
+    },
+    "za-eselsfest-3-eaaf1115d5b3": {
+      "korean": "차라투스트라는 이렇게 말했다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 장면을 맺는 정형 후렴",
+      "footnotes": []
+    },
+    "za-nachtwandler-3-113dc7bfeb0d": {
+      "korean": "오 인간이여, 귀 기울여라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 몽유병자의 노래를 여는 명령",
+      "footnotes": []
+    }
+  }
+}

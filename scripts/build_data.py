@@ -354,6 +354,7 @@ def clean_new_markdown(value: str) -> str:
         value
         .replace("Obhutzeigte", "Obhut zeigte")
         .replace("Wagner’sgehabt", "Wagner’s gehabt")
+        .replace("Zarathutra", "Zarathustra")
     )
 
 

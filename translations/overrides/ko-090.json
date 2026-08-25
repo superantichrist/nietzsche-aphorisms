@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "translations": {
+    "za-nachtwandler-12-9385f29af3ce": {
+      "korean": "오 인간이여! 귀 기울여라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 자정의 노래를 다시 시작하는 명령과 구두점 보존",
+      "footnotes": []
+    },
+    "za-nachtwandler-12-a9727b6fc0e5": {
+      "korean": "‘세계는 깊다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 이어지는 자정의 노래 인용부를 여는 시행",
+      "footnotes": []
+    },
+    "za-nachtwandler-12-fe8dbf3b6554": {
+      "korean": "‘그 고통은 깊다—,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 세계의 깊이와 고통의 깊이를 병치하는 시행",
+      "footnotes": []
+    },
+    "za-nachtwandler-12-2630952e9e62": {
+      "korean": "‘고통은 말한다. 사라져라!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 고통이 소멸을 명령하는 의인화 보존",
+      "footnotes": []
+    }
+  }
+}

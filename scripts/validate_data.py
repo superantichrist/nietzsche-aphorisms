@@ -326,7 +326,7 @@ def main() -> None:
                 f"split German u. A. m. abbreviation across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
-    joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt")
+    joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt", "Zarathutra")
     if any(
         token in quote["german"]
         for quote in quotes

@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "translations": {
+    "za-zauberer-1-3e9ae53d1dc5": {
+      "korean": "들어가려는가,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 가슴속 침입의 비유를 이어가는 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-27279ab1705a": {
+      "korean": "가슴속으로,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞뒤 시행과 이어지는 목적지",
+      "footnotes": []
+    },
+    "za-zauberer-1-5efa1ad2eaf1": {
+      "korean": "기어들어, 나의 가장 은밀한",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행의 Gedanken과 연결되도록 기존 초안을 교정",
+      "footnotes": []
+    },
+    "za-zauberer-1-c0e95e065826": {
+      "korean": "생각 속으로 기어들려는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · einsteigen의 반복과 의문형을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-d754b0715316": {
+      "korean": "너 고문자여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 단호한 호격",
+      "footnotes": []
+    },
+    "za-zauberer-1-2eb949fc0126": {
+      "korean": "너—망나니 신이여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · Henker-Gott의 모욕적 결합어를 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-7794b36b180f": {
+      "korean": "네 앞에서 몸을 뒹굴어야 하는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행의 개 비유와 이어지는 질문",
+      "footnotes": []
+    },
+    "za-zauberer-1-9b923cb86427": {
+      "korean": "너에게—사랑을 꼬리 쳐 보여야 하는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · zuwedeln의 개가 꼬리 치는 동작을 살림",
+      "footnotes": []
+    },
+    "za-zauberer-1-a946c78e0d07": {
+      "korean": "소용없다! 계속 찔러라,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 탄식에서 도발로 바뀌는 명령",
+      "footnotes": []
+    },
+    "za-zauberer-1-469925c1ced3": {
+      "korean": "가장 잔혹한 가시여! 아니다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · Stachel의 찌르는 이미지와 급전환을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-2a262cc7553f": {
+      "korean": "가장 잔혹한 사냥꾼이여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 반복되는 신-사냥꾼 호격",
+      "footnotes": []
+    },
+    "za-zauberer-1-2156882df436": {
+      "korean": "너의 가장 자부심 강한 포로,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 화자가 자신을 규정하는 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-9d4c888ea04d": {
+      "korean": "구름 뒤의 약탈자여!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 숨은 신을 약탈자로 부르는 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-89b6eb2d9052": {
+      "korean": "이제는 말하라,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 답을 재촉하는 명령",
+      "footnotes": []
+    },
+    "za-zauberer-1-7f434dba83a5": {
+      "korean": "뭐라고? 몸값?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 단절된 반문을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-0a91ee7b2e75": {
+      "korean": "몸값으로 무엇을 원하는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · Lösegeld의 반복을 보존",
+      "footnotes": []
+    },
+    "za-zauberer-1-d248d010af63": {
+      "korean": "나를—통째로?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · ganz의 전부 요구를 압축",
+      "footnotes": []
+    },
+    "za-zauberer-1-be95cd9edb12": {
+      "korean": "하하!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 웃음의 독립 시행",
+      "footnotes": []
+    },
+    "za-zauberer-1-9a0730a50651": {
+      "korean": "내 자부심을 모조리 고문하는가?",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · zermartern의 철저한 고문을 살림",
+      "footnotes": []
+    },
+    "za-zauberer-1-9c0bd0d77a41": {
+      "korean": "가슴의 화로를 다오,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 반복되는 온기의 이미지",
+      "footnotes": []
+    },
+    "za-zauberer-1-9ea5709699ab": {
+      "korean": "가장 외로운 나에게 다오,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 뒤따르는 긴 목적어와 이어지는 시행",
+      "footnotes": []
+    }
+  }
+}

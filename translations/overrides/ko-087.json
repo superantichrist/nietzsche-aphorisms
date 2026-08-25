@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "translations": {
+    "za-wuesten-2-77e7187d319b": {
+      "korean": "더 어리석고 더 심술궂은",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행의 욕망과 착상을 꾸미는 비교급 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-927f7e8030e3": {
+      "korean": "욕망과 착상들이—",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행과 이어지는 열거 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-26d1012e066d": {
+      "korean": "너희에게 둘러싸여,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 화자를 에워싼 청자들을 다음 시행에서 밝히는 구조 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-c9d64d5c88e3": {
+      "korean": "소녀 고양이들이여,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · Mädchen-Katzen의 익살스러운 합성어를 직역",
+      "footnotes": []
+    },
+    "za-wuesten-2-5c08f60d0f3b": {
+      "korean": "두두와 줄라이카여,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 노래 속 두 여성 이름의 호격 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-125d39b4fb8b": {
+      "korean": "많은 감정을 쑤셔 넣게 되어:",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · stopfen의 거칠고 희극적인 동작을 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-f5967400169d": {
+      "korean": "(신께서 용서하시기를",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행과 이어지는 괄호 안 기원문 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-02f264fc9822": {
+      "korean": "이 언어의 죄를!)",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행의 괄호와 기원문을 완결",
+      "footnotes": []
+    },
+    "za-wuesten-2-3941dc5a94b2": {
+      "korean": "참으로 낙원의 공기,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 오아시스의 공기를 낙원에 견주는 감탄",
+      "footnotes": []
+    },
+    "za-wuesten-2-b0c06c448816": {
+      "korean": "이토록 좋은 공기가 일찍이",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행의 달에서 내려왔다는 말과 이어짐",
+      "footnotes": []
+    },
+    "za-wuesten-2-fa64bcf9fa27": {
+      "korean": "달에서 내려온 적이 있었던가—",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 과장된 달의 기원을 의문형으로 살림",
+      "footnotes": []
+    },
+    "za-wuesten-2-1cb96c3beea0": {
+      "korean": "우연이었든,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 뒤따르는 선택지와 이어지는 양보적 열거",
+      "footnotes": []
+    },
+    "za-wuesten-2-a2cd34463114": {
+      "korean": "그러나 의심하는 나는 차라리 그것이",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · ziehe es vor의 선택 구문이 다음 시행으로 이어지도록 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-b80cdb111ca2": {
+      "korean": "유럽에서 왔다고 보겠다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 시행의 선택 구문을 완결",
+      "footnotes": []
+    },
+    "za-wuesten-2-2dc040cfc3dc": {
+      "korean": "늙수그레한 아내보다도 의심에 중독되어 있다.",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · Ältlichen Eheweibchen의 조롱을 완화하지 않음",
+      "footnotes": []
+    },
+    "za-wuesten-2-2c7e9ab09c97": {
+      "korean": "신께서 그것을 고쳐 주시기를!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 기도문을 흉내 낸 반복 후렴",
+      "footnotes": []
+    },
+    "za-wuesten-2-6859de814fb2": {
+      "korean": "아멘!",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 기도문 후렴",
+      "footnotes": []
+    },
+    "za-wuesten-2-98bd5c766018": {
+      "korean": "그렇게 나는 여기 앉아 있다, 너희",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행의 호격과 이어지는 도입",
+      "footnotes": []
+    },
+    "za-wuesten-2-ae27738236bd": {
+      "korean": "지극히 사랑스러운 여자 벗들이여,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 최상급 애칭의 호격 보존",
+      "footnotes": []
+    },
+    "za-wuesten-2-c61ef8adaaef": {
+      "korean": "그리고 종려나무를 바라본다,",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행에서 종려나무의 다리를 묻는 장면으로 이어짐",
+      "footnotes": []
+    },
+    "za-wuesten-2-e361efcc53c6": {
+      "korean": "그곳은 그 어떤",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 다음 시행의 늙수그레한 아내와 이어지도록 기존 초안을 교정",
+      "footnotes": []
+    },
+    "za-wuesten-2-6603d50e8830": {
+      "korean": "의심한다. 그럴 만도 한 것이 나는",
+      "status": "draft",
+      "notes": "독일어 원문 직접 번역 · 앞 문장을 맺고 다음 시행의 출신 고백으로 이어지도록 기존 초안을 교정",
+      "footnotes": []
+    }
+  }
+}
