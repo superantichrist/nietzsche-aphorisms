@@ -19,14 +19,17 @@ LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 ORDINAL_CONTINUATION_RE = re.compile(
     r"^(?:Jahrhundert(?:s|e|en)?|"
     r"Aufl(?:age|agen)?|"
-    r"Kap(?:itel)?|"
+    r"Kap(?:itel)?|B(?:uch|ücher)|"
     r"Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b"
 )
 
 PP_CITATION_FRAGMENT_RE = re.compile(
     r"\b(?:spekul|edit|somn|vergl|Arist|Cic|Clem|Alex|Apulej|Jambl|Pyth|"
-    r"Diog|Laert|Herod|Schol|vit|adv|Math)\.$",
+    r"Diog|Laert|Herod|Schol|vit|adv|Math|Enn)\.$",
     re.IGNORECASE,
+)
+PP_LOWER_CITATION_FRAGMENT_RE = re.compile(
+    r"(?:\b(?:eth|nat)\.|\ba\. a\. O\.)$"
 )
 
 
@@ -284,7 +287,10 @@ def main() -> None:
         if (
             current["work"] == "pp"
             and same_paragraph
-            and PP_CITATION_FRAGMENT_RE.search(current["german"])
+            and (
+                PP_CITATION_FRAGMENT_RE.search(current["german"])
+                or PP_LOWER_CITATION_FRAGMENT_RE.search(current["german"])
+            )
         ):
             fail(
                 f"split German citation abbreviation across quote boundary: "

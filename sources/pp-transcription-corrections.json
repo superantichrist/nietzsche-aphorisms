@@ -9,6 +9,51 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA48",
       "reason": "The supplied EPUB reads Salz; the fixed 1874 third-edition scan clearly reads Satz."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 56",
+      "from": "das Individuum venichtet",
+      "to": "das Individuum vernichtet",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA56",
+      "reason": "The supplied EPUB drops the r in vernichtet; the word and sentence are clear in the fixed scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 57",
+      "from": "dieser Ouintessenz aller Schaalheit",
+      "to": "dieser Quintessenz aller Schaalheit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA57",
+      "reason": "The supplied EPUB misreads the initial Fraktur Q of Quintessenz as O."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 57",
+      "from": "aus dem Zeno und Ehrysippos",
+      "to": "aus dem Zeno und Chrysippos",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA57",
+      "reason": "The supplied EPUB misreads Chrysippos as Ehrysippos; the philosopher's name is clear in the fixed scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 60",
+      "from": "Schilderungen der Menscheit und ihres Thuns",
+      "to": "Schilderungen der Menschheit und ihres Thuns",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA60",
+      "reason": "The supplied EPUB drops the h in Menschheit; the fixed scan clearly preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 63",
+      "from": "(0portet autem nequaquam extra animam tempus accipere)",
+      "to": "(Oportet autem nequaquam extra animam tempus accipere)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA63",
+      "reason": "The supplied EPUB misreads the capital O in the Latin Oportet as the digit zero."
     }
   ]
 }
