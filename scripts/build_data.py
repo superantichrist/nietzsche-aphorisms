@@ -1082,6 +1082,13 @@ ABBREVIATIONS = (
     "vergl.", "vgl.", "S.", "Bd.", "Nr.", "sc.", "ca.", "ff.",
 )
 
+PP_CITATION_ABBREVIATIONS = (
+    "St.", "V.", "Aufl.", "P.", "p.", "L.", "Art.", "Vol.",
+    "Lib.", "lib.", "Liv.", "liv.", "Tom.", "C.", "c.", "ibid.",
+    "Med.", "Part.", "publ.", "prop.", "pr.", "schol.", "seqq.",
+    "sq.", "Opp.", "opp.", "ed.", "cap.", "ch.",
+)
+
 # Short refrains and closing verse lines that are semantically complete even
 # though they fall below the general quote-size threshold. Dialogue cues such
 # as "— Weiter!" remain excluded from the random quote pool.
@@ -1154,7 +1161,13 @@ def split_long(
     return result
 
 
-def merge_tiny(parts: list[str], min_chars: int = 28, min_words: int = 4) -> list[str]:
+def merge_tiny(
+    parts: list[str],
+    min_chars: int = 28,
+    min_words: int = 4,
+    *,
+    preserve_lone: bool = False,
+) -> list[str]:
     merged: list[str] = []
     pending = ""
     for part in parts:
@@ -1175,7 +1188,7 @@ def merge_tiny(parts: list[str], min_chars: int = 28, min_words: int = 4) -> lis
     if pending:
         if merged:
             merged[-1] = normalize_space(f"{merged[-1]} {pending}")
-        elif len(pending) >= min_chars:
+        elif preserve_lone or len(pending) >= min_chars:
             merged.append(pending)
     return merged
 
@@ -1187,6 +1200,7 @@ def sentence_units(
     extra_abbreviations: tuple[str, ...] = (),
     protect_ordinals: bool = False,
     prefer_strong_boundaries: bool = False,
+    preserve_lone: bool = False,
 ) -> list[str]:
     normalized = normalize_space(paragraph)
     if normalized in PRESERVE_SHORT_UNITS:
@@ -1205,7 +1219,7 @@ def sentence_units(
                 prefer_strong_boundaries=prefer_strong_boundaries,
             )
         )
-    return merge_tiny(expanded)
+    return merge_tiny(expanded, preserve_lone=preserve_lone)
 
 
 def quote_units(paragraph: str) -> list[str]:
@@ -1218,9 +1232,10 @@ def quote_units_for_work(paragraph: str, work: str, part: str = "") -> list[str]
     units = sentence_units(
         paragraph,
         max_chars=650,
-        extra_abbreviations=("St.", "V."),
-        protect_ordinals=work in {"za", "eh", "nf"},
+        extra_abbreviations=PP_CITATION_ABBREVIATIONS if work == "pp" else ("St.", "V."),
+        protect_ordinals=work in {"za", "eh", "nf", "pp"},
         prefer_strong_boundaries=work == "eh" and part == "Za",
+        preserve_lone=work == "za",
     )
     packed: list[str] = []
     current = ""
@@ -1266,9 +1281,13 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
                 paragraph_text = paragraph["text"] if isinstance(paragraph, dict) else paragraph
                 source_notes = paragraph.get("source_notes", {}) if isinstance(paragraph, dict) else {}
-                for sentence_index, marked_german in enumerate(
-                    quote_units_for_work(paragraph_text, work, section_data["part"])
-                ):
+                units = quote_units_for_work(paragraph_text, work, section_data["part"])
+                if work == "za" and paragraph_text.strip() and not units:
+                    raise ValueError(
+                        "Zarathustra source block disappeared during quote splitting: "
+                        f"{section_data['part']} {section_data['section']} paragraph {paragraph_index}"
+                    )
+                for sentence_index, marked_german in enumerate(units):
                     german, source_note_refs = (
                         strip_note_markers(marked_german)
                         if work == "pp"

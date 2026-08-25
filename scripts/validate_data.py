@@ -170,6 +170,8 @@ def main() -> None:
     translated_ids: set[str] = set()
     sections: dict[str, set[tuple[str, str]]] = defaultdict(set)
     work_counts: Counter[str] = Counter()
+    paragraph_coverage: dict[tuple[str, str, str], set[int]] = defaultdict(set)
+    paragraph_counts: dict[tuple[str, str, str], int] = {}
     preserved_short_ids = {"jgb-256-cb5b5089f133"}
     for index, quote in enumerate(quotes):
         missing = required - quote.keys()
@@ -191,7 +193,11 @@ def main() -> None:
             fail(f"paragraph exceeds paragraph count in {quote['id']}")
         if not isinstance(quote["sentence"], int) or quote["sentence"] < 0:
             fail(f"invalid sentence in {quote['id']}")
-        if len(quote["german"]) < 24 and quote["id"] not in preserved_short_ids:
+        if (
+            len(quote["german"]) < 24
+            and quote["work"] != "za"
+            and quote["id"] not in preserved_short_ids
+        ):
             fail(f"too-short German unit {quote['id']}: {quote['german']!r}")
         if len(quote["german"]) > 700:
             fail(f"too-long German unit {quote['id']}: {len(quote['german'])} chars")
@@ -226,6 +232,21 @@ def main() -> None:
 
         sections[quote["work"]].add((quote["part"], str(quote["section"])))
         work_counts[quote["work"]] += 1
+        paragraph_key = (quote["work"], quote["part"], str(quote["section"]))
+        paragraph_coverage[paragraph_key].add(quote["paragraph"])
+        previous_count = paragraph_counts.setdefault(paragraph_key, quote["paragraphCount"])
+        if previous_count != quote["paragraphCount"]:
+            fail(f"inconsistent paragraph count in {quote['id']}")
+
+    for paragraph_key, count in paragraph_counts.items():
+        if paragraph_key[0] != "za":
+            continue
+        missing_paragraphs = set(range(count)) - paragraph_coverage[paragraph_key]
+        if missing_paragraphs:
+            fail(
+                "Zarathustra source paragraph coverage gap in "
+                f"{paragraph_key[1]} {paragraph_key[2]}: {sorted(missing_paragraphs)[:10]}"
+            )
 
     cache_ids = set(translation_cache)
     for current, following in zip(quotes, quotes[1:]):
@@ -234,7 +255,7 @@ def main() -> None:
             for field in ("work", "part", "section", "paragraph")
         )
         if (
-            current["work"] in {"za", "eh", "nf"}
+            current["work"] in {"za", "eh", "nf", "pp"}
             and same_paragraph
             and re.search(r"\b\d{1,2}\.$", current["german"])
             and ORDINAL_CONTINUATION_RE.match(following["german"])
@@ -244,7 +265,7 @@ def main() -> None:
                 f"{current['id']} -> {following['id']}"
             )
         if (
-            current["work"] in {"za", "eh", "nf"}
+            current["work"] in {"za", "eh", "nf", "pp"}
             and same_paragraph
             and re.search(r"\bV[.]$", current["german"])
         ):
