@@ -414,6 +414,15 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB misreads the final Fraktur u in kopfscheu as n; the independent transcription reads kopfscheu and preserves the horse metaphor."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary023.xhtml",
+      "page": "Band I, Kapitel IV",
+      "from": "Dies ist ein Prachtexemplar der Ehrfucht",
+      "to": "Dies ist ein Prachtexemplar der Ehrsucht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the medial Fraktur s in Ehrsucht as f; the passage concerns ambition for public esteem, and the independent transcription reads Ehrsucht."
     }
   ]
 }
