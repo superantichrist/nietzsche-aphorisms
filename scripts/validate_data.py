@@ -19,11 +19,13 @@ LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 ORDINAL_CONTINUATION_RE = re.compile(
     r"^(?:Jahrhundert(?:s|e|en)?|"
     r"Aufl(?:age|agen)?|"
+    r"Kap(?:itel)?|"
     r"Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b"
 )
 
 PP_CITATION_FRAGMENT_RE = re.compile(
-    r"\b(?:spekul)\.$",
+    r"\b(?:spekul|edit|somn|vergl|Arist|Cic|Clem|Alex|Apulej|Jambl|Pyth|"
+    r"Diog|Laert|Herod|Schol|vit|adv|Math)\.$",
     re.IGNORECASE,
 )
 

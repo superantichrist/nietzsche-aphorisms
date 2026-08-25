@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "corrections": [
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 48",
+      "from": "in den Salz nihil est in intellectu",
+      "to": "in den Satz nihil est in intellectu",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA48",
+      "reason": "The supplied EPUB reads Salz; the fixed 1874 third-edition scan clearly reads Satz."
+    }
+  ]
+}

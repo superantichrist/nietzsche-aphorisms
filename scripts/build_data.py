@@ -1086,7 +1086,11 @@ PP_CITATION_ABBREVIATIONS = (
     "St.", "V.", "Aufl.", "P.", "p.", "L.", "Art.", "Vol.",
     "Lib.", "lib.", "Liv.", "liv.", "Tom.", "C.", "c.", "ibid.",
     "Med.", "Part.", "publ.", "prop.", "pr.", "schol.", "seqq.",
-    "sq.", "Opp.", "opp.", "ed.", "cap.", "ch.", "vierf.", "spekul.",
+    "sq.", "Opp.", "opp.", "ed.", "edit.", "cap.", "ch.", "vierf.", "spekul.",
+    "somn.", "Vergl.",
+    "Arist.", "Cic.", "Clem.", "Alex.", "Apulej.", "Jambl.", "Pyth.",
+    "Diog.", "Laert.", "Herod.", "Schol.", "vit.",
+    "adv.", "Math.", "math.",
 )
 
 # Short refrains and closing verse lines that are semantically complete even
@@ -1112,6 +1116,7 @@ def protect_abbreviations(text: str, extra: tuple[str, ...] = ()) -> str:
 ORDINAL_CONTINUATIONS = (
     "Jahrhundert", "Jahrhunderts", "Jahrhunderte", "Jahrhunderten",
     "Aufl", "Auflage", "Auflagen",
+    "Kap", "Kapitel",
     "Januar", "Februar", "März", "April", "Mai", "Juni",
     "Juli", "August", "September", "Oktober", "November", "Dezember",
 )

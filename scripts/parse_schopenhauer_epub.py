@@ -10,6 +10,7 @@ are otherwise preserved.
 from __future__ import annotations
 
 import hashlib
+import json
 import posixpath
 import re
 import unicodedata
@@ -20,6 +21,7 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 EPUB_PATH = ROOT / "sources" / "raw" / "pp-1874-virtual-library.epub"
+CORRECTIONS_PATH = ROOT / "sources" / "pp-transcription-corrections.json"
 EXPECTED_SHA256 = "42b70273663391ce572b2ad20bb00f79caf7c76e89b9d6504eb794556d956819"
 
 VOLUME_URLS = {
@@ -390,6 +392,25 @@ def parse_parerga() -> list[dict]:
             for file_number in CONTENT_SPECS
             for section in parse_content_file(zipped, file_number, source_notes)
         ]
+
+    corrections = json.loads(CORRECTIONS_PATH.read_text(encoding="utf-8"))["corrections"]
+    for correction in corrections:
+        source_file = correction["sourceFile"]
+        before = correction["from"]
+        after = correction["to"]
+        expected = correction.get("expectedOccurrences", 1)
+        occurrences = 0
+        for section in sections:
+            if section.get("source_file") != source_file:
+                continue
+            for paragraph in section["paragraphs"]:
+                occurrences += paragraph["text"].count(before)
+                paragraph["text"] = paragraph["text"].replace(before, after)
+        if occurrences != expected:
+            raise ValueError(
+                "Parerga transcription correction occurrence mismatch: "
+                f"{before!r} expected={expected}, actual={occurrences}"
+            )
 
     numbered = {
         section["section"]
