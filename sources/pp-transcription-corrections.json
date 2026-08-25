@@ -162,6 +162,96 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA117",
       "reason": "The supplied EPUB misreads the edition number 1 as a lowercase l; the fixed scan clearly reads 1. Aufl."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 128",
+      "from": "ed. 0relli",
+      "to": "ed. Orelli",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA128",
+      "reason": "The supplied EPUB misreads the editor Orelli's initial O as the digit zero; the fixed scan clearly reads ed. Orelli."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 128",
+      "from": "Albrecht Paneritius",
+      "to": "Albrecht Pancritius",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA128",
+      "reason": "The supplied EPUB misreads the travel writer Albrecht Pancritius's surname; the fixed scan and the cited book's catalog record read Pancritius."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 129",
+      "from": "is sure to he outdone by his successors",
+      "to": "is sure to be outdone by his successors",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA129",
+      "reason": "The supplied EPUB misreads be as he in Hume's English quotation; the fixed scan clearly reads is sure to be outdone."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 129",
+      "from": "the endeavour, by an affected ravishment",
+      "to": "they endeavour, by an affected ravishment",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA129",
+      "reason": "The supplied EPUB drops y from they in Hume's English quotation; the fixed scan clearly reads they endeavour."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 132",
+      "from": "qui a tout recu",
+      "to": "qui a tout reçu",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA132",
+      "reason": "The supplied EPUB drops the cedilla from reçu in Vauvenargues's French quotation; the fixed scan clearly preserves reçu."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 132",
+      "from": "Siehe DEuvres complètes",
+      "to": "Siehe Œuvres complètes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA132",
+      "reason": "The supplied EPUB misreads the Œ ligature in Œuvres as D; the fixed scan clearly reads Œuvres complètes."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 138",
+      "from": "ήρασθη το πνευμα των ίδιων άρχων",
+      "to": "ἤρασθη τὸ πνεῦμα τῶν ἰδίων ἀρχῶν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA138",
+      "reason": "The supplied EPUB loses the polytonic accents and breathings from the Greek quotation; the fixed scan and Eusebius, Praeparatio evangelica I.10 preserve the Greek text."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 138",
+      "from": "Sehnsucht, ποθος,",
+      "to": "Sehnsucht, πόθος,",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA138",
+      "reason": "The supplied EPUB drops the accent from the quoted Greek πόθος; the fixed source passage identifies the Greek term for longing."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 139",
+      "from": "αυτο δε ουκ ελιλνωσκε την έαυτου κτισιν",
+      "to": "αὐτὸ δὲ οὐκ ἐγίνωσκε τὴν ἑαυτοῦ κτίσιν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA139",
+      "reason": "The supplied EPUB corrupts the Greek verb ἐγίνωσκε as ελιλνωσκε and drops most diacritics; the fixed scan search reads εγιγνωσκε and the cited Eusebius text confirms the phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, S. 139",
+      "from": "von Taant, dem Aegypter",
+      "to": "von Taaut, dem Aegypter",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA139",
+      "reason": "The supplied EPUB misreads the second u in Taaut as n; the fixed scan search result clearly reads Taaut."
     }
   ]
 }

@@ -340,6 +340,16 @@ def main() -> None:
         "feria, oomo le va",
         "τον σεφον",
         "der l. Aufl.",
+        "ed. 0relli",
+        "Albrecht Paneritius",
+        "is sure to he outdone",
+        "the endeavour, by an affected",
+        "tout recu",
+        "Siehe DEuvres complètes",
+        "ήρασθη το πνευμα των ίδιων άρχων",
+        "Sehnsucht, ποθος,",
+        "ελιλνωσκε",
+        "von Taant, dem Aegypter",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
