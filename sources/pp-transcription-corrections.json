@@ -423,6 +423,60 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB misreads the medial Fraktur s in Ehrsucht as f; the passage concerns ambition for public esteem, and the independent transcription reads Ehrsucht."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary023.xhtml",
+      "page": "Band I, Kapitel IV",
+      "from": "que Démosthène fut an homme d’honneur",
+      "to": "que Démosthène fut un homme d’honneur",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads French un as an; the independent transcription and French grammar read un homme."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary023.xhtml",
+      "page": "Band I, Kapitel IV",
+      "from": "am Steigen des Ouecksilbers",
+      "to": "am Steigen des Quecksilbers",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the initial Fraktur Q in Quecksilbers as O; the independent transcription reads Quecksilbers."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary023.xhtml",
+      "page": "Band I, Kapitel IV",
+      "from": "des belebten Mittelalters und seines Ritterthums",
+      "to": "des belobten Mittelalters und seines Ritterthums",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops the medial Fraktur ol in the ironic belobten; the independent transcription reads belobten Mittelalters."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary023.xhtml",
+      "page": "Band I, Kapitel IV",
+      "from": "quod quis habcat quibuscum conferens se",
+      "to": "quod quis habeat quibuscum conferens se",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads Latin habeat as habcat; the independent transcription and Hobbes's De Cive I.5 read habeat."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary023.xhtml",
+      "page": "Band I, Kapitel IV",
+      "from": "aber die Nachtwelt, wie wird sie lächeln",
+      "to": "aber die Nachwelt, wie wird sie lächeln",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB inserts an erroneous t in Nachwelt; the independent transcription and context read Nachwelt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary023.xhtml",
+      "page": "Band I, Kapitel IV",
+      "from": "und die möglichen Kombinationen derselben erschöpft hat",
+      "to": "und die unmöglichen Kombinationen derselben erschöpft hat",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops the prefix un- in unmöglichen; the argument and independent transcription say earlier thinkers have exhausted the impossible combinations."
     }
   ]
 }
