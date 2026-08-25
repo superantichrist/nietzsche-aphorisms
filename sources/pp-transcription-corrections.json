@@ -333,6 +333,60 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB misreads the medial Fraktur s in Greisen as f; independent German transcriptions agree on den Greisen analog, which is also required by the historical rejuvenation comparison."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary021.xhtml",
+      "page": "Band I, Kapitel II",
+      "from": "Eth. End. VII, 2.",
+      "to": "Eth. Eud. VII, 2.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the standard abbreviation Eud. for Aristotle's Eudemian Ethics as End.; the independent transcription and the cited work agree on Eth. Eud. VII, 2."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary021.xhtml",
+      "page": "Band I, Kapitel II",
+      "from": "le Commerce, 0ctbr. 19, 1837",
+      "to": "le Commerce, Octbr. 19, 1837",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the capital O in the newspaper date abbreviation Octbr. as the digit zero; the independent transcription reads Octbr. 19, 1837."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary021.xhtml",
+      "page": "Band I, Kapitel II",
+      "from": "Exil saepe foras magnis ex aedibus ille",
+      "to": "Exit saepe foras magnis ex aedibus ille",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the final t in Lucretius's Latin Exit as l; the independent transcription and De rerum natura III agree on Exit saepe foras."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary021.xhtml",
+      "page": "Band I, Kapitel II",
+      "from": "was Hetären einem Greife",
+      "to": "was Hetären einem Greise",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB again misreads the medial Fraktur s in Greise as f; the independent transcription and the comparison's meaning agree on an old man, not a griffin."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary021.xhtml",
+      "page": "Band I, Kapitel II",
+      "from": "Πλουτος ο της φυχης πλουτος",
+      "to": "Πλουτος ο της ψυχης πλουτος",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads Greek psi as phi in ψυχης; the verse means wealth of the soul, and the independent transcription preserves ψυχης."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary021.xhtml",
+      "page": "Band I, Kapitel II",
+      "from": "durch den Gegensatz zum Musenlohne",
+      "to": "durch den Gegensatz zum Musensohne",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops the medial s from Musensohne; the independent transcription and the student-culture contrast with Philister both read Musensohne."
     }
   ]
 }
