@@ -387,6 +387,33 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB drops the medial s from Musensohne; the independent transcription and the student-culture contrast with Philister both read Musensohne."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary022.xhtml",
+      "page": "Band I, Kapitel III",
+      "from": "die homerische Stelle, 0d. XVIII, 130—137",
+      "to": "die homerische Stelle, Od. XVIII, 130—137",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the capital O in the standard Odyssey abbreviation Od. as the digit zero; the independent transcription reads Od. XVIII."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary022.xhtml",
+      "page": "Band I, Kapitel III",
+      "from": "επιχθονιων ανθροπον",
+      "to": "επιχθονιων ανθρωπων",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops omega and misreads the plural ending in Homer's ανθρωπων; the independent transcription and Odyssey XVIII, 136 preserve ανθρωπων."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary022.xhtml",
+      "page": "Band I, Kapitel III",
+      "from": "da wird er stätisch oder kopfschen",
+      "to": "da wird er stätisch oder kopfscheu",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the final Fraktur u in kopfscheu as n; the independent transcription reads kopfscheu and preserves the horse metaphor."
     }
   ]
 }
