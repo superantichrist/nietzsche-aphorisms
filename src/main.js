@@ -134,7 +134,13 @@ function showQuote(quote, { historyMode = "replace" } = {}) {
 
   const url = new URL(window.location.href);
   url.searchParams.set("q", quote.id);
-  window.history[historyMode === "push" ? "pushState" : "replaceState"]({ quoteId: quote.id }, "", url);
+  if (historyMode !== "none") {
+    window.history[historyMode === "push" ? "pushState" : "replaceState"](
+      { quoteId: quote.id, filter: state.filter },
+      "",
+      url,
+    );
+  }
 }
 
 function footnoteText(quote) {
@@ -189,7 +195,12 @@ async function copyCurrent(questionMode = false) {
 }
 
 function move(step) {
-  const index = Math.max(0, state.filtered.indexOf(state.current));
+  if (!state.filtered.length) return;
+  let index = state.filtered.indexOf(state.current);
+  if (index < 0) {
+    setFilter("all");
+    index = state.filtered.indexOf(state.current);
+  }
   const nextIndex = (index + step + state.filtered.length) % state.filtered.length;
   showQuote(state.filtered[nextIndex], { historyMode: "push" });
 }
@@ -454,10 +465,18 @@ function bindEvents() {
     if (event.key === "ArrowLeft") move(-1);
     if (event.key === "ArrowRight") move(1);
   });
-  window.addEventListener("popstate", () => {
+  window.addEventListener("popstate", (event) => {
     const quoteId = new URL(window.location.href).searchParams.get("q");
     const quote = state.quotes.find((item) => item.id === quoteId);
-    if (quote) showQuote(quote);
+    if (!quote) return;
+    const historyFilter = event.state?.filter;
+    const knownFilter = historyFilter === "all"
+      || WORK_ORDER.includes(historyFilter)
+      || historyFilter === "author:nietzsche"
+      || historyFilter === "author:schopenhauer";
+    if (knownFilter) setFilter(historyFilter);
+    else if (!state.filtered.includes(quote)) setFilter("all");
+    showQuote(quote, { historyMode: "none" });
   });
 }
 

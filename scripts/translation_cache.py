@@ -35,6 +35,8 @@ def export_batch(args: argparse.Namespace) -> None:
     for quote in read_quotes():
         if args.work and quote["work"] != args.work:
             continue
+        if args.part and quote["part"] != args.part:
+            continue
         if cache.get(quote["id"], {}).get("korean"):
             continue
         pending.append(
@@ -62,6 +64,8 @@ def export_review_batch(args: argparse.Namespace) -> None:
     review_items = []
     for quote in read_quotes():
         if args.work and quote["work"] != args.work:
+            continue
+        if args.part and quote["part"] != args.part:
             continue
         translation = cache.get(quote["id"], {})
         if not translation.get("korean") or translation.get("status") == "reviewed":
@@ -158,12 +162,14 @@ def main() -> None:
 
     export_parser = subparsers.add_parser("export", help="write pending quote records as NDJSON")
     export_parser.add_argument("--work", choices=("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"))
+    export_parser.add_argument("--part", help="limit the export to one stable part key")
     export_parser.add_argument("--limit", type=int, default=100)
     export_parser.add_argument("--output", default="translations/batches/pending.ndjson")
     export_parser.set_defaults(func=export_batch)
 
     review_parser = subparsers.add_parser("review", help="write translated draft records for editorial review")
     review_parser.add_argument("--work", choices=("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"))
+    review_parser.add_argument("--part", help="limit the export to one stable part key")
     review_parser.add_argument("--limit", type=int, default=100)
     review_parser.add_argument("--output", default="translations/batches/review.ndjson")
     review_parser.set_defaults(func=export_review_batch)

@@ -1,17 +1,17 @@
 {
   "schemaVersion": 3,
-  "corpusVersion": "3b51f84ca9b68101",
-  "dataVersion": "ae235ca2fff2c2a1",
-  "quoteCount": 25035,
-  "translatedCount": 17949,
-  "widgetQuoteCount": 25035,
+  "corpusVersion": "a7dde64ec4bebd5b",
+  "dataVersion": "d7292cd386dda2c4",
+  "quoteCount": 25297,
+  "translatedCount": 18118,
+  "widgetQuoteCount": 25297,
   "reviewedCount": 5749,
-  "pendingTranslationCount": 7086,
+  "pendingTranslationCount": 7179,
   "widgetShards": {
     "schemaVersion": 1,
     "basePath": "data/widget-shards",
     "shardSize": 256,
-    "totalCount": 25035,
+    "totalCount": 25297,
     "workOrder": [
       "jgb",
       "gm",
@@ -51,22 +51,22 @@
       },
       "za": {
         "offset": 5395,
-        "count": 3588,
-        "shardCount": 15
+        "count": 3872,
+        "shardCount": 16
       },
       "eh": {
-        "offset": 8983,
+        "offset": 9267,
         "count": 565,
         "shardCount": 3
       },
       "nf": {
-        "offset": 9548,
+        "offset": 9832,
         "count": 8401,
         "shardCount": 33
       },
       "pp": {
-        "offset": 17949,
-        "count": 7086,
+        "offset": 18233,
+        "count": 7064,
         "shardCount": 28
       }
     }
@@ -75,7 +75,7 @@
     "nietzsche": {
       "nameDe": "Friedrich Nietzsche",
       "nameKo": "프리드리히 니체",
-      "count": 17949,
+      "count": 18233,
       "works": [
         "jgb",
         "gm",
@@ -90,7 +90,7 @@
     "schopenhauer": {
       "nameDe": "Arthur Schopenhauer",
       "nameKo": "아르투어 쇼펜하우어",
-      "count": 7086,
+      "count": 7064,
       "works": [
         "pp"
       ]
@@ -154,7 +154,7 @@
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
-      "count": 3588,
+      "count": 3872,
       "reviewedCount": 0
     },
     "eh": {
@@ -184,22 +184,22 @@
       "edition": "3. Auflage (1874)",
       "editor": "Julius Frauenstädt",
       "transcriptionStatus": "검증 중인 구조화 전사본",
-      "count": 7086,
+      "count": 7064,
       "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 25035,
-      "bytes": 32226537,
-      "sha256": "cb945de64dcc3038caab966032a4072b519653050c3cb7664fae56f03f5529d2"
+      "count": 25297,
+      "bytes": 32508939,
+      "sha256": "ac5730feefa16fd29d1abbb2cc1f91211a3469f2b2b103a14ae2cb9d360b3b0a"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 25035,
-      "bytes": 19855484,
-      "sha256": "8e8fd7173c9fa834aef0b4657c01d7b8a5e3e2d9f785318c0609610614d1883a"
+      "count": 25297,
+      "bytes": 20020816,
+      "sha256": "cb2e83c695f8e141f5473ab63283a2b257968097952aded709e6aaeb369d46f8"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -233,9 +233,9 @@
     },
     "za": {
       "path": "data/za.json",
-      "count": 3588,
-      "bytes": 4025111,
-      "sha256": "4942347b3d7f4ffc3df4b737c0e9f18625005b53301bb829da88fb9548a8429a"
+      "count": 3872,
+      "bytes": 4255037,
+      "sha256": "b5082e7ec3e6a0c4414cecf3f936e0d55eb37d502ee706869abfc032bdb11ba0"
     },
     "eh": {
       "path": "data/eh.json",
@@ -251,9 +251,9 @@
     },
     "pp": {
       "path": "data/pp.json",
-      "count": 7086,
-      "bytes": 8970724,
-      "sha256": "7393323030a5ecd75d00da3213c84ca96be800b4c61599baea6e56e7c7d9b198"
+      "count": 7064,
+      "bytes": 9023200,
+      "sha256": "ad958a2e4c3c1b51209abfb4f9f96464e99f5fa1afae556e95038745fcf63e25"
     }
   },
   "sources": "sources/sources.json"

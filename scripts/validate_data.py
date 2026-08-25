@@ -18,7 +18,13 @@ WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp")
 LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 ORDINAL_CONTINUATION_RE = re.compile(
     r"^(?:Jahrhundert(?:s|e|en)?|"
+    r"Aufl(?:age|agen)?|"
     r"Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b"
+)
+
+PP_CITATION_FRAGMENT_RE = re.compile(
+    r"\b(?:spekul)\.$",
+    re.IGNORECASE,
 )
 
 
@@ -195,7 +201,7 @@ def main() -> None:
             fail(f"invalid sentence in {quote['id']}")
         if (
             len(quote["german"]) < 24
-            and quote["work"] != "za"
+            and quote["work"] not in {"za", "pp"}
             and quote["id"] not in preserved_short_ids
         ):
             fail(f"too-short German unit {quote['id']}: {quote['german']!r}")
@@ -239,12 +245,12 @@ def main() -> None:
             fail(f"inconsistent paragraph count in {quote['id']}")
 
     for paragraph_key, count in paragraph_counts.items():
-        if paragraph_key[0] != "za":
+        if paragraph_key[0] not in {"za", "pp"}:
             continue
         missing_paragraphs = set(range(count)) - paragraph_coverage[paragraph_key]
         if missing_paragraphs:
             fail(
-                "Zarathustra source paragraph coverage gap in "
+                "source paragraph coverage gap in "
                 f"{paragraph_key[1]} {paragraph_key[2]}: {sorted(missing_paragraphs)[:10]}"
             )
 
@@ -271,6 +277,15 @@ def main() -> None:
         ):
             fail(
                 f"split abbreviated name across quote boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
+        if (
+            current["work"] == "pp"
+            and same_paragraph
+            and PP_CITATION_FRAGMENT_RE.search(current["german"])
+        ):
+            fail(
+                f"split German citation abbreviation across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
     joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt")
