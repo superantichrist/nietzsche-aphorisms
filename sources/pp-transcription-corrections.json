@@ -324,6 +324,15 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA145",
       "reason": "The supplied EPUB misreads the French reflexive pronoun se as so; the fixed scan search result clearly reads Quiconque se plaît."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary020.xhtml",
+      "page": "Band I, Kapitel I",
+      "from": "den Greifen analog, welche sich durch die Ausdünstung junger Mädchen zu stärken suchen",
+      "to": "den Greisen analog, welche sich durch die Ausdünstung junger Mädchen zu stärken suchen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the medial Fraktur s in Greisen as f; independent German transcriptions agree on den Greisen analog, which is also required by the historical rejuvenation comparison."
     }
   ]
 }
