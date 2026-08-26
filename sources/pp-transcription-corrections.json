@@ -6356,6 +6356,33 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA617",
       "reason": "The supplied EPUB drops the clearly printed full stop after extravagiren."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 318, p. 620",
+      "from": "Viva muchos anos!",
+      "to": "Viva muchos años!",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA620",
+      "reason": "The supplied EPUB drops the clearly printed Spanish tilde in años."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 334, p. 626",
+      "from": "sufficit irae.möge Folgendes dienen",
+      "to": "sufficit irae, möge Folgendes dienen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA626",
+      "reason": "The EPUB extractor replaces the clearly printed comma after irae with a full stop and drops the following space."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 335, p. 626",
+      "from": "das ξευγμα",
+      "to": "das ζευγμα",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA626",
+      "reason": "The supplied EPUB mistakes the clearly printed Greek zeta in ζευγμα for xi."
     }
   ]
 }

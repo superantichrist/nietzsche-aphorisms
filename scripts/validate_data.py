@@ -1039,6 +1039,9 @@ def main() -> None:
         "bradype, 0edype, Andromaque",
         "ungestühmer und leidenschaftlicher",
         "extravagiren Das Genie hingegen",
+        "Viva muchos anos!",
+        "sufficit irae.möge Folgendes dienen",
+        "das ξευγμα",
     )
     pp_transcription_texts = [
         "\n".join(
