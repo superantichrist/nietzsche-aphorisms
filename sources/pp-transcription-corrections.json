@@ -2342,6 +2342,195 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
       "reason": "The supplied EPUB duplicates t in the title Biographia Britannica; the fixed German scan preserves the title."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 156",
+      "from": "pag. 704 note l",
+      "to": "pag. 704 note 1",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as a lowercase l in Byron's bibliographic note."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 156",
+      "from": "which is aaid to have",
+      "to": "which is said to have",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes a for s in the printed English quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 156",
+      "from": "Mr. Conduit, as, as I have not",
+      "to": "Mr. Conduit; so, as I have not",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB corrupts the punctuation and the word so in the printed English quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 157",
+      "from": "Erst hinterher viel ihm die alte Hypothese ein",
+      "to": "Erst hinterher fiel ihm die alte Hypothese ein",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes viel for the printed verb fiel."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 158",
+      "from": "welterklärenden Hppothese",
+      "to": "welterklärenden Hypothese",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops y from the printed word Hypothese."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 90 b, p. 159",
+      "from": "dem blossen Auge sichtbaren",
+      "to": "dem bloßen Auge sichtbaren",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB normalizes the printed sharp s incorrectly in bloßen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 91, p. 160",
+      "from": "aus See-und nicht aus Flußwasser",
+      "to": "aus See- und nicht aus Flußwasser",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 92, p. 160",
+      "from": "generatio univoca (εξ ομωνυμου Arist. metaph. Z, 25.)",
+      "to": "generatio univoca (ἐξ ὁμωνύμου Arist. metaph. Z, 25.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the breathing and accent marks from the printed Greek phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 161",
+      "from": "die Gedurten allemal",
+      "to": "die Geburten allemal",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes d for b in the printed word Geburten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 161",
+      "from": "beigebrachten Phänomem",
+      "to": "beigebrachten Phänomen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes final m for n in the printed word Phänomen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 161",
+      "from": "mutatis mutandis dieses Gesetz",
+      "to": "mutatis mutandis, dieses Gesetz",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the comma printed after the Latin phrase mutatis mutandis."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 162",
+      "from": "dann auf die generatio aequivoca werfen",
+      "to": "sich dann auf die generatio aequivoca werfen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed reflexive pronoun sich."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 162",
+      "from": "generatio in utero heterogeno",
+      "to": "generatio in utero heterogeneo",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the second e from the printed Latin adjective heterogeneo."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 163",
+      "from": "völlig ansgelöscht haben",
+      "to": "völlig ausgelöscht haben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes n for u in the printed word ausgelöscht."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 164",
+      "from": "das Gebiet der Physik ungebürlich ausdehnt",
+      "to": "das Gebiet der Physik ungebührlich ausdehnt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops h from the printed word ungebührlich."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 164",
+      "from": "plumpester Judensuperfiktion",
+      "to": "plumpester Judensuperstition",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB misreads the Fraktur st in the printed word Judensuperstition."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 165",
+      "from": "am Lichte der Erkennntiß",
+      "to": "am Lichte der Erkenntniß",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB duplicates n in the printed word Erkenntniß."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 165",
+      "from": "prostititiren und zum Spott",
+      "to": "prostituiren und zum Spott",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB corrupts the printed word prostituiren."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 93, p. 165",
+      "from": "zunehmen nnd dadurch",
+      "to": "zunehmen und dadurch",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes n for u in the printed conjunction und."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 94, pp. 165–166",
+      "from": "Pflanzen-und Thiergeschlecht",
+      "to": "Pflanzen- und Thiergeschlecht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 94, p. 166",
+      "from": "(und dies ist der eigentliche Begriff des Genus, und zerfallen manche",
+      "to": "(und dies ist der eigentliche Begriff des Genus), und zerfallen manche",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB moves the printed closing parenthesis after Genus into a comma, leaving the sentence unbalanced."
     }
   ]
 }
