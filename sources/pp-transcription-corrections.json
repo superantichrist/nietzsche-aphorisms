@@ -1494,6 +1494,116 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
       "reason": "The supplied EPUB modernizes the historical spelling Nothwendigkeit preserved in the fixed German scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 43, p. 62",
+      "from": "Und beweist euch, es müß´t so seyn.",
+      "to": "Und beweist euch, es müßt’ so seyn.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB transposes the apostrophe within müßt’; the fixed German scan places it after the final t."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 44, p. 63",
+      "from": "uns abwehrend und verneinend Verhalten.",
+      "to": "uns abwehrend und verneinend verhalten.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB capitalizes the infinitive verhalten; the fixed German scan preserves lowercase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 44, p. 64",
+      "from": "Selbstmord ist eine feige Handlung",
+      "to": "Selbstmord ist eine feige Handlung.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the full stop printed at the end of the first numbered maxim."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 44, p. 64",
+      "from": "(Ist das Gegentheil der WahrheitJ",
+      "to": "(Ist das Gegentheil der Wahrheit.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the printed closing full stop and parenthesis as J."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 44, p. 64",
+      "from": "Dass dem Bako von Verulam Nachgesprochene",
+      "to": "Das dem Bako von Verulam Nachgesprochene",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes Dass for the printed substantivized demonstrative Das."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 44, p. 64",
+      "operation": "insert-after-paragraph",
+      "after": "Das dem Bako von Verulam Nachgesprochene: Ein wenig Philosophie führt von Gott ab; ein vieles zu ihm zurück.",
+      "text": "Knowledge is power. Den Teufel auch! Einer kann sehr viel Kenntniß haben, ohne darum die mindeste Macht zu besitzen, während ein Anderer die höchste Gewalt hat, bei blutwenigen Kenntnissen. Daher spricht Herodot sehr richtig das Gegentheil jenes Satzes aus: ἐχθίστη δὲ ὀδύνη ἐστὶ τῶν ἐν ἀνθρώποισι αὕτη, πολλὰ φρονέοντα μηδενὸς κρατέειν (IX, 16). — Daß hin und wieder Einem seine Kenntnisse Gewalt über Andere geben, z. B. wenn er ihr Geheimniß weiß, oder sie nicht hinter das Seinige kommen können u. s. w., berechtigt noch nicht zu jenem Ausspruch.",
+      "moveSourceNotesFromAnchor": true,
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB omits Schopenhauer's handwritten eighth maxim from the body and preserves it only inside editor note 7; the fixed German scan prints the complete authorial addition as item 8."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 49, p. 67",
+      "from": "Πολλακι και κηπωρος ανηρ μαλα καιριον ἑιπε.",
+      "to": "Πολλάκι καὶ κηπωρὸς ἀνὴρ μάλα καίριον εἶπε.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and misorders the breathing in εἶπε; the fixed German scan preserves the complete Greek line."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 50, p. 68",
+      "from": "ein diesem fremdes Subjetktives",
+      "to": "ein diesem fremdes Subjektives",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB duplicates the t in Subjektives; the fixed German scan preserves the spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 50, p. 68",
+      "from": "Persönlichkeit Entspringendes",
+      "to": "Persönlichkeit entspringendes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB capitalizes the participle entspringendes; the fixed German scan preserves lowercase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 50, p. 69",
+      "from": "von unschätz-barem Werth",
+      "to": "von unschätzbarem Werth",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB retains a print line-break hyphen inside unschätzbarem."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 50, p. 69",
+      "from": "des Aussgangs politischer Angelegenheiten",
+      "to": "des Ausgangs politischer Angelegenheiten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB duplicates the s in Ausgangs; the fixed German scan preserves the spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 71",
+      "from": "wenn in größern Massen umfaßt, nützliche Kenntnisse heißen",
+      "to": "wenn in größern Massen umfaßt, „nützliche Kenntnisse“ heißen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around nützliche Kenntnisse."
     }
   ]
 }

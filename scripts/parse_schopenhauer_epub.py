@@ -447,20 +447,49 @@ def parse_parerga() -> list[dict]:
     corrections = json.loads(CORRECTIONS_PATH.read_text(encoding="utf-8"))["corrections"]
     for correction in corrections:
         source_file = correction["sourceFile"]
-        before = correction["from"]
-        after = correction["to"]
+        operation = correction.get("operation", "replace")
         expected = correction.get("expectedOccurrences", 1)
         occurrences = 0
-        for section in sections:
-            if section.get("source_file") != source_file:
-                continue
-            for paragraph in section["paragraphs"]:
-                occurrences += paragraph["text"].count(before)
-                paragraph["text"] = paragraph["text"].replace(before, after)
+        if operation == "replace":
+            before = correction["from"]
+            after = correction["to"]
+            for section in sections:
+                if section.get("source_file") != source_file:
+                    continue
+                for paragraph in section["paragraphs"]:
+                    occurrences += paragraph["text"].count(before)
+                    paragraph["text"] = paragraph["text"].replace(before, after)
+            subject = before
+        elif operation == "insert-after-paragraph":
+            anchor = correction["after"]
+            inserted_text = correction["text"]
+            for section in sections:
+                if section.get("source_file") != source_file:
+                    continue
+                rebuilt: list[dict] = []
+                for paragraph in section["paragraphs"]:
+                    rebuilt.append(paragraph)
+                    anchor_occurrences = paragraph["text"].count(anchor)
+                    if not anchor_occurrences:
+                        continue
+                    occurrences += anchor_occurrences
+                    marked_inserted_text = inserted_text
+                    if correction.get("moveSourceNotesFromAnchor"):
+                        refs = NOTE_MARKER_RE.findall(paragraph["text"])
+                        markers = " ".join(f"[[PP-NOTE:{ref}]]" for ref in refs)
+                        paragraph["text"] = normalize_space(NOTE_MARKER_RE.sub(" ", paragraph["text"]))
+                        paragraph["source_notes"] = {}
+                        marked_inserted_text = normalize_space(f"{inserted_text} {markers}")
+                    inserted = paragraph_payload(marked_inserted_text, source_notes)
+                    rebuilt.append(inserted)
+                section["paragraphs"] = rebuilt
+            subject = anchor
+        else:
+            raise ValueError(f"Unknown Parerga transcription correction operation: {operation}")
         if occurrences != expected:
             raise ValueError(
                 "Parerga transcription correction occurrence mismatch: "
-                f"{before!r} expected={expected}, actual={occurrences}"
+                f"{subject!r} expected={expected}, actual={occurrences}"
             )
 
     numbered = {

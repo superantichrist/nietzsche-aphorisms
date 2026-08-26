@@ -465,6 +465,16 @@ def main() -> None:
         "an der οψιμαθια",
         "Gedanken, welche wert waren, aufgeschrieben",
         "die Notwendigkeit einer Ursache zu jeder Veränderung",
+        "müß´t so seyn",
+        "verneinend Verhalten",
+        "WahrheitJ",
+        "Dass dem Bako von Verulam Nachgesprochene",
+        "Πολλακι και κηπωρος ανηρ μαλα καιριον ἑιπε",
+        "Subjetktives",
+        "Persönlichkeit Entspringendes",
+        "unschätz-barem",
+        "Aussgangs politischer Angelegenheiten",
+        "umfaßt, nützliche Kenntnisse heißen",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
@@ -482,13 +492,14 @@ def main() -> None:
         "Die Apagoge bringen wir dadurch zu Wege",
         "Das Subjekt des Erkennens ist nichts Selbstständiges",
         "Der Wille in uns ist allerdings Ding an sich",
-        "Selbstmord ist eine feige Handlung",
+        "Selbstmord ist eine feige Handlung.",
         "Wer Andern mißtraut ist selbst unredlich.",
         "Verdienst und Genie sind aufrichtig bescheiden.",
         "Die Wahnsinnigen sind überaus unglücklich.",
         "Die Philosophie läßt sich nicht lernen, sondern nur das Philosophiren.",
         "Es ist leichter eine gute Tragödie, als eine gute Komödie zu schreiben.",
-        "Dass dem Bako von Verulam Nachgesprochene",
+        "Das dem Bako von Verulam Nachgesprochene",
+        "Knowledge is power. Den Teufel auch!",
         "daß Der, zu dem geredet wird, den Subjektbegriff",
         "weshalb denn auch Herr Prof. Rosas in Wien",
     )
