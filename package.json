@@ -2,7 +2,7 @@
   "name": "nietzsche-aphorisms",
   "version": "1.0.0",
   "private": true,
-  "description": "German philosophy texts, direct Korean translations, a mobile reader, and Scriptable widget data.",
+  "description": "German and Latin philosophy texts, direct Korean translations, a mobile reader, and Scriptable widget data.",
   "engines": {
     "node": ">=22.13.0"
   },
@@ -10,6 +10,7 @@
     "dev": "python scripts/build_data.py && vite --host 0.0.0.0",
     "build:data": "python scripts/build_data.py",
     "fetch:sources": "python scripts/fetch_sources.py && python scripts/fetch_extended_sources.py",
+    "fetch:seneca": "python scripts/fetch_seneca_sources.py",
     "build": "npm run build:data && vite build && python scripts/copy_static.py",
     "validate": "python scripts/validate_data.py",
     "audit:translations": "python scripts/audit_translations.py",

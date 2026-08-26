@@ -4,14 +4,14 @@
 const SITE_URL = "https://superantichrist.github.io/nietzsche-aphorisms/";
 const MANIFEST_URL = `${SITE_URL}data/manifest.json`;
 const WIDGET_DATA_URL = `${SITE_URL}data/widget.json`;
-const WORK_FILTER = "all"; // "all" | "nietzsche" | "schopenhauer" | 작품 키(jgb, gm, ..., pp)
+const WORK_FILTER = "all"; // "all" | "nietzsche" | "schopenhauer" | "seneca" | 작품 키
 const REQUEST_TIMEOUT_SECONDS = 12;
-const VALID_WORKS = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"];
-const VALID_AUTHORS = ["nietzsche", "schopenhauer"];
+const VALID_WORKS = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv"];
+const VALID_AUTHORS = ["nietzsche", "schopenhauer", "seneca"];
 const WORK_AUTHORS = {
   jgb: "nietzsche", gm: "nietzsche", ac: "nietzsche", gd: "nietzsche",
   fw: "nietzsche", za: "nietzsche", eh: "nietzsche", nf: "nietzsche",
-  pp: "schopenhauer",
+  pp: "schopenhauer", dbv: "seneca",
 };
 
 const fm = FileManager.local();
@@ -105,8 +105,12 @@ function validQuote(value) {
     value
     && typeof value.id === "string"
     && typeof value.work === "string"
-    && typeof value.german === "string"
+    && (typeof value.original === "string" || typeof value.german === "string")
   );
+}
+
+function originalText(quote) {
+  return quote.original || quote.german || "";
 }
 
 function validQuotes(value, minimumLength = 1) {
@@ -320,13 +324,14 @@ function sourceLabel(quote) {
     eh: "이 사람을 보라",
     nf: "후기 유고 1885–1888",
     pp: "소품과 부록",
+    dbv: "인생의 짧음에 대하여",
   };
   const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
   const unnumbered = ["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"];
   const section = quote.sectionLabel
     ? ` · ${quote.sectionLabel}`
     : unnumbered.includes(quote.section) ? "" : ` §${quote.section}`;
-  const authors = { nietzsche: "니체", schopenhauer: "쇼펜하우어" };
+  const authors = { nietzsche: "니체", schopenhauer: "쇼펜하우어", seneca: "세네카" };
   const author = quote.authorNameKo || authors[quote.author || WORK_AUTHORS[quote.work]] || "";
   return `${author ? `${author} · ` : ""}${quote.workTitleKo || titles[quote.work] || quote.work} · ${part}${section}`;
 }
@@ -335,6 +340,13 @@ function positionLabel(quote) {
   const paragraph = Number.isInteger(quote.paragraph) ? quote.paragraph : 0;
   const sentence = Number.isInteger(quote.sentence) ? quote.sentence : 0;
   const paragraphCount = Number.isInteger(quote.paragraphCount) ? quote.paragraphCount : 1;
+  if (quote.sourceSection) {
+    const sourceParagraph = Number.isInteger(quote.sourceParagraph) ? quote.sourceParagraph : 0;
+    const paragraphLabel = quote.sourceSectionParagraphCount > 1
+      ? ` · 문단 ${sourceParagraph + 1}`
+      : "";
+    return `§${quote.sourceSection}${paragraphLabel} · 문장 ${sentence + 1}`;
+  }
   return paragraphCount === 1
     ? `구절 ${sentence + 1}`
     : `문단 ${paragraph + 1} · 문장 ${sentence + 1}`;
@@ -381,7 +393,8 @@ function makeWidget(quote) {
   widget.addSpacer(isSmall ? 10 : 13);
 
   const hasKorean = Boolean(quote.korean && quote.korean.trim());
-  const mainText = hasKorean ? quote.korean.trim() : quote.german.trim();
+  const original = originalText(quote).trim();
+  const mainText = hasKorean ? quote.korean.trim() : original;
   addText(
     widget,
     mainText,
@@ -393,7 +406,7 @@ function makeWidget(quote) {
 
   if (!isSmall && hasKorean) {
     widget.addSpacer(9);
-    addText(widget, quote.german.trim(), Font.italicSystemFont(isLarge ? 12 : 10), muted, isLarge ? 5 : 3, 0.7);
+    addText(widget, original, Font.italicSystemFont(isLarge ? 12 : 10), muted, isLarge ? 5 : 3, 0.7);
   }
 
   widget.addSpacer();

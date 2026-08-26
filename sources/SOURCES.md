@@ -1,4 +1,4 @@
-# 독일어 원문과 판본
+# 원문과 판본
 
 니체 빌드 입력은 Nietzsche Source의 eKGWB 화면에서 전사된 Markdown 스냅샷이다. 스냅샷을 커밋 해시와 SHA-256으로 고정해, 원격 사이트가 바뀌더라도 같은 ID와 같은 JSON을 다시 만들 수 있게 했다.
 
@@ -31,3 +31,9 @@ Nietzsche Source는 eKGWB가 독일어 표준 비평판의 디지털판이며, �
 EPUB의 구조적 무결성은 좋다. 선언되지 않은 `&nbsp;` 828개를 비분리 공백으로 정규화하면 60개 XHTML이 모두 파싱되고 내부 링크가 하나도 끊어지지 않는다. 반면 몇몇 명백한 전사 오자가 표본 검사에서 확인됐으므로, 첫 공개본은 `검증 중인 구조화 전사본`으로 표시한다. 이후 1874년 제3판 스캔과 대조해 전사 오자만 수정하며 역사적 철자·문장부호를 현대화하지 않는다. 원본 EPUB은 수정하지 않고, 모든 교정은 별도 기록으로 재현 가능하게 관리한다.
 
 교정 기록은 `pp-transcription-corrections.json`에 원문 문자열·교정 문자열·판면 URL·예상 출현 횟수를 함께 둔다. 파서는 각 교정이 지정 XHTML에서 정확히 그 횟수만큼 발견될 때만 적용하므로, EPUB이나 파서가 바뀌어 엉뚱한 본문을 고치는 일을 막는다.
+
+## 세네카 코퍼스
+
+세네카의 라틴어 원문은 PerseusDL `canonical-latinLit` 저장소의 TEI XML을 커밋 `422896dde7f07509f151d18bb5fe351b77458748`로 고정해 사용한다. 현재 공개한 《De brevitate vitae》는 John William Basore 편집, *Moral Essays* 제2권(1932)의 라틴어 전사이며 20장·104개 번호 절을 모두 보존한다. 비평 장치의 이문 주석과 판면 표지는 본문에서 제외하고, 원문 독법과 문단 구조만 읽기 단위로 만든다.
+
+같은 고정 스냅샷에서 《Ad Lucilium Epistulae Morales》 124편, 《De tranquillitate animi》, 《De vita beata》, 《De ira》, 《De clementia》, 《De providentia》도 확보해 SHA-256을 기록했다. 취득 URL·편집자·연도·개별 파일 해시는 [`sources.json`](sources.json)에 있으며 `npm run fetch:seneca`로 다시 내려받아 검증할 수 있다. Perseus 스냅샷은 CC BY-SA 4.0으로 배포된다.

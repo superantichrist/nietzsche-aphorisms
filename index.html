@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#15110d" />
     <meta name="color-scheme" content="dark" />
-    <meta name="description" content="니체와 쇼펜하우어의 독일어 원문을 정확한 출전과 함께 읽는 모바일 아카이브." />
+    <meta name="description" content="니체·쇼펜하우어·세네카의 원문을 정확한 출전과 함께 읽는 모바일 아카이브." />
     <meta property="og:title" content="오늘의 문장" />
-    <meta property="og:description" content="니체와 쇼펜하우어의 독일어 원문에서 만나는 오늘의 한 문장." />
+    <meta property="og:description" content="독일어와 라틴어 원문에서 만나는 오늘의 한 문장." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <link rel="manifest" href="./manifest.webmanifest" />
@@ -42,6 +42,7 @@
         <button class="filter active" type="button" data-filter="all">전체</button>
         <button class="filter" type="button" data-filter="author:nietzsche">니체 전체</button>
         <button class="filter" type="button" data-filter="author:schopenhauer">쇼펜하우어 전체</button>
+        <button class="filter" type="button" data-filter="author:seneca">세네카 전체</button>
         <button class="filter" type="button" data-filter="jgb">선악의 저편</button>
         <button class="filter" type="button" data-filter="gm">도덕의 계보</button>
         <button class="filter" type="button" data-filter="ac">안티크리스트</button>
@@ -51,6 +52,7 @@
         <button class="filter" type="button" data-filter="eh">이 사람을 보라</button>
         <button class="filter" type="button" data-filter="nf">후기 유고</button>
         <button class="filter" type="button" data-filter="pp">소품과 부록</button>
+        <button class="filter" type="button" data-filter="dbv">인생의 짧음에 대하여</button>
       </nav>
 
       <section class="quote-card" aria-live="polite" aria-busy="true" id="quote-card">
@@ -64,7 +66,7 @@
 
         <div class="german-wrap" id="german-wrap">
           <div class="language-label">
-            <span>DEUTSCH · ORIGINAL</span>
+            <span id="original-language-label">DEUTSCH · ORIGINAL</span>
             <button id="toggle-german" type="button" aria-expanded="true">원문 숨기기</button>
           </div>
           <blockquote class="quote-german" id="quote-german"></blockquote>
@@ -113,11 +115,12 @@
         <p class="section-number">01 · THE ARCHIVE</p>
         <h2 id="about-title">저자를 함께 읽되,<br />출전은 섞지 않습니다.</h2>
         <div class="about-grid">
-          <p>니체의 일곱 저작과 후기 유고, 쇼펜하우어의 《소품과 부록》을 작품·권·장·절·문단·문장 단위로 나누고 원문에서 만든 안정 ID를 부여했습니다. 쇼펜하우어 원문은 1874년 제3판 구조화 전사본이며 스캔 대조를 진행합니다. 한국어는 독일어에서 직접 순차 번역합니다.</p>
+          <p>니체와 쇼펜하우어의 독일어 저작, 세네카의 라틴어 저작을 작품·권·장·절·문단·문장 단위로 나눕니다. 원문과 판본을 기준으로 삼고 한국어는 이 프로젝트가 직접 번역합니다.</p>
           <dl>
             <div><dt id="stat-total">—</dt><dd>전체 구절</dd></div>
             <div><dt id="stat-author-nietzsche">—</dt><dd>니체</dd></div>
             <div><dt id="stat-author-schopenhauer">—</dt><dd>쇼펜하우어</dd></div>
+            <div><dt id="stat-author-seneca">—</dt><dd>세네카</dd></div>
             <div><dt id="stat-jgb">—</dt><dd>선악의 저편</dd></div>
             <div><dt id="stat-gm">—</dt><dd>도덕의 계보</dd></div>
             <div><dt id="stat-ac">—</dt><dd>안티크리스트</dd></div>
@@ -127,6 +130,7 @@
             <div><dt id="stat-eh">—</dt><dd>이 사람을 보라</dd></div>
             <div><dt id="stat-nf">—</dt><dd>후기 유고</dd></div>
             <div><dt id="stat-pp">—</dt><dd>소품과 부록</dd></div>
+            <div><dt id="stat-dbv">—</dt><dd>인생의 짧음에 대하여</dd></div>
             <div><dt id="stat-translated">—</dt><dd>한국어 번역</dd></div>
             <div><dt id="stat-reviewed">—</dt><dd>감수 완료</dd></div>
             <div><dt id="stat-pending">—</dt><dd>미번역</dd></div>
@@ -137,7 +141,7 @@
       <footer>
         <div>
           <p class="footer-title">EIN SATZ FÜR HEUTE</p>
-          <p>독일어 원문과 판본 정보가 기준입니다. 한국어는 이 프로젝트가 독일어에서 직접 만든 번역이며 안정 ID와 분리해 순차적으로 추가합니다. 구절마다 번역과 원문 전사의 현재 상태를 표시합니다.</p>
+          <p>독일어·라틴어 원문과 판본 정보가 기준입니다. 한국어는 이 프로젝트가 원문에서 직접 만든 번역이며 원문 데이터와 분리해 순차적으로 추가합니다.</p>
         </div>
         <nav aria-label="자료 링크">
           <a href="./data/manifest.json">JSON</a>
@@ -174,7 +178,7 @@
         </div>
         <label class="search-input-wrap">
           <span aria-hidden="true">⌕</span>
-          <input id="search-input" type="search" autocomplete="off" placeholder="독일어 또는 한국어 검색" />
+          <input id="search-input" type="search" autocomplete="off" placeholder="원문 또는 한국어 검색" />
         </label>
         <p class="search-count" id="search-count">검색어를 입력하세요.</p>
         <div class="search-results" id="search-results"></div>

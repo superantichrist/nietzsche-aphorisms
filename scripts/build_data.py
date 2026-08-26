@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build stable quote JSON from the vendored German source texts."""
+"""Build traceable quote JSON from the vendored German and Latin sources."""
 
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from collections import Counter
 from pathlib import Path
 
 from parse_schopenhauer_epub import parse_parerga, strip_note_markers
+from parse_seneca_tei import parse_work as parse_seneca_work, split_latin_units
 from translation_sources import load_translations
 
 
@@ -27,6 +28,12 @@ AUTHORS = {
     "schopenhauer": {
         "name_de": "Arthur Schopenhauer",
         "name_ko": "아르투어 쇼펜하우어",
+    },
+    "seneca": {
+        "name_de": "Lucius Annaeus Seneca",
+        "name_ko": "루키우스 안나이우스 세네카",
+        "name_original": "Lucius Annaeus Seneca",
+        "language": "la",
     },
 }
 
@@ -84,6 +91,17 @@ WORKS = {
         "edition": "3. Auflage (1874)",
         "editor": "Julius Frauenstädt",
         "transcription_status": "검증 중인 구조화 전사본",
+    },
+    "dbv": {
+        "author": "seneca",
+        "title_de": "De brevitate vitae",
+        "title_ko": "인생의 짧음에 대하여",
+        "title_original": "De brevitate vitae",
+        "source_file": "sources/raw/seneca/dbv-perseus.xml",
+        "edition": "Moral Essays, vol. II (1932)",
+        "editor": "John William Basore",
+        "transcription_status": "Perseus TEI 구조 검증 완료",
+        "original_language": "la",
     },
 }
 
@@ -1726,6 +1744,22 @@ def stable_id(work: str, part: str, section: str, paragraph: int, german: str) -
     return f"{work}-{section_slug}-{digest}"
 
 
+def seneca_id(
+    work: str,
+    part: str,
+    section: str,
+    source_section: str,
+    source_paragraph: int,
+    sentence: int,
+) -> str:
+    """Use the edition's citation hierarchy as the readable Seneca identity."""
+    slug = lambda value: re.sub(r"[^a-z0-9]+", "-", str(value).casefold()).strip("-") or "text"
+    return (
+        f"{work}-{slug(part)}-{slug(section)}-{slug(source_section)}"
+        f"-p{source_paragraph + 1:02d}-s{sentence + 1:02d}"
+    )
+
+
 def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
     translations = load_translations()
     by_work: dict[str, list[dict]] = {work: [] for work in WORK_ORDER}
@@ -1742,6 +1776,8 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
             sections = parse_late_nachlass()
         elif work == "pp":
             sections = parse_parerga()
+        elif author_key == "seneca":
+            sections = parse_seneca_work(RAW / "seneca", work)
         else:
             sections = parse_markdown_work(ROOT / metadata["source_file"], work)
         for section_data in sections:
@@ -1749,12 +1785,16 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
                 paragraph_text = paragraph["text"] if isinstance(paragraph, dict) else paragraph
                 source_notes = paragraph.get("source_notes", {}) if isinstance(paragraph, dict) else {}
-                units = quote_units_for_work(
-                    paragraph_text,
-                    work,
-                    section_data["part"],
-                    str(section_data["section"]),
-                    paragraph_index,
+                units = (
+                    split_latin_units(paragraph_text)
+                    if author_key == "seneca"
+                    else quote_units_for_work(
+                        paragraph_text,
+                        work,
+                        section_data["part"],
+                        str(section_data["section"]),
+                        paragraph_index,
+                    )
                 )
                 if work in {"za", "pp"} and paragraph_text.strip() and not units:
                     raise ValueError(
@@ -1767,12 +1807,23 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                         if work == "pp"
                         else (marked_german, [])
                     )
-                    quote_id = stable_id(
-                        work,
-                        section_data["part"],
-                        section_data.get("id_section", section_data["section"]),
-                        paragraph_index,
-                        german,
+                    quote_id = (
+                        seneca_id(
+                            work,
+                            section_data["part"],
+                            section_data["section"],
+                            paragraph.get("source_section", "1"),
+                            paragraph.get("source_paragraph", 0),
+                            sentence_index,
+                        )
+                        if author_key == "seneca"
+                        else stable_id(
+                            work,
+                            section_data["part"],
+                            section_data.get("id_section", section_data["section"]),
+                            paragraph_index,
+                            german,
+                        )
                     )
                     translation = translations.get(quote_id, {})
                     korean = translation.get("korean", "") if isinstance(translation, dict) else str(translation)
@@ -1798,7 +1849,9 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                         "volumeTitleDe": section_data.get("volume_title_de", ""),
                         "volumeTitleKo": section_data.get("volume_title_ko", ""),
                         "part": section_data["part"],
-                        "partTitleDe": section_data["part_title_de"],
+                        "partTitleDe": section_data.get(
+                            "part_title_de", section_data.get("part_title_original", "")
+                        ),
                         "partTitleKo": section_data["part_title_ko"],
                         "section": section_data["section"],
                         "sectionLabel": section_data.get("section_label", ""),
@@ -1818,6 +1871,24 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
                         ),
                         "sourceFile": section_data.get("source_file", metadata.get("source_file", "")),
                     }
+                    record["originalLanguage"] = metadata.get("original_language", "de")
+                    if author_key == "seneca":
+                        record.update(
+                            {
+                                "original": german,
+                                "authorNameOriginal": author.get("name_original", author["name_de"]),
+                                "workTitleOriginal": metadata.get("title_original", metadata["title_de"]),
+                                "partTitleOriginal": section_data.get(
+                                    "part_title_original", section_data.get("part_title_de", "")
+                                ),
+                                "sectionTitleOriginal": section_data.get("section_title_original", ""),
+                                "sourceSection": paragraph.get("source_section", ""),
+                                "sourceParagraph": paragraph.get("source_paragraph", 0),
+                                "sourceSectionParagraphCount": paragraph.get(
+                                    "source_paragraph_count", 1
+                                ),
+                            }
+                        )
                     by_work[work].append(record)
 
     quotes = [quote for work in WORK_ORDER for quote in by_work[work]]
@@ -1856,10 +1927,11 @@ def main() -> None:
 
     widget_fields = (
         "id", "author", "authorNameKo", "work", "workTitleKo", "part", "partTitleKo", "section", "sectionLabel",
-        "paragraph", "paragraphCount", "sentence", "german", "korean",
+        "paragraph", "paragraphCount", "sentence", "german", "korean", "originalLanguage", "original",
+        "sourceSection", "sourceParagraph", "sourceSectionParagraphCount",
     )
     widget_quotes = [
-        {field: quote[field] for field in widget_fields}
+        {field: quote[field] for field in widget_fields if field in quote}
         for quote in quotes
     ]
     write_json(DATA / "widget.json", widget_quotes, compact=True)
@@ -1885,14 +1957,16 @@ def main() -> None:
         }
         widget_offset += len(work_widget_quotes)
 
-    corpus_identity = "\n".join(f"{quote['id']}\0{quote['german']}" for quote in quotes)
+    corpus_identity = "\n".join(
+        f"{quote['id']}\0{quote.get('original', quote['german'])}" for quote in quotes
+    )
     corpus_version = hashlib.sha256(corpus_identity.encode("utf-8")).hexdigest()[:16]
     data_identity = json.dumps(quotes, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     data_version = hashlib.sha256(data_identity.encode("utf-8")).hexdigest()[:16]
     translated = sum(bool(quote["korean"]) for quote in quotes)
     reviewed = sum(quote["translationStatus"] == "reviewed" for quote in quotes)
     manifest = {
-        "schemaVersion": 3,
+        "schemaVersion": 4,
         "corpusVersion": corpus_version,
         "dataVersion": data_version,
         "quoteCount": len(quotes),
@@ -1911,6 +1985,7 @@ def main() -> None:
         "authors": {
             author_key: {
                 "nameDe": author["name_de"],
+                "nameOriginal": author.get("name_original", author["name_de"]),
                 "nameKo": author["name_ko"],
                 "count": sum(quote["author"] == author_key for quote in quotes),
                 "works": [
@@ -1924,7 +1999,9 @@ def main() -> None:
             work: {
                 "author": WORKS[work].get("author", "nietzsche"),
                 "titleDe": WORKS[work]["title_de"],
+                "titleOriginal": WORKS[work].get("title_original", WORKS[work]["title_de"]),
                 "titleKo": WORKS[work]["title_ko"],
+                "originalLanguage": WORKS[work].get("original_language", "de"),
                 "edition": WORKS[work].get("edition", "eKGWB"),
                 "editor": WORKS[work].get("editor", ""),
                 "transcriptionStatus": WORKS[work].get("transcription_status", "검증 완료"),

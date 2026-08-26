@@ -1,0 +1,271 @@
+#!/usr/bin/env python3
+"""Parse the pinned Perseus TEI editions of Seneca into traceable reading units."""
+
+from __future__ import annotations
+
+import re
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+
+TEI = "{http://www.tei-c.org/ns/1.0}"
+XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
+SKIP_TEXT = {"note", "pb", "milestone", "fw", "ref"}
+LATIN_INITIAL_RE = re.compile(r"\b(?:A|Ap|C|Cn|D|K|L|M|Mam|N|P|Q|S|Ser|Sex|Sp|T|Ti|V)\.")
+COMMON_ABBREVIATIONS = (
+    "a. d.", "a. u. c.", "c.", "cf.", "e. g.", "i. e.", "lib.", "n.",
+    "p.", "pp.", "sc.", "v.", "vol.",
+)
+
+
+WORK_CONFIG = {
+    "dbv": {
+        "source": "dbv-perseus.xml",
+        "urn": "urn:cts:latinLit:stoa0255.stoa004",
+        "citation": "chapter",
+        "part": "Text",
+        "part_title_original": "Ad Paulinum",
+        "part_title_ko": "파울리누스에게",
+    },
+    "em": {
+        "source": "em-perseus.xml",
+        "urn": "urn:cts:latinLit:phi1017.phi015",
+        "citation": "letter",
+    },
+    "dta": {
+        "source": "dta-perseus.xml",
+        "urn": "urn:cts:latinLit:stoa0255.stoa013",
+        "citation": "chapter",
+        "part": "Text",
+        "part_title_original": "Ad Serenum",
+        "part_title_ko": "세레누스에게",
+    },
+    "dvb": {
+        "source": "dvb-perseus.xml",
+        "urn": "urn:cts:latinLit:stoa0255.stoa014",
+        "citation": "chapter",
+        "part": "Text",
+        "part_title_original": "Ad Gallionem",
+        "part_title_ko": "갈리오에게",
+    },
+    "di": {
+        "source": "di-perseus.xml",
+        "urn": "urn:cts:latinLit:stoa0255.stoa010",
+        "citation": "chapter",
+    },
+    "dc": {
+        "source": "dc-perseus.xml",
+        "urn": "urn:cts:latinLit:phi1017.phi014",
+        "citation": "chapter",
+    },
+    "dp": {
+        "source": "dp-perseus.xml",
+        "urn": "urn:cts:latinLit:stoa0255.stoa012",
+        "citation": "chapter",
+        "part": "Text",
+        "part_title_original": "Ad Lucilium",
+        "part_title_ko": "루킬리우스에게",
+    },
+}
+
+
+def local_name(element: ET.Element) -> str:
+    return element.tag.rsplit("}", 1)[-1]
+
+
+def _text_without_apparatus(element: ET.Element) -> str:
+    """Return reading text, excluding page furniture and critical apparatus."""
+    parts: list[str] = []
+    if element.text:
+        parts.append(element.text)
+    for child in element:
+        name = local_name(child)
+        if name == "choice":
+            preferred = next(
+                (child.find(f"{TEI}{tag}") for tag in ("corr", "reg") if child.find(f"{TEI}{tag}") is not None),
+                None,
+            )
+            if preferred is None and len(child):
+                preferred = child[0]
+            if preferred is not None:
+                parts.append(_text_without_apparatus(preferred))
+        elif name == "gap":
+            parts.append(" […] ")
+        elif name not in SKIP_TEXT:
+            parts.append(_text_without_apparatus(child))
+        if child.tail:
+            parts.append(child.tail)
+    return "".join(parts)
+
+
+def normalize_latin(text: str) -> str:
+    text = text.replace("\u00a0", " ")
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+([,.;:!?])", r"\1", text)
+    text = re.sub(r"([‘'\"])[ ]+", r"\1", text)
+    text = re.sub(r"[ ]+([’'\"])", r"\1", text)
+    return text
+
+
+def _protect_abbreviations(text: str) -> str:
+    marker = "\u2024"
+    text = LATIN_INITIAL_RE.sub(lambda match: match.group(0).replace(".", marker), text)
+    for abbreviation in COMMON_ABBREVIATIONS:
+        pattern = re.compile(re.escape(abbreviation), re.IGNORECASE)
+        text = pattern.sub(lambda match: match.group(0).replace(".", marker), text)
+    return text
+
+
+def _restore_abbreviations(text: str) -> str:
+    return text.replace("\u2024", ".")
+
+
+def _split_long_unit(text: str, limit: int) -> list[str]:
+    if len(text) <= limit:
+        return [text]
+    pieces = [text]
+    for punctuation in (";", ":", ","):
+        expanded: list[str] = []
+        for piece in pieces:
+            if len(piece) <= limit:
+                expanded.append(piece)
+                continue
+            candidates = [match.end() for match in re.finditer(re.escape(punctuation) + r"\s+", piece)]
+            start = 0
+            while len(piece) - start > limit and candidates:
+                viable = [position for position in candidates if start + 120 <= position <= start + limit]
+                if not viable:
+                    break
+                target = start + min(limit, max(180, limit * 2 // 3))
+                cut = min(viable, key=lambda position: abs(position - target))
+                expanded.append(piece[start:cut].strip())
+                start = cut
+                candidates = [position for position in candidates if position > start]
+            remainder = piece[start:].strip()
+            if remainder:
+                expanded.append(remainder)
+        pieces = expanded
+    return pieces
+
+
+def split_latin_units(text: str, *, limit: int = 680) -> list[str]:
+    """Pack complete sentences into readable source-section units."""
+    protected = _protect_abbreviations(normalize_latin(text))
+    raw = re.split(r"(?<=[.!?])\s+(?=[\"'‘“(\[]?[A-ZĀĒĪŌŪÆ])", protected)
+    sentences: list[str] = []
+    for item in raw:
+        restored = normalize_latin(_restore_abbreviations(item))
+        if restored:
+            sentences.extend(_split_long_unit(restored, limit))
+
+    units: list[str] = []
+    current = ""
+    for sentence in sentences:
+        combined = normalize_latin(f"{current} {sentence}") if current else sentence
+        if current and len(combined) > limit:
+            units.append(current)
+            current = sentence
+        else:
+            current = combined
+    if current:
+        units.append(current)
+
+    merged: list[str] = []
+    for unit in units:
+        if len(unit) < 24 and merged:
+            merged[-1] = normalize_latin(f"{merged[-1]} {unit}")
+        else:
+            merged.append(unit)
+    if len(merged) > 1 and len(merged[0]) < 24:
+        merged[1] = normalize_latin(f"{merged[0]} {merged[1]}")
+        merged.pop(0)
+    return merged
+
+
+def _direct_children(element: ET.Element, subtype: str) -> list[ET.Element]:
+    return [
+        child
+        for child in element
+        if local_name(child) == "div" and child.get("subtype") == subtype
+    ]
+
+
+def parse_seneca(path: Path, work: str) -> list[dict]:
+    config = WORK_CONFIG[work]
+    root = ET.parse(path).getroot()
+    edition = next(
+        element
+        for element in root.iter(f"{TEI}div")
+        if element.get("type") == "edition"
+    )
+    books = _direct_children(edition, "book")
+    section_kind = config["citation"]
+    output: list[dict] = []
+
+    for book in books:
+        book_number = book.get("n", "")
+        if section_kind == "letter":
+            cited_sections = _direct_children(book, "letter")
+            part = f"Liber-{book_number}"
+            part_title_original = f"Liber {book_number}"
+            part_title_ko = f"제{book_number}권"
+        else:
+            cited_sections = _direct_children(book, "chapter")
+            if "part" in config:
+                part = config["part"]
+                part_title_original = config["part_title_original"]
+                part_title_ko = config["part_title_ko"]
+            else:
+                part = f"Liber-{book_number}"
+                part_title_original = f"Liber {book_number}"
+                part_title_ko = f"제{book_number}권"
+
+        for cited in cited_sections:
+            citation_number = cited.get("n", "")
+            source_sections = _direct_children(cited, "section")
+            paragraphs: list[dict] = []
+            for source_section in source_sections:
+                source_number = source_section.get("n", "")
+                paragraph_nodes = source_section.findall(f"./{TEI}p")
+                if not paragraph_nodes:
+                    paragraph_nodes = [source_section]
+                for source_paragraph, node in enumerate(paragraph_nodes):
+                    text = normalize_latin(_text_without_apparatus(node))
+                    if not text:
+                        continue
+                    paragraphs.append(
+                        {
+                            "text": text,
+                            "source_section": source_number,
+                            "source_paragraph": source_paragraph,
+                            "source_paragraph_count": len(paragraph_nodes),
+                        }
+                    )
+
+            if not paragraphs:
+                continue
+            label = (
+                f"제{citation_number}서한"
+                if section_kind == "letter"
+                else f"제{citation_number}장"
+            )
+            output.append(
+                {
+                    "part": part,
+                    "part_title_original": part_title_original,
+                    "part_title_ko": part_title_ko,
+                    "section": citation_number,
+                    "section_label": label,
+                    "paragraphs": paragraphs,
+                    "source_file": f"sources/raw/seneca/{config['source']}",
+                    "source_url": (
+                        "https://atlas.perseus.tufts.edu/library/"
+                        f"{config['urn']}/"
+                    ),
+                }
+            )
+    return output
+
+
+def parse_work(root: Path, work: str) -> list[dict]:
+    return parse_seneca(root / WORK_CONFIG[work]["source"], work)

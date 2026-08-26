@@ -9,12 +9,14 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from parse_seneca_tei import normalize_latin, parse_work as parse_seneca_work
 from translation_sources import load_translations
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp")
+WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv")
+SENECA_WORKS = {"dbv", "em", "dta", "dvb", "di", "dc", "dp"}
 LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 ORDINAL_CONTINUATION_RE = re.compile(
     r"^(?:Jahrhundert(?:s|e|en)?|"
@@ -42,9 +44,9 @@ def numbered(start: int, end: int) -> set[str]:
 
 
 def check_source_hashes(source_manifest: dict) -> None:
-    for work in WORKS:
+    for work, work_source in source_manifest["works"].items():
         for role in ("buildInput", "crossCheck"):
-            descriptor = source_manifest["works"][work].get(role, {})
+            descriptor = work_source.get(role, {})
             if "file" not in descriptor:
                 continue
             source_path = ROOT / descriptor["file"]
@@ -160,6 +162,10 @@ def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
     if len({part for part, _ in pp_sections}) != 45 or len(pp_sections) != 458:
         fail("Parerga volume/chapter coverage mismatch")
 
+    dbv_sections = {section for _, section in sections["dbv"]}
+    if dbv_sections != numbered(1, 20):
+        fail("De brevitate vitae chapter coverage mismatch")
+
 
 def main() -> None:
     quotes = json.loads((DATA / "quotes.json").read_text(encoding="utf-8"))
@@ -193,9 +199,22 @@ def main() -> None:
         ids.add(quote["id"])
         if quote["work"] not in WORKS:
             fail(f"invalid work {quote['work']}")
-        expected_author = "schopenhauer" if quote["work"] == "pp" else "nietzsche"
+        expected_author = (
+            "schopenhauer"
+            if quote["work"] == "pp"
+            else "seneca"
+            if quote["work"] in SENECA_WORKS
+            else "nietzsche"
+        )
         if quote["author"] != expected_author:
             fail(f"invalid author in {quote['id']}")
+        if quote["work"] in SENECA_WORKS:
+            if quote.get("originalLanguage") != "la":
+                fail(f"invalid Seneca source language in {quote['id']}")
+            if quote.get("original") != quote["german"]:
+                fail(f"Seneca legacy source alias mismatch in {quote['id']}")
+            if not str(quote.get("sourceSection", "")).isdigit():
+                fail(f"missing Seneca source section in {quote['id']}")
         if not isinstance(quote["paragraph"], int) or quote["paragraph"] < 0:
             fail(f"invalid paragraph in {quote['id']}")
         if not isinstance(quote["paragraphCount"], int) or quote["paragraphCount"] < 1:
@@ -230,9 +249,11 @@ def main() -> None:
         if len(quote["german"]) > max_german_chars:
             fail(f"too-long German unit {quote['id']}: {len(quote['german'])} chars")
         valid_source = (
-            quote.get("sourceUrl", "").startswith("https://www.nietzschesource.org/")
-            if quote["work"] != "pp"
-            else quote.get("sourceUrl", "").startswith("https://books.google.com/")
+            quote.get("sourceUrl", "").startswith("https://books.google.com/")
+            if quote["work"] == "pp"
+            else quote.get("sourceUrl", "").startswith("https://atlas.perseus.tufts.edu/")
+            if quote["work"] in SENECA_WORKS
+            else quote.get("sourceUrl", "").startswith("https://www.nietzschesource.org/")
         )
         if not valid_source:
             fail(f"missing canonical source URL in {quote['id']}")
@@ -267,7 +288,7 @@ def main() -> None:
             fail(f"inconsistent paragraph count in {quote['id']}")
 
     for paragraph_key, count in paragraph_counts.items():
-        if paragraph_key[0] not in {"za", "pp"}:
+        if paragraph_key[0] not in {"za", "pp", *SENECA_WORKS}:
             continue
         missing_paragraphs = set(range(count)) - paragraph_coverage[paragraph_key]
         if missing_paragraphs:
@@ -275,6 +296,26 @@ def main() -> None:
                 "source paragraph coverage gap in "
                 f"{paragraph_key[1]} {paragraph_key[2]}: {sorted(missing_paragraphs)[:10]}"
             )
+
+    for work in sorted(SENECA_WORKS & set(WORKS)):
+        expected_paragraphs: dict[tuple[str, str, int], str] = {}
+        for section_data in parse_seneca_work(ROOT / "sources" / "raw" / "seneca", work):
+            for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
+                expected_paragraphs[
+                    (section_data["part"], str(section_data["section"]), paragraph_index)
+                ] = normalize_latin(paragraph["text"])
+        actual_paragraphs: dict[tuple[str, str, int], list[str]] = defaultdict(list)
+        for quote in quotes:
+            if quote["work"] == work:
+                actual_paragraphs[
+                    (quote["part"], str(quote["section"]), quote["paragraph"])
+                ].append(quote["german"])
+        if set(actual_paragraphs) != set(expected_paragraphs):
+            fail(f"{work.upper()} source paragraph key coverage mismatch")
+        for key, expected_text in expected_paragraphs.items():
+            reconstructed = normalize_latin(" ".join(actual_paragraphs[key]))
+            if reconstructed != expected_text:
+                fail(f"{work.upper()} source text reconstruction mismatch at {key}")
 
     cache_ids = set(translation_cache)
     pp_long_clause_splits: list[tuple[dict, dict]] = []

@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_TRANSLATIONS = ROOT / "translations" / "ko.json"
+CORPUS_DIR = ROOT / "translations" / "corpora"
 OVERRIDE_DIR = ROOT / "translations" / "overrides"
 
 
@@ -27,6 +28,9 @@ def load_translations() -> dict[str, dict]:
         if BASE_TRANSLATIONS.exists()
         else {}
     )
+    if CORPUS_DIR.is_dir():
+        for path in sorted(CORPUS_DIR.glob("*.json")):
+            translations.update(_read_translation_map(path))
     if OVERRIDE_DIR.is_dir():
         for path in sorted(OVERRIDE_DIR.glob("*.json")):
             translations.update(_read_translation_map(path))

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "German philosophy sentence corpus",
+  "title": "Original-language philosophy sentence corpus",
   "type": "array",
   "items": {
     "type": "object",
@@ -12,6 +12,7 @@
       "work",
       "workTitleDe",
       "workTitleKo",
+      "originalLanguage",
       "part",
       "section",
       "paragraph",
@@ -23,12 +24,16 @@
     ],
     "properties": {
       "id": { "type": "string", "minLength": 12 },
-      "author": { "enum": ["nietzsche", "schopenhauer"] },
+      "author": { "enum": ["nietzsche", "schopenhauer", "seneca"] },
       "authorNameDe": { "type": "string", "minLength": 1 },
       "authorNameKo": { "type": "string", "minLength": 1 },
-      "work": { "enum": ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp"] },
+      "work": { "enum": ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv", "em", "dta", "dvb", "di", "dc", "dp"] },
       "workTitleDe": { "type": "string" },
       "workTitleKo": { "type": "string" },
+      "originalLanguage": { "enum": ["de", "la"] },
+      "original": { "type": "string", "minLength": 1 },
+      "authorNameOriginal": { "type": "string", "minLength": 1 },
+      "workTitleOriginal": { "type": "string" },
       "edition": { "type": "string" },
       "editor": { "type": "string" },
       "transcriptionStatus": { "type": "string" },
@@ -42,6 +47,11 @@
       "sectionLabel": { "type": "string" },
       "sectionTitleDe": { "type": "string" },
       "sectionTitleKo": { "type": "string" },
+      "partTitleOriginal": { "type": "string" },
+      "sectionTitleOriginal": { "type": "string" },
+      "sourceSection": { "type": "string" },
+      "sourceParagraph": { "type": "integer", "minimum": 0 },
+      "sourceSectionParagraphCount": { "type": "integer", "minimum": 1 },
       "paragraph": { "type": "integer", "minimum": 0 },
       "paragraphCount": { "type": "integer", "minimum": 1 },
       "sentence": { "type": "integer", "minimum": 0 },
@@ -56,7 +66,7 @@
           "properties": {
             "label": { "type": "string", "minLength": 1 },
             "text": { "type": "string", "minLength": 1 },
-            "language": { "enum": ["de", "ko"] },
+            "language": { "enum": ["de", "la", "ko"] },
             "kind": { "enum": ["source-edition", "editorial"] }
           },
           "additionalProperties": false

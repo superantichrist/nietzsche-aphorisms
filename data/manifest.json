@@ -1,17 +1,17 @@
 {
-  "schemaVersion": 3,
-  "corpusVersion": "98ebf07193a3f3b5",
-  "dataVersion": "9b1c5ae51c96d802",
-  "quoteCount": 24298,
-  "translatedCount": 24298,
-  "widgetQuoteCount": 24298,
+  "schemaVersion": 4,
+  "corpusVersion": "904c34440bc32065",
+  "dataVersion": "14534d98a90aeea6",
+  "quoteCount": 24407,
+  "translatedCount": 24407,
+  "widgetQuoteCount": 24407,
   "reviewedCount": 5749,
   "pendingTranslationCount": 0,
   "widgetShards": {
     "schemaVersion": 1,
     "basePath": "data/widget-shards",
     "shardSize": 256,
-    "totalCount": 24298,
+    "totalCount": 24407,
     "workOrder": [
       "jgb",
       "gm",
@@ -21,7 +21,8 @@
       "za",
       "eh",
       "nf",
-      "pp"
+      "pp",
+      "dbv"
     ],
     "works": {
       "jgb": {
@@ -68,12 +69,18 @@
         "offset": 18233,
         "count": 6065,
         "shardCount": 24
+      },
+      "dbv": {
+        "offset": 24298,
+        "count": 109,
+        "shardCount": 1
       }
     }
   },
   "authors": {
     "nietzsche": {
       "nameDe": "Friedrich Nietzsche",
+      "nameOriginal": "Friedrich Nietzsche",
       "nameKo": "프리드리히 니체",
       "count": 18233,
       "works": [
@@ -89,10 +96,20 @@
     },
     "schopenhauer": {
       "nameDe": "Arthur Schopenhauer",
+      "nameOriginal": "Arthur Schopenhauer",
       "nameKo": "아르투어 쇼펜하우어",
       "count": 6065,
       "works": [
         "pp"
+      ]
+    },
+    "seneca": {
+      "nameDe": "Lucius Annaeus Seneca",
+      "nameOriginal": "Lucius Annaeus Seneca",
+      "nameKo": "루키우스 안나이우스 세네카",
+      "count": 109,
+      "works": [
+        "dbv"
       ]
     }
   },
@@ -100,7 +117,9 @@
     "jgb": {
       "author": "nietzsche",
       "titleDe": "Jenseits von Gut und Böse",
+      "titleOriginal": "Jenseits von Gut und Böse",
       "titleKo": "선악의 저편",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -110,7 +129,9 @@
     "gm": {
       "author": "nietzsche",
       "titleDe": "Zur Genealogie der Moral",
+      "titleOriginal": "Zur Genealogie der Moral",
       "titleKo": "도덕의 계보",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -120,7 +141,9 @@
     "ac": {
       "author": "nietzsche",
       "titleDe": "Der Antichrist",
+      "titleOriginal": "Der Antichrist",
       "titleKo": "안티크리스트",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -130,7 +153,9 @@
     "gd": {
       "author": "nietzsche",
       "titleDe": "Götzen-Dämmerung",
+      "titleOriginal": "Götzen-Dämmerung",
       "titleKo": "우상의 황혼",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -140,7 +165,9 @@
     "fw": {
       "author": "nietzsche",
       "titleDe": "Die fröhliche Wissenschaft",
+      "titleOriginal": "Die fröhliche Wissenschaft",
       "titleKo": "즐거운 학문",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -150,7 +177,9 @@
     "za": {
       "author": "nietzsche",
       "titleDe": "Also sprach Zarathustra",
+      "titleOriginal": "Also sprach Zarathustra",
       "titleKo": "차라투스트라는 이렇게 말했다",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -160,7 +189,9 @@
     "eh": {
       "author": "nietzsche",
       "titleDe": "Ecce homo",
+      "titleOriginal": "Ecce homo",
       "titleKo": "이 사람을 보라",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -170,7 +201,9 @@
     "nf": {
       "author": "nietzsche",
       "titleDe": "Nachgelassene Fragmente 1885–1888",
+      "titleOriginal": "Nachgelassene Fragmente 1885–1888",
       "titleKo": "후기 유고 1885–1888",
+      "originalLanguage": "de",
       "edition": "eKGWB",
       "editor": "",
       "transcriptionStatus": "검증 완료",
@@ -180,80 +213,100 @@
     "pp": {
       "author": "schopenhauer",
       "titleDe": "Parerga und Paralipomena",
+      "titleOriginal": "Parerga und Paralipomena",
       "titleKo": "소품과 부록",
+      "originalLanguage": "de",
       "edition": "3. Auflage (1874)",
       "editor": "Julius Frauenstädt",
       "transcriptionStatus": "검증 중인 구조화 전사본",
       "count": 6065,
+      "reviewedCount": 0
+    },
+    "dbv": {
+      "author": "seneca",
+      "titleDe": "De brevitate vitae",
+      "titleOriginal": "De brevitate vitae",
+      "titleKo": "인생의 짧음에 대하여",
+      "originalLanguage": "la",
+      "edition": "Moral Essays, vol. II (1932)",
+      "editor": "John William Basore",
+      "transcriptionStatus": "Perseus TEI 구조 검증 완료",
+      "count": 109,
       "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 24298,
-      "bytes": 34510338,
-      "sha256": "c301924d0b2215c4001f100731169b5f803a0a3924e311e46051c1c40d18fc2e"
+      "count": 24407,
+      "bytes": 35363422,
+      "sha256": "409abd10cea8dbd08c1e8f3bfc2b50d23379c93d354eaab81f0821244bade20b"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 24298,
-      "bytes": 22317391,
-      "sha256": "e93f99b0cfa14a495f5f76cfcd38997b83455186dca514bebc676db7851b343d"
+      "count": 24407,
+      "bytes": 23096508,
+      "sha256": "4d5c495a505d3f61e44bbf59bab8ecaf7b1446f58604ffe544b76291c9ecfabf"
     },
     "jgb": {
       "path": "data/jgb.json",
       "count": 1717,
-      "bytes": 2202195,
-      "sha256": "33971d799c706a7ffd73a93eda35c6e46f8a1e86b14fd3453383ccef8ee24f9d"
+      "bytes": 2243403,
+      "sha256": "ad3b58e328fce7037a80b21382463acc9a82ade5c9e7a28dba60c3c0097a5e93"
     },
     "gm": {
       "path": "data/gm.json",
       "count": 1261,
-      "bytes": 1657550,
-      "sha256": "d6fafe13a414bf1983201ada573cc3b20ba0c7a58f1cf5e7126be0e85dbd9015"
+      "bytes": 1687814,
+      "sha256": "a94064a07a6c42e889cc23a81a5394e021409128c16a89b4b645885ea1a534f4"
     },
     "ac": {
       "path": "data/ac.json",
       "count": 439,
-      "bytes": 678665,
-      "sha256": "14fd89e2db7ce9ecd293eebbac00c9c5821a0e6240adaa6656785fc1dcc1a01e"
+      "bytes": 689201,
+      "sha256": "2a35494576233b034d0442beeb33d021140925579a857329d1c094feab9ffb1c"
     },
     "gd": {
       "path": "data/gd.json",
       "count": 486,
-      "bytes": 746525,
-      "sha256": "a42628bcd0540d7ac50404861f9c23d976b9ee8cedc30011e4a20dd0c506f746"
+      "bytes": 758189,
+      "sha256": "8d872ad1383067ee49d180ac9501bc74019120590c611dd3a65c9c50b2cf952e"
     },
     "fw": {
       "path": "data/fw.json",
       "count": 1492,
-      "bytes": 2188522,
-      "sha256": "8bb6b98123da42fe99faeef60fc937d5d1a297a8e9b1d80ca963f540f4765fe9"
+      "bytes": 2224330,
+      "sha256": "5fa32c1b0d0bffe273c918f48e464149a0066cc54c2a77e92d1b96e715d6bc38"
     },
     "za": {
       "path": "data/za.json",
       "count": 3872,
-      "bytes": 4263611,
-      "sha256": "97883b7b9c1995b5fbea21a8aa22ec8c6151101622eff51cd0d37f2ca98b40bc"
+      "bytes": 4356539,
+      "sha256": "14f1811cc7cebd2633fb4abdf68a37d2683120d9c8b7e861fea7d67fd6affe68"
     },
     "eh": {
       "path": "data/eh.json",
       "count": 565,
-      "bytes": 887227,
-      "sha256": "5506dbbfb3e20a60b1888e6d283de7c9b5f821db68c060a1f22b2658aaf0c8cc"
+      "bytes": 900787,
+      "sha256": "f3fb325776815177b821750e392bc7677e91a704d8bfbe27b032dca21b2f9aca"
     },
     "nf": {
       "path": "data/nf.json",
       "count": 8401,
-      "bytes": 10870042,
-      "sha256": "8bda45f04be6aa23c3d7ce491601e8c04860ba4e463696384c37dfa3f8bc0235"
+      "bytes": 11071666,
+      "sha256": "984ecf0cd70213c555666f6487c5bcafae4ad8a5dd5dbb66a6a8d15c73da621a"
     },
     "pp": {
       "path": "data/pp.json",
       "count": 6065,
-      "bytes": 11016025,
-      "sha256": "a80e66bdf4c44caf209bc4f1418453cf4930663eb95ef4b2aedb255617bbea78"
+      "bytes": 11161585,
+      "sha256": "d2d861ce632d78182917ac632c5f6967a1dddd2eeb193f7dc3d90d2815a16257"
+    },
+    "dbv": {
+      "path": "data/dbv.json",
+      "count": 109,
+      "bytes": 269935,
+      "sha256": "0af95ee00b5fec4f03091ff70db08a6aa5587156566e759c01ae8ad9fb6383fb"
     }
   },
   "sources": "sources/sources.json"

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "editions": {
     "nietzsche": {
       "name": "Digitale Kritische Gesamtausgabe Werke und Briefe (eKGWB)",
@@ -16,6 +16,14 @@
       "volume1Scan": "https://books.google.com/books?id=8g2CD8RLADQC",
       "volume2Scan": "https://books.google.com/books?id=T4lhAAAAcAAJ",
       "firstEditionCrossCheck": "https://sammlungen.ub.uni-frankfurt.de/schopenhauer/content/structure/10252941"
+    },
+    "senecaPerseus": {
+      "name": "Perseus Digital Library canonical Latin TEI editions",
+      "repository": "https://github.com/PerseusDL/canonical-latinLit",
+      "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "catalogBaseUrl": "https://atlas.perseus.tufts.edu/library/"
     }
   },
   "works": {
@@ -155,6 +163,97 @@
       "sourceScans": {
         "volume1": "https://books.google.com/books?id=8g2CD8RLADQC",
         "volume2": "https://books.google.com/books?id=T4lhAAAAcAAJ"
+      }
+    },
+    "dbv": {
+      "author": "Lucius Annaeus Seneca",
+      "title": "De brevitate vitae",
+      "publication": "Moral Essays, vol. II, edited by John William Basore, 1932",
+      "canonicalUrl": "https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:stoa0255.stoa004/",
+      "buildInput": {
+        "file": "sources/raw/seneca/dbv-perseus.xml",
+        "format": "TEI XML",
+        "repositoryPath": "data/stoa0255/stoa004/stoa0255.stoa004.perseus-lat2.xml",
+        "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+        "sha256": "3a835ce9154a08804a7fcb74562860f54bbd389d213c26171cc98afc8e357c34"
+      }
+    },
+    "em": {
+      "author": "Lucius Annaeus Seneca",
+      "title": "Ad Lucilium Epistulae Morales",
+      "publication": "Volumes I–III, edited by Richard M. Gummere, 1917–1925",
+      "canonicalUrl": "https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:phi1017.phi015/",
+      "buildInput": {
+        "file": "sources/raw/seneca/em-perseus.xml",
+        "format": "TEI XML",
+        "repositoryPath": "data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml",
+        "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+        "sha256": "79f18a0e9796cc0de140792b2dd5f879cfb37405ece40e98b7443420e1d721ad"
+      }
+    },
+    "dta": {
+      "author": "Lucius Annaeus Seneca",
+      "title": "De tranquillitate animi",
+      "publication": "Moral Essays, vol. II, edited by John William Basore, 1932",
+      "canonicalUrl": "https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:stoa0255.stoa013/",
+      "buildInput": {
+        "file": "sources/raw/seneca/dta-perseus.xml",
+        "format": "TEI XML",
+        "repositoryPath": "data/stoa0255/stoa013/stoa0255.stoa013.perseus-lat2.xml",
+        "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+        "sha256": "1267f58cb19b5e52c318459842cb7dad231fff35b21157140d482e1a6d836b4a"
+      }
+    },
+    "dvb": {
+      "author": "Lucius Annaeus Seneca",
+      "title": "De vita beata",
+      "publication": "Moral Essays, vol. II, edited by John William Basore, 1932",
+      "canonicalUrl": "https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:stoa0255.stoa014/",
+      "buildInput": {
+        "file": "sources/raw/seneca/dvb-perseus.xml",
+        "format": "TEI XML",
+        "repositoryPath": "data/stoa0255/stoa014/stoa0255.stoa014.perseus-lat2.xml",
+        "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+        "sha256": "7c66fe578afd01a79f8e3ed7a4730ef43069026232a07459c7494f965a567a03"
+      }
+    },
+    "di": {
+      "author": "Lucius Annaeus Seneca",
+      "title": "De ira",
+      "publication": "Moral Essays, vol. I, edited by John William Basore, 1928",
+      "canonicalUrl": "https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:stoa0255.stoa010/",
+      "buildInput": {
+        "file": "sources/raw/seneca/di-perseus.xml",
+        "format": "TEI XML",
+        "repositoryPath": "data/stoa0255/stoa010/stoa0255.stoa010.perseus-lat2.xml",
+        "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+        "sha256": "094c5c2f3d2cfc2f2691ab084601ea677275608fe21e9d4c1c2291d45e6f58e1"
+      }
+    },
+    "dc": {
+      "author": "Lucius Annaeus Seneca",
+      "title": "De clementia",
+      "publication": "Moral Essays, vol. I, edited by John W. Basore, 1928",
+      "canonicalUrl": "https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:phi1017.phi014/",
+      "buildInput": {
+        "file": "sources/raw/seneca/dc-perseus.xml",
+        "format": "TEI XML",
+        "repositoryPath": "data/phi1017/phi014/phi1017.phi014.perseus-lat2.xml",
+        "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+        "sha256": "50c22cc21326ee80b030a28ecf0ef1ab57f30167af85a47533594509b07339a2"
+      }
+    },
+    "dp": {
+      "author": "Lucius Annaeus Seneca",
+      "title": "De providentia",
+      "publication": "Moral Essays, vol. I, edited by John William Basore, 1928",
+      "canonicalUrl": "https://atlas.perseus.tufts.edu/library/urn:cts:latinLit:stoa0255.stoa012/",
+      "buildInput": {
+        "file": "sources/raw/seneca/dp-perseus.xml",
+        "format": "TEI XML",
+        "repositoryPath": "data/stoa0255/stoa012/stoa0255.stoa012.perseus-lat2.xml",
+        "snapshotCommit": "422896dde7f07509f151d18bb5fe351b77458748",
+        "sha256": "c194099f17ceadec6ede23aae2fe6c72850af74013411be1afc159b291373e07"
       }
     }
   }
