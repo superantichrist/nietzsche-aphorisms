@@ -184,6 +184,26 @@ def semantic_blocks(body: ET.Element) -> list[tuple[str, ET.Element, str]]:
             if text:
                 blocks.append(("p", element, text))
             return
+        if tag == "table":
+            rows: list[str] = []
+            for row in element.iter():
+                if local_name(row) != "tr":
+                    continue
+                cells = [
+                    element_text(cell)
+                    for cell in row
+                    if local_name(cell) in {"th", "td"} and element_text(cell)
+                ]
+                if not cells:
+                    continue
+                if len(cells) == 2:
+                    values = " / ".join(cells[1].split())
+                    rows.append(f"{cells[0]}: {values}")
+                else:
+                    rows.append(" | ".join(cells))
+            if rows:
+                blocks.append(("p", element, "; ".join(rows) + "."))
+            return
         if tag in {"ul", "ol"}:
             items = [
                 (child, element_text(child))

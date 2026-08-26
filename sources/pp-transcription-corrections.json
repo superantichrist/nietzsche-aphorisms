@@ -2225,6 +2225,123 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
       "reason": "The supplied EPUB gives système a circumflex instead of the printed grave accent."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 144",
+      "from": "die Cirlulation der Planeten",
+      "to": "die Circulation der Planeten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts l in Circulation; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 144",
+      "from": "muß es eine und dieselbe Ursache gewesen sehn",
+      "to": "muß es eine und dieselbe Ursache gewesen seyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops y in seyn; the fixed German scan preserves the printed spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 143",
+      "from": "Newtonischen Gravitations-und Centrifugalgesetzen",
+      "to": "Newtonischen Gravitations- und Centrifugalgesetzen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 146",
+      "from": "seiner noch vorhandenen Ausdehnung (— 2) znsammenzog",
+      "to": "seiner noch vorhandenen Ausdehnung (— 2) zusammenzog",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes n for u in zusammenzog; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 147",
+      "from": "die des Merkurs 7° O’ 6” beträgt",
+      "to": "die des Merkurs 7° 0’ 6” beträgt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes capital O for the printed numeral 0 in the angular measurement."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 147",
+      "from": "die χαριν τθ βελτιονος des Aristoteles",
+      "to": "die χαριν του βελτιονος des Aristoteles",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops ου in the Greek article του; the fixed German scan preserves the phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 148",
+      "from": "den am vollkommensten Ampere geschildert hat",
+      "to": "den am vollkommensten Ampère geschildert hat",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed grave accent from Ampère's name."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 149",
+      "from": "Vegetation und Animalisacion hervorbringt",
+      "to": "Vegetation und Animalisation hervorbringt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes c for t in Animalisation; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 153",
+      "from": "die Pflanzen-und Thierwelt",
+      "to": "die Pflanzen- und Thierwelt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 153",
+      "from": "aus eingeschachtelten durchsichtigen Sphären zusammengesetzt sehn",
+      "to": "aus eingeschachtelten durchsichtigen Sphären zusammengesetzt seyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops y in seyn; the fixed German scan preserves the printed spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 154",
+      "from": "einen usichtbaren und unfühlbaren Stoff",
+      "to": "einen unsichtbaren und unfühlbaren Stoff",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops n in unsichtbaren; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 155",
+      "from": "nicht als irrevelant beseitigt zu werden verdient",
+      "to": "nicht als irrelevant beseitigt zu werden verdient",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts e in irrelevant; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 88, p. 155",
+      "from": "aus der Biographia Brittannica zu seyn",
+      "to": "aus der Biographia Britannica zu seyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB duplicates t in the title Biographia Britannica; the fixed German scan preserves the title."
     }
   ]
 }

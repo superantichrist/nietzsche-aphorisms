@@ -1,17 +1,17 @@
 {
   "schemaVersion": 3,
-  "corpusVersion": "3b0d684e292e5b7d",
-  "dataVersion": "0f6aecb2ac5a1915",
-  "quoteCount": 24305,
-  "translatedCount": 21900,
-  "widgetQuoteCount": 24305,
+  "corpusVersion": "c746520a0beb8e26",
+  "dataVersion": "91fa4324a8a7514e",
+  "quoteCount": 24306,
+  "translatedCount": 21950,
+  "widgetQuoteCount": 24306,
   "reviewedCount": 5749,
-  "pendingTranslationCount": 2405,
+  "pendingTranslationCount": 2356,
   "widgetShards": {
     "schemaVersion": 1,
     "basePath": "data/widget-shards",
     "shardSize": 256,
-    "totalCount": 24305,
+    "totalCount": 24306,
     "workOrder": [
       "jgb",
       "gm",
@@ -66,7 +66,7 @@
       },
       "pp": {
         "offset": 18233,
-        "count": 6072,
+        "count": 6073,
         "shardCount": 24
       }
     }
@@ -90,7 +90,7 @@
     "schopenhauer": {
       "nameDe": "Arthur Schopenhauer",
       "nameKo": "아르투어 쇼펜하우어",
-      "count": 6072,
+      "count": 6073,
       "works": [
         "pp"
       ]
@@ -184,22 +184,22 @@
       "edition": "3. Auflage (1874)",
       "editor": "Julius Frauenstädt",
       "transcriptionStatus": "검증 중인 구조화 전사본",
-      "count": 6072,
+      "count": 6073,
       "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 24305,
-      "bytes": 33185893,
-      "sha256": "8d4ce052212696464e12380560eb4f947e32032123a5534da830d223de4b248a"
+      "count": 24306,
+      "bytes": 33215976,
+      "sha256": "a9095befd86e5e33697857efe353c270bfba5f11b3039bb8a23298f8d4aa3a6f"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 24305,
-      "bytes": 21118978,
-      "sha256": "59856372410e6af9353bb57a7bbe140067e06d877a1f138f6bf862f2c0e5e94d"
+      "count": 24306,
+      "bytes": 21146632,
+      "sha256": "9b98147d8d0d4ba724510d2d6e08134040ed6185f94c07aba628cb15bb8c2115"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -251,9 +251,9 @@
     },
     "pp": {
       "path": "data/pp.json",
-      "count": 6072,
-      "bytes": 9691580,
-      "sha256": "aa8fa2e3c0823c3018f6ab1f33c4f250fc143ceec686efc209593ef095326d6f"
+      "count": 6073,
+      "bytes": 9721663,
+      "sha256": "ffcbc528b9d6ef1a6ba2e9afa30028b0b0c452f64cd16a395b24b5ff26390028"
     }
   },
   "sources": "sources/sources.json"

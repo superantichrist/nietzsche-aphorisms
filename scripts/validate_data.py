@@ -544,6 +544,19 @@ def main() -> None:
         "selhst die im luftleeren Raume",
         "Quanität Wärme",
         "systême du monde",
+        "Cirlulation der Planeten",
+        "gewesen sehn, welche jedem Planeten",
+        "Gravitations-und Centrifugalgesetzen",
+        "znsammenzog",
+        "7° O’ 6”",
+        "χαριν τθ βελτιονος",
+        "Ampere geschildert",
+        "Animalisacion",
+        "Pflanzen-und Thierwelt",
+        "Sphären zusammengesetzt sehn",
+        "usichtbaren und unfühlbaren Stoff",
+        "irrevelant beseitigt",
+        "Biographia Brittannica",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
@@ -563,6 +576,7 @@ def main() -> None:
     pp_required_list_fragments = (
         "Metaphysik der Natur, Metaphysik des Schönen, Metaphysik der Sitten.",
         "Die Modi sind: ad rem und ad hominem",
+        "Merkur: 0 / 4; Venus: 3 / 7; Erde: 6 / 10; Mars: 12 / 16; Planetoiden: 24 / 28",
         "Die zwei Wege nun ferner sind der direkte, und der indirekte.",
         "Auf dem indirekten Wege widerlegend",
         "Die Apagoge bringen wir dadurch zu Wege",
