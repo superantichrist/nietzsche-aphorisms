@@ -1079,7 +1079,7 @@ def parse_late_nachlass() -> list[dict]:
 
 
 ABBREVIATIONS = (
-    "Dr.", "Prof.", "resp.", "etc.", "u. s. w.", "u. a.", "z. B.", "d. h.",
+    "Dr.", "Prof.", "resp.", "etc.", "u. s. w.", "u. a.", "z. B.", "Z. B.", "d. h.",
     "vergl.", "vgl.", "S.", "Bd.", "Nr.", "sc.", "ca.", "ff.",
 )
 
@@ -1250,12 +1250,13 @@ def quote_units(paragraph: str) -> list[str]:
 def quote_units_for_work(paragraph: str, work: str, part: str = "") -> list[str]:
     if work in {"jgb", "gm"}:
         return quote_units(paragraph)
+    pp_dialectic = work == "pp" and part == "II-02"
     units = sentence_units(
         paragraph,
-        max_chars=650,
+        max_chars=640 if pp_dialectic else 650,
         extra_abbreviations=PP_CITATION_ABBREVIATIONS if work == "pp" else ("St.", "V."),
         protect_ordinals=work in {"za", "eh", "nf", "pp"},
-        prefer_strong_boundaries=work == "eh" and part == "Za",
+        prefer_strong_boundaries=(work == "eh" and part == "Za") or pp_dialectic,
         preserve_lone=work in {"za", "pp"},
         protect_citation_initials=work == "pp",
         min_chars=40 if work == "pp" else 28,

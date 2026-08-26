@@ -298,6 +298,32 @@ def paragraph_payload(text: str, source_notes: dict[str, str]) -> dict:
     }
 
 
+# The supplied EPUB starts a fresh ``p`` at two print-page boundaries inside
+# continuous sentences.  Keep those source sentences together before quote
+# IDs and sentence units are generated.  Both instances are in the still
+# untranslated Band II, chapter 2, so source fidelity takes precedence over
+# retaining the provisional IDs produced from the broken transcription.
+KNOWN_PAGE_BREAK_CONTINUATIONS = (
+    "daß Der, zu dem geredet wird, den",
+    "weshalb denn auch Herr Prof.",
+)
+
+
+def append_paragraph(
+    paragraphs: list[dict],
+    text: str,
+    source_notes: dict[str, str],
+) -> None:
+    if paragraphs and any(
+        paragraphs[-1]["text"].endswith(ending)
+        for ending in KNOWN_PAGE_BREAK_CONTINUATIONS
+    ):
+        merged = normalize_space(f'{paragraphs[-1]["text"]} {text}')
+        paragraphs[-1] = paragraph_payload(merged, source_notes)
+        return
+    paragraphs.append(paragraph_payload(text, source_notes))
+
+
 def parse_content_file(
     zipped: zipfile.ZipFile,
     file_number: int,
@@ -397,7 +423,7 @@ def parse_content_file(
             markers = " ".join(f"[[PP-NOTE:{ref}]]" for ref in current["_heading_refs"])
             text = normalize_space(f"{markers} {text}")
             current["_heading_refs"] = []
-        current["paragraphs"].append(paragraph_payload(text, source_notes))
+        append_paragraph(current["paragraphs"], text, source_notes)
 
     flush()
     return sections

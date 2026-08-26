@@ -846,6 +846,258 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891187.pdf",
       "reason": "The supplied EPUB misreads the y in Labruyere as p and inserts an extra p; the fixed 1874 scan clearly reads Labruyere."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 22",
+      "from": "tout animal fossil est un animnal perdu",
+      "to": "tout animal fossil est un animal perdu",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB duplicates the n in the French word animal; the fixed German scan reads animal perdu."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 22",
+      "from": "Kein eierlegendes Thier hat ein Zwergfell",
+      "to": "Kein eierlegendes Thier hat ein Zwerchfell",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB omits the ch in Zwerchfell; the fixed German scan clearly reads Zwerchfell."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 23",
+      "from": "wie von l bis 9 gezählt",
+      "to": "wie von 1 bis 9 gezählt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB confuses the numeral 1 with a lowercase l; the fixed German scan clearly reads 1 bis 9."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 25",
+      "from": "Das aus, was man Urtheils kraft nennt",
+      "to": "Das aus, was man Urtheilskraft nennt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a space within the compound Urtheilskraft; the fixed German scan prints the compound as one word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "moraliichen Schlechtigkeit",
+      "to": "moralischen Schlechtigkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB duplicates the i in moralischen; the fixed 1874 scan clearly reads moralischen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "die so eben belebten Kunstgriffe",
+      "to": "die so eben belobten Kunstgriffe",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB misreads belobten as belebten; the fixed 1874 scan clearly prints the former."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "zum Aufstellen (κατασκευαζειν) und Umstoßen (ανασκευαζειν)",
+      "to": "zum Aufstellen (κατασκευάζειν) und Umstoßen (ἀνασκευάζειν)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB drops the printed Greek breathing and accent marks from both technical terms."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "Αγωνιστικον υης περι υους εριστικους λογους θεωριας",
+      "to": "Ἀγωνιστικὸν τῆς περὶ τοὺς ἐριστικοὺς λόγους θεωρίας",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB corrupts tau as upsilon twice and omits the printed Greek breathing and accent marks; the fixed 1874 scan preserves the title."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "eine αντιλογικη τεχνη, welche das εριζειν lehrte, wie die διαλεκτικη das διαλεγεσθαι",
+      "to": "eine ἀντιλογικὴ τέχνη, welche das ἐρίζειν lehrte, wie die διαλεκτικὴ das διαλέγεσθαι",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB omits the Greek breathing and accent marks preserved by the fixed 1874 scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "des weiland Halle´schen Professors",
+      "to": "des weiland Halle'schen Professors",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB substitutes an acute accent for the apostrophe printed in the fixed 1874 scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "mancherlei eristische Unredlichseiten bloßlegt",
+      "to": "mancherlei eristische Unredlichkeiten bloßlegt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB misreads the middle of Unredlichkeiten; the fixed 1874 scan clearly reads the standard word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "wie solche Fakultäten waare zu seyn pflegt",
+      "to": "wie solche Fakultätenwaare zu seyn pflegt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB inserts a space inside the compound Fakultätenwaare; the fixed 1874 scan prints it as one word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "Bei ietzt vorgenommener Revision",
+      "to": "Bei jetzt vorgenommener Revision",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB misreads the initial j of jetzt as i; the fixed 1874 scan clearly reads jetzt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "Durch den andern hingegen sioßen wir",
+      "to": "Durch den andern hingegen stoßen wir",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB misreads the t in stoßen as i; the fixed 1874 scan clearly reads stoßen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "oder Zugesständnissen des Vertheidigers",
+      "to": "oder Zugeständnissen des Vertheidigers",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB inserts an extra s in Zugeständnissen; the fixed 1874 scan clearly reads Zugeständnissen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "indem gar häufig, im einem, wie im andern Fall",
+      "to": "indem gar häufig, in einem, wie im andern Fall",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB misreads in as im before einem; the fixed 1874 scan clearly reads in einem."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "a falsitate rationati ad falsitaem rationis valet consequentia",
+      "to": "a falsitate rationati ad falsitatem rationis valet consequentia",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB drops the second t in the Latin falsitatem; the fixed 1874 scan preserves the logical formula."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "Die Instanz, ενστασις",
+      "to": "Die Instanz, ἐνστασις",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB drops the Greek smooth breathing printed in the fixed 1874 scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "über ihre natürliche Gränze hinaus geführt",
+      "to": "über ihre natürliche Gränze hinausgeführt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB inserts a space inside hinausgeführt; the fixed 1874 scan prints the compound as one word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "zieht man eine Unwahre, meistens gehässige Konklusion",
+      "to": "zieht man eine unwahre, meistens gehässige Konklusion",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB wrongly capitalizes the adjective unwahre; the fixed 1874 scan uses lowercase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "durch eine mutatio controversiae also durch Ablenken",
+      "to": "durch eine mutatio controversiae, also durch Ablenken",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB omits the comma after the Latin phrase; the fixed 1874 scan includes it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "in einer Viertelstunde wieder holen",
+      "to": "in einer Viertelstunde wiederholen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB turns a print line-break hyphen into a space inside wiederholen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "desselben auf´s Tapet bringt",
+      "to": "desselben auf's Tapet bringt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB substitutes an acute accent for the apostrophe printed in auf's."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "nichts zn thun haben",
+      "to": "nichts zu thun haben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB misreads the u in zu as n; the fixed 1874 scan clearly reads zu."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "auch wenige Dinge solche Indignation hervorrufem",
+      "to": "auch wenig Dinge solche Indignation hervorrufen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB adds an e to wenig and misreads the final n of hervorrufen as m; the fixed 1874 scan clearly prints both forms."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "durch die Herrschaft des eigenen Willens unterdrücken, also indirekt schwachen Verstand",
+      "to": "durch die Herrschaft des eigenen Willens unterdrückten, also indirekt schwachen Verstand",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB drops the adjectival t in unterdrückten; the fixed 1874 scan clearly preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "Im Gefühl hie von geschieht es",
+      "to": "Im Gefühl hievon geschieht es",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB inserts a space into hievon; the fixed 1874 scan prints the word continuously."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary029.xhtml",
+      "page": "Band II, Kapitel II, § 26",
+      "from": "Inzwischen leitet deutliche Erkenntnis der hier dargelegten",
+      "to": "Inzwischen leitet deutliche Erkenntniß der hier dargelegten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
+      "reason": "The supplied EPUB modernizes the historical spelling Erkenntniß despite the fixed 1874 scan."
     }
   ]
 }

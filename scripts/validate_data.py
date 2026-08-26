@@ -299,6 +299,27 @@ def main() -> None:
         if (
             current["work"] == "pp"
             and same_paragraph
+            and current["part"] == "II-02"
+            and current["german"].endswith(",")
+            and re.match(r"[a-zäöü]", following["german"])
+        ):
+            fail(
+                f"split Parerga dialectic clause at a comma: "
+                f"{current['id']} -> {following['id']}"
+            )
+        if (
+            current["work"] == "pp"
+            and same_paragraph
+            and current["german"].endswith(" Z.")
+            and following["german"].startswith("B. ")
+        ):
+            fail(
+                f"split German Z. B. abbreviation across quote boundary: "
+                f"{current['id']} -> {following['id']}"
+            )
+        if (
+            current["work"] == "pp"
+            and same_paragraph
             and current["german"].endswith(" A.")
             and following["german"].startswith("T. ")
         ):
@@ -358,6 +379,35 @@ def main() -> None:
         "ipsa hominjs essentia",
         "Mit großem Rechte sagt Helvetius",
         "Quiconque so plaît",
+        "animnal perdu",
+        "Zwergfell",
+        "von l bis 9",
+        "Urtheils kraft",
+        "moraliichen Schlechtigkeit",
+        "belebten Kunstgriffe",
+        "κατασκευαζειν",
+        "ανασκευαζειν",
+        "Αγωνιστικον υης περι υους",
+        "αντιλογικη τεχνη",
+        "Halle´schen",
+        "Unredlichseiten",
+        "Fakultäten waare",
+        "Bei ietzt vorgenommener",
+        "hingegen sioßen wir",
+        "Zugesständnissen",
+        "im einem, wie im andern Fall",
+        "falsitaem rationis",
+        "Die Instanz, ενστασις",
+        "Gränze hinaus geführt",
+        "eine Unwahre, meistens",
+        "mutatio controversiae also",
+        "Viertelstunde wieder holen",
+        "auf´s Tapet",
+        "nichts zn thun",
+        "wenige Dinge solche Indignation hervorrufem",
+        "eigenen Willens unterdrücken, also",
+        "Im Gefühl hie von",
+        "deutliche Erkenntnis der hier dargelegten",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
@@ -382,6 +432,8 @@ def main() -> None:
         "Die Philosophie läßt sich nicht lernen, sondern nur das Philosophiren.",
         "Es ist leichter eine gute Tragödie, als eine gute Komödie zu schreiben.",
         "Dass dem Bako von Verulam Nachgesprochene",
+        "daß Der, zu dem geredet wird, den Subjektbegriff",
+        "weshalb denn auch Herr Prof. Rosas in Wien",
     )
     missing_pp_list_fragments = [
         fragment for fragment in pp_required_list_fragments if fragment not in pp_text
