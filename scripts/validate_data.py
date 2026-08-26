@@ -578,6 +578,19 @@ def main() -> None:
         "zunehmen nnd dadurch",
         "Pflanzen-und Thiergeschlecht",
         "(und dies ist der eigentliche Begriff des Genus, und zerfallen manche",
+        "first saw Buropean women",
+        "durch die stärkere Be kleidung",
+        "ihn nicht wieder in Besitz, nehmen",
+        "fortgesetzten Hervorbringungj",
+        "Hervorzu-bringenden",
+        "wie der Magnetismuß",
+        "vom Gehn durchdaus nicht ermüdet",
+        "ανιη και πολυς υπνος",
+        "(0d. XV. 394)",
+        "Dieserhalb soll mann",
+        "die rüstigen Affekt wie Freude",
+        "mit dem Blutumlauß",
+        "schöne Entdeckuug der Reflexbewegungen",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
@@ -595,6 +608,8 @@ def main() -> None:
 
     pp_text = "\n".join(quote["german"] for quote in quotes if quote["work"] == "pp")
     pp_required_list_fragments = (
+        "Hauptwerk, Bd. 2. Kap. 44. S. 550",
+        "Flourens, Buffon. Histoire de ses travaux",
         "Metaphysik der Natur, Metaphysik des Schönen, Metaphysik der Sitten.",
         "Die Modi sind: ad rem und ad hominem",
         "Merkur: 0 / 4; Venus: 3 / 7; Erde: 6 / 10; Mars: 12 / 16; Planetoiden: 24 / 28",

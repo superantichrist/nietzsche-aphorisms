@@ -1090,7 +1090,7 @@ PP_CITATION_ABBREVIATIONS = (
     "sq.", "Opp.", "opp.", "ed.", "edit.", "cap.", "ch.", "Dial.", "institut.", "vierf.", "spekul.",
     "somn.", "Vergl.",
     "Arist.", "Cic.", "Clem.", "Alex.", "Apulej.", "Jambl.", "Pyth.",
-    "Diog.", "Laert.", "Herod.", "Schol.", "vit.",
+    "Diog.", "Laert.", "Herod.", "Schol.", "vit.", "Buffon.",
     "adv.", "Math.", "math.", "eth.", "nat.", "Enn.", "a. a. O.",
     "A. T.", "Eth. Pars", "u. A. m.",
 )
@@ -1247,6 +1247,11 @@ def sentence_units(
     )
     if protect_citation_initials:
         protected = re.sub(r"(?<!\w)([dv])[.](?=\s+[A-ZÄÖÜ])", r"\1∯", protected)
+        protected = re.sub(
+            r"\bKap[.]\s+44[.](?=\s+S∯\s+550\b)",
+            "Kap∯ 44∯",
+            protected,
+        )
         protected = re.sub(
             r"(?<=S∯\s)(\d{1,4})[.](?=\s+—\s+\d+[.]\s+Aufl∯)",
             r"\1∯",

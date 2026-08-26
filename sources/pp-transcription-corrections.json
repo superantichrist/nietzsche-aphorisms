@@ -2531,6 +2531,114 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
       "reason": "The supplied EPUB moves the printed closing parenthesis after Genus into a comma, leaving the sentence unbalanced."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 94, p. 169",
+      "from": "first saw Buropean women",
+      "to": "first saw European women",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes B for E in the printed English word European."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 94, p. 170",
+      "from": "durch die stärkere Be kleidung",
+      "to": "durch die stärkere Bekleidung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts a spurious space inside the printed word Bekleidung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, pp. 172–173",
+      "from": "ihn nicht wieder in Besitz, nehmen",
+      "to": "ihn nicht wieder in Besitz nehmen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts a comma at the print-page boundary inside the infinitive phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 173",
+      "from": "(d. i. fortgesetzten Hervorbringungj",
+      "to": "(d. i. fortgesetzten Hervorbringung)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB reads the printed closing parenthesis as j."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 173",
+      "from": "Succession des Hervorzu-bringenden",
+      "to": "Succession des Hervorzubringenden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB retains a print-line hyphen inside the word Hervorzubringenden."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 173",
+      "from": "wie der Magnetismuß",
+      "to": "wie der Magnetismus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes ß for the printed final s in Magnetismus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 174",
+      "from": "so lange man vom Gehn durchdaus nicht ermüdet",
+      "to": "so lange man vom Gehn durchaus nicht ermüdet",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts d in the printed word durchaus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 175",
+      "from": "ανιη και πολυς υπνος (0d. XV. 394)",
+      "to": "ἀνίη καὶ πολὺς ὕπνος (Od. XV. 394)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and reads the capital O in Odyssey as zero."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 175",
+      "from": "Dieserhalb soll mann, wenn man",
+      "to": "Dieserhalb soll man, wenn man",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB duplicates n in the printed word man."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 176",
+      "from": "die rüstigen Affekt wie Freude",
+      "to": "die rüstigen Affekte wie Freude",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops final e from the printed plural Affekte."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 96, p. 176",
+      "from": "mit dem Blutumlauß auch die Respiration",
+      "to": "mit dem Blutumlauf auch die Respiration",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes ß for the printed final f in Blutumlauf."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 98, p. 178",
+      "from": "schöne Entdeckuug der Reflexbewegungen",
+      "to": "schöne Entdeckung der Reflexbewegungen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes u for n in the printed word Entdeckung."
     }
   ]
 }
