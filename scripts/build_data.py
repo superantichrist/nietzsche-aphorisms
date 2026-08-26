@@ -1381,6 +1381,24 @@ def quote_units_for_work(
             and unit.startswith("Boas, Schiller und Göthe im Xenienkampf")
         ):
             citation_rejoined[-1] = normalize_space(f"{citation_rejoined[-1]} {unit}")
+        elif (
+            citation_rejoined
+            and citation_rejoined[-1].endswith("(1.")
+            and unit.startswith("Mos. 17, 8.),")
+            and len(
+                normalize_space(f"{citation_rejoined[-1]} Mos. 17, 8.),")
+            )
+            <= 820
+        ):
+            # Do not leave the tail of Genesis 17:8 as a standalone quote.
+            # Only attach the citation; the following prose remains its own
+            # readable unit when the pack boundary requires it.
+            citation_rejoined[-1] = normalize_space(
+                f"{citation_rejoined[-1]} Mos. 17, 8.),"
+            )
+            remainder = normalize_space(unit[len("Mos. 17, 8.),") :])
+            if remainder:
+                citation_rejoined.append(remainder)
         else:
             citation_rejoined.append(unit)
     packed = citation_rejoined

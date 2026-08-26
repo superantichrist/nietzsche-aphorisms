@@ -3629,6 +3629,60 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
       "reason": "The supplied EPUB omits the first printed Greek word, drops accents, and misreads tau as iota in the Stobaeus title."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 130, p. 276",
+      "from": "das feiner Gläubiger",
+      "to": "das seiner Gläubiger",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB misreads the medial Fraktur s in seiner as f; the printed sentence contrasts the pope's believers with the throne's creditors."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 130, p. 276",
+      "from": "σεισαχθεια",
+      "to": "σεισάχθεια",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed acute accent from the Greek term σεισάχθεια."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 132, p. 277",
+      "from": "Οισθα λαρ οιος θυμος ενι στηθεσσι λυναικος Κεινου βουλεται οικον οφελλειν, ος κεν οπυιοι, Ηαιδων δε προτερων και κουριδιοιο φιλοιο Ουκετι μεμνηται τεθνηοτος, ουδε μεταλλα.",
+      "to": "Οἶσθα γὰρ, οἷος θυμὸς ἐνὶ στήθεσσι γυναικός· Κείνου βούλεται οἶκον ὀφέλλειν, ὅς κεν ὀπυίῃ, Παίδων δὲ προτέρων καὶ κουριδίοιο φίλοιο Οὐκέτι μέμνηται τεθνηότος, οὐδὲ μεταλλᾷ.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and punctuation and misreads several letters in the Odyssey quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 133, p. 278",
+      "from": "nie erlöst verden",
+      "to": "nie erlöst werden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB misreads the initial Fraktur w in werden as v."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 134, p. 282",
+      "from": "zum Unrechte ge-braucht",
+      "to": "zum Unrechte gebraucht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB retains a line-break hyphen inside the printed word gebraucht."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 135, p. 284",
+      "from": "be-unruhigt wird",
+      "to": "beunruhigt wird",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB retains a line-break hyphen inside the printed word beunruhigt."
     }
   ]
 }

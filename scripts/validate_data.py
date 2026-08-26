@@ -705,6 +705,12 @@ def main() -> None:
         "Ουκ αλαθον πολυκοιρανιη",
         "à Leyde l665",
         "καλλισιον η μοναρχια",
+        "das feiner Gläubiger",
+        "σεισαχθεια",
+        "Οισθα λαρ οιος θυμος",
+        "nie erlöst verden",
+        "zum Unrechte ge-braucht",
+        "be-unruhigt",
     )
     pp_transcription_texts = [
         "\n".join(
@@ -732,6 +738,7 @@ def main() -> None:
         and (
             quote["german"].startswith("Boas, Schiller und Göthe im Xenienkampf")
             or quote["german"].startswith("II, p. 226 fg.; 3. Aufl.")
+            or quote["german"].startswith("Mos. 17, 8.)")
         )
         for quote in quotes
     ):
