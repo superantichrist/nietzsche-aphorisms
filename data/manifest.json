@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "corpusVersion": "c9371313b0cf2888",
-  "dataVersion": "6e4d865458739727",
+  "corpusVersion": "0a4efe76ccfa643e",
+  "dataVersion": "ca86677f217b4470",
   "quoteCount": 24306,
-  "translatedCount": 22150,
+  "translatedCount": 22200,
   "widgetQuoteCount": 24306,
   "reviewedCount": 5749,
-  "pendingTranslationCount": 2156,
+  "pendingTranslationCount": 2106,
   "widgetShards": {
     "schemaVersion": 1,
     "basePath": "data/widget-shards",
@@ -192,14 +192,14 @@
     "quotes": {
       "path": "data/quotes.json",
       "count": 24306,
-      "bytes": 33329989,
-      "sha256": "89849ccb230e6768513261152162f7cefa4fb73718fc8aae32542575c33ec4a7"
+      "bytes": 33355792,
+      "sha256": "63578ce7ffb77315b08b914d5a54086e530bfc183201bb800d5fb032cfba0948"
     },
     "widget": {
       "path": "data/widget.json",
       "count": 24306,
-      "bytes": 21252929,
-      "sha256": "3e3519aeb8cec008014f9225cb077975cded5c6aae8a30bcb30c86613e23f7ee"
+      "bytes": 21277895,
+      "sha256": "8a3143b792f5c8ca1ba3c3029efbcb157821ce088367f2307237c59010a47680"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -252,8 +252,8 @@
     "pp": {
       "path": "data/pp.json",
       "count": 6073,
-      "bytes": 9835676,
-      "sha256": "1ea5cfb4819e70bedee60be2ee2a990fd43ee76b3b9d799caa8dbe7acb801af9"
+      "bytes": 9861479,
+      "sha256": "bc8fd90d0306ce9c449dc99e05a0d46fb38a4a0d85153770d1092061c69049b6"
     }
   },
   "sources": "sources/sources.json"

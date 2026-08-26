@@ -619,6 +619,23 @@ def main() -> None:
         "das Sichentfernen der einzelnen farbigen Lichter",
         "Krown-und",
         "vom Flint-anders",
+        "Konkav-und Konvexglas",
+        "Thätigkeit der Netzhant",
+        "in der Edinburgh’ review recensirt",
+        "Nationaleigenthum πυξ και λαξ",
+        "Sancta Simplicitas!",
+        "à l’acadèmie des sciences",
+        "geist-und verdienstlosen",
+        "luftleere Glasröhre ausströmen",
+        "in Folge welcher sie als dann",
+        "im Jahr l849",
+        "in ihrer Blbliothek",
+        "den Leuten von Fachs",
+        "sich hatten anfbinden lassen",
+        "ihre Schuld verhundetfacht",
+        "wollenwir uns gebärden",
+        "das unverschämte Vorgehen, daß",
+        "Daher laßt, unter dem Einfluß",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]

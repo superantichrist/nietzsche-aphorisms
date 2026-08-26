@@ -2882,6 +2882,159 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
       "reason": "The supplied EPUB removes the printed space after the suspended compound Flint-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 204",
+      "from": "mittelst Konkav-und Konvexglas",
+      "to": "mittelst Konkav- und Konvexglas",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB removes the printed space after the suspended compound Konkav-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 204",
+      "from": "Thätigkeit der Netzhant",
+      "to": "Thätigkeit der Netzhaut",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB substitutes n for u in the printed word Netzhaut."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 209",
+      "from": "in der Edinburgh’ review recensirt",
+      "to": "in der Edinburgh review recensirt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB inserts a spurious apostrophe into the printed journal title."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 209",
+      "from": "Nationaleigenthum πυξ και λαξ",
+      "to": "Nationaleigenthum πὺξ καὶ λάξ",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops the printed accents from the Greek phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 210",
+      "from": "Sancta Simplicitas!",
+      "to": "Sancta simplicitas!",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB capitalizes the second word of the printed Latin exclamation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 210",
+      "from": "à l’acadèmie des sciences",
+      "to": "à l’académie des sciences",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB gives the wrong printed accent in académie."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 210",
+      "from": "einen geist-und verdienstlosen",
+      "to": "einen geist- und verdienstlosen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB removes the printed space after the suspended compound geist-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 211",
+      "from": "in eine luftleere Glasröhre ausströmen läßt",
+      "to": "in eine luftleere Glasröhre einströmen läßt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB replaces the printed verb einströmen with the opposite-direction verb ausströmen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 211",
+      "from": "in Folge welcher sie als dann",
+      "to": "in Folge welcher sie alsdann",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB splits the single printed word alsdann."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 212",
+      "from": "im Jahr l849",
+      "to": "im Jahr 1849",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 212",
+      "from": "in ihrer Blbliothek deponirten",
+      "to": "in ihrer Bibliothek deponirten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB substitutes lowercase l for i in the printed word Bibliothek."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 213",
+      "from": "den Leuten von Fachs d. h.",
+      "to": "den Leuten von Fach, d. h.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB adds s and drops the printed comma after the phrase Leuten von Fach."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 213",
+      "from": "sich hatten anfbinden lassen",
+      "to": "sich hatten aufbinden lassen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops u from the printed word aufbinden."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 213",
+      "from": "ihre Schuld verhundetfacht",
+      "to": "ihre Schuld verhundertfacht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops r from the printed word verhundertfacht."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 213",
+      "from": "wollenwir uns gebärden",
+      "to": "wollen wir uns gebärden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB removes the printed space between wollen and wir."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 214",
+      "from": "das unverschämte Vorgehen, daß",
+      "to": "das unverschämte Vorgeben, daß",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB replaces the printed noun Vorgeben with Vorgehen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 108, p. 214",
+      "from": "Daher laßt, unter dem Einfluß",
+      "to": "Daher läßt, unter dem Einfluß",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops the printed umlaut in läßt."
     }
   ]
 }
