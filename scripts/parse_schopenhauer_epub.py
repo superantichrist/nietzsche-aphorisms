@@ -184,6 +184,31 @@ def semantic_blocks(body: ET.Element) -> list[tuple[str, ET.Element, str]]:
             if text:
                 blocks.append(("p", element, text))
             return
+        if tag in {"ul", "ol"}:
+            items = [
+                (child, element_text(child))
+                for child in element
+                if local_name(child) == "li" and element_text(child)
+            ]
+            if not items:
+                return
+            # A compact enumerating list completes the preceding colon and is
+            # one readable source unit.  Longer list entries are independent
+            # paragraphs and must retain their boundaries.  The EPUB uses
+            # both forms, and silently skipping <li> used to drop substantial
+            # passages from volumes II, chapters 1–3.
+            if (
+                blocks
+                and blocks[-1][0] == "p"
+                and blocks[-1][2].endswith(":")
+                and all(len(text) < 100 for _, text in items)
+            ):
+                kind, previous, text = blocks[-1]
+                joined = normalize_space(" ".join(item_text for _, item_text in items))
+                blocks[-1] = (kind, previous, normalize_space(f"{text} {joined}"))
+            else:
+                blocks.extend(("p", child, text) for child, text in items)
+            return
         for child in element:
             visit(child)
 

@@ -366,6 +366,29 @@ def main() -> None:
     ):
         fail("known Parerga transcription OCR error remains in German corpus")
 
+    pp_text = "\n".join(quote["german"] for quote in quotes if quote["work"] == "pp")
+    pp_required_list_fragments = (
+        "Metaphysik der Natur, Metaphysik des Schönen, Metaphysik der Sitten.",
+        "Die Modi sind: ad rem und ad hominem",
+        "Die zwei Wege nun ferner sind der direkte, und der indirekte.",
+        "Auf dem indirekten Wege widerlegend",
+        "Die Apagoge bringen wir dadurch zu Wege",
+        "Das Subjekt des Erkennens ist nichts Selbstständiges",
+        "Der Wille in uns ist allerdings Ding an sich",
+        "Selbstmord ist eine feige Handlung",
+        "Wer Andern mißtraut ist selbst unredlich.",
+        "Verdienst und Genie sind aufrichtig bescheiden.",
+        "Die Wahnsinnigen sind überaus unglücklich.",
+        "Die Philosophie läßt sich nicht lernen, sondern nur das Philosophiren.",
+        "Es ist leichter eine gute Tragödie, als eine gute Komödie zu schreiben.",
+        "Dass dem Bako von Verulam Nachgesprochene",
+    )
+    missing_pp_list_fragments = [
+        fragment for fragment in pp_required_list_fragments if fragment not in pp_text
+    ]
+    if missing_pp_list_fragments:
+        fail(f"Parerga XHTML list content missing: {missing_pp_list_fragments[:3]}")
+
     eh_venice = [
         quote for quote in quotes
         if quote["work"] == "eh" and quote["part"] == "Klug" and quote["section"] == "7"

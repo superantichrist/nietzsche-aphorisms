@@ -612,6 +612,240 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB misreads the initial Fraktur V in Vesta as B; independent transcriptions and the named set of four planetoids read Vesta."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 2",
+      "from": "Korrelat der platonischen Idee anfgestellt habe",
+      "to": "Korrelat der platonischen Idee aufgestellt habe",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads aufgestellt as anfgestellt; the fixed German scan clearly reads aufgestellt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 2",
+      "from": "Erkenntniß der Thiere streng anf dies Einzelne beschränkt",
+      "to": "Erkenntniß der Thiere streng auf dies Einzelne beschränkt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads auf as anf; the fixed German scan clearly reads auf."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 2",
+      "from": "Leistungen in der Philosophie Poesie, überhaupt",
+      "to": "Leistungen in der Philosophie, Poesie, überhaupt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB drops the comma between Philosophie and Poesie; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 2",
+      "from": "Begriffe, Klassen, Arten hin gegen können",
+      "to": "Begriffe, Klassen, Arten hingegen können",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious space in hingegen; the fixed German scan has the single word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 2",
+      "from": "wie sie den Stoff·des praktischen Lebens ausmacht",
+      "to": "wie sie den Stoff des praktischen Lebens ausmacht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious middle dot between Stoff and des; the fixed German scan has a normal space."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 3",
+      "from": "welche die anschau liche Welt und das eigene Bewußtsehn ihm ertheilt",
+      "to": "welche die anschauliche Welt und das eigene Bewußtsehn ihm ertheilt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious space inside anschauliche; the fixed German scan has the single word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 5",
+      "from": "einer absoluten, sich selbst denken den Vernunft",
+      "to": "einer absoluten, sich selbst denkenden Vernunft",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious space inside denkenden; the fixed German scan has the single inflected word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 6",
+      "from": "wie aus Einem Stück geschnittem oder wie aus Einer Tonart gespielt",
+      "to": "wie aus Einem Stück geschnitten oder wie aus Einer Tonart gespielt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads the final n of geschnitten as m; the fixed German scan clearly reads geschnitten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 9",
+      "from": "dieser wirklichen und unerschöpflichen Ouelle aller Einsicht",
+      "to": "dieser wirklichen und unerschöpflichen Quelle aller Einsicht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads the initial Fraktur Q of Quelle as O; the fixed German scan clearly reads Quelle."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 10",
+      "from": "weil solche Erlenntniß doch mittelst der Sprache",
+      "to": "weil solche Erkenntniß doch mittelst der Sprache",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads the Fraktur k in Erkenntniß as l; the fixed German scan clearly reads Erkenntniß."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 10",
+      "from": "der Rationalisntus wieder ins Feld tritt",
+      "to": "der Rationalismus wieder ins Feld tritt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads the second m in Rationalismus as nt; the fixed German scan clearly reads Rationalismus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 10",
+      "from": "der Neuplatoniker, der Gnostiker des Dionysius Areopagita",
+      "to": "der Neuplatoniker, der Gnostiker, des Dionysius Areopagita",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB drops the comma after Gnostiker; the fixed German scan preserves the enumeration punctuation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 10",
+      "from": "die Philosophie soll mittheilbare Erkenntnis, muß daher Rationalismus seyn",
+      "to": "die Philosophie soll mittheilbare Erkenntniß, muß daher Rationalismus seyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB drops the final Fraktur ß in Erkenntniß; the fixed 1874 text preserves the period spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 10",
+      "from": "dagegen denn auch nicht unter nommen, die letzten Aufschlüsse über das Dasehn der Welt",
+      "to": "dagegen denn auch nicht unternommen, die letzten Aufschlüsse über das Daseyn der Welt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a space in unternommen and misreads the period spelling Daseyn as Dasehn; the fixed 1874 text preserves both words."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 10",
+      "from": "Dies mag der Fall gewesen sehn mit Plato, Spinoza, Malebranche und man chem Andern",
+      "to": "Dies mag der Fall gewesen seyn mit Plato, Spinoza, Malebranche und manchem Andern",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads seyn as sehn and inserts a spurious space in manchem; the fixed 1874 text preserves both words."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 10",
+      "from": "zur Erklärung der objektiven, äußern Erlenntniß anwende",
+      "to": "zur Erklärung der objektiven, äußern Erkenntniß anwende",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads the Fraktur k in Erkenntniß as l; the fixed German scan clearly reads Erkenntniß."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 13",
+      "from": "dann gebürt ihr eine Ergänzung, nicht eine Widerlegung",
+      "to": "dann gebührt ihr eine Ergänzung, nicht eine Widerlegung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB drops the h in gebührt; the fixed German scan clearly reads gebührt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 14",
+      "from": "der so großen der physikalischen Wissen schaften vorzuwerfen",
+      "to": "der so großen der physikalischen Wissenschaften vorzuwerfen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious space inside Wissenschaften; the fixed German scan has the single word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 18",
+      "from": "daß man dieses selbst ge dacht und geurtheilt",
+      "to": "daß man dieses selbst gedacht und geurtheilt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious space inside gedacht; the fixed German scan has the single word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 19",
+      "from": "daß ihr Daseyn durch ihr Wesen gerecht fertigt",
+      "to": "daß ihr Daseyn durch ihr Wesen gerechtfertigt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious space inside gerechtfertigt; the fixed German scan has the single word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 20",
+      "from": "Aber die voll kommene Ueberzeugung hievon",
+      "to": "Aber die vollkommene Ueberzeugung hievon",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB inserts a spurious space inside vollkommene; the fixed German scan has the single word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 21",
+      "from": "Daß denmzufolge die Philosophie allerdings empirische Grundlagen",
+      "to": "Daß demzufolge die Philosophie allerdings empirische Grundlagen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads the m in demzufolge as nm; the fixed German scan clearly reads demzufolge."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 21",
+      "from": "d. i. abstrakten Vorstellungen» nebst der Gesetzmäßigkeit",
+      "to": "d. i. abstrakten Vorstellungen, nebst der Gesetzmäßigkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB substitutes a closing guillemet for the comma after Vorstellungen; the fixed German scan has a comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 21",
+      "from": "die Natur, kennen lehrt, ordnet und in feinem Zusammenhange betrachtet",
+      "to": "die Natur, kennen lehrt, ordnet und in seinem Zusammenhange betrachtet",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB misreads the initial Fraktur s of seinem as f; the fixed German scan clearly reads seinem."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 21",
+      "from": "Diese an das Innere des Menschen geküpfte Betrachtung",
+      "to": "Diese an das Innere des Menschen geknüpfte Betrachtung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Schopenhauer%27s_S%C3%A4mmtliche_Werke_in_F%C3%BCnf_B%C3%A4nden_%28IA_schopenhauerssam05scho%29.pdf",
+      "reason": "The supplied EPUB drops the n in geknüpfte; the fixed German scan clearly reads geknüpfte."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary028.xhtml",
+      "page": "Band II, Kapitel I, § 21",
+      "from": "Larochefoucauld, Labrupere, Helvetius",
+      "to": "Larochefoucauld, Labruyere, Helvetius",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891187.pdf",
+      "reason": "The supplied EPUB misreads the y in Labruyere as p and inserts an extra p; the fixed 1874 scan clearly reads Labruyere."
     }
   ]
 }
