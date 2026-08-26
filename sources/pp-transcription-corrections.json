@@ -4484,6 +4484,150 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
       "reason": "The supplied EPUB drops the printed Greek breathing and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 162, p. 334",
+      "from": "die Venichtung einer Substanz",
+      "to": "die Vernichtung einer Substanz",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed r in Vernichtung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 164, pp. 335–336",
+      "from": "jener Uebergang vom A. T. zum N. T von der Herrschaft",
+      "to": "jener Uebergang vom A. T. zum N. T., von der Herrschaft",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed period and comma after the N. T. abbreviation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 167, p. 338",
+      "from": "Geht man, bei ber Auffassung der Welt",
+      "to": "Geht man, bei der Auffassung der Welt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB misreads the printed d in der as b."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 167, p. 338",
+      "from": "indem er besagt: der Wille zum Leben hat sich aufs Neue bejaht.",
+      "to": "indem er besagt: „der Wille zum Leben hat sich aufs Neue bejaht“.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the proposition expressed by generation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 167, p. 338",
+      "from": "Floskel wehe, wehe! der Lingam ist in der Yoni.",
+      "to": "Floskel „wehe, wehe! der Lingam ist in der Yoni“.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the Brahmanical formula."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 167, p. 338",
+      "from": "Schwangerschaft hingegen besagt: dem Willen ist auch wieder das Licht der Erkenntniß beigegeben;",
+      "to": "Schwangerschaft hingegen besagt: „dem Willen ist auch wieder das Licht der Erkenntniß beigegeben“;",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the proposition expressed by pregnancy."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 167, p. 339",
+      "from": "Lichtes der Erkenntnis, und zwar",
+      "to": "Lichtes der Erkenntniß, und zwar",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB replaces the printed historical spelling Erkenntniß."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 168, p. 339",
+      "from": "επι μονη παιδοποιια",
+      "to": "ἐπὶ μόνῃ παιδοποιίᾳ",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed Greek breathings and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 171, p. 341",
+      "from": "δευτερος πλους",
+      "to": "δεύτερος πλοῦς",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 171, p. 341",
+      "from": "(Matth. l9, 24)",
+      "to": "(Matth. 19, 24)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 171, p. 341",
+      "from": "ευκοπωτερον εστιν, καμιλον ρια τρυπηματος ραφιδος διελθειν, η πλουσιον εις την βασιλειαν του θεου εισελθειν.",
+      "to": "εὐκοπώτερόν ἐστιν, κάμιλον διὰ τρυπήματος ῥαφίδος διελθεῖν, ἢ πλούσιον εἰς τὴν βασιλείαν τοῦ θεοῦ εἰσελθεῖν.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed Greek diacritics and misreads διὰ as ρια."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 171, pp. 341–342",
+      "from": "gefragt: Nun, Herr Franz, werdet ihr nicht bald eine Wahl unter diesen Schönen treffen? erwiderte: eine viel Schönere habe ich mir ausersehn! — O, welche? — La poverta; —",
+      "to": "gefragt: „Nun, Herr Franz, werdet ihr nicht bald eine Wahl unter diesen Schönen treffen?“ erwiderte: „eine viel Schönere habe ich mir ausersehn!“ — „O, welche?“ — „La poverta“; —",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks throughout the Francis of Assisi dialogue."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 174, p. 343",
+      "from": "3. Aufl. Bd. II. S. 405.)",
+      "to": "3. Aufl. Bd. II. S. 404 fg.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB misreads the printed page reference S. 404 fg. as S. 405."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, Anhang verwandter Stellen, p. 345",
+      "from": "till grief und oldage hand in hand Lead him to death et make him understand After a course so painfull et so long, That all his life he has been in the wrong",
+      "to": "Then old age and experience, hand in hand, Lead him to death and make him understand, After a search so painful and so long, That all his life he has been in the wrong",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB corrupts the first three lines of the clearly printed English verse."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, Anhang verwandter Stellen, p. 345",
+      "from": "Der Mensch, ο ανθρωπος, is in the wrong",
+      "to": "Der Mensch, ὁ ἄνθρωπος, is in the wrong",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed Greek breathing and accent."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, Anhang verwandter Stellen, p. 345",
+      "from": "Mensch, τις ανθρωπος, sein Leben",
+      "to": "Mensch, τις ἄνθρωπος, sein Leben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accent."
     }
   ]
 }

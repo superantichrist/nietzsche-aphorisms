@@ -562,6 +562,53 @@ def parse_parerga() -> list[dict]:
     appendix_head["source_notes"].update(appendix_tail["source_notes"])
     death_appendix["paragraphs"] = [appendix_head]
 
+    # The EPUB uses display paragraphs for Hamlet's two-line quotation and
+    # Schopenhauer's parenthetical German rendering.  They belong to the
+    # introductory sentence in the print and are unusably fragmentary as
+    # three separate reader records.
+    hamlet_section = next(
+        (
+            section
+            for section in sections
+            if section["part"] == "II-14" and section["section"] == "166"
+        ),
+        None,
+    )
+    if hamlet_section is None or len(hamlet_section["paragraphs"]) != 5:
+        raise ValueError("Unexpected chapter XIV § 166 paragraph structure")
+    hamlet_head = hamlet_section["paragraphs"][0]
+    for hamlet_tail in hamlet_section["paragraphs"][1:3]:
+        hamlet_head["text"] = normalize_space(
+            f"{hamlet_head['text']} {hamlet_tail['text']}"
+        )
+        hamlet_head["source_notes"].update(hamlet_tail["source_notes"])
+    hamlet_section["paragraphs"] = [
+        hamlet_head,
+        *hamlet_section["paragraphs"][3:],
+    ]
+
+    # The related-passages appendix likewise sets its four-line English
+    # verse as a separate display paragraph.  Join it to the colon that
+    # introduces it, preserving a single complete quotation unit.
+    affirmation_appendix = next(
+        (
+            section
+            for section in sections
+            if section["part"] == "II-14"
+            and section["section"] == "Anhang-verwandter-Stellen"
+        ),
+        None,
+    )
+    if affirmation_appendix is None or len(affirmation_appendix["paragraphs"]) != 5:
+        raise ValueError("Unexpected chapter XIV related-passages appendix structure")
+    verse_head, verse_tail = affirmation_appendix["paragraphs"][:2]
+    verse_head["text"] = normalize_space(f"{verse_head['text']} {verse_tail['text']}")
+    verse_head["source_notes"].update(verse_tail["source_notes"])
+    affirmation_appendix["paragraphs"] = [
+        verse_head,
+        *affirmation_appendix["paragraphs"][2:],
+    ]
+
     numbered = {
         section["section"]
         for section in sections

@@ -716,6 +716,23 @@ def main() -> None:
         "gegenwärtigen διαστολη auch eine συστολη",
         "Oupnekhat Vol. l. p. 163",
         "mit dem επεκεινα der Neuplatoniker",
+        "die Venichtung einer Substanz",
+        "zum N. T von der Herrschaft",
+        "bei ber Auffassung der Welt",
+        "besagt: der Wille zum Leben hat sich aufs Neue bejaht",
+        "Floskel wehe, wehe! der Lingam",
+        "besagt: dem Willen ist auch wieder das Licht",
+        "Lichtes der Erkenntnis, und zwar",
+        "επι μονη παιδοποιια",
+        "δευτερος πλους",
+        "(Matth. l9, 24)",
+        "καμιλον ρια τρυπηματος",
+        "gefragt: Nun, Herr Franz",
+        "3. Aufl. Bd. II. S. 405.)",
+        "till grief und oldage",
+        "painfull et so long",
+        "Der Mensch, ο ανθρωπος",
+        "Mensch, τις ανθρωπος",
         "sufficit irae, Iuv. Sat. XIII",
         "το οργιζεσθαι ηδυ",
         "sie sogleich zer-trat",
@@ -838,6 +855,37 @@ def main() -> None:
         for quote in quotes
     ):
         fail("Parerga Buddhist reminder split inside quotation marks")
+
+    pp_hamlet = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-14"
+        and quote["section"] == "166"
+    ]
+    if (
+        len(pp_hamlet) != 3
+        or "for thou hast been" not in pp_hamlet[0]["german"]
+        or "(Denn du bist" not in pp_hamlet[0]["german"]
+    ):
+        fail("Parerga Hamlet quotation is not a coherent § 166 unit")
+
+    pp_affirmation_appendix = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-14"
+        and quote["section"] == "Anhang-verwandter-Stellen"
+    ]
+    if (
+        not pp_affirmation_appendix
+        or "Then old age and experience" not in pp_affirmation_appendix[0]["german"]
+        or any(
+            quote["german"].startswith("Then old age and experience")
+            for quote in pp_affirmation_appendix
+        )
+    ):
+        fail("Parerga chapter XIV appendix verse is detached from its introduction")
 
     pp_text = "\n".join(quote["german"] for quote in quotes if quote["work"] == "pp")
     pp_required_list_fragments = (
