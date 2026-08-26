@@ -1296,6 +1296,204 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
       "reason": "The supplied EPUB substitutes bedingt for the printed bestimmt; the fixed German scan clearly preserves Schopenhauer's wording."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 34, p. 51",
+      "from": "ihr Haupt-und Grundcharakter",
+      "to": "ihr Haupt- und Grundcharakter",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB removes the printed word space after the suspended hyphen in Haupt- und Grundcharakter."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 35, p. 52",
+      "from": "Göttingen 1801. Bd. II, 287 fg.",
+      "to": "Göttingen 1801. Bd. II, S. 287 fg.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the printed page abbreviation S. before 287 in the Lichtenberg reference."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 38, p. 54",
+      "from": "werthwolle eigene Meditationen",
+      "to": "werthvolle eigene Meditationen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the v in werthvolle as w; the fixed German scan clearly preserves the adjective."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 38, p. 55",
+      "from": "dies Alles ist uns selber, die wir dabei thätig find, ein Räthsel",
+      "to": "dies Alles ist uns selber, die wir dabei thätig sind, ein Räthsel",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the long s in sind as f; the fixed German scan clearly preserves the verb."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 38, p. 56",
+      "from": "wobei nur, wenn es bloße Worte, oder Zahlen, sind, uns einstweilen",
+      "to": "wobei wir, wenn es bloße Worte, oder Zahlen, sind, uns einstweilen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes nur for the printed subject wir; the fixed German scan clearly preserves the grammatical construction."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 39, p. 57",
+      "from": "indem mir denselben, wenigstens zum Theil, beliebig bestimmen können",
+      "to": "indem wir denselben, wenigstens zum Theil, beliebig bestimmen können",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads wir as mir; the fixed German scan clearly preserves the subject of bestimmen können."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 39, p. 57",
+      "from": "(über die Leitung des Vorstandes.)",
+      "to": "(über die Leitung des Verstandes.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes Vorstandes for Verstandes in the German rendering of Locke's title; the fixed scan clearly reads Verstandes."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 40, p. 58",
+      "from": "durch die Vorsorge; auf einige Jahre im Voraus",
+      "to": "durch die Vorsorge auf einige Jahre im Voraus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts a semicolon inside the printed phrase Vorsorge auf einige Jahre im Voraus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 40, p. 58",
+      "from": "metaphpsische Bedürfnis; ist von oben",
+      "to": "metaphysische Bedürfniß ist von oben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the y, modernizes the printed ß, and inserts a semicolon; the fixed German scan clearly reads metaphysische Bedürfniß ist."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 41, p. 59",
+      "from": "noch weniger-ihren etwanigen Einfluß",
+      "to": "noch weniger ihren etwanigen Einfluß",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB turns a print line break into a hyphen between weniger and ihren."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 41, p. 59",
+      "from": "Bd. 2., Kap. 14, S. 134, (3. Aufl. 148)",
+      "to": "Bd. 2, Kap. 14, S. 134 (3. Aufl. 148)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts two punctuation marks absent from the fixed German scan in the internal reference."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 42, pp. 59–60",
+      "from": "Fortschreiten der Erkenntnis; und Einsicht",
+      "to": "Fortschreiten der Erkenntniß und Einsicht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB modernizes the printed ß and inserts a semicolon between the coordinated nouns."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 42, p. 60",
+      "from": "theils als Frucht der Reise und Erfahrung",
+      "to": "theils als Frucht der Reife und Erfahrung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the long s-like Fraktur letter in Reife as s; the fixed German scan clearly refers to maturity, not travel."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 42, p. 60",
+      "from": "Abnahme der Intensität der Geisteskräfte; das dies diem docet",
+      "to": "Abnahme der Intensität der Geisteskräfte, das dies diem docet",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes a semicolon for the printed comma before the Latin maxim."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 42, p. 60",
+      "from": "γηρασκω δ αει πολλα διδασκομενος zu seinem Wahlspruch Nebenbei",
+      "to": "γηράσκω δ’ ἀεὶ πολλὰ διδασκόμενος zu seinem Wahlspruch. Nebenbei",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and apostrophe as well as the full stop after Wahlspruch; the fixed German scan preserves them."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 43, p. 60",
+      "from": "zum Apotheker, aber nicht zum Philosophen befähigte",
+      "to": "zum Apotheker, aber nicht zum Philosophen befähige",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB adds a t to the printed subjunctive befähige; the fixed German scan clearly preserves the coordinated reported-speech form."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 43, p. 60",
+      "from": "(Vergl. die Vorrede zu der Schrift Über den Willen in der Natur, 2. Aufl. 1854, S. IV.)",
+      "to": "(Vergl. die Vorrede zu der Schrift „über den Willen in der Natur“, 2. Aufl., S. IV; 3. Aufl., S. VI.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB replaces the title typography, inserts 1854, and drops the third-edition reference preserved in the fixed German scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 43, p. 61",
+      "from": "3. Aufl. 1856, S. 17., welches",
+      "to": "3. Aufl. 1856, S. 17, welches",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts a full stop after 17 before the continuing relative clause; the fixed German scan has only a comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 43, p. 61",
+      "from": "das Verhältnis der beharrenden Materie",
+      "to": "das Verhältniß der beharrenden Materie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB modernizes the historical spelling Verhältniß preserved in the fixed German scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 43, p. 61",
+      "from": "an der οψιμαθια, welche Gellius",
+      "to": "an der ὀψιμαθία, welche Gellius",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the Greek breathing and accent marks printed in the fixed German scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 39, p. 57",
+      "from": "Gedanken, welche wert waren, aufgeschrieben zu werden",
+      "to": "Gedanken, welche werth waren, aufgeschrieben zu werden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB modernizes the historical spelling werth preserved in the fixed German scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 43, p. 60",
+      "from": "die Notwendigkeit einer Ursache zu jeder Veränderung",
+      "to": "die Nothwendigkeit einer Ursache zu jeder Veränderung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB modernizes the historical spelling Nothwendigkeit preserved in the fixed German scan."
     }
   ]
 }
