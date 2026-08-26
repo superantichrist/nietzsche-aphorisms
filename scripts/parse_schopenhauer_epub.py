@@ -318,14 +318,14 @@ def paragraph_payload(text: str, source_notes: dict[str, str]) -> dict:
     }
 
 
-# The supplied EPUB starts a fresh ``p`` at two print-page boundaries inside
-# continuous sentences.  Keep those source sentences together before quote
-# IDs and sentence units are generated.  Both instances are in the still
-# untranslated Band II, chapter 2, so source fidelity takes precedence over
-# retaining the provisional IDs produced from the broken transcription.
+# The supplied EPUB occasionally starts a fresh ``p`` inside a continuous
+# printed sentence. Keep those source sentences together before quote IDs and
+# sentence units are generated. Source fidelity takes precedence over the
+# provisional IDs produced from the broken transcription.
 KNOWN_PAGE_BREAK_CONTINUATIONS = (
     "daß Der, zu dem geredet wird, den",
     "weshalb denn auch Herr Prof.",
+    "Hingegen die eigenen, urkräftigen Gedanken verscheuchen, um ein",
 )
 
 

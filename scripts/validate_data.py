@@ -544,6 +544,11 @@ def main() -> None:
         "seinen Zeit-und Altersgenossen",
         "vielleicht aus Kondescendenz— eine schlechte Sache",
         "beschließt er, S 44, mit:",
+        "soche unwissende Patrone",
+        "Quanität",
+        "l) daß Keiner vor seinem 20. Jahre",
+        "never to he read.Pope",
+        "Vätern hast,Erwirb",
         "Χειλεα μεν τ εδιην",
         "de11a Causa",
         "nicht andersist es mir",
@@ -1038,6 +1043,16 @@ def main() -> None:
         for quote in quotes
     ):
         fail("Parerga bibliographic citation split into an orphan quote")
+
+    if any(
+        quote["work"] == "pp"
+        and (
+            quote["german"].endswith("urkräftigen Gedanken verscheuchen, um ein")
+            or quote["german"].startswith("Buch zur Hand zu nehmen, ist Sünde")
+        )
+        for quote in quotes
+    ):
+        fail("Parerga § 266 sentence split at a false EPUB paragraph boundary")
 
     if any(
         quote["work"] == "pp"

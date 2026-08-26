@@ -6041,6 +6041,69 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA517",
       "reason": "The supplied EPUB drops the clearly printed abbreviation point after S."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary048.xhtml",
+      "page": "Band II, Kapitel XXI, § 261, p. 522",
+      "from": "soche unwissende Patrone",
+      "to": "solche unwissende Patrone",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA522",
+      "reason": "The supplied EPUB drops the clearly printed l in solche."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary048.xhtml",
+      "page": "Band II, Kapitel XXI, § 262, pp. 524–525",
+      "from": "Quanität",
+      "to": "Quantität",
+      "expectedOccurrences": 2,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA524",
+      "reason": "The supplied EPUB drops the clearly printed t in both occurrences of Quantität."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary048.xhtml",
+      "page": "Band II, Kapitel XXI, § 262, p. 524",
+      "from": "l) daß Keiner vor seinem 20. Jahre",
+      "to": "1) daß Keiner vor seinem 20. Jahre",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA524",
+      "reason": "The supplied EPUB mistakes the clearly printed Arabic numeral 1 for a lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary049.xhtml",
+      "page": "Band II, Kapitel XXII, § 264, p. 527",
+      "from": "For ever reading, never to he read.Pope, Dunciad. III, 194.",
+      "to": "For ever reading, never to be read. Pope, Dunciad. III, 194.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA527",
+      "reason": "The supplied EPUB misreads be as he and loses the printed word space before the Pope citation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary049.xhtml",
+      "page": "Band II, Kapitel XXII, § 266, p. 528",
+      "from": "Was du ererbt von deinen Vätern hast,Erwirb es, um es zu besitzen,seine",
+      "to": "Was du ererbt von deinen Vätern hast, Erwirb es, um es zu besitzen, seine",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA528",
+      "reason": "The supplied EPUB loses two clearly printed word spaces at inline-emphasis boundaries around Goethe's verse."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, Fragmente zur Geschichte der Philosophie, § 2, p. 42",
+      "from": "ihrer Quanität nach, hinsichtlich des Takts",
+      "to": "ihrer Quantität nach, hinsichtlich des Takts",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA42",
+      "reason": "The supplied EPUB drops the clearly printed t in Quantität."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary052.xhtml",
+      "page": "Band II, Kapitel XXV, § 313, pp. 609–610",
+      "from": "an Farbe, Beschaffenheit und Quanität",
+      "to": "an Farbe, Beschaffenheit und Quantität",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA610",
+      "reason": "The supplied EPUB drops the clearly printed t in Quantität."
     }
   ]
 }
