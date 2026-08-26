@@ -5402,6 +5402,105 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
       "reason": "The supplied EPUB transposes letters in the clearly printed Konjektur."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 200, p. 440",
+      "from": "Auslegen der Mythlogie",
+      "to": "Auslegen der Mythologie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB drops the clearly printed o in Mythologie."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 200, p. 440",
+      "from": "αλλαπερι μεν των μυθικως σοφιζομενων ουκ αξιον μετα σπουδηςσκοπειν",
+      "to": "αλλα περι μεν των μυθικως σοφιζομενων ουκ αξιον μετα σπουδης σκοπειν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The EPUB’s adjacent emphasis spans collapse two clearly printed Greek word spaces."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 201, p. 441",
+      "from": "die Zeit venichtet jede Zeugungskraft",
+      "to": "die Zeit vernichtet jede Zeugungskraft",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB drops the clearly printed r in vernichtet."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 203, p. 443",
+      "from": "(Enn. IV, l. l. c. 14)",
+      "to": "(Enn. IV, l. 1. c. 14)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB mistakes the printed Arabic numeral 1 for a second lowercase l in Plotinus’s citation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 204, p. 443",
+      "from": "Ζεθς εν πιθωτα Χρηστα παντα συλλεξας",
+      "to": "Ζευς εν πιθω τα Χρηστα παντα συλλεξας",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The EPUB substitutes theta for the clearly printed upsilon in Ζευς and collapses the printed space after πιθω."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 205, p. 443",
+      "from": "Epitheton λιγυφωνοι welches Hesiodus",
+      "to": "Epitheton λιγυφωνοι, welches Hesiodus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB omits the clearly printed comma after the Greek epithet."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 205, p. 444",
+      "from": "waum sollten die Hesperiden",
+      "to": "warum sollten die Hesperiden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB drops the clearly printed r in warum."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 207, p. 444",
+      "from": "Steine verschlingen und verdauen laßt",
+      "to": "Steine verschlingen und verdauen läßt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB drops the clearly printed umlaut in läßt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 208, p. 444",
+      "from": "Bd. l. §. 54",
+      "to": "Bd. I. §. 54",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB mistakes the clearly printed Roman numeral I for a lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 210, p. 450",
+      "from": "in Finanz-oder Handelsgeschäften",
+      "to": "in Finanz- oder Handelsgeschäften",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 210, p. 451",
+      "from": "oder als Maler dazustellen",
+      "to": "oder als Maler darzustellen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB drops the clearly printed r in darzustellen."
     }
   ]
 }

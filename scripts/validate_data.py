@@ -918,6 +918,18 @@ def main() -> None:
         "226 f. f.",
         "Schlaf und Tod (V. 746—765.)",
         "nach eigener Konjetkur",
+        "Auslegen der Mythlogie",
+        "αλλαπερι μεν των μυθικως",
+        "σπουδηςσκοπειν",
+        "die Zeit venichtet jede Zeugungskraft",
+        "(Enn. IV, l. l. c. 14)",
+        "Ζεθς εν πιθωτα",
+        "Epitheton λιγυφωνοι welches",
+        "waum sollten die Hesperiden",
+        "Steine verschlingen und verdauen laßt",
+        "Bd. l. §. 54",
+        "in Finanz-oder Handelsgeschäften",
+        "Maler dazustellen",
     )
     pp_transcription_texts = [
         "\n".join(
