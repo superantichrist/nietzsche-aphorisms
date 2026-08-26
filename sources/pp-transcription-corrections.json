@@ -5132,6 +5132,87 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
       "reason": "The supplied EPUB drops the printed p in Aegyptischen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 412",
+      "from": "weniger bedenklichen Beispielen klar, machen",
+      "to": "weniger bedenklichen Beispielen klar machen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma between the clearly printed klar machen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 413",
+      "from": "avec un essay sur l’origine",
+      "to": "avec un essai sur l’origine",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB substitutes English essay for the clearly printed French essai."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 414",
+      "from": "aus den rechereches sur l’histoire de l’Espagne par Dozy, 1849. Bd. 1.,",
+      "to": "aus den recherches sur l’histoire de l’Espagne par Dozy, 1849. Bd. 1,",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misspells recherches and inserts a spurious full stop after the printed volume number."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 181, p. 414",
+      "from": "In Folge seiner Begreiflichkeit und Planheit",
+      "to": "In Folge seiner Begreiflichkeit und Plattheit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed tt in Plattheit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 182, p. 415",
+      "from": "Das A. T. nämlich ist Optimisimus",
+      "to": "Das A. T. nämlich ist Optimismus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious i in the clearly printed Optimismus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 182, p. 416",
+      "from": "zu verwischen und hinauszuexegesiren",
+      "to": "zu verwischen und hinauszuexegetisiren",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed ti in hinauszuexegetisiren."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 182, p. 416",
+      "from": "die Erbsünde aus der Bibel hinausexegesirt",
+      "to": "die Erbsünde aus der Bibel hinausexegetisirt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed ti in hinausexegetisirt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 182, p. 418",
+      "from": "in ihrer nordischen Nüchternheit und Planheit",
+      "to": "in ihrer nordischen Nüchternheit und Plattheit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed tt in Plattheit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 183, p. 421",
+      "from": "mit dem oben angezogenen Sprichwort: detras de la cruz està el diablo",
+      "to": "mit dem oben (S. 385) angezogenen Sprichwort: detras de la cruz está el diablo",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB omits the printed page reference and gives the Spanish está the wrong accent."
     }
   ]
 }

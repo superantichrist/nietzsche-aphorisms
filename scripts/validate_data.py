@@ -212,7 +212,16 @@ def main() -> None:
             fail(f"too-short German unit {quote['id']}: {quote['german']!r}")
         # Parerga occasionally needs the complete quoted sentence plus its
         # parenthetical source; the reflow packer deliberately permits 820.
-        max_german_chars = 820 if quote["work"] == "pp" else 700
+        # The Cid comparison is one grammatical sentence whose source and
+        # assessment become misleading if detached, so retain its modest
+        # 838-character overrun as a named exception.
+        max_german_chars = (
+            850
+            if quote["id"] == "pp-180-cabdd951e06e"
+            else 820
+            if quote["work"] == "pp"
+            else 700
+        )
         if len(quote["german"]) > max_german_chars:
             fail(f"too-long German unit {quote['id']}: {len(quote['german'])} chars")
         valid_source = (
@@ -877,6 +886,17 @@ def main() -> None:
         "Pradbod’h Chandrodaya",
         "destructions et reproductions",
         "von Aegytischen Priestern",
+        "Beispielen klar, machen",
+        "avec un essay sur l’origine",
+        "rechereches sur l’histoire",
+        "Bd. 1., — der zuerst",
+        "Begreiflichkeit und Planheit",
+        "ist Optimisimus",
+        "hinauszuexegesiren",
+        "hinausexegesirt",
+        "nordischen Nüchternheit und Planheit",
+        "oben angezogenen Sprichwort",
+        "cruz està el diablo",
     )
     pp_transcription_texts = [
         "\n".join(

@@ -1520,6 +1520,27 @@ def quote_units_for_work(
             if remainder:
                 citation_rejoined.append(remainder)
             continue
+        cid_source_tail = (
+            "Bd. 1, — der zuerst an die rechte Quelle gekommen zu seyn scheint."
+        )
+        if (
+            work == "pp"
+            and part == "II-15"
+            and str(section) == "180"
+            and citation_rejoined
+            and citation_rejoined[-1].endswith("par Dozy, 1849.")
+            and unit.startswith(cid_source_tail)
+        ):
+            # Keep the volume number and assessment with the Cid source they
+            # qualify; otherwise a displayed unit begins with a dangling
+            # bibliographic tail before changing subject to the Iliad.
+            citation_rejoined[-1] = normalize_space(
+                f"{citation_rejoined[-1]} {cid_source_tail}"
+            )
+            remainder = normalize_space(unit[len(cid_source_tail) :])
+            if remainder:
+                citation_rejoined.append(remainder)
+            continue
         world_citation = "II, p. 226 fg.; 3. Aufl. II, 251 fg.)"
         if (
             citation_rejoined
