@@ -711,6 +711,26 @@ def main() -> None:
         "nie erlöst verden",
         "zum Unrechte ge-braucht",
         "be-unruhigt",
+        "Art von Geistern",
+        "dessen so homogene",
+        "Realitat innerhalb",
+        "Venichtung darstellt",
+        "Ein individuelles Bewußtsein, also",
+        "Nerven-und Gefäßsystems",
+        "geheimnisvollen Bau",
+        "Voraussetzung daß",
+        "ο λαμβανων και διδους",
+        "falsch Und richtig",
+        "Geheimnis der Palingenesie",
+        "p. p. 386, 387 et. 395",
+        "Isisbild zu Gais",
+        "Kleine dialogische Schlußbelustigung Thrasymachos.",
+        "altmodische kantische Kunstsprache",
+        "Philalethes (leise für sich).",
+        "Succession, großer Männer",
+        "von allen Dem zurück",
+        "Dein Wesen an sich Selbst",
+        "von seiner Individualität ausgeschlossen",
     )
     pp_transcription_texts = [
         "\n".join(
@@ -739,6 +759,7 @@ def main() -> None:
             quote["german"].startswith("Boas, Schiller und Göthe im Xenienkampf")
             or quote["german"].startswith("II, p. 226 fg.; 3. Aufl.")
             or quote["german"].startswith("Mos. 17, 8.)")
+            or quote["german"].startswith("Brunus (ed. Wagner")
         )
         for quote in quotes
     ):

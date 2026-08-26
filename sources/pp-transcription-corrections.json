@@ -3683,6 +3683,186 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
       "reason": "The supplied EPUB retains a line-break hyphen inside the printed word beunruhigt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 136, p. 285",
+      "from": "Art von Geistern, welche einen Anfang hat",
+      "to": "Art von Existenz, welche einen Anfang hat",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB replaces the printed word Existenz with the contextually impossible Geistern."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 136, p. 286",
+      "from": "am Vogelei, dessen so homogene, gestaltlose Flüssigkeit",
+      "to": "am Vogelei, dessen homogene, gestaltlose Flüssigkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB inserts a spurious so before the printed adjective homogene."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 140, p. 289",
+      "from": "es war eben so viel Realitat innerhalb",
+      "to": "es war eben so viel Realität innerhalb",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed umlaut from Realität."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 140, p. 289",
+      "from": "der Tod sich als Venichtung darstellt",
+      "to": "der Tod sich als Vernichtung darstellt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops r from the printed word Vernichtung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 140, p. 290",
+      "from": "Ein individuelles Bewußtsein, also überhaupt ein Bewußtseyn",
+      "to": "Ein individuelles Bewußtseyn, also überhaupt ein Bewußtseyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB modernizes only the first occurrence of the printed period spelling Bewußtseyn."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 140, p. 290",
+      "from": "Zusammenwirken des Nerven-und Gefäßsystems",
+      "to": "Zusammenwirken des Nerven- und Gefäßsystems",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Nerven-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 140, p. 290",
+      "from": "durch dessen künstlichen und geheimnisvollen Bau",
+      "to": "durch dessen künstlichen und geheimnißvollen Bau",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB modernizes the printed historical spelling geheimnißvollen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 140, p. 291",
+      "from": "auf der Voraussetzung daß wir nun einmal",
+      "to": "auf der Voraussetzung, daß wir nun einmal",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed comma before daß."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 141, p. 292",
+      "from": "ο λαμβανων και διδους",
+      "to": "ὁ λαμβανων και διδους",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed rough breathing from the Greek article ὁ."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 141, p. 293",
+      "from": "Wernsdorffii dissertat. de metempsychosi p. 48 ist offenbar falsch Und richtig",
+      "to": "Wernsdorffii dissertat. de metempsychosi p. 48, ist offenbar falsch und nichtig",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed comma, capitalizes und, and misreads nichtig as richtig."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 141, p. 294",
+      "from": "in das Geheimnis der Palingenesie tiefer einzudringen",
+      "to": "in das Geheimniß der Palingenesie tiefer einzudringen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB modernizes the printed historical spelling Geheimniß."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 141, p. 294",
+      "from": "(p. p. 386, 387 et. 395, ed. Bip.)",
+      "to": "(p. p. 386, 387 et 395, ed. Bip.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB inserts a spurious period after the printed Latin conjunction et."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 141, p. 295",
+      "from": "wie das Isisbild zu Gais, sagen",
+      "to": "wie das Isisbild zu Sais, sagen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB misreads the initial Fraktur S in the printed place name Sais as G."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, p. 295",
+      "from": "Kleine dialogische Schlußbelustigung Thrasymachos.",
+      "to": "Kleine dialogische Schlußbelustigung. Thrasymachos.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed period separating the closing dialogue's heading from its first speaker."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, pp. 295–296",
+      "from": "deine altmodische kantische Kunstsprache",
+      "to": "deine altmodische Kantische Kunstsprache",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB lowercases the printed adjective Kantische."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, p. 296",
+      "from": "Philalethes (leise für sich). — deutschen, philosophischen Windbeutelei",
+      "to": "Philalethes (leise für sich:) — deutschen, philosophischen Windbeutelei",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB replaces the printed colon inside the stage direction with a period."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, p. 296",
+      "from": "durch eine ganze Succession, großer Männer",
+      "to": "durch eine ganze Succession großer Männer",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma between the printed noun Succession and its genitive complement."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, p. 296",
+      "from": "von allen Dem zurück",
+      "to": "von allem Dem zurück",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB misreads the printed final m in allem as n."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, p. 296",
+      "from": "Dein Wesen an sich Selbst hingegen",
+      "to": "Dein Wesen an sich selbst hingegen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB capitalizes the printed reflexive selbst."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, p. 296",
+      "from": "daher kann es von seiner Individualität ausgeschlossen werden",
+      "to": "daher kann es von keiner Individualität ausgeschlossen werden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB misreads the printed keiner as seiner, reversing the sentence's meaning."
     }
   ]
 }

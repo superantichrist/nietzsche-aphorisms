@@ -1361,6 +1361,20 @@ def quote_units_for_work(
     # The quoted sentence and its source belong to one readable unit.
     citation_rejoined: list[str] = []
     for unit in packed:
+        speaker_boundary = (
+            re.search(r"\s((?:Thrasymachos|Philalethes)[.])$", citation_rejoined[-1])
+            if citation_rejoined and unit.startswith("—")
+            else None
+        )
+        if speaker_boundary:
+            # A long dialogue turn can hit the pack limit directly after the
+            # next speaker's label.  Carry that label into the continuation
+            # instead of leaving it stranded at the end of the prior quote.
+            speaker = speaker_boundary.group(1)
+            citation_rejoined[-1] = citation_rejoined[-1][
+                : speaker_boundary.start()
+            ].rstrip()
+            unit = normalize_space(f"{speaker} {unit}")
         world_citation = "II, p. 226 fg.; 3. Aufl. II, 251 fg.)"
         if (
             citation_rejoined
@@ -1379,6 +1393,13 @@ def quote_units_for_work(
             citation_rejoined
             and citation_rejoined[-1].endswith("(S. Ed.")
             and unit.startswith("Boas, Schiller und Göthe im Xenienkampf")
+        ):
+            citation_rejoined[-1] = normalize_space(f"{citation_rejoined[-1]} {unit}")
+        elif (
+            citation_rejoined
+            and citation_rejoined[-1].endswith("Ausspruch des J.")
+            and unit.startswith("Brunus (ed. Wagner")
+            and len(normalize_space(f"{citation_rejoined[-1]} {unit}")) <= 820
         ):
             citation_rejoined[-1] = normalize_space(f"{citation_rejoined[-1]} {unit}")
         elif (
