@@ -664,6 +664,22 @@ def main() -> None:
         "Uhrmachet, Schuhmacher",
         "notre faiseurwiederzugeben",
         "jenem maker aus nichs",
+        "with e refutation of his arguments",
+        "the exellence of the moral system",
+        "Pfründen-und Allongen-perücken-Träger",
+        "Mahmud dem Gahznewiden",
+        "von allem Bilder-und Götterwesen",
+        "θεοις μεν καν ο μηδεν ων ομου",
+        "Sept-1858",
+        "Uebersetztungen heiliger Bücher",
+        "Mythologie gereinigt sein wird",
+        "das Ur-und Grundwollen",
+        "De legib. X. p 106",
+        "die unbedeutendesten herab",
+        "Tangential-und der von seiner Sonne",
+        "Shakespear’s Dramen",
+        "moralische νουτεθησις",
+        "durch die strenge Notwendigkeit",
     )
     pp_transcription_texts = [
         "\n".join(
@@ -688,7 +704,10 @@ def main() -> None:
 
     if any(
         quote["work"] == "pp"
-        and quote["german"].startswith("Boas, Schiller und Göthe im Xenienkampf")
+        and (
+            quote["german"].startswith("Boas, Schiller und Göthe im Xenienkampf")
+            or quote["german"].startswith("II, p. 226 fg.; 3. Aufl.")
+        )
         for quote in quotes
     ):
         fail("Parerga bibliographic citation split into an orphan quote")

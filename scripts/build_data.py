@@ -1088,7 +1088,7 @@ PP_CITATION_ABBREVIATIONS = (
     "Lib.", "lib.", "Liv.", "liv.", "Tom.", "C.", "c.", "ibid.",
     "Med.", "Part.", "publ.", "prop.", "pr.", "schol.", "seqq.",
     "sq.", "Opp.", "opp.", "ed.", "edit.", "cap.", "ch.", "Dial.", "institut.", "vierf.", "spekul.",
-    "somn.", "Vergl.",
+    "somn.", "Vergl.", "disp.", "sect.", "Sept.", "i. J.",
     "Arist.", "Cic.", "Clem.", "Alex.", "Apulej.", "Jambl.", "Pyth.",
     "Diog.", "Laert.", "Herod.", "Schol.", "vit.", "Buffon.",
     "adv.", "Math.", "math.", "eth.", "nat.", "Enn.", "a. a. O.",
@@ -1133,7 +1133,7 @@ ORDINAL_CONTINUATIONS = (
     "Aufl", "Auflage", "Auflagen",
     "Kap", "Kapitel", "Buch", "Bücher",
     "Januar", "Februar", "März", "April", "Mai", "Juni",
-    "Juli", "August", "September", "Oktober", "November", "Dezember",
+    "Juli", "August", "Sept", "September", "Oktober", "November", "Dezember",
 )
 
 
@@ -1361,6 +1361,20 @@ def quote_units_for_work(
     # The quoted sentence and its source belong to one readable unit.
     citation_rejoined: list[str] = []
     for unit in packed:
+        world_citation = "II, p. 226 fg.; 3. Aufl. II, 251 fg.)"
+        if (
+            citation_rejoined
+            and citation_rejoined[-1].endswith("(Vergl. Welt als Wille u. Vorstell.")
+            and unit.startswith(world_citation)
+            and len(normalize_space(f"{citation_rejoined[-1]} {world_citation}")) <= 820
+        ):
+            citation_rejoined[-1] = normalize_space(
+                f"{citation_rejoined[-1]} {world_citation}"
+            )
+            remainder = normalize_space(unit[len(world_citation) :])
+            if remainder:
+                citation_rejoined.append(remainder)
+            continue
         if (
             citation_rejoined
             and citation_rejoined[-1].endswith("(S. Ed.")

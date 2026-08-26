@@ -3269,6 +3269,150 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
       "reason": "The supplied EPUB drops t from the printed word nichts."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 239",
+      "from": "with e refutation of his arguments",
+      "to": "with a refutation of his arguments",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB reads the printed English article a as e."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 239",
+      "from": "the exellence of the moral system",
+      "to": "the excellence of the moral system",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops c from the printed English word excellence."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 240",
+      "from": "Pfründen-und Allongen-perücken-Träger",
+      "to": "Pfründen- und Allongen-perücken-Träger",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Pfründen-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 240",
+      "from": "Mahmud dem Gahznewiden",
+      "to": "Mahmud dem Ghaznewiden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB transposes h and z in the printed name Ghaznewiden."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 241",
+      "from": "von allem Bilder-und Götterwesen",
+      "to": "von allem Bilder- und Götterwesen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Bilder-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 241",
+      "from": "θεοις μεν καν ο μηδεν ων ομου κρατος κατακτησαιτ ξγω δε και διχα κεινων πεποιθα τουτ ξπισπασειν κλεος.",
+      "to": "θεοῖς μὲν κἂν ὁ μηδὲν ὢν ὁμοῦ κράτος κατακτήσαιτ᾽· ἐγὼ δὲ καὶ δίχα κείνων πέποιθα τοῦτ᾽ ἐπισπάσειν κλέος.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and punctuation and misreads two elided epsilons as xi."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 242",
+      "from": "Sept-1858.",
+      "to": "Sept. 1858.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB replaces the printed period and space in the date with a hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 242",
+      "from": "sorgfältige Uebersetztungen heiliger Bücher",
+      "to": "sorgfältige Uebersetzungen heiliger Bücher",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB inserts t into the printed word Uebersetzungen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 242",
+      "from": "von aller jüdischen Mythologie gereinigt sein wird",
+      "to": "von aller jüdischen Mythologie gereinigt seyn wird",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB modernizes the printed historical spelling seyn to sein."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 117, p. 242",
+      "from": "also das Ur-und Grundwollen desselben",
+      "to": "also das Ur- und Grundwollen desselben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Ur-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 117, p. 243",
+      "from": "De legib. X. p 106. ed. Bip.",
+      "to": "De legib. X. p. 106. ed. Bip.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed period after the bibliographic abbreviation p."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 246",
+      "from": "bis auf die unbedeutendesten herab",
+      "to": "bis auf die unbedeutendsten herab",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB inserts e into the printed superlative unbedeutendsten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 247",
+      "from": "beigegebenen Tangential-und der von seiner Sonne",
+      "to": "beigegebenen Tangential- und der von seiner Sonne",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Tangential-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 248",
+      "from": "Shakespear’s Dramen",
+      "to": "Shakespeare’s Dramen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops final e from the printed name Shakespeare."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 250",
+      "from": "moralische νουτεθησις",
+      "to": "moralische νουθέτησις",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB misorders letters and drops the printed accent in the Greek word νουθέτησις."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 251",
+      "from": "andererseits durch die strenge Notwendigkeit",
+      "to": "andererseits durch die strenge Nothwendigkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB modernizes the printed historical spelling Nothwendigkeit."
     }
   ]
 }
