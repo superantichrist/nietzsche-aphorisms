@@ -6500,6 +6500,87 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA660",
       "reason": "The supplied EPUB mistakes the clearly printed l in welchen for i."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary054.xhtml",
+      "page": "Band II, Kapitel XXVII, § 384, p. 661",
+      "from": "Τυνη το συνολον εστι δαπανηρον φυσει",
+      "to": "Γυνὴ τὸ σύνολον ἐστὶ δαπανηρὸν φύσει",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA661",
+      "reason": "The supplied EPUB mistakes the printed gamma for tau and strips all printed Greek breathings and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary055.xhtml",
+      "page": "Band II, Kapitel XXVIII, § 385, p. 663",
+      "from": "jenes υστερον προτερον",
+      "to": "jenes ὕστερον πρότερον",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA663",
+      "reason": "The EPUB transcription strips the Greek breathings and accents printed in ὕστερον πρότερον."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary055.xhtml",
+      "page": "Band II, Kapitel XXVIII, § 386, p. 664",
+      "from": "Verhältnisse dass rechte, oder das deutliche Verständniß",
+      "to": "Verhältnisse das rechte, oder das deutliche Verständniß",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA664",
+      "reason": "The supplied EPUB adds a second s to the clearly printed article das."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary055.xhtml",
+      "page": "Band II, Kapitel XXVIII, § 386, p. 666",
+      "from": "ερωτηθεις τι των μαθηματων αναγχαιοτατον, εφη, το κακα απομαθειν",
+      "to": "ἐρωτηθεὶς τί τῶν μαθημάτων ἀναγκαιότατον, ἔφη, „τὸ κακὰ ἀπομαθεῖν“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA666",
+      "reason": "The EPUB transcription strips the printed Greek breathings, accents, and quotation marks and mistakes kappa in ἀναγκαιότατον for chi."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary055.xhtml",
+      "page": "Band II, Kapitel XXVIII, § 386, p. 666",
+      "from": "Mala, inquit,dediscere",
+      "to": "Mala, inquit, dediscere",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA666",
+      "reason": "The EPUB extractor drops the clearly printed space after inquit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary055.xhtml",
+      "page": "Band II, Kapitel XXVIII, § 387, p. 666",
+      "from": "hingegen muß has Urtheil im Allgemeinen",
+      "to": "hingegen muß das Urtheil im Allgemeinen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA666",
+      "reason": "The supplied EPUB mistakes the clearly printed d in das for h."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary056.xhtml",
+      "page": "Band II, Kapitel XXIX, § 390, p. 670",
+      "from": "aus seinen Gesichtsszügen im voraus",
+      "to": "aus seinen Gesichtszügen im voraus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA670",
+      "reason": "The supplied EPUB inserts a second s into the clearly printed Gesichtszügen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary056.xhtml",
+      "page": "Band II, Kapitel XXIX, § 390, p. 671",
+      "from": "Sie ist ein Grund-und Hauptgedanke der Natur",
+      "to": "Sie ist ein Grund- und Hauptgedanke der Natur",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA671",
+      "reason": "The EPUB extractor drops the printed space after the suspended compound Grund-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary055.xhtml",
+      "page": "Band II, Kapitel XXVIII, § 386, p. 665",
+      "from": "Flausen, Grillen, Rücken, Einbildungen",
+      "to": "Flausen, Grillen, Mucken, Einbildungen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA665",
+      "reason": "The supplied EPUB mistakes the clearly printed Fraktur M in Mucken for R."
     }
   ]
 }

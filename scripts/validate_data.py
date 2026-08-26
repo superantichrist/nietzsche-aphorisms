@@ -1055,6 +1055,15 @@ def main() -> None:
         "to red neither poetry nor politics",
         "Standes-oder Vermögensrücksichten",
         "von weichen jetzt Europa voll ist",
+        "Τυνη το συνολον εστι δαπανηρον φυσει",
+        "jenes υστερον προτερον",
+        "Verhältnisse dass rechte, oder das deutliche Verständniß",
+        "ερωτηθεις τι των μαθηματων αναγχαιοτατον",
+        "inquit,dediscere",
+        "muß has Urtheil im Allgemeinen",
+        "Gesichtsszügen im voraus",
+        "Grund-und Hauptgedanke der Natur",
+        "Flausen, Grillen, Rücken, Einbildungen",
     )
     pp_transcription_texts = [
         "\n".join(
