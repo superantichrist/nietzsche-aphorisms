@@ -2729,6 +2729,159 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
       "reason": "The supplied EPUB drops t from the printed word bestimmt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 104, p. 192",
+      "from": "nur Einen Beleg zu dem Ge—sagten",
+      "to": "nur einen Beleg zu dem Gesagten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB capitalizes einen and retains a spurious dash from the printed line break in Gesagten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 104, p. 192",
+      "from": "Ausführung dieser Betrachtungen der Sache",
+      "to": "Ausführung dieser Betrachtungsart der Sache",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB replaces the printed compound Betrachtungsart with Betrachtungen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 104, p. 193",
+      "from": "herein,Und beweist euch",
+      "to": "herein, Und beweist euch",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The EPUB markup boundary removes the separation between the two printed verse lines."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 104, p. 194",
+      "from": "sein Urphänomem nachdem",
+      "to": "sein Urphänomen, nachdem",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB substitutes final m for n in Urphänomen and omits the printed comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 104, p. 194",
+      "from": "die specifiche Verschiedenheit",
+      "to": "die specifische Verschiedenheit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops s from the printed word specifische."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 104, p. 194",
+      "from": "qualitus occulta (colorifica)",
+      "to": "qualitas occulta (colorifica)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB substitutes u for a in the printed Latin word qualitas."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 105, p. 196",
+      "from": "homogenen Farbestrahlen",
+      "to": "homogenen Farbenstrahlen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops n from the printed compound Farbenstrahlen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 105, p. 196",
+      "from": "Diese Auslegung der Sache laßt sich",
+      "to": "Diese Auslegung der Sache läßt sich",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops the printed umlaut in läßt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 105, p. 197",
+      "from": "auf einer grauen) Flache",
+      "to": "auf einer grauen) Fläche",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB drops the printed umlaut in Fläche."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 105, p. 197",
+      "from": "physiologisch als Spektenm ihm",
+      "to": "physiologisch als Spektrum ihm",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB corrupts the printed word Spektrum."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 105, p. 199",
+      "from": "in sehr verschiedenen Produktionen getheilt",
+      "to": "in sehr verschiedenen Proportionen getheilt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB replaces the printed optical term Proportionen with Produktionen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 106, p. 200",
+      "from": "Blätter in Roch, beim ersten Frost",
+      "to": "Blätter in Roth, beim ersten Frost",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB substitutes c for t in the printed color word Roth."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 202",
+      "from": "unabweisbare Wiederlegung derselben",
+      "to": "unabweisbare Widerlegung derselben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB inserts e in the printed word Widerlegung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 202",
+      "from": "hin und her, hinaus und herab gezogen",
+      "to": "hin und her, hinauf und herab gezogen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB substitutes s for f in the printed word hinauf."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 202",
+      "from": "das Sichentfernen der einzelnen farbigen Lichter",
+      "to": "das Sich-entfernen der einzelnen farbigen Lichter",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB omits the printed hyphen in Sich-entfernen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 203",
+      "from": "Krown-und",
+      "to": "Krown- und",
+      "expectedOccurrences": 2,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB removes the printed space after the suspended compound Krown-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary034.xhtml",
+      "page": "Band II, Kapitel VII, § 107, p. 203",
+      "from": "vom Flint-anders, als vom Krown-Glas",
+      "to": "vom Flint- anders, als vom Krown-Glas",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
+      "reason": "The supplied EPUB removes the printed space after the suspended compound Flint-."
     }
   ]
 }

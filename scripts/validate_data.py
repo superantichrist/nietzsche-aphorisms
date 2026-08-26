@@ -602,6 +602,23 @@ def main() -> None:
         "peu de médecin, peu de médecin.",
         "verschiedenen Thiergesta1ten",
         "nicht so besimmt angeben",
+        "nur Einen Beleg zu dem Ge—sagten",
+        "Ausführung dieser Betrachtungen der Sache",
+        "herein,Und beweist euch",
+        "sein Urphänomem nachdem",
+        "die specifiche Verschiedenheit",
+        "qualitus occulta",
+        "homogenen Farbestrahlen",
+        "Diese Auslegung der Sache laßt sich",
+        "auf einer grauen) Flache",
+        "physiologisch als Spektenm ihm",
+        "in sehr verschiedenen Produktionen getheilt",
+        "Blätter in Roch, beim ersten Frost",
+        "unabweisbare Wiederlegung derselben",
+        "hin und her, hinaus und herab gezogen",
+        "das Sichentfernen der einzelnen farbigen Lichter",
+        "Krown-und",
+        "vom Flint-anders",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
