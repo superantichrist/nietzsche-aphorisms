@@ -5744,6 +5744,114 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
       "reason": "The supplied EPUB omits the clearly printed acute accent in Boisserée’sche."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 242, p. 487",
+      "from": "Irr-und Wandelsterne",
+      "to": "Irr- und Wandelsterne",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA487",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 488",
+      "from": "Labrüyere sagt",
+      "to": "Labruyère sagt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA488",
+      "reason": "The supplied EPUB puts the diacritic on the wrong letter in the clearly printed name Labruyère."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 489",
+      "from": "Ben Johnson Massinger, Beaumont",
+      "to": "Ben Jonson, Massinger, Beaumont",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA489",
+      "reason": "The supplied EPUB adds an h to Jonson and drops the clearly printed comma before Massinger."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 489",
+      "from": "mediocribus esse poetis",
+      "to": "mediocribus esse poëtis",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA489",
+      "reason": "The supplied EPUB omits the clearly printed diaeresis in the Latin quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 490",
+      "from": "Nicht weniger Newton:",
+      "to": "Nicht weniger Neuton:",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA490",
+      "reason": "The supplied EPUB modernizes the clearly printed historical spelling Neuton."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 490",
+      "from": "Newtonische Gravitationssystem",
+      "to": "Neutonische Gravitationssystem",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA490",
+      "reason": "The supplied EPUB modernizes the clearly printed historical spelling Neutonische."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 490",
+      "from": "Obgleich Newton das Erscheinen",
+      "to": "Obgleich Neuton das Erscheinen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA490",
+      "reason": "The supplied EPUB modernizes the clearly printed historical spelling Neuton."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 490",
+      "from": "während er ausserhalb seines Vaterlandes",
+      "to": "während er außerhalb seines Vaterlandes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA490",
+      "reason": "The supplied EPUB replaces the clearly printed ß in außerhalb with ss."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 490",
+      "from": "Darstellung des Newtonianismus",
+      "to": "Darstellung des Neutonianismus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA490",
+      "reason": "The supplied EPUB modernizes the clearly printed historical spelling Neutonianismus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 490",
+      "from": "Newtons absurde Farbenlehre",
+      "to": "Neutons absurde Farbenlehre",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA490",
+      "reason": "The supplied EPUB modernizes the clearly printed historical spelling Neutons."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 245, p. 491",
+      "from": "auf den Camoens, ihren einzigen Dichter",
+      "to": "auf den Camoëns, ihren einzigen Dichter",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA491",
+      "reason": "The supplied EPUB omits the clearly printed diaeresis in Camoëns."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 246, p. 492",
+      "from": "einem versschlossenen Zauberschrank",
+      "to": "einem verschlossenen Zauberschrank",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA492",
+      "reason": "The supplied EPUB duplicates the s in the clearly printed verschlossenen."
     }
   ]
 }
