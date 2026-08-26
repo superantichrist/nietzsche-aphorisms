@@ -6131,6 +6131,33 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA540",
       "reason": "The supplied EPUB misreads the clearly printed n as m and drops the following comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 282, pp. 541–542",
+      "from": "einer schönen hetruxischen Vase",
+      "to": "einer schönen hetrurischen Vase",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA541",
+      "reason": "The supplied EPUB misreads the clearly printed r as x in hetrurischen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 288, p. 544",
+      "from": "von der damit beikeideten Mauer",
+      "to": "von der damit bekleideten Mauer",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA544",
+      "reason": "The supplied EPUB transposes letters and drops the clearly printed l in bekleideten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 289, p. 545",
+      "from": "laudes laudaris ut absens",
+      "to": "laudes lauderis ut absens",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA545",
+      "reason": "The supplied EPUB misreads the clearly printed e as a in the Latin passive subjunctive lauderis."
     }
   ]
 }
