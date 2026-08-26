@@ -5213,6 +5213,195 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
       "reason": "The supplied EPUB omits the printed page reference and gives the Spanish está the wrong accent."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, § 184, p. 425",
+      "from": "so geschmacklos und monstros",
+      "to": "so geschmacklos und monströs",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB drops the clearly printed umlaut in monströs."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, § 185, p. 426",
+      "from": "die Ueberssetzungen europäischer Gelehrten",
+      "to": "die Uebersetzungen europäischer Gelehrten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB inserts a spurious s in the clearly printed Uebersetzungen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, § 185, pp. 427-428",
+      "from": "Anquetil dü Perron",
+      "to": "Anquetil du Perron",
+      "expectedOccurrences": 2,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The EPUB mistakes the Fraktur distinguishing mark over u for an umlaut in the French name du Perron."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, § 185, p. 427",
+      "from": "Stellen in Colebrook’s Uebersetzungen",
+      "to": "Stellen in Colebrooke’s Uebersetzungen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB drops the final printed e in Colebrooke’s name."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, § 185, p. 428",
+      "from": "Bibliotheca India No. 41",
+      "to": "Bibliotheca Indica No. 41",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB drops the clearly printed c in the periodical title Bibliotheca Indica."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, § 186, p. 429",
+      "from": "hat Colebrook, in seiner Abhandlung",
+      "to": "hat Colebrooke, in seiner Abhandlung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB drops the final printed e in Colebrooke’s name."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, § 188, p. 429",
+      "from": "diese ganze Philososphie verdorben",
+      "to": "diese ganze Philosophie verdorben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB inserts a spurious syllable in the clearly printed Philosophie."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, Anhang verwandter Stellen, p. 432",
+      "from": "indem er Phantastische Beschäftigung haben will",
+      "to": "indem er phantastische Beschäftigung haben will",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB wrongly capitalizes the clearly printed adjective phantastische."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, Anhang verwandter Stellen, p. 432",
+      "from": "du Nirvana Indien l856",
+      "to": "du Nirvana Indien 1856",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB mistakes the printed numeral 1 in the publication year 1856 for a lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary043.xhtml",
+      "page": "Band II, Kapitel XVI, Anhang verwandter Stellen, p. 432",
+      "from": "Dasjenige odjektiv darzustellen",
+      "to": "Dasjenige objektiv darzustellen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891399.pdf",
+      "reason": "The supplied EPUB substitutes d for the clearly printed b in objektiv."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary044.xhtml",
+      "page": "Band II, Kapitel XVII, § 192, p. 436",
+      "from": "specimen ingorantiae veterum",
+      "to": "specimen ignorantiae veterum",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891405.pdf",
+      "reason": "The supplied EPUB transposes two letters in the clearly printed Latin ignorantiae."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary044.xhtml",
+      "page": "Band II, Kapitel XVII, § 192, p. 436",
+      "from": "το θερμον και φυχρον",
+      "to": "το θερμον και ψυχρον",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891405.pdf",
+      "reason": "The supplied EPUB substitutes phi for the clearly printed psi in the Greek ψυχρον."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary044.xhtml",
+      "page": "Band II, Kapitel XVII, § 193, p. 437",
+      "from": "vielgepriesenen Hhymnus des Kleanthes",
+      "to": "vielgepriesenen Hymnus des Kleanthes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891405.pdf",
+      "reason": "The supplied EPUB inserts a spurious initial H in the clearly printed Hymnus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary044.xhtml",
+      "page": "Band II, Kapitel XVII, § 197, p. 438",
+      "from": "eingeweiht, besondere der Isis",
+      "to": "eingeweiht, besonders der Isis",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891405.pdf",
+      "reason": "The supplied EPUB drops the final printed s in besonders."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary044.xhtml",
+      "page": "Band II, Kapitel XVII, § 198, p. 438",
+      "from": "wann er antikes Kostüm, trägt",
+      "to": "wann er antikes Kostüm trägt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891405.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma between the clearly printed Kostüm trägt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary044.xhtml",
+      "page": "Band II, Kapitel XVII, § 199, p. 438",
+      "from": "die Wohnungen, die Gefässe, die Kunst",
+      "to": "die Wohnungen, die Gefäße, die Kunst",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891405.pdf",
+      "reason": "The supplied EPUB replaces the clearly printed ß in Gefäße with ss."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 200, p. 439",
+      "from": "in den Studien zu Göthe’s Werken, 1849",
+      "to": "in den „Studien zu Göthe’s Werken“, 1849",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB omits the printed quotation marks around the cited book title."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 200, p. 440",
+      "from": "(Theog. v. 211 f. f.)",
+      "to": "(Theog. v. 211 fg.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB misreads the clearly printed abbreviation fg. as f. f."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 200, p. 440",
+      "from": "(V. 226 f. f.)",
+      "to": "(V. 226 fg.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB misreads the clearly printed abbreviation fg. as f. f."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary045.xhtml",
+      "page": "Band II, Kapitel XVIII, § 200, p. 440",
+      "from": "Schlaf und Tod (V. 746—765.)",
+      "to": "Schlaf und Tod (V. 746—765).",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB places the sentence full stop inside rather than after the printed parenthesis."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary060.xhtml",
+      "page": "Band II, Kapitel XVIII, § 200, p. 440, edition footnote 68",
+      "from": "nach eigener Konjetkur",
+      "to": "nach eigener Konjektur",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891414.pdf",
+      "reason": "The supplied EPUB transposes letters in the clearly printed Konjektur."
     }
   ]
 }
