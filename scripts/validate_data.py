@@ -844,6 +844,15 @@ def main() -> None:
         "Im ganzes Verlaufe",
         "Arisioteles",
         "Bändigungs-und Zähmungsmittel",
+        "Akadenmieen",
+        "Statisiker",
+        "Feierlichleit",
+        "Unterweisung der Priesterauktorität",
+        "beigezähl.",
+        "Mord-und Raubzug",
+        "dich versichen",
+        "A man convinced against his will",
+        "Suceession",
     )
     pp_transcription_texts = [
         "\n".join(

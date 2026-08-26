@@ -4862,6 +4862,87 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
       "reason": "The supplied EPUB drops the printed word space after Bändigungs-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 376",
+      "from": "Akadenmieen könnten es",
+      "to": "Akademieen könnten es",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious n in the clearly printed Akademieen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 376",
+      "from": "ein Statisiker uns angeben",
+      "to": "ein Statistiker uns angeben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed t in Statistiker."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 378",
+      "from": "mit größter Feierlichleit",
+      "to": "mit größter Feierlichkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed k in Feierlichkeit as l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 379",
+      "from": "Unterweisung der Priesterauktorität",
+      "to": "Unterwerfung der Priesterauktorität",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB corrupts the clearly printed Unterwerfung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 380",
+      "from": "den schweren Sünden beigezähl.",
+      "to": "den schweren Sünden beigezählt.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the final printed t in beigezählt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 381",
+      "from": "seinen Mord-und Raubzug",
+      "to": "seinen Mord- und Raubzug",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed word space after Mord-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 385",
+      "from": "kann auch ich dich versichen, daß Alles",
+      "to": "kann auch ich dich versichern, daß Alles",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the second printed r in versichern."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 385",
+      "from": "A man convinced against his will Is of the same opinion still.",
+      "to": "A man convinc’d against his will Is of the same opinion still.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB expands the contraction printed as convinc’d in the Hubibras quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 177, p. 387",
+      "from": "in rascher Suceession",
+      "to": "in rascher Succession",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious e in the clearly printed Succession."
     }
   ]
 }
