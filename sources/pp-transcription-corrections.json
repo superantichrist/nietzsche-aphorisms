@@ -6464,6 +6464,42 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA649",
       "reason": "The supplied EPUB mistakes the clearly printed act numeral 1 for lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary054.xhtml",
+      "page": "Band II, Kapitel XXVII, § 382, p. 656",
+      "from": "des sympathies d’epiderme",
+      "to": "des sympathies d’épiderme",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA656",
+      "reason": "The EPUB transcription drops the acute accent printed in the French épiderme."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary054.xhtml",
+      "page": "Band II, Kapitel XXVII, § 382, p. 657",
+      "from": "but to red neither poetry nor politics",
+      "to": "but to read neither poetry nor politics",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA657",
+      "reason": "The supplied EPUB drops the clearly printed a in Byron's English read."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary054.xhtml",
+      "page": "Band II, Kapitel XXVII, § 383, p. 659",
+      "from": "Manchem Manne nämlich machen Standes-oder Vermögensrücksichten",
+      "to": "Manchem Manne nämlich machen Standes- oder Vermögensrücksichten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA659",
+      "reason": "The EPUB extractor drops the printed space after the suspended compound Standes-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary054.xhtml",
+      "page": "Band II, Kapitel XXVII, § 383, p. 660",
+      "from": "unglückliche Weiber mehr, von weichen jetzt Europa voll ist",
+      "to": "unglückliche Weiber mehr, von welchen jetzt Europa voll ist",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA660",
+      "reason": "The supplied EPUB mistakes the clearly printed l in welchen for i."
     }
   ]
 }

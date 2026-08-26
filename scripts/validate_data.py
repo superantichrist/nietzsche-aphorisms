@@ -1051,6 +1051,10 @@ def main() -> None:
         "αναισθησια και βραδυτης φυχης",
         "fin de concolation",
         "Sardanapal, Akt l, Sc. 2",
+        "sympathies d’epiderme",
+        "to red neither poetry nor politics",
+        "Standes-oder Vermögensrücksichten",
+        "von weichen jetzt Europa voll ist",
     )
     pp_transcription_texts = [
         "\n".join(
