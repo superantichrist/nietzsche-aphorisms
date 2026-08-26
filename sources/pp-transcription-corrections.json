@@ -3539,6 +3539,96 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
       "reason": "The supplied EPUB drops the printed l from Negersklaven."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 126, p. 262",
+      "from": "ως εν σοπον βουλευμα τας πολλων χειρας νικα.",
+      "to": "ὡς ἓν σοφὸν βούλευμα τὰς πολλῶν χεῖρας νικᾷ.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and misreads phi as pi in the Euripides quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary060.xhtml",
+      "page": "Band II, Kapitel IX, § 127, p. 265, source-edition footnote",
+      "from": "Περσαις νομος ην, οποτε βασιλευς αποθανοι, ανομιαν ειναι πεντε ημερων, ιν αισθοιντο οσου αξιος εστιν ο βασιλευς και ο νομος.",
+      "to": "Πέρσαις νόμος ἦν, ὁπότε βασιλεὺς ἀπόθανοι, ἀνομίαν εἶναι πέντε ἡμερῶν, ἵν’ αἴσθοιντο ὅσου ἄξιος ἐστιν ὁ βασιλεὺς καὶ ὁ νόμος.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and elision mark from the Stobaeus footnote."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 127, p. 266",
+      "from": "sondern appercus",
+      "to": "sondern aperçus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB doubles p and drops the printed cedilla from the French word aperçus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 128, p. 267",
+      "from": "der geistigen Ueberlegenheιτ",
+      "to": "der geistigen Ueberlegenheit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB substitutes Greek iota and tau for the printed Latin letters it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 128, p. 267",
+      "from": "an seiner Koncentration und Kraft Verliere",
+      "to": "an seiner Koncentration und Kraft verliere",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB capitalizes the printed verb verliere."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 128, p. 268",
+      "from": "darstellen lassen, wie. z. B. Fluor",
+      "to": "darstellen lassen, wie z. B. Fluor",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB inserts a spurious period after the printed word wie."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 128, p. 271",
+      "from": "der Lenker und Negierer, das ηγεμονικον",
+      "to": "der Lenker und Regierer, das ἡγεμονικόν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB misreads the printed German word Regierer and drops the Greek accents from ἡγεμονικόν."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 128, p. 272",
+      "from": "Ουκ αλαθον πολυκοιρανιη εις κοιρανος εστω, εις βασιλευς.",
+      "to": "Οὐκ ἀγαθὸν πολυκοιρανίη· εἷς κοίρανος ἔστω, εἷς βασιλεύς.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and punctuation and misreads gamma as lambda in the Homer quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 128, p. 272",
+      "from": "à Leyde l665. Chap. 45.",
+      "to": "à Leyde 1665. Chap. 45.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB misreads the first printed numeral of the publication year as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 128, p. 272",
+      "from": "überschrieben: καλλισιον η μοναρχια",
+      "to": "überschrieben: ὅτι κάλλιστον ἡ μοναρχία",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB omits the first printed Greek word, drops accents, and misreads tau as iota in the Stobaeus title."
     }
   ]
 }

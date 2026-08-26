@@ -694,6 +694,17 @@ def main() -> None:
         "Fabrik-vοrsteher",
         "dem Namen der Skaverei",
         "Millionen Negerskaven",
+        "ως εν σοπον βουλευμα",
+        "Περσαις νομος ην, οποτε βασιλευς",
+        "sondern appercus",
+        "Ueberlegenheιτ",
+        "Kraft Verliere",
+        "darstellen lassen, wie. z. B. Fluor",
+        "Lenker und Negierer",
+        "das ηγεμονικον",
+        "Ουκ αλαθον πολυκοιρανιη",
+        "à Leyde l665",
+        "καλλισιον η μοναρχια",
     )
     pp_transcription_texts = [
         "\n".join(
