@@ -5852,6 +5852,168 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA492",
       "reason": "The supplied EPUB duplicates the s in the clearly printed verschlossenen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 247, p. 494",
+      "from": "nicht Vielmehr die zwingende Auktorität",
+      "to": "nicht vielmehr die zwingende Auktorität",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA494",
+      "reason": "The supplied EPUB wrongly capitalizes the clearly printed adverb vielmehr."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 247, p. 494",
+      "from": "aus der die Möglichkeit des festen",
+      "to": "auf der die Möglichkeit des festen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA494",
+      "reason": "The supplied EPUB mistakes the clearly printed preposition auf for aus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 494",
+      "from": "zusammenkommenden Bandes aller Mittelmäßigen",
+      "to": "zusammenkommenden Bundes aller Mittelmäßigen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA494",
+      "reason": "The supplied EPUB mistakes the clearly printed Bundes for Bandes."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 495",
+      "from": "Unfähigkeit, Planheit und Stümperhaftigkeit",
+      "to": "Unfähigkeit, Plattheit und Stümperhaftigkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA495",
+      "reason": "The supplied EPUB drops the clearly printed tt in Plattheit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 496",
+      "from": "die vermaladeite Parade",
+      "to": "die vermaledeite Parade",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA496",
+      "reason": "The supplied EPUB substitutes an a for the clearly printed e in vermaledeite."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 496",
+      "from": "in meinen Hauptwerke",
+      "to": "in meinem Hauptwerke",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA496",
+      "reason": "The supplied EPUB mistakes the clearly printed dative ending in meinem."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 496",
+      "from": "La modestie devroit êtra la vertu",
+      "to": "La modestie devroit être la vertu",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA496",
+      "reason": "The supplied EPUB mistakes the clearly printed French infinitive être for êtra."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 496",
+      "from": "qua todo poeta, á quien sus versos",
+      "to": "que todo poeta, á quien sus versos",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA496",
+      "reason": "The supplied EPUB mistakes the clearly printed Spanish que for qua."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 497",
+      "from": "das ehr-und gewissenlose Lobpreisen",
+      "to": "das ehr- und gewissenlose Lobpreisen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA497",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 498",
+      "from": "nicht der Schandtweg der Kamaraderie",
+      "to": "nicht der Schandweg der Kamaraderie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA498",
+      "reason": "The supplied EPUB inserts a spurious t into the clearly printed Schandweg."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 498",
+      "from": "σοφον ειναι δει τον επιγνωσομενον τον σοφον",
+      "to": "σοφὸν εἶναι δεῖ τὸν ἐπιγνωσόμενον τὸν σοφόν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA498",
+      "reason": "The supplied EPUB drops the clearly printed Greek breathings and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 499",
+      "from": "was Mahlmamn, im Herodes",
+      "to": "was Mahlmann, im Herodes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA499",
+      "reason": "The supplied EPUB mistakes the second n in the clearly printed name Mahlmann for m."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 500",
+      "from": "Vevielfältigung",
+      "to": "Vervielfältigung",
+      "expectedOccurrences": 2,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA500",
+      "reason": "The supplied EPUB twice drops the clearly printed r in Vervielfältigung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 502",
+      "from": "irgend ein berühtmer Mann",
+      "to": "irgend ein berühmter Mann",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA502",
+      "reason": "The supplied EPUB transposes letters in the clearly printed berühmter."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 502",
+      "from": "da sprangen sie allezu, es aufzulesen",
+      "to": "da sprangen sie alle zu, es aufzulesen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA502",
+      "reason": "The supplied EPUB collapses the clearly printed word space in alle zu."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 502",
+      "from": "verchworene litterarische Rottirer",
+      "to": "verschworene litterarische Rottirer",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA502",
+      "reason": "The supplied EPUB drops the clearly printed s in verschworene."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary047.xhtml",
+      "page": "Band II, Kapitel XX, § 248, p. 503",
+      "from": "Χειλεα μεν τ εδιην, υπερφην δ ουκ εδιηνεν",
+      "to": "Χείλεα μέν τ’ ἐδίην’, ὑπερῴην δ’ οὐκ ἐδίηνεν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA503",
+      "reason": "The supplied EPUB drops Greek breathings, accents, apostrophes, and the clearly printed omega-iota form in the Homer quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary010.xhtml",
+      "page": "Band I, Fragmente zur Geschichte der Philosophie, § 13, p. 104",
+      "from": "σοφον ειναι δει τον επιγνωσομενον τον σοφον",
+      "to": "σοφὸν εἶναι δεῖ τὸν ἐπιγνωσόμενον τὸν σοφόν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA104",
+      "reason": "The supplied EPUB drops the clearly printed Greek breathings and accents."
     }
   ]
 }
