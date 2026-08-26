@@ -3035,6 +3035,132 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891292.pdf",
       "reason": "The supplied EPUB drops the printed umlaut in läßt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 110, p. 216",
+      "from": "in ihrer mysthischen Weise",
+      "to": "in ihrer mystischen Weise",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB inserts h in the printed word mystischen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 111, p. 217",
+      "from": "lettres édifiantes et, curieuses",
+      "to": "lettres édifiantes et curieuses",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma into the printed French title."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 111, p. 218",
+      "from": "Die, welche von Cicero temperantia",
+      "to": "Die σωφροσύνη, welche von Cicero temperantia",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB omits the printed Greek name σωφροσύνη from the sentence."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 111, p. 218",
+      "from": "von σωον εχειν το φρονειν",
+      "to": "von σῶον ἔχειν τὸ φρονεῖν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed accents and breathings from the Greek phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 111, p. 218",
+      "from": "Ταυτην την αρετην σωφροσυνην εκαλεσαν σωτηριαν ουσαν φρονησεως.",
+      "to": "Ταύτην τὴν ἀρετὴν σωφροσύνην ἐκάλεσαν σωτηρίαν οὖσαν φρονήσεως.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed accents and breathings from the Greek quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 111, p. 218",
+      "from": "Schon Geulinx (Ethica",
+      "to": "Schon Geulincx (Ethica",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops c from the printed name Geulincx."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 111, p. 218",
+      "from": "London 1841, p. l97",
+      "to": "London 1841, p. 197",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 111, p. 218",
+      "from": "nicht Kardinal-sondern Theologal-Tugenden",
+      "to": "nicht Kardinal-, sondern Theologal-Tugenden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed punctuation and spacing after the suspended compound Kardinal-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 112, p. 219",
+      "from": "dem Chrißtlichen Sinne",
+      "to": "dem Christlichen Sinne",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB inserts ß in the printed word Christlichen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 112, p. 220",
+      "from": "Tugend, virtus, αρετη,",
+      "to": "Tugend, virtus, ἀρετή,",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed accents and breathing from the Greek word ἀρετή."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 112, p. 221",
+      "from": "für αρετη erklärt wird",
+      "to": "für ἀρετή erklärt wird",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed accents and breathing from the Greek word ἀρετή."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 112, p. 221",
+      "from": "σκυτοτομου αρετην λεγεσθαι καθ ην αποτελειν αριστον υποδημα δυναται",
+      "to": "σκυτοτόμου ἀρετὴν λέγεσθαι καθ’ ἣν ἀποτελεῖν ἄριστον ὑπόδημα δύναται",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed accents, breathings, and apostrophe from the Greek quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 224",
+      "from": "seine Stammverwandschaft mit dem",
+      "to": "seine Stammverwandtschaft mit dem",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops t from the printed word Stammverwandtschaft."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 225",
+      "from": "und ihn seyn ließe, wie wenig",
+      "to": "und ihn sehn ließe, wie wenig",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB replaces the printed verb sehn with seyn."
     }
   ]
 }

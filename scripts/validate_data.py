@@ -636,6 +636,20 @@ def main() -> None:
         "wollenwir uns gebärden",
         "das unverschämte Vorgehen, daß",
         "Daher laßt, unter dem Einfluß",
+        "in ihrer mysthischen Weise",
+        "lettres édifiantes et, curieuses",
+        "Die, welche von Cicero temperantia",
+        "von σωον εχειν το φρονειν",
+        "Ταυτην την αρετην σωφροσυνην εκαλεσαν",
+        "Schon Geulinx (Ethica",
+        "London 1841, p. l97",
+        "nicht Kardinal-sondern Theologal-Tugenden",
+        "dem Chrißtlichen Sinne",
+        "Tugend, virtus, αρετη,",
+        "für αρετη erklärt wird",
+        "σκυτοτομου αρετην λεγεσθαι",
+        "seine Stammverwandschaft mit dem",
+        "und ihn seyn ließe, wie wenig",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
