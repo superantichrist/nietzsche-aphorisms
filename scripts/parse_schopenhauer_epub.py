@@ -456,17 +456,45 @@ def parse_parerga() -> list[dict]:
     if digest != EXPECTED_SHA256:
         raise ValueError(f"Unexpected Parerga EPUB hash: {digest}")
 
+    corrections = json.loads(CORRECTIONS_PATH.read_text(encoding="utf-8"))["corrections"]
+
     with zipfile.ZipFile(EPUB_PATH) as zipped:
         source_notes = load_source_notes(zipped)
+        # Edition notes live in separate XHTML files and are copied into the
+        # paragraph payload only after their references are resolved.  Apply
+        # scan-verified corrections at that single source before copying them,
+        # so a note is corrected once even if it is cited more than once.
+        for correction in corrections:
+            if correction["sourceFile"] not in FOOTNOTE_FILES:
+                continue
+            operation = correction.get("operation", "replace")
+            if operation != "replace":
+                raise ValueError(
+                    "Parerga edition-note corrections only support replace: "
+                    f"{operation}"
+                )
+            before = correction["from"]
+            after = correction["to"]
+            expected = correction.get("expectedOccurrences", 1)
+            occurrences = 0
+            for note_id, note_text in source_notes.items():
+                occurrences += note_text.count(before)
+                source_notes[note_id] = note_text.replace(before, after)
+            if occurrences != expected:
+                raise ValueError(
+                    "Parerga edition-note correction occurrence mismatch: "
+                    f"{before!r} expected={expected}, actual={occurrences}"
+                )
         sections = [
             section
             for file_number in CONTENT_SPECS
             for section in parse_content_file(zipped, file_number, source_notes)
         ]
 
-    corrections = json.loads(CORRECTIONS_PATH.read_text(encoding="utf-8"))["corrections"]
     for correction in corrections:
         source_file = correction["sourceFile"]
+        if source_file in FOOTNOTE_FILES:
+            continue
         operation = correction.get("operation", "replace")
         expected = correction.get("expectedOccurrences", 1)
         occurrences = 0

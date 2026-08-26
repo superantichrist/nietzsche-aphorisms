@@ -3161,6 +3161,114 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
       "reason": "The supplied EPUB replaces the printed verb sehn with seyn."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 228",
+      "from": "dieses Gottes και εξοχην der Pantheisten",
+      "to": "dieses Gottes κατ’ ἐξοχήν der Pantheisten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB misreads the printed Greek phrase κατ’ ἐξοχήν and drops its accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 228",
+      "from": "sufficit irae, Iuv. Sat. XIII",
+      "to": "sufficit irae. Iuv. Sat. XIII",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB replaces the printed full stop after the Latin quotation with a comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 229",
+      "from": "sagt schon Aristoteles: το οργιζεσθαι ηδυ",
+      "to": "sagt schon Aristoteles: τὸ ὀργίζεσθαι ἡδύ",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed accents and breathing from Aristotle's Greek phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, pp. 229–230",
+      "from": "sie sogleich zer-trat",
+      "to": "sie sogleich zertrat",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB retains a line-break hyphen inside the printed word zertrat."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 230",
+      "from": "sie venichten möchte",
+      "to": "sie vernichten möchte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops r from the printed word vernichten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 230",
+      "from": "alle Kampf-und Kriegslust",
+      "to": "alle Kampf- und Kriegslust",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Kampf-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 230",
+      "from": "Stelle einer Erkärung vertritt",
+      "to": "Stelle einer Erklärung vertritt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops l from the printed word Erklärung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 230",
+      "from": "Expansions-und Kontraktionskraft",
+      "to": "Expansions- und Kontraktionskraft",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Expansions-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 115, p. 233",
+      "from": "an seiner Quaal dich weiden",
+      "to": "an seiner Qual dich weiden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB inserts a into the printed word Qual."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 237",
+      "from": "gänzlich venichtet wäre",
+      "to": "gänzlich vernichtet wäre",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops r from the printed word vernichtet."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary060.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 238 n.",
+      "from": "Maker ist das deutsche Macher und auch, wie dieses, in compositis häufig, z. B. watchmaker, showmaker, — Uhrmachet, Schuhmacher u. a. m. Our maker unser Macher, (französisch wäre es notre faiseurwiederzugeben), ist nun",
+      "to": "Maker ist das deutsche „Macher“ und auch, wie dieses, in compositis häufig, z. B. watchmaker, shoemaker, — Uhrmacher, Schuhmacher, u. a. m. Our maker „unser Macher“ (französisch wäre es „notre faiseur“ wiederzugeben) ist nun",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB loses the printed quotation marks and spaces and misreads shoemaker and Uhrmacher in the edition note."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary060.xhtml",
+      "page": "Band II, Kapitel VIII, § 116, p. 238 n.",
+      "from": "jenem maker aus nichs",
+      "to": "jenem maker aus nichts",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops t from the printed word nichts."
     }
   ]
 }

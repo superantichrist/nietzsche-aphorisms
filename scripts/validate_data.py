@@ -650,10 +650,38 @@ def main() -> None:
         "σκυτοτομου αρετην λεγεσθαι",
         "seine Stammverwandschaft mit dem",
         "und ihn seyn ließe, wie wenig",
+        "dieses Gottes και εξοχην",
+        "sufficit irae, Iuv. Sat. XIII",
+        "το οργιζεσθαι ηδυ",
+        "sie sogleich zer-trat",
+        "sie venichten möchte",
+        "alle Kampf-und Kriegslust",
+        "Stelle einer Erkärung vertritt",
+        "Expansions-und Kontraktionskraft",
+        "an seiner Quaal dich weiden",
+        "gänzlich venichtet wäre",
+        "watchmaker, showmaker",
+        "Uhrmachet, Schuhmacher",
+        "notre faiseurwiederzugeben",
+        "jenem maker aus nichs",
     )
-    if any(
-        quote["work"] == "pp" and token in quote["german"]
+    pp_transcription_texts = [
+        "\n".join(
+            [
+                quote["german"],
+                *(
+                    footnote["text"]
+                    for footnote in quote["footnotes"]
+                    if footnote.get("kind") == "source-edition"
+                ),
+            ]
+        )
         for quote in quotes
+        if quote["work"] == "pp"
+    ]
+    if any(
+        token in transcription_text
+        for transcription_text in pp_transcription_texts
         for token in pp_stale_ocr_tokens
     ):
         fail("known Parerga transcription OCR error remains in German corpus")
