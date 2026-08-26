@@ -1042,6 +1042,11 @@ def main() -> None:
         "Viva muchos anos!",
         "sufficit irae.möge Folgendes dienen",
         "das ξευγμα",
+        "Baumgruppen, weiche, von ferne gesehn",
+        "welche dem γνωθι σαυτον, schon beim ersten Schritte",
+        "ein Vorkehrendes es ist kein Nicht-ich",
+        "hier skitzirten Extremen",
+        "ουδε τιτων ανθρωπινων αξιον εστι μεγαλης σπουδης",
     )
     pp_transcription_texts = [
         "\n".join(

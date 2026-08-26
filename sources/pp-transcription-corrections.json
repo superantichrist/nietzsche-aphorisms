@@ -6383,6 +6383,51 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA626",
       "reason": "The supplied EPUB mistakes the clearly printed Greek zeta in ζευγμα for xi."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 342, p. 629",
+      "from": "mit gewissen Baumgruppen, weiche, von ferne gesehn",
+      "to": "mit gewissen Baumgruppen, welche, von ferne gesehn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA629",
+      "reason": "The supplied EPUB mistakes the clearly printed l in welche for i."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 343, p. 629",
+      "from": "dem γνωθι σαυτον, schon beim ersten Schritte",
+      "to": "dem γνῶθι σαυτον, schon beim ersten Schritte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA629",
+      "reason": "The supplied EPUB strips the circumflex clearly printed over omega in the Delphic maxim."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 343, p. 629",
+      "from": "ein Vorkehrendes es ist kein Nicht-ich, sondern Ich zu",
+      "to": "ein vorkehrendes „es ist kein Nicht-ich, sondern Ich“ zu",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA629",
+      "reason": "The EPUB loses the printed German quotation marks around the italic phrase and capitalizes the preceding adjective."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 345, p. 632",
+      "from": "Zwischen den hier skitzirten Extremen",
+      "to": "Zwischen den hier skizzirten Extremen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA632",
+      "reason": "The supplied EPUB renders the clearly printed second z in skizzirten as t."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 349, p. 636",
+      "from": "ουδε τιτων ανθρωπινων αξιον εστι μεγαλης σπουδης",
+      "to": "οὐδὲ τι τῶν ἀνθρωπίνων ἄξιον ἐστὶ μεγάλης σπουδῆς",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA636",
+      "reason": "The EPUB extractor also joins τι and των across adjacent inline elements, while the transcription strips the Greek breathings and accents printed in Plato's sentence."
     }
   ]
 }
