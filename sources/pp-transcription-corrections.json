@@ -5501,6 +5501,69 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
       "reason": "The supplied EPUB drops the clearly printed r in darzustellen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 211, p. 452",
+      "from": "in jene suceessiven Zustände",
+      "to": "in jene successiven Zustände",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB inserts a spurious e in the clearly printed successiven."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 212, p. 454",
+      "from": "Daher ridete, puellae, ridete!.",
+      "to": "Daher ridete, puellae, ridete!",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB adds a full stop after the clearly printed exclamation mark."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 212, p. 453",
+      "from": "Raphael und Rembrand",
+      "to": "Raphael und Rembrandt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB drops the clearly printed final t in Rembrandt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 213, p. 454",
+      "from": "Wachsfiguren keine ästhetischen Eindruck machen",
+      "to": "Wachsfiguren keinen ästhetischen Eindruck machen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB misreads the clearly printed accusative keinen as keine."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 215, p. 456",
+      "from": "Schön ist, ohne Zweifel, verwandt",
+      "to": "„Schön“ ist, ohne Zweifel, verwandt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the printed quotation marks around the word Schön under discussion."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 217, p. 459",
+      "from": "In Korn-und Gemüse-Feldern",
+      "to": "In Korn- und Gemüse-Feldern",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 220, p. 461",
+      "from": "ducontos versus, stans pode in uno",
+      "to": "ducentos versus, stans pede in uno",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB misreads two letters in the clearly printed Latin quotation."
     }
   ]
 }

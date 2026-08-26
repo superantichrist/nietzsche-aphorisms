@@ -371,6 +371,21 @@ def main() -> None:
             f"{len(pp_long_clause_splits)}"
         )
 
+    pp_broken_volume_citations = [
+        (current, following)
+        for current, following in zip(quotes, quotes[1:])
+        if current["work"] == following["work"] == "pp"
+        and current["paragraph"] == following["paragraph"]
+        and re.search(r"\b\d{1,2}[.]$", current["german"])
+        and re.match(r"(?:Band|Bande|Bänden)\b", following["german"])
+    ]
+    if pp_broken_volume_citations:
+        current, following = pp_broken_volume_citations[0]
+        fail(
+            "split German volume citation across quote boundary: "
+            f"{current['id']} -> {following['id']}"
+        )
+
     joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt", "Zarathutra")
     if any(
         token in quote["german"]
@@ -930,6 +945,13 @@ def main() -> None:
         "Bd. l. §. 54",
         "in Finanz-oder Handelsgeschäften",
         "Maler dazustellen",
+        "suceessiven Zustände",
+        "ridete, puellae, ridete!.",
+        "Raphael und Rembrand,",
+        "Wachsfiguren keine ästhetischen Eindruck",
+        "Schön ist, ohne Zweifel, verwandt",
+        "In Korn-und Gemüse-Feldern",
+        "ducontos versus, stans pode in uno",
     )
     pp_transcription_texts = [
         "\n".join(

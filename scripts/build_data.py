@@ -1131,7 +1131,7 @@ def protect_abbreviations(
 ORDINAL_CONTINUATIONS = (
     "Jahrhundert", "Jahrhunderts", "Jahrhunderte", "Jahrhunderten",
     "Aufl", "Auflage", "Auflagen",
-    "Kap", "Kapitel", "Buch", "Bücher",
+    "Kap", "Kapitel", "Band", "Bande", "Bänden", "Buch", "Bücher",
     "Januar", "Februar", "März", "April", "Mai", "Juni",
     "Juli", "August", "Sept", "September", "Oktober", "November", "Dezember",
 )
