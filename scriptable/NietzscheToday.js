@@ -6,12 +6,12 @@ const MANIFEST_URL = `${SITE_URL}data/manifest.json`;
 const WIDGET_DATA_URL = `${SITE_URL}data/widget.json`;
 const WORK_FILTER = "all"; // "all" | "nietzsche" | "schopenhauer" | "seneca" | 작품 키
 const REQUEST_TIMEOUT_SECONDS = 12;
-const VALID_WORKS = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv"];
+const VALID_WORKS = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv", "em"];
 const VALID_AUTHORS = ["nietzsche", "schopenhauer", "seneca"];
 const WORK_AUTHORS = {
   jgb: "nietzsche", gm: "nietzsche", ac: "nietzsche", gd: "nietzsche",
   fw: "nietzsche", za: "nietzsche", eh: "nietzsche", nf: "nietzsche",
-  pp: "schopenhauer", dbv: "seneca",
+  pp: "schopenhauer", dbv: "seneca", em: "seneca",
 };
 
 const fm = FileManager.local();
@@ -325,6 +325,7 @@ function sourceLabel(quote) {
     nf: "후기 유고 1885–1888",
     pp: "소품과 부록",
     dbv: "인생의 짧음에 대하여",
+    em: "루킬리우스에게 보내는 도덕 서한",
   };
   const part = quote.partTitleKo || (quote.part === "Vorrede" ? "서문" : quote.part);
   const unnumbered = ["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"];

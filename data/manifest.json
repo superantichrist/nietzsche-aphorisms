@@ -1,17 +1,17 @@
 {
   "schemaVersion": 4,
-  "corpusVersion": "904c34440bc32065",
-  "dataVersion": "14534d98a90aeea6",
-  "quoteCount": 24407,
-  "translatedCount": 24407,
-  "widgetQuoteCount": 24407,
+  "corpusVersion": "a0ed7bc5ae19a03e",
+  "dataVersion": "6c104fb551169513",
+  "quoteCount": 26783,
+  "translatedCount": 24510,
+  "widgetQuoteCount": 26783,
   "reviewedCount": 5749,
-  "pendingTranslationCount": 0,
+  "pendingTranslationCount": 2273,
   "widgetShards": {
     "schemaVersion": 1,
     "basePath": "data/widget-shards",
     "shardSize": 256,
-    "totalCount": 24407,
+    "totalCount": 26783,
     "workOrder": [
       "jgb",
       "gm",
@@ -22,7 +22,8 @@
       "eh",
       "nf",
       "pp",
-      "dbv"
+      "dbv",
+      "em"
     ],
     "works": {
       "jgb": {
@@ -74,6 +75,11 @@
         "offset": 24298,
         "count": 109,
         "shardCount": 1
+      },
+      "em": {
+        "offset": 24407,
+        "count": 2376,
+        "shardCount": 10
       }
     }
   },
@@ -107,9 +113,10 @@
       "nameDe": "Lucius Annaeus Seneca",
       "nameOriginal": "Lucius Annaeus Seneca",
       "nameKo": "루키우스 안나이우스 세네카",
-      "count": 109,
+      "count": 2485,
       "works": [
-        "dbv"
+        "dbv",
+        "em"
       ]
     }
   },
@@ -233,20 +240,32 @@
       "transcriptionStatus": "Perseus TEI 구조 검증 완료",
       "count": 109,
       "reviewedCount": 0
+    },
+    "em": {
+      "author": "seneca",
+      "titleDe": "Ad Lucilium Epistulae Morales",
+      "titleOriginal": "Ad Lucilium Epistulae Morales",
+      "titleKo": "루킬리우스에게 보내는 도덕 서한",
+      "originalLanguage": "la",
+      "edition": "Ad Lucilium Epistulae Morales, vols. I–III (1917–1925)",
+      "editor": "Richard M. Gummere",
+      "transcriptionStatus": "Perseus TEI 구조 검증 완료",
+      "count": 2376,
+      "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 24407,
-      "bytes": 35363422,
-      "sha256": "409abd10cea8dbd08c1e8f3bfc2b50d23379c93d354eaab81f0821244bade20b"
+      "count": 26783,
+      "bytes": 39744561,
+      "sha256": "8ad968b13a06ee8be7c9ad811931cc5db16a26a4ab33eb3562a12bc186f91a47"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 24407,
-      "bytes": 23096508,
-      "sha256": "4d5c495a505d3f61e44bbf59bab8ecaf7b1446f58604ffe544b76291c9ecfabf"
+      "count": 26783,
+      "bytes": 25828276,
+      "sha256": "48075f79582169e51eb05872cdf44b2968712819241d8924c2656333ee62d3c4"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -307,6 +326,12 @@
       "count": 109,
       "bytes": 269935,
       "sha256": "0af95ee00b5fec4f03091ff70db08a6aa5587156566e759c01ae8ad9fb6383fb"
+    },
+    "em": {
+      "path": "data/em.json",
+      "count": 2376,
+      "bytes": 4381142,
+      "sha256": "a250cba837703664c6ff693ec12068c0b88d6e4a67a6e2d351c02e177c6396be"
     }
   },
   "sources": "sources/sources.json"

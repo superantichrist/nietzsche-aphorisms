@@ -34,6 +34,6 @@ EPUB의 구조적 무결성은 좋다. 선언되지 않은 `&nbsp;` 828개를 �
 
 ## 세네카 코퍼스
 
-세네카의 라틴어 원문은 PerseusDL `canonical-latinLit` 저장소의 TEI XML을 커밋 `422896dde7f07509f151d18bb5fe351b77458748`로 고정해 사용한다. 현재 공개한 《De brevitate vitae》는 John William Basore 편집, *Moral Essays* 제2권(1932)의 라틴어 전사이며 20장·104개 번호 절을 모두 보존한다. 비평 장치의 이문 주석과 판면 표지는 본문에서 제외하고, 원문 독법과 문단 구조만 읽기 단위로 만든다.
+세네카의 라틴어 원문은 PerseusDL `canonical-latinLit` 저장소의 TEI XML을 커밋 `422896dde7f07509f151d18bb5fe351b77458748`로 고정해 사용한다. 《De brevitate vitae》는 John William Basore 편집, *Moral Essays* 제2권(1932)의 라틴어 전사이며 20장·104개 번호 절을 모두 보존한다. 《Ad Lucilium Epistulae Morales》는 Richard M. Gummere 편집 제1–3권(1917–1925)의 라틴어 전사이며 124편·17권·2,359개 원문 문단을 모두 보존한다. 비평 장치의 이문 주석과 판면 표지는 본문에서 제외하고, 원문 독법과 문단 구조만 읽기 단위로 만든다.
 
 같은 고정 스냅샷에서 《Ad Lucilium Epistulae Morales》 124편, 《De tranquillitate animi》, 《De vita beata》, 《De ira》, 《De clementia》, 《De providentia》도 확보해 SHA-256을 기록했다. 취득 URL·편집자·연도·개별 파일 해시는 [`sources.json`](sources.json)에 있으며 `npm run fetch:seneca`로 다시 내려받아 검증할 수 있다. Perseus 스냅샷은 CC BY-SA 4.0으로 배포된다.

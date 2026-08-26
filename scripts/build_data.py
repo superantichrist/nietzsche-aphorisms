@@ -103,6 +103,17 @@ WORKS = {
         "transcription_status": "Perseus TEI 구조 검증 완료",
         "original_language": "la",
     },
+    "em": {
+        "author": "seneca",
+        "title_de": "Ad Lucilium Epistulae Morales",
+        "title_ko": "루킬리우스에게 보내는 도덕 서한",
+        "title_original": "Ad Lucilium Epistulae Morales",
+        "source_file": "sources/raw/seneca/em-perseus.xml",
+        "edition": "Ad Lucilium Epistulae Morales, vols. I–III (1917–1925)",
+        "editor": "Richard M. Gummere",
+        "transcription_status": "Perseus TEI 구조 검증 완료",
+        "original_language": "la",
+    },
 }
 
 WORK_ORDER = tuple(WORKS)

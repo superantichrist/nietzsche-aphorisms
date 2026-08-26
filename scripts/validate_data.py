@@ -15,7 +15,7 @@ from translation_sources import load_translations
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv")
+WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv", "em")
 SENECA_WORKS = {"dbv", "em", "dta", "dvb", "di", "dc", "dp"}
 LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 ORDINAL_CONTINUATION_RE = re.compile(
@@ -165,6 +165,12 @@ def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
     dbv_sections = {section for _, section in sections["dbv"]}
     if dbv_sections != numbered(1, 20):
         fail("De brevitate vitae chapter coverage mismatch")
+
+    em_letters = {section for _, section in sections["em"]}
+    if em_letters != numbered(1, 124):
+        fail("Epistulae Morales letter coverage mismatch")
+    if len({part for part, _ in sections["em"]}) != 17:
+        fail("Epistulae Morales book coverage mismatch")
 
 
 def main() -> None:
