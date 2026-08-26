@@ -500,6 +500,16 @@ def main() -> None:
         "Versständlichkeit eines Vorganges",
         "mit dem Pantheimus",
         "es doch ganz, anders gewohnt",
+        "bloß potantia vorhanden seyn",
+        "das Oxyen der Basis",
+        "Wirkung znrückzuführen",
+        "eigenschafts-und formlosen Materie",
+        "Erkennntiß des Wesens der Dinge",
+        "Kraftäußeruug",
+        "Ellen langes, gespanntes Strick",
+        "chromatolgische Theil",
+        "Quanitativen",
+        "Pouil1et",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]

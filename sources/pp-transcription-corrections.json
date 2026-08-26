@@ -1838,6 +1838,105 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
       "reason": "The supplied EPUB inserts a spurious comma between ganz and anders; the fixed German scan has no punctuation there."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 74, p. 109",
+      "from": "nicht actu, sondern bloß potantia vorhanden seyn",
+      "to": "nicht actu, sondern bloß potentia vorhanden seyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes a for e in the Latin potentia; the fixed German scan preserves the term."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 74, p. 109",
+      "from": "das Oxyen der Basis eines Salzes",
+      "to": "das Oxygen der Basis eines Salzes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the g in Oxygen; the fixed German scan preserves the chemical term."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 75, p. 110",
+      "from": "auf mechanische Wirkung znrückzuführen vermögt",
+      "to": "auf mechanische Wirkung zurückzuführen vermögt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes n for u in zurückzuführen; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 75, p. 112",
+      "from": "eigenschafts-und formlosen Materie",
+      "to": "eigenschafts- und formlosen Materie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed word space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 75, p. 113",
+      "from": "zur objektiven Erkennntiß des Wesens der Dinge",
+      "to": "zur objektiven Erkenntniß des Wesens der Dinge",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB duplicates n in Erkenntniß; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 75, p. 113",
+      "from": "keine Kraftäußeruug ohne irgend eine materielle Veränderung",
+      "to": "keine Kraftäußerung ohne irgend eine materielle Veränderung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes u for n in Kraftäußerung; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 76, p. 114",
+      "from": "ein etwan 200 Ellen langes, gespanntes Strick",
+      "to": "ein etwan 200 Ellen langer, gespannter Strick",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB misreads both masculine adjective endings; the fixed German scan clearly reads langer, gespannter Strick."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 77, p. 115",
+      "from": "der ganze chromatolgische Theil der Optik",
+      "to": "der ganze chromatologische Theil der Optik",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops o in chromatologische; the fixed German scan preserves the technical adjective."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 78, p. 115",
+      "from": "als Verschiedenheit des Quanitativen",
+      "to": "als Verschiedenheit des Quantitativen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops t in Quantitativen; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 78, p. 116",
+      "from": "(Pouil1et I, p. 23.)",
+      "to": "(Pouillet I, p. 23.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes the digit 1 for l in Pouillet; the fixed German scan preserves the physicist's name."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80",
+      "from": "(Pouil1et, Vol. 2, p. 282)",
+      "to": "(Pouillet, Vol. 2, p. 282)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB again substitutes the digit 1 for l in Pouillet; the fixed German scan preserves the physicist's name."
     }
   ]
 }
