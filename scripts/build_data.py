@@ -1416,6 +1416,29 @@ def quote_units_for_work(
                 : speaker_boundary.start()
             ].rstrip()
             unit = normalize_space(f"{speaker} {unit}")
+        augustine_citation_stem = next(
+            (
+                stem
+                for stem in ("Z. B. de civit.", "(de civit.")
+                if (
+                    work == "pp"
+                    and part == "II-15"
+                    and str(section) == "178"
+                    and citation_rejoined
+                    and citation_rejoined[-1].endswith(stem)
+                    and unit.startswith("Dei, lib.")
+                )
+            ),
+            None,
+        )
+        if augustine_citation_stem:
+            # Do not strand half of Augustine's De civitate Dei citation at
+            # a packing boundary.  Carry the stem into the continuation so
+            # both independently displayed records remain readable.
+            citation_rejoined[-1] = citation_rejoined[-1][
+                : -len(augustine_citation_stem)
+            ].rstrip()
+            unit = normalize_space(f"{augustine_citation_stem} {unit}")
         sansara_boundary = (
             "— Zur Geduld im Leben"
             if (
@@ -1431,6 +1454,45 @@ def quote_units_for_work(
             # introduces it—in one unit.  The source EPUB's page-sized prose
             # otherwise leaves an opening quote at the end of one record.
             carry_at = citation_rejoined[-1].rfind(sansara_boundary)
+            carried = citation_rejoined[-1][carry_at:].strip()
+            citation_rejoined[-1] = citation_rejoined[-1][:carry_at].rstrip()
+            unit = normalize_space(f"{carried} {unit}")
+        jung_stilling_boundary = (
+            "Aber wirklich empörend ist es"
+            if (
+                work == "pp"
+                and part == "II-15"
+                and str(section) == "178"
+                and citation_rejoined
+                and "Aber wirklich empörend ist es" in citation_rejoined[-1]
+                and unit.startswith("S. 15, folgendes Gleichniß")
+            )
+            else None
+        )
+        if jung_stilling_boundary:
+            # The pack limit falls inside the Jung-Stilling citation and its
+            # following sentence.  Carry the complete second sentence into
+            # the continuation instead of leaving a dangling scene number.
+            carry_at = citation_rejoined[-1].rfind(jung_stilling_boundary)
+            carried = citation_rejoined[-1][carry_at:].strip()
+            citation_rejoined[-1] = citation_rejoined[-1][:carry_at].rstrip()
+            unit = normalize_space(f"{carried} {unit}")
+        animal_notice_boundary = (
+            "Eine Bekanntmachung des"
+            if (
+                work == "pp"
+                and part == "II-15"
+                and str(section) == "178"
+                and citation_rejoined
+                and "Eine Bekanntmachung des" in citation_rejoined[-1]
+                and unit.startswith("Novemb. 1852,")
+            )
+            else None
+        )
+        if animal_notice_boundary:
+            # Keep the Munich animal-protection notice with its complete date
+            # and argument instead of ending one record at "27.".
+            carry_at = citation_rejoined[-1].rfind(animal_notice_boundary)
             carried = citation_rejoined[-1][carry_at:].strip()
             citation_rejoined[-1] = citation_rejoined[-1][:carry_at].rstrip()
             unit = normalize_space(f"{carried} {unit}")

@@ -4943,6 +4943,87 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
       "reason": "The supplied EPUB inserts a spurious e in the clearly printed Succession."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 389",
+      "from": "Verleumdung des eignen Willens",
+      "to": "Verleugnung des eignen Willens",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB corrupts the clearly printed Verleugnung into Verleumdung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 389",
+      "from": "Die Absurditäten im Dogma sind eben das Stämpel",
+      "to": "Die Absurditäten im Dogma sind eben der Stempel",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads both the article and vowel in the clearly printed der Stempel."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 390",
+      "from": "als ein systemisches Ganzes",
+      "to": "als ein systematisches Ganzes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed at in systematisches."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 393",
+      "from": "durch Zersetzung, venichten könne",
+      "to": "durch Zersetzung, vernichten könne",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed r in vernichten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 394",
+      "from": "omnia quaecunque vouit fecit",
+      "to": "omnia quaecunque voluit fecit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed l in the Latin voluit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 394",
+      "from": "erit ergo decendus improvidus",
+      "to": "erit ergo dicendus improvidus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the clearly printed Latin dicendus as decendus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 396",
+      "from": "das Leben Shakva Muni’s",
+      "to": "das Leben Shakya Muni’s",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed y in Shakya as v."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 398",
+      "from": "Sprüche Salomonis 12, 1O",
+      "to": "Sprüche Salomonis 12, 10",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed zero in the citation as capital O."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 399",
+      "from": "Bd. 2. Sc. l.",
+      "to": "Bd. 2. Sc. 1.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed scene number 1 as lowercase l."
     }
   ]
 }

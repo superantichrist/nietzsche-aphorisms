@@ -853,6 +853,15 @@ def main() -> None:
         "dich versichen",
         "A man convinced against his will",
         "Suceession",
+        "Verleumdung des eignen Willens",
+        "Die Absurditäten im Dogma sind eben das Stämpel",
+        "systemisches Ganzes",
+        "venichten könne",
+        "quaecunque vouit",
+        "decendus improvidus",
+        "Shakva Muni",
+        "12, 1O",
+        "Sc. l.",
     )
     pp_transcription_texts = [
         "\n".join(
