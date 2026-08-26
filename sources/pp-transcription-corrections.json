@@ -5564,6 +5564,78 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
       "reason": "The supplied EPUB misreads two letters in the clearly printed Latin quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 224, p. 465",
+      "from": "lebhaftesten Licht-und Farben-Eindrücke",
+      "to": "lebhaftesten Licht- und Farben-Eindrücke",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 224, p. 466",
+      "from": "gedrängte, geist-und gedankenvolle Poesie",
+      "to": "gedrängte, geist- und gedankenvolle Poesie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 224, p. 467",
+      "from": "sofern die vox humana welche, musikalisch genommen",
+      "to": "sofern die vox humana, welche, musikalisch genommen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed comma after vox humana."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 224, p. 467",
+      "from": "Tenor-oder Baßstimme",
+      "to": "Tenor- oder Baßstimme",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 224, p. 467",
+      "from": "Baryton-oder Baß-Arie",
+      "to": "Baryton- oder Baß-Arie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 224, p. 467",
+      "from": "das allein Natur-und Kunstgemäße",
+      "to": "das allein Natur- und Kunstgemäße",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB omits the clearly printed space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 224, p. 468",
+      "from": "im Teatro della Balle",
+      "to": "im Teatro della Valle",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB mistakes the clearly printed initial V in the Roman theatre name for B."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 225, p. 469",
+      "from": "zusammengeflickte Harlekinsjackes der Potpourri",
+      "to": "zusammengeflickte Harlekinsjacke der Potpourri",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891415.pdf",
+      "reason": "The supplied EPUB adds a spurious final s to the clearly printed Harlekinsjacke."
     }
   ]
 }

@@ -952,6 +952,14 @@ def main() -> None:
         "Schön ist, ohne Zweifel, verwandt",
         "In Korn-und Gemüse-Feldern",
         "ducontos versus, stans pode in uno",
+        "lebhaftesten Licht-und Farben-Eindrücke",
+        "gedrängte, geist-und gedankenvolle Poesie",
+        "vox humana welche, musikalisch genommen",
+        "Tenor-oder Baßstimme",
+        "Baryton-oder Baß-Arie",
+        "das allein Natur-und Kunstgemäße",
+        "Teatro della Balle",
+        "Harlekinsjackes der Potpourri",
     )
     pp_transcription_texts = [
         "\n".join(
