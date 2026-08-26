@@ -5024,6 +5024,114 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
       "reason": "The supplied EPUB misreads the printed scene number 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 400",
+      "from": "Als ich in Göttingen studierte",
+      "to": "Als ich in Göttingen studirte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB modernizes the historical spelling studirte printed in the 1878 edition."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 178, p. 402",
+      "from": "durchsaus das Selbe",
+      "to": "durchaus das Selbe",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious s in the clearly printed durchaus."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 407",
+      "from": "Psalm 99, l. In der Septuaginta",
+      "to": "Psalm 99, 1. In der Septuaginta",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed verse number 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 406",
+      "from": "der Mackabäer, Kap. l und 2",
+      "to": "der Mackabäer, Kap. 1 und 2",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed chapter number 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 409",
+      "from": "ο ιροχος της γενεσεως",
+      "to": "ὁ τροχὸς τῆς γενέσεως",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the initial tau and all printed breathings and accents from the Greek quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 409",
+      "from": "Abel Nemüsat’s Uebersetzung des Foe Koue Ki",
+      "to": "Abel Rémusat’s Uebersetzung des Foe-Kue-Ki",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB corrupts the printed name Rémusat and drops both hyphens from Foe-Kue-Ki."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 409",
+      "from": "la roue est l’embelême de la transmigration des âmes, qui est comme un cercle sans commencement ni fin. S. 179 la roue est un embléme familier aux Bouddhistes, il exprime le passage successif de l’âme dans le cercle des divers modes d’exestence",
+      "to": "la roue est l’emblême de la transmigration des âmes, qui est comme un cercle sans commencement ni fin. S. 179 la roue est un emblême familier aux Bouddhistes, il exprime le passage successif de l’âme dans le cercle des divers modes d’existence",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB introduces three spelling errors into the two clearly printed French quotations."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 409",
+      "from": "qui ne connâit pas la raison",
+      "to": "qui ne connaît pas la raison",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB places the circumflex on the wrong vowel in the clearly printed French connaît."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 409",
+      "from": "et ayant triomphé de toutes les détruisant, etc.",
+      "to": "et ayant triomphé de toutes les voies par lesquelles on entre dans le monde, en les détruisant, etc.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB omits an entire printed clause from the Burnouf quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 410",
+      "from": "Pradbod’h Chandrodaya",
+      "to": "Prabod’h Chandrodaya",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious d in the clearly printed title Prabod’h Chandrodaya."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 410",
+      "from": "the successive destructions et reproductions of the world",
+      "to": "the successive destructions and reproductions of the world",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB substitutes French et for the clearly printed English and."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 180, p. 410",
+      "from": "von Aegytischen Priestern",
+      "to": "von Aegyptischen Priestern",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed p in Aegyptischen."
     }
   ]
 }

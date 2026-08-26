@@ -1496,6 +1496,30 @@ def quote_units_for_work(
             carried = citation_rejoined[-1][carry_at:].strip()
             citation_rejoined[-1] = citation_rejoined[-1][:carry_at].rstrip()
             unit = normalize_space(f"{carried} {unit}")
+        cherubim_citation = (
+            "Buch 2, c. 6, 2 und c. 22, 11; Buch 4, c. 19, 15: "
+            "ο καθημενος επι των Χερουβιμ.)"
+        )
+        if (
+            work == "pp"
+            and part == "II-15"
+            and str(section) == "180"
+            and citation_rejoined
+            and citation_rejoined[-1].endswith(
+                "(Psalm 99, 1. In der Septuaginta, Kön."
+            )
+            and unit.startswith(cherubim_citation)
+        ):
+            # Keep the cross-page Septuagint citation with the sentence that
+            # introduces it; a displayed quote must not end at the dangling
+            # abbreviation "Kön." while the next starts at "Buch 2".
+            citation_rejoined[-1] = normalize_space(
+                f"{citation_rejoined[-1]} {cherubim_citation}"
+            )
+            remainder = normalize_space(unit[len(cherubim_citation) :])
+            if remainder:
+                citation_rejoined.append(remainder)
+            continue
         world_citation = "II, p. 226 fg.; 3. Aufl. II, 251 fg.)"
         if (
             citation_rejoined

@@ -862,6 +862,21 @@ def main() -> None:
         "Shakva Muni",
         "12, 1O",
         "Sc. l.",
+        "Göttingen studierte",
+        "durchsaus das Selbe",
+        "Psalm 99, l. In der Septuaginta",
+        "der Mackabäer, Kap. l und 2",
+        "ο ιροχος της γενεσεως",
+        "Abel Nemüsat",
+        "Foe Koue Ki",
+        "l’embelême",
+        "un embléme familier",
+        "d’exestence",
+        "qui ne connâit",
+        "triomphé de toutes les détruisant",
+        "Pradbod’h Chandrodaya",
+        "destructions et reproductions",
+        "von Aegytischen Priestern",
     )
     pp_transcription_texts = [
         "\n".join(
