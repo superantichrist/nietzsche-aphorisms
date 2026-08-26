@@ -1345,9 +1345,25 @@ def quote_units_for_work(
             )
         )
     )
+    pp_preserve_long_sentence = (
+        work == "pp"
+        and part == "II-22"
+        and str(section) == "278"
+        and paragraph_index == 0
+    )
     units = sentence_units(
         paragraph,
-        max_chars=(780 if pp_reflow else 720 if pp_untranslated_chapter else 640 if pp_dialectic else 650),
+        max_chars=(
+            1500
+            if pp_preserve_long_sentence
+            else 780
+            if pp_reflow
+            else 720
+            if pp_untranslated_chapter
+            else 640
+            if pp_dialectic
+            else 650
+        ),
         extra_abbreviations=PP_CITATION_ABBREVIATIONS if work == "pp" else ("St.", "V."),
         protect_ordinals=work in {"za", "eh", "nf", "pp"},
         prefer_strong_boundaries=(
@@ -1369,7 +1385,7 @@ def quote_units_for_work(
     )
     packed: list[str] = []
     current = ""
-    pack_max_chars = 780 if pp_reflow else 500
+    pack_max_chars = 1500 if pp_preserve_long_sentence else 780 if pp_reflow else 500
     pp_attach_leading_parentheticals = pp_reflow and (
         int(part[3:]) > 3
         or (part == "II-03" and re.fullmatch(r"\d+", str(section)) is not None and int(str(section)) >= 51)

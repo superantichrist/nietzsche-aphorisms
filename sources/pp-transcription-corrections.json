@@ -6104,6 +6104,33 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA610",
       "reason": "The supplied EPUB drops the clearly printed t in Quantität."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary049.xhtml",
+      "page": "Band II, Kapitel XXII, § 268, p. 530",
+      "from": "Diese können über Vieles Auskunft ertheilten",
+      "to": "Diese können über Vieles Auskunft ertheilen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA530",
+      "reason": "The supplied EPUB adds a spurious t to the clearly printed infinitive ertheilen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary049.xhtml",
+      "page": "Band II, Kapitel XXII, § 273, p. 533",
+      "from": "unusquisque mavult credere",
+      "to": "unus quisque mavult credere",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA533",
+      "reason": "The supplied EPUB loses the clearly printed word space in Seneca's Latin quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 281, p. 540",
+      "from": "nachgeahmtem d. h. halb gestohlenen Titel",
+      "to": "nachgeahmten, d. h. halb gestohlenen Titel",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA540",
+      "reason": "The supplied EPUB misreads the clearly printed n as m and drops the following comma."
     }
   ]
 }

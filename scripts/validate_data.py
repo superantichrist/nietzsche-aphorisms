@@ -216,7 +216,12 @@ def main() -> None:
         # assessment become misleading if detached, so retain its modest
         # 838-character overrun as a named exception.
         max_german_chars = (
-            850
+            1400
+            if quote["work"] == "pp"
+            and quote["part"] == "II-22"
+            and quote["section"] == "278"
+            and quote["paragraph"] == 0
+            else 850
             if quote["id"] == "pp-180-cabdd951e06e"
             else 820
             if quote["work"] == "pp"
@@ -549,6 +554,9 @@ def main() -> None:
         "l) daß Keiner vor seinem 20. Jahre",
         "never to he read.Pope",
         "Vätern hast,Erwirb",
+        "Auskunft ertheilten",
+        "unusquisque mavult credere",
+        "nachgeahmtem d. h. halb",
         "Χειλεα μεν τ εδιην",
         "de11a Causa",
         "nicht andersist es mir",
@@ -1053,6 +1061,21 @@ def main() -> None:
         for quote in quotes
     ):
         fail("Parerga § 266 sentence split at a false EPUB paragraph boundary")
+
+    pp_278_opening = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-22"
+        and quote["section"] == "278"
+        and quote["paragraph"] == 0
+    ]
+    if (
+        len(pp_278_opening) != 1
+        or not pp_278_opening[0]["german"].startswith("Wenn man wohl erwägt")
+        or not pp_278_opening[0]["german"].endswith("anzunehmen pflegt.")
+    ):
+        fail("Parerga § 278 conditional sentence split into dependent fragments")
 
     if any(
         quote["work"] == "pp"
