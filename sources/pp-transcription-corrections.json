@@ -4745,6 +4745,60 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
       "reason": "The supplied EPUB drops the printed word space after the hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 358",
+      "from": "mysthisch-allegorischer",
+      "to": "mythisch-allegorischer",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious s in the clearly printed mythisch-allegorischer."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 363",
+      "from": "Beschaffenheit des grossen Haufens",
+      "to": "Beschaffenheit des großen Haufens",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB normalizes the clearly printed ß in großen to ss."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 364",
+      "from": "Ader seitdem Das aufgehört hat",
+      "to": "Aber seitdem Das aufgehört hat",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed b in Aber as d."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 364",
+      "from": "daß in jemen sie einander sämmtlich widerstreiten",
+      "to": "daß in jenem sie einander sämmtlich widerstreiten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed n in jenem."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 365",
+      "from": "Lenkungs-, Bändigungs-und Besänftigungsmittel",
+      "to": "Lenkungs-, Bändigungs- und Besänftigungsmittel",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed word space after Bändigungs-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 365",
+      "from": "ein execellentes Zähmungs-und Abrichtungsmittel",
+      "to": "ein excellentes Zähmungs- und Abrichtungsmittel",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious e in excellentes and drops the printed word space after Zähmungs-."
     }
   ]
 }

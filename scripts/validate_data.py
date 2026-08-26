@@ -827,6 +827,13 @@ def main() -> None:
         "απειργομες φευδεσι",
         "Gemüthe führen Doch, guter Freund",
         "Gewalt-und Schandthaten",
+        "mysthisch-allegorischer",
+        "grossen Haufens",
+        "Ader seitdem",
+        "in jemen sie",
+        "Bändigungs-und Besänftigungsmittel",
+        "execellentes",
+        "Zähmungs-und Abrichtungsmittel",
     )
     pp_transcription_texts = [
         "\n".join(
@@ -884,6 +891,52 @@ def main() -> None:
         or "Laren und Penaten" not in pp_apuleius[0]["german"]
     ):
         fail("Parerga § 175 Apuleius citation detached from its printed sentence")
+
+    pp_century = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-15"
+        and quote["section"] == "175"
+        and "des 16. und 17. Jahrhunderts in die Hand nehme" in quote["german"]
+    ]
+    if (
+        len(pp_century) != 1
+        or any(
+            quote["work"] == "pp"
+            and quote["part"] == "II-15"
+            and quote["section"] == "175"
+            and quote["german"].startswith("Jahrhunderts in die Hand nehme")
+            for quote in quotes
+        )
+    ):
+        fail("Parerga § 175 century phrase split at a print page turn")
+
+    pp_demopheles_interruption = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-15"
+        and quote["section"] == "175"
+        and "Da findest du sie aber nicht!" in quote["german"]
+    ]
+    if (
+        len(pp_demopheles_interruption) != 1
+        or not pp_demopheles_interruption[0]["german"].startswith("Demopheles.")
+        or "Philalethes." in pp_demopheles_interruption[0]["german"]
+    ):
+        fail("Parerga § 175 speaker change flattened into one quote")
+    if any(
+        re.search(
+            r"(?:Philalethes|Demopheles)[.]",
+            re.sub(r"^(?:Philalethes|Demopheles)[.]\s*", "", quote["german"]),
+        )
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-15"
+        and quote["section"] == "175"
+    ):
+        fail("Parerga § 175 quote contains more than one dialogue turn")
 
     pp_hamlet = [
         quote

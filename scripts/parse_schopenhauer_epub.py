@@ -651,6 +651,66 @@ def parse_parerga() -> list[dict]:
         religion_head
     ]
 
+    # The same EPUB turns the p. 361/362 page break into a paragraph break in
+    # the middle of "des 16. und 17. Jahrhunderts".  The print has one
+    # continuous sentence, so restore it before ordinal protection and quote
+    # segmentation run.
+    century_pairs = [
+        index
+        for index, (head, tail) in enumerate(
+            zip(
+                religion_section["paragraphs"],
+                religion_section["paragraphs"][1:],
+            )
+        )
+        if head["text"].endswith("des 16. und 17.")
+        and tail["text"].startswith("Jahrhunderts in die Hand nehme")
+    ]
+    if len(century_pairs) != 1:
+        raise ValueError(
+            "Unexpected chapter XV § 175 century boundary count: "
+            f"{len(century_pairs)}"
+        )
+    century_index = century_pairs[0]
+    century_head = religion_section["paragraphs"][century_index]
+    century_tail = religion_section["paragraphs"][century_index + 1]
+    century_head["text"] = normalize_space(
+        f"{century_head['text']} {century_tail['text']}"
+    )
+    century_head["source_notes"].update(century_tail["source_notes"])
+    religion_section["paragraphs"][century_index : century_index + 2] = [
+        century_head
+    ]
+
+    # The XHTML flattens two printed changes of speaker into their preceding
+    # paragraph (at pp. 364 and 365/366).  Split every internal dialogue cue,
+    # while leaving a cue already at the start of a paragraph untouched.
+    dialogue_cue = re.compile(r"(?=(?:Demopheles|Philalethes)[.]\s)")
+    dialogue_paragraphs: list[dict] = []
+    dialogue_splits = 0
+    for paragraph in religion_section["paragraphs"]:
+        pieces = [
+            normalize_space(piece)
+            for piece in dialogue_cue.split(paragraph["text"])
+            if normalize_space(piece)
+        ]
+        if len(pieces) == 1:
+            dialogue_paragraphs.append(paragraph)
+            continue
+        if paragraph["source_notes"]:
+            raise ValueError("Unexpected source note on chapter XV § 175 speaker boundary")
+        dialogue_splits += len(pieces) - 1
+        dialogue_paragraphs.extend(
+            {"text": piece, "source_notes": {}}
+            for piece in pieces
+        )
+    if dialogue_splits != 2:
+        raise ValueError(
+            "Unexpected chapter XV § 175 internal dialogue cue count: "
+            f"{dialogue_splits}"
+        )
+    religion_section["paragraphs"] = dialogue_paragraphs
+
     numbered = {
         section["section"]
         for section in sections
