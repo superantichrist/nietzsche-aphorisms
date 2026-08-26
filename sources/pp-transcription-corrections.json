@@ -6581,6 +6581,60 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA665",
       "reason": "The supplied EPUB mistakes the clearly printed Fraktur M in Mucken for R."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary056.xhtml",
+      "page": "Band II, Kapitel XXIX, § 390, p. 675",
+      "from": "sein ganzes Wesen, im Allgemeinem auf Ein Mal erfassen",
+      "to": "sein ganzes Wesen, im Allgemeinen auf Ein Mal erfassen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA675",
+      "reason": "The supplied EPUB adds a final m to the clearly printed dative form Allgemeinen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary056.xhtml",
+      "page": "Band II, Kapitel XXIX, § 390, p. 675",
+      "from": "Bemerkung des Labruyere",
+      "to": "Bemerkung des Labruyère",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA675",
+      "reason": "The EPUB transcription drops the grave accent printed in Labruyère."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary056.xhtml",
+      "page": "Band II, Kapitel XXIX, § 390, pp. 675–676",
+      "from": "die Alltagköpfe haben",
+      "to": "die Alltagsköpfe haben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA676",
+      "reason": "The supplied EPUB drops the clearly printed linking s in the word split across the page boundary."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary057.xhtml",
+      "page": "Band II, Kapitel XXX, § 391, p. 679",
+      "from": "von dem Strumpfsinn und der Gedankenlosigkeit",
+      "to": "von dem Stumpfsinn und der Gedankenlosigkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA679",
+      "reason": "The supplied EPUB inserts r into the clearly printed Stumpfsinn."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary058.xhtml",
+      "page": "Band II, Kapitel XXXI, § 392, p. 683",
+      "from": "S. 407 (3. Aufl. 463) des zweiten Bandes",
+      "to": "S. 407 (3. Aufl. 464) des zweiten Bandes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA683",
+      "reason": "The supplied EPUB misreads the final printed digit in the third-edition page reference as 3 rather than 4."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary058.xhtml",
+      "page": "Band II, Kapitel XXXI, § 398, p. 685",
+      "from": "den Mechanismns der Maschinerien",
+      "to": "den Mechanismus der Maschinerien",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA685",
+      "reason": "The supplied EPUB mistakes the second u in the clearly printed Mechanismus for n."
     }
   ]
 }

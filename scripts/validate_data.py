@@ -1064,6 +1064,12 @@ def main() -> None:
         "Gesichtsszügen im voraus",
         "Grund-und Hauptgedanke der Natur",
         "Flausen, Grillen, Rücken, Einbildungen",
+        "im Allgemeinem auf Ein Mal",
+        "Bemerkung des Labruyere",
+        "die Alltagköpfe haben",
+        "von dem Strumpfsinn und der Gedankenlosigkeit",
+        "3. Aufl. 463) des zweiten Bandes",
+        "den Mechanismns der Maschinerien",
     )
     pp_transcription_texts = [
         "\n".join(
