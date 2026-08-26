@@ -6014,6 +6014,33 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=8g2CD8RLADQC&pg=PA104",
       "reason": "The supplied EPUB drops the clearly printed Greek breathings and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary048.xhtml",
+      "page": "Band II, Kapitel XXI, § 250, p. 513",
+      "from": "seinen Zeit-und Altersgenossen",
+      "to": "seinen Zeit- und Altersgenossen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA513",
+      "reason": "The supplied EPUB drops the clearly printed word space after the suspended compound Zeit-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary048.xhtml",
+      "page": "Band II, Kapitel XXI, § 256, p. 517",
+      "from": "vielleicht aus Kondescendenz— eine schlechte Sache",
+      "to": "vielleicht aus Kondescendenz — eine schlechte Sache",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA517",
+      "reason": "The supplied EPUB loses the word space at an inline-emphasis boundary before the printed dash."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary048.xhtml",
+      "page": "Band II, Kapitel XXI, § 256, p. 517",
+      "from": "beschließt er, S 44, mit:",
+      "to": "beschließt er, S. 44, mit:",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA517",
+      "reason": "The supplied EPUB drops the clearly printed abbreviation point after S."
     }
   ]
 }
