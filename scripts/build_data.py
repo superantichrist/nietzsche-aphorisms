@@ -1433,6 +1433,47 @@ def quote_units_for_work(
                 : speaker_boundary.start()
             ].rstrip()
             unit = normalize_space(f"{speaker} {unit}")
+        conversation_followup = "Was aber kann elender seyn,"
+        if (
+            work == "pp"
+            and part == "II-24"
+            and str(section) == "303"
+            and citation_rejoined
+            and citation_rejoined[-1].endswith(
+                "Stoff zur Konversation daran zu haben:"
+            )
+            and unit.startswith("zu diesem Zweck dienen denn")
+            and conversation_followup in unit
+        ):
+            # The pack limit falls directly after the colon that introduces
+            # the fashionable reading material.  Complete that thought with
+            # its examples; let the independently phrased question begin the
+            # following reading unit.
+            followup_at = unit.index(conversation_followup)
+            examples = unit[:followup_at].strip()
+            citation_rejoined[-1] = normalize_space(
+                f"{citation_rejoined[-1]} {examples}"
+            )
+            unit = unit[followup_at:].strip()
+        grammar_comparison = "Welch’ ein Abstand ist doch zwischen Denen,"
+        if (
+            work == "pp"
+            and part == "II-23"
+            and str(section) == "Anhang-verwandter-Stellen"
+            and citation_rejoined
+            and grammar_comparison in citation_rejoined[-1]
+            and citation_rejoined[-1].endswith("—")
+            and unit.startswith("und jenen Elenden,")
+        ):
+            # Start the long comparison at the second reading unit so the
+            # first one closes after its complete list of language abuses and
+            # the continuation no longer opens with a stranded conjunction.
+            comparison_at = citation_rejoined[-1].rfind(grammar_comparison)
+            comparison = citation_rejoined[-1][comparison_at:].strip()
+            citation_rejoined[-1] = citation_rejoined[-1][
+                :comparison_at
+            ].rstrip()
+            unit = normalize_space(f"{comparison} {unit}")
         augustine_citation_stem = next(
             (
                 stem

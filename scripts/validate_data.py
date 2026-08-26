@@ -1030,6 +1030,7 @@ def main() -> None:
         "Jedem drückt er sein Stämpel auf",
         "Ornamente, Gefässe, Möbeln",
         "Boisseree’sche jetzt in München",
+        "ausszumerzen",
     )
     pp_transcription_texts = [
         "\n".join(
@@ -1086,6 +1087,43 @@ def main() -> None:
         for quote in pp_style_citations
     ):
         fail("Parerga § 291 Goethe source detached from its quotation")
+
+    pp_language_appendix = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-23"
+        and quote["section"] == "Anhang-verwandter-Stellen"
+    ]
+    if any(
+        quote["german"].startswith("und jenen Elenden,")
+        or quote["german"].endswith("Welch’ ein Abstand ist doch zwischen Denen, —")
+        for quote in pp_language_appendix
+    ) or not any(
+        quote["german"].startswith("Welch’ ein Abstand ist doch zwischen Denen,")
+        and "und jenen Elenden" in quote["german"]
+        for quote in pp_language_appendix
+    ):
+        fail("Parerga language-grammar comparison split before its second term")
+
+    pp_reading_advice = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-24"
+        and quote["section"] == "303"
+    ]
+    if any(
+        quote["german"].endswith("Stoff zur Konversation daran zu haben:")
+        or quote["german"].startswith("zu diesem Zweck dienen denn")
+        for quote in pp_reading_advice
+    ) or not any(
+        "zu diesem Zweck dienen denn schlechte Romane"
+        in quote["german"]
+        and "Eugen Sue u. s. w." in quote["german"]
+        for quote in pp_reading_advice
+    ):
+        fail("Parerga § 303 conversational-reading example split at its colon")
 
     if any(
         quote["work"] == "pp"

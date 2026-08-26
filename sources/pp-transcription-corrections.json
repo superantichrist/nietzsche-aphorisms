@@ -6275,6 +6275,15 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA581",
       "reason": "The supplied EPUB misreads the clearly printed delta in διέχουσι and strips all Greek breathings and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, Anhang verwandter Stellen, p. 586",
+      "from": "um hie und da eine Silbe ausszumerzen",
+      "to": "um hie und da eine Silbe auszumerzen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA586",
+      "reason": "The supplied EPUB inserts a second s before the clearly printed auszumerzen."
     }
   ]
 }
