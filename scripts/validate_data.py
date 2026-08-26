@@ -171,8 +171,8 @@ def main() -> None:
         "paragraph", "paragraphCount", "sentence", "german", "korean", "footnotes",
     }
 
-    if len(quotes) < 25_000:
-        fail(f"expected at least 25,000 quote units, found {len(quotes)}")
+    if len(quotes) < 24_000:
+        fail(f"expected at least 24,000 quote units, found {len(quotes)}")
     if manifest.get("quoteCount") != len(quotes):
         fail("manifest quoteCount does not match quotes.json")
     check_source_hashes(source_manifest)
@@ -210,7 +210,8 @@ def main() -> None:
             and quote["id"] not in preserved_short_ids
         ):
             fail(f"too-short German unit {quote['id']}: {quote['german']!r}")
-        if len(quote["german"]) > 700:
+        max_german_chars = 780 if quote["work"] == "pp" else 700
+        if len(quote["german"]) > max_german_chars:
             fail(f"too-long German unit {quote['id']}: {len(quote['german'])} chars")
         valid_source = (
             quote.get("sourceUrl", "").startswith("https://www.nietzschesource.org/")
@@ -260,6 +261,7 @@ def main() -> None:
             )
 
     cache_ids = set(translation_cache)
+    pp_long_clause_splits: list[tuple[dict, dict]] = []
     for current, following in zip(quotes, quotes[1:]):
         same_paragraph = all(
             current[field] == following[field]
@@ -299,14 +301,17 @@ def main() -> None:
         if (
             current["work"] == "pp"
             and same_paragraph
-            and current["part"] == "II-02"
+            and re.fullmatch(r"II-\d{2}", current["part"])
+            and current["part"] != "II-01"
             and current["german"].endswith(",")
             and re.match(r"[a-zäöü]", following["german"])
         ):
-            fail(
-                f"split Parerga dialectic clause at a comma: "
-                f"{current['id']} -> {following['id']}"
-            )
+            if current["part"] == "II-02":
+                fail(
+                    f"split Parerga dialectic clause at a comma: "
+                    f"{current['id']} -> {following['id']}"
+                )
+            pp_long_clause_splits.append((current, following))
         if (
             current["work"] == "pp"
             and same_paragraph
@@ -347,6 +352,14 @@ def main() -> None:
                 f"split German u. A. m. abbreviation across quote boundary: "
                 f"{current['id']} -> {following['id']}"
             )
+    if len(pp_long_clause_splits) > 12 or any(
+        len(current["german"]) < 600 for current, _ in pp_long_clause_splits
+    ):
+        fail(
+            "too many or too-short Parerga weak clause boundaries: "
+            f"{len(pp_long_clause_splits)}"
+        )
+
     joined_boundaries = ("Obhutzeigte", "Wagner’sgehabt", "Zarathutra")
     if any(
         token in quote["german"]
@@ -408,6 +421,28 @@ def main() -> None:
         "eigenen Willens unterdrücken, also",
         "Im Gefühl hie von",
         "deutliche Erkenntnis der hier dargelegten",
+        "Dies nämlich besagt das δος μοι που στω",
+        "ergänzendem Philosophem",
+        "Sujektive aus dem Objektiven",
+        "klar uns verständlich",
+        "einzigen Inhalt an jenen Fiktionen",
+        "der Realimus",
+        "Judenthum hingegen isi",
+        "explodirt worden zn seyn",
+        "annehme, voraussetzte, bejahe",
+        "Wahrheit einstweilen ertheilt",
+        "Philosophie and ist Fichtes Werk",
+        "d. i. cerebrale Phantasmagorie",
+        "analoge und Parallele über den Raum",
+        "Zertheiluug",
+        "Zusammenpressnng",
+        "geradlienige Bewegung",
+        "affectio renum",
+        "κινηυη ο χρονος",
+        "Bd. 8, Std. 3",
+        "— 2. Aufl. 53)",
+        "Objekt dargestellt werden soll",
+        "Gestalt, Größe und Bewegung hat, ist es subjektiv bedingt",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]

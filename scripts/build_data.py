@@ -1107,10 +1107,23 @@ PRESERVE_SHORT_UNITS = {
 }
 
 
-def protect_abbreviations(text: str, extra: tuple[str, ...] = ()) -> str:
+def protect_abbreviations(
+    text: str,
+    extra: tuple[str, ...] = (),
+    *,
+    require_token_boundaries: bool = False,
+) -> str:
     protected = text
     for abbreviation in (*ABBREVIATIONS, *extra):
-        protected = protected.replace(abbreviation, abbreviation.replace(".", "∯"))
+        replacement = abbreviation.replace(".", "∯")
+        if require_token_boundaries:
+            protected = re.sub(
+                rf"(?<!\w){re.escape(abbreviation)}(?=$|[\s)\]}}»”’'\",;:!?—–-])",
+                lambda _: replacement,
+                protected,
+            )
+        else:
+            protected = protected.replace(abbreviation, replacement)
     protected = re.sub(r"(?<=\d)\.(?=\d)", "∯", protected)
     return protected
 
@@ -1139,6 +1152,7 @@ def split_long(
     max_chars: int = 500,
     *,
     prefer_strong_boundaries: bool = False,
+    strong_boundary_min_ratio: float = 0.48,
 ) -> list[str]:
     if len(text) <= max_chars:
         return [text]
@@ -1152,11 +1166,16 @@ def split_long(
             if prefer_strong_boundaries
             else (r"(?:;|:|,| —| –)\s+",)
         )
-        for pattern in boundary_patterns:
+        for pattern_index, pattern in enumerate(boundary_patterns):
+            min_ratio = (
+                strong_boundary_min_ratio
+                if prefer_strong_boundaries and pattern_index == 0
+                else 0.48
+            )
             candidates = [
                 (match.end(), match.end())
                 for match in re.finditer(pattern, window)
-                if match.end() >= int(max_chars * 0.48)
+                if match.end() >= int(max_chars * min_ratio)
             ]
             if candidates:
                 break
@@ -1209,8 +1228,10 @@ def sentence_units(
     extra_abbreviations: tuple[str, ...] = (),
     protect_ordinals: bool = False,
     prefer_strong_boundaries: bool = False,
+    strong_boundary_min_ratio: float = 0.48,
     preserve_lone: bool = False,
     protect_citation_initials: bool = False,
+    require_abbreviation_token_boundaries: bool = False,
     min_chars: int = 28,
     min_words: int = 4,
     lone_min_chars: int = 28,
@@ -1219,9 +1240,18 @@ def sentence_units(
     normalized = normalize_space(paragraph)
     if normalized in PRESERVE_SHORT_UNITS:
         return [normalized]
-    protected = protect_abbreviations(normalized, extra_abbreviations)
+    protected = protect_abbreviations(
+        normalized,
+        extra_abbreviations,
+        require_token_boundaries=require_abbreviation_token_boundaries,
+    )
     if protect_citation_initials:
         protected = re.sub(r"(?<!\w)([dv])[.](?=\s+[A-ZÄÖÜ])", r"\1∯", protected)
+        protected = re.sub(
+            r"(?<=S∯\s)(\d{1,4})[.](?=\s+—\s+\d+[.]\s+Aufl∯)",
+            r"\1∯",
+            protected,
+        )
     if protect_ordinals:
         protected = protect_ordinal_continuations(protected)
     raw = re.split(r"(?<=[.!?…])(?:[”’\"])?\s+(?=(?:[„‚\"(\[])?[A-ZÄÖÜ—–-])", protected)
@@ -1233,6 +1263,7 @@ def sentence_units(
                 part,
                 max_chars=max_chars,
                 prefer_strong_boundaries=prefer_strong_boundaries,
+                strong_boundary_min_ratio=strong_boundary_min_ratio,
             )
         )
     return merge_tiny(
@@ -1247,26 +1278,55 @@ def quote_units(paragraph: str) -> list[str]:
     return sentence_units(paragraph)
 
 
-def quote_units_for_work(paragraph: str, work: str, part: str = "") -> list[str]:
+def quote_units_for_work(
+    paragraph: str,
+    work: str,
+    part: str = "",
+    section: str = "",
+    paragraph_index: int = -1,
+) -> list[str]:
     if work in {"jgb", "gm"}:
         return quote_units(paragraph)
     pp_dialectic = work == "pp" and part == "II-02"
+    pp_untranslated_chapter = (
+        work == "pp"
+        and re.fullmatch(r"II-\d{2}", part) is not None
+        and int(part[3:]) >= 3
+    )
+    pp_reflow = pp_untranslated_chapter and (
+        int(part[3:]) > 3
+        or (
+            part == "II-03"
+            and re.fullmatch(r"\d+", str(section)) is not None
+            and (
+                int(str(section)) >= 30
+                or (int(str(section)) == 29 and paragraph_index >= 8)
+            )
+        )
+    )
     units = sentence_units(
         paragraph,
-        max_chars=640 if pp_dialectic else 650,
+        max_chars=(780 if pp_reflow else 720 if pp_untranslated_chapter else 640 if pp_dialectic else 650),
         extra_abbreviations=PP_CITATION_ABBREVIATIONS if work == "pp" else ("St.", "V."),
         protect_ordinals=work in {"za", "eh", "nf", "pp"},
-        prefer_strong_boundaries=(work == "eh" and part == "Za") or pp_dialectic,
+        prefer_strong_boundaries=(
+            (work == "eh" and part == "Za")
+            or pp_dialectic
+            or pp_untranslated_chapter
+        ),
+        strong_boundary_min_ratio=0.25 if pp_untranslated_chapter else 0.48,
         preserve_lone=work in {"za", "pp"},
         protect_citation_initials=work == "pp",
+        require_abbreviation_token_boundaries=pp_untranslated_chapter,
         min_chars=40 if work == "pp" else 28,
         min_words=5 if work == "pp" else 4,
     )
     packed: list[str] = []
     current = ""
+    pack_max_chars = 780 if pp_reflow else 500
     for unit in units:
         candidate = normalize_space(f"{current} {unit}")
-        if current and len(candidate) > 500:
+        if current and len(candidate) > pack_max_chars:
             packed.append(current)
             current = unit
         else:
@@ -1306,7 +1366,13 @@ def build_quotes() -> tuple[list[dict], dict[str, list[dict]]]:
             for paragraph_index, paragraph in enumerate(section_data["paragraphs"]):
                 paragraph_text = paragraph["text"] if isinstance(paragraph, dict) else paragraph
                 source_notes = paragraph.get("source_notes", {}) if isinstance(paragraph, dict) else {}
-                units = quote_units_for_work(paragraph_text, work, section_data["part"])
+                units = quote_units_for_work(
+                    paragraph_text,
+                    work,
+                    section_data["part"],
+                    str(section_data["section"]),
+                    paragraph_index,
+                )
                 if work in {"za", "pp"} and paragraph_text.strip() and not units:
                     raise ValueError(
                         f"{work.upper()} source block disappeared during quote splitting: "

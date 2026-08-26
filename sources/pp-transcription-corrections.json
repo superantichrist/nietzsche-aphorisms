@@ -1098,6 +1098,204 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891188.pdf",
       "reason": "The supplied EPUB modernizes the historical spelling Erkenntniß despite the fixed 1874 scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 27",
+      "from": "das δος μοι που στω",
+      "to": "das δός μοι ποῦ στῶ",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the Greek accent and circumflex marks preserved in the fixed German scan and the cited Archimedean formula."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 27",
+      "from": "in einem ergänzendem Philosophem",
+      "to": "in einem ergänzenden Philosophem",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB gives the adjective the wrong case ending; the fixed German scan clearly reads ergänzenden."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 27",
+      "from": "das Sujektive aus dem Objektiven ableitet",
+      "to": "das Subjektive aus dem Objektiven ableitet",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the b in Subjektive; the fixed German scan clearly preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 27",
+      "from": "ist daher völlig klar uns verständlich",
+      "to": "ist daher völlig klar und verständlich",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads und as uns; the fixed German scan clearly reads klar und verständlich."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 27",
+      "from": "ihren einzigen Inhalt an jenen Fiktionen der Metaphysik hätte",
+      "to": "ihren einzigen Anhalt an jenen Fiktionen der Metaphysik hätte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads Anhalt as Inhalt; the fixed German scan shows that the metaphysical fictions provide the sole support, not content."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 28",
+      "from": "dem Idealismus der Realimus getrost entgegentritt",
+      "to": "dem Idealismus der Realismus getrost entgegentritt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the second s in Realismus; the fixed German scan clearly preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 28, p. 40",
+      "from": "Das Judenthum hingegen isi eine rechte Koncentration",
+      "to": "Das Judenthum hingegen ist eine rechte Koncentration",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the final t in ist as i; the fixed German scan clearly reads ist."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 28, p. 40",
+      "from": "explodirt worden zn seyn",
+      "to": "explodirt worden zu seyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the u in zu as n; the fixed German scan clearly reads zu seyn."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 28, p. 40",
+      "from": "etwas vor der Hand annehme, voraussetzte, bejahe",
+      "to": "etwas vor der Hand annehme, voraussetze, bejahe",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts an extra t into the coordinated subjunctive voraussetze; the fixed German scan preserves the parallel form."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 28, p. 40",
+      "from": "formale Wahrheit einstweilen ertheilt",
+      "to": "formale Wahrheit einstweilen ertheile",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB changes the coordinated subjunctive ertheile into ertheilt; the fixed German scan clearly reads ertheile."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 28, p. 41",
+      "from": "Nachkantischen Philosophie and ist Fichtes Werk",
+      "to": "Nachkantischen Philosophie und ist Fichtes Werk",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads und as English and; the fixed German scan clearly reads und."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 42",
+      "from": "die transscendentale Idealität, d. i. cerebrale Phantasmagorie",
+      "to": "die transscendentale Idealität, d. h. cerebrale Phantasmagorie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the printed abbreviation d. h. as d. i.; the fixed German scan clearly preserves d. h."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 43",
+      "from": "analoge und Parallele über den Raum",
+      "to": "analoge und parallele über den Raum",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB capitalizes the second coordinated adjective; the fixed German scan clearly prints parallele in lower case."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 43",
+      "from": "Zertheiluug",
+      "to": "Zertheilung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB transposes the final letters of Zertheilung; the fixed German scan clearly preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 43",
+      "from": "Zusammenpressnng",
+      "to": "Zusammenpressung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the u in Zusammenpressung as n; the fixed German scan clearly preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 43",
+      "from": "geradlienige Bewegung",
+      "to": "geradlinige Bewegung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts an extra e into geradlinige; the fixed German scan clearly preserves the spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 43",
+      "from": "tempus non est affectio renum, sed tantum merus modus cogitandi",
+      "to": "tempus non est affectio rerum, sed tantum merus modus cogitandi",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the second r in the Latin rerum; the fixed German scan and Spinoza citation clearly read rerum."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 43",
+      "from": "αιωνος εικων κινηυη ο χρονος",
+      "to": "αιωνος εικων κινητη ὁ χρονος",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the tau in the Greek κινητη as upsilon and drops the rough breathing over ὁ; both are visible in the fixed German scan."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 45",
+      "from": "Kieser´s Archiv f. thierisch. Magnetism. Bd. 8, Std. 3",
+      "to": "Kieser´s Archiv f. thierisch. Magnetism. Bd. 8, Stck. 3",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the printed abbreviation Stck. as Std.; the fixed German scan clearly identifies issue 3 as Stück 3."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 29, p. 45",
+      "from": "(siehe über den Willen in der Natur S. 61. — 2. Aufl. 53)",
+      "to": "(siehe über den Willen in der Natur S. 61. — 2. Aufl. S. 53; 3. Aufl. S. 57)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the page abbreviation before 53 and the complete third-edition reference; the fixed German scan preserves both."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 30, p. 46",
+      "from": "sobald ein Objekt dargestellt werden soll",
+      "to": "sobald ein Objekt vorgestellt werden soll",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the prefix vor- from vorgestellt; the fixed German scan clearly describes an object being represented."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 30, p. 46",
+      "from": "Gestalt, Größe und Bewegung hat, ist es subjektiv bedingt",
+      "to": "Gestalt, Größe und Bewegung hat, ist es subjektiv bestimmt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes bedingt for the printed bestimmt; the fixed German scan clearly preserves Schopenhauer's wording."
     }
   ]
 }
