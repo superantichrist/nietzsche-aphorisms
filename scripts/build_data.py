@@ -1416,6 +1416,24 @@ def quote_units_for_work(
                 : speaker_boundary.start()
             ].rstrip()
             unit = normalize_space(f"{speaker} {unit}")
+        sansara_boundary = (
+            "— Zur Geduld im Leben"
+            if (
+                citation_rejoined
+                and "Buddhaistische Erinnerung dieser Art: „Dies ist Sansara:"
+                in citation_rejoined[-1]
+                and unit.startswith("Was also könnt ihr Besseres erwarten?“")
+            )
+            else None
+        )
+        if sansara_boundary:
+            # Keep the complete Buddhist reminder—and the sentence that
+            # introduces it—in one unit.  The source EPUB's page-sized prose
+            # otherwise leaves an opening quote at the end of one record.
+            carry_at = citation_rejoined[-1].rfind(sansara_boundary)
+            carried = citation_rejoined[-1][carry_at:].strip()
+            citation_rejoined[-1] = citation_rejoined[-1][:carry_at].rstrip()
+            unit = normalize_space(f"{carried} {unit}")
         world_citation = "II, p. 226 fg.; 3. Aufl. II, 251 fg.)"
         if (
             citation_rejoined
@@ -1427,6 +1445,35 @@ def quote_units_for_work(
                 f"{citation_rejoined[-1]} {world_citation}"
             )
             remainder = normalize_space(unit[len(world_citation) :])
+            if remainder:
+                citation_rejoined.append(remainder)
+            continue
+        augustin_citation = "Dei, L. XI, c. 23.);"
+        if (
+            citation_rejoined
+            and citation_rejoined[-1].endswith("(Augustin. de civit.")
+            and unit.startswith(augustin_citation)
+        ):
+            # A pack boundary inside Augustine's title must not turn the
+            # citation tail into a quote of its own.  Attach only the source;
+            # keep the prose after it available as the next reading unit.
+            citation_rejoined[-1] = normalize_space(
+                f"{citation_rejoined[-1]} {augustin_citation}"
+            )
+            remainder = normalize_space(unit[len(augustin_citation) :])
+            if remainder:
+                citation_rejoined.append(remainder)
+            continue
+        valerius_citation = "L. II. c. 6, §. 7 et 8.)."
+        if (
+            citation_rejoined
+            and citation_rejoined[-1].endswith("(Val. Max.")
+            and unit.startswith(valerius_citation)
+        ):
+            citation_rejoined[-1] = normalize_space(
+                f"{citation_rejoined[-1]} {valerius_citation}"
+            )
+            remainder = normalize_space(unit[len(valerius_citation) :])
             if remainder:
                 citation_rejoined.append(remainder)
             continue

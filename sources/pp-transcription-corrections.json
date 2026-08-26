@@ -4259,6 +4259,231 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
       "reason": "The supplied EPUB misreads the printed Hinderung as Änderung, changing the string metaphor."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 157, p. 322",
+      "from": "nach Beliebe bestellen",
+      "to": "nach Belieben bestellen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed final n in Belieben."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 157, p. 322",
+      "from": "Philososphieprofessoren",
+      "to": "Philosophieprofessoren",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB inserts a spurious s in the printed Philosophieprofessoren."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 157, p. 322",
+      "from": "παντα καλα λιαν",
+      "to": "πάντα καλὰ λίαν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 157, p. 324",
+      "from": "ein εργαστηριον",
+      "to": "ein ἐργαστήριον",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed Greek breathing and accent."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 157, p. 325",
+      "from": "seyn möchte Leidensgefährte, Socî malorum, compagnon de misères, my fellow-sufferer.",
+      "to": "seyn möchte „Leidensgefährte, Soci malorum, compagnon de misères, my fellow-sufferer.“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks and inserts a spurious circumflex in Soci."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, Anhang verwandter Stellen, p. 326",
+      "from": "Entschuldigung: und doch ist es dem Menschen natürlich",
+      "to": "Entschuldigung: „und doch ist es dem Menschen natürlich“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the excuse being quoted."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, Anhang verwandter Stellen, p. 326",
+      "from": "darauf erwidern: eben weil es schlecht ist, ist es natürlich, und eben weil es natürlich ist, ist es schlecht.",
+      "to": "darauf erwidern: „eben weil es schlecht ist, ist es natürlich, und eben weil es natürlich ist, ist es schlecht.“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the proposed reply."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, Anhang verwandter Stellen, p. 327",
+      "from": "Erinnerung dieser Art: Dies ist Sansara:",
+      "to": "Erinnerung dieser Art: „Dies ist Sansara:",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the opening quotation mark before the Buddhist reminder."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, Anhang verwandter Stellen, p. 327",
+      "from": "Was also könnt ihr Besseres erwarten? Ich möchte",
+      "to": "Was also könnt ihr Besseres erwarten?“ Ich möchte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the closing quotation mark after the Buddhist reminder."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 328",
+      "from": "der Selbstmord sei unrecht;",
+      "to": "der Selbstmord sei „unrecht“;",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around unrecht."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 329",
+      "from": "histor. nat. lib. 28, c. l;",
+      "to": "histor. nat. lib. 28, c. 1;",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 330",
+      "from": "dedit optimumin tantis vitae poenis",
+      "to": "dedit optimum in tantis vitae poenis",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB loses the printed word space between optimum and in at an emphasis boundary."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 330",
+      "from": "Φευκτον δε τονβιον γιγνεσθαι τοις μεν αγαθοις εν ταις αγαν ατυχιαςτοις δε κακοις και εν ταις αγαν ευτυχιαις.",
+      "to": "Φευκτὸν δὲ τὸν βίον γίγνεσθαι τοῖς μὲν ἀγαθοῖς ἐν ταῖς ἄγαν ἀτυχίαις· τοῖς δὲ κακοῖς καὶ ἐν ταῖς ἄγαν εὐτυχίαις.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB drops printed spaces and the Greek diacritics and joins two clauses."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 330",
+      "from": "miseriis, pravisvero in nimium quoque secundis",
+      "to": "miseriis, pravis vero in nimium quoque secundis",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB loses the printed word space between pravis and vero."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 330",
+      "from": "Διο και γαμησειν, και παιδοποιησεσθαι, και πολιτευσεσθαιetc. και καθολου την αρετην ασκουντα και μενειν εν τω βιω, και παλιν, ει δεοι, ποτε δι αναγκας απαλλαγησεσθαι, ταφης προνοησαντα etc.",
+      "to": "Διὸ καὶ γαμήσειν, καὶ παιδοποιήσεσθαι, καὶ πολιτεύσεσθαι etc. καὶ καθόλου τὴν ἀρετὴν ἀσκοῦντα καὶ μένειν ἐν τῷ βίῳ, καὶ πάλιν, εἰ δέοι, ποτὲ δι’ ἀνάγκας ἀπαλλάττεσθαι, ταφῆς προνοήσαντα etc.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB drops printed spaces and the Greek diacritics."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 330",
+      "from": "tum iterum,cogente necessitate",
+      "to": "tum iterum, cogente necessitate",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB drops the printed space after the comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 330",
+      "from": "eine edele und heldenmüthige Handlung",
+      "to": "eine edle und heldenmüthige Handlung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB inserts a spurious e in the printed edle."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 331",
+      "from": "absolut venichtet zu werden",
+      "to": "absolut vernichtet zu werden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB drops the printed r in vernichtet."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 331",
+      "from": "But: there lies the, rub.",
+      "to": "But: there lies the rub.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma into the printed Hamlet quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 331",
+      "from": "124 S. 80.",
+      "to": "124 S. 8°.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB reads the printed octavo format sign as a zero."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 331",
+      "from": "Hauptwerk Bd. l. §. 69.",
+      "to": "Hauptwerk Bd. 1. §. 69.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary040.xhtml",
+      "page": "Band II, Kapitel XIII, § 158, p. 332",
+      "from": "gesagt hat παντα καλα λιαν?",
+      "to": "gesagt hat πάντα καλὰ λίαν?",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891378.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 162, p. 334",
+      "from": "gegenwärtigen διαστολη auch eine συστολη",
+      "to": "gegenwärtigen διαστολή auch eine συστολή",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 162, p. 334",
+      "from": "Oupnekhat Vol. l. p. 163",
+      "to": "Oupnekhat Vol. 1. p. 163",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary041.xhtml",
+      "page": "Band II, Kapitel XIV, § 162, p. 334",
+      "from": "mit dem επεκεινα der Neuplatoniker",
+      "to": "mit dem ἐπέκεινα der Neuplatoniker",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
+      "reason": "The supplied EPUB drops the printed Greek breathing and accents."
     }
   ]
 }

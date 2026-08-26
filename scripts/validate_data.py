@@ -692,6 +692,30 @@ def main() -> None:
         "darin es heißt: es ist heute schlecht",
         "gar nicht ein mal nöthig",
         "Durchkreuzung, oder Änderung, deren Vibration",
+        "nach Beliebe bestellen",
+        "Philososphieprofessoren",
+        "mit παντα καλα λιαν",
+        "ein εργαστηριον",
+        "Socî malorum",
+        "Entschuldigung: und doch ist es dem Menschen natürlich",
+        "erwidern: eben weil es schlecht ist",
+        "Erinnerung dieser Art: Dies ist Sansara",
+        "der Selbstmord sei unrecht",
+        "histor. nat. lib. 28, c. l;",
+        "dedit optimumin tantis vitae poenis",
+        "Φευκτον δε τονβιον",
+        "pravisvero",
+        "πολιτευσεσθαιetc.",
+        "tum iterum,cogente",
+        "eine edele und heldenmüthige Handlung",
+        "absolut venichtet zu werden",
+        "there lies the, rub",
+        "124 S. 80.",
+        "Hauptwerk Bd. l. §. 69.",
+        "gesagt hat παντα καλα λιαν",
+        "gegenwärtigen διαστολη auch eine συστολη",
+        "Oupnekhat Vol. l. p. 163",
+        "mit dem επεκεινα der Neuplatoniker",
         "sufficit irae, Iuv. Sat. XIII",
         "το οργιζεσθαι ηδυ",
         "sie sogleich zer-trat",
@@ -801,10 +825,19 @@ def main() -> None:
             or quote["german"].startswith("II, p. 226 fg.; 3. Aufl.")
             or quote["german"].startswith("Mos. 17, 8.)")
             or quote["german"].startswith("Brunus (ed. Wagner")
+            or quote["german"].startswith("Dei, L. XI, c. 23.);")
+            or quote["german"].startswith("L. II. c. 6, §. 7 et 8.).")
         )
         for quote in quotes
     ):
         fail("Parerga bibliographic citation split into an orphan quote")
+
+    if any(
+        quote["work"] == "pp"
+        and quote["german"].endswith("Und Dies hier ist die Bevölkerung der Sansara.")
+        for quote in quotes
+    ):
+        fail("Parerga Buddhist reminder split inside quotation marks")
 
     pp_text = "\n".join(quote["german"] for quote in quotes if quote["work"] == "pp")
     pp_required_list_fragments = (
