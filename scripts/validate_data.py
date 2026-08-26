@@ -960,6 +960,17 @@ def main() -> None:
         "das allein Natur-und Kunstgemäße",
         "Teatro della Balle",
         "Harlekinsjackes der Potpourri",
+        "kompletiren Ein Roman",
+        "Ritter-oder Räuberroman",
+        "latitantia cernuut",
+        "a riveder lestelle",
+        "Das ganze lnferno des Dante",
+        "Ehr-und Gewissenlosigleit",
+        "gedanken-und wahrheitsreichen Bücher",
+        "zahl-und endlos sind",
+        "Jedem drückt er sein Stämpel auf",
+        "Ornamente, Gefässe, Möbeln",
+        "Boisseree’sche jetzt in München",
     )
     pp_transcription_texts = [
         "\n".join(
