@@ -485,6 +485,13 @@ def main() -> None:
         "Abmessuug der Hierarchie",
         "Auffassnng unterscheiden",
         "als eine Parasit",
+        "Seil-oder Solo-Tänzer",
+        "Labrüpere",
+        "de11a Causa",
+        "nicht andersist es mir",
+        "die Werte großer Geister",
+        "Ehr läßt es sich indirekt ausdrücken",
+        "die füchtigen Gestalten dieser Welt",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]

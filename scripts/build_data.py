@@ -1087,7 +1087,7 @@ PP_CITATION_ABBREVIATIONS = (
     "St.", "V.", "Aufl.", "P.", "p.", "L.", "Art.", "Vol.",
     "Lib.", "lib.", "Liv.", "liv.", "Tom.", "C.", "c.", "ibid.",
     "Med.", "Part.", "publ.", "prop.", "pr.", "schol.", "seqq.",
-    "sq.", "Opp.", "opp.", "ed.", "edit.", "cap.", "ch.", "institut.", "vierf.", "spekul.",
+    "sq.", "Opp.", "opp.", "ed.", "edit.", "cap.", "ch.", "Dial.", "institut.", "vierf.", "spekul.",
     "somn.", "Vergl.",
     "Arist.", "Cic.", "Clem.", "Alex.", "Apulej.", "Jambl.", "Pyth.",
     "Diog.", "Laert.", "Herod.", "Schol.", "vit.",

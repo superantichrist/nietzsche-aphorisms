@@ -1694,6 +1694,69 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
       "reason": "The supplied EPUB gives the masculine noun Parasit the wrong article; the fixed German scan clearly reads ein."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 58, p. 83",
+      "from": "als Seil-oder Solo-Tänzer",
+      "to": "als Seil- oder Solo-Tänzer",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the printed word space after the suspended hyphen in Seil- oder Solo-Tänzer."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 58, p. 84",
+      "from": "denn Labrüpere hat ganz Recht",
+      "to": "denn Labruyere hat ganz Recht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the printed proper name Labruyere; the fixed German scan preserves Schopenhauer's spelling of La Bruyère."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 58, p. 87",
+      "from": "Giordano Bruno (de11a Causa, Dial.",
+      "to": "Giordano Bruno (della Causa, Dial.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes the digits 11 for the letters ll in the Italian title della Causa."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 58, p. 88",
+      "from": "nicht andersist es mir mit dem Menschengeschlechte gegangen",
+      "to": "nicht anders ist es mir mit dem Menschengeschlechte gegangen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB fuses anders ist and drops the s; the fixed German scan preserves the complete phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 58, p. 88",
+      "from": "die Werte großer Geister, den Homer, den Plato, den Horaz",
+      "to": "die Werke großer Geister, den Homer, den Plato, den Horaz",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the k in Werke; the fixed German scan clearly reads Werke großer Geister."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 59, p. 89",
+      "from": "Ehr läßt es sich indirekt ausdrücken",
+      "to": "Eher läßt es sich indirekt ausdrücken",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the second e in Eher; the fixed German scan preserves the complete comparative adverb."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, Anhang, p. 93",
+      "from": "kurzum die füchtigen Gestalten dieser Welt",
+      "to": "kurzum die flüchtigen Gestalten dieser Welt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the l in flüchtigen; the fixed German scan preserves the complete word."
     }
   ]
 }
