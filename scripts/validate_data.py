@@ -563,6 +563,10 @@ def main() -> None:
         "κατ εξοχην",
         "nuscetur ridiculus mus",
         "πλεον ημισυ παντος",
+        "ομοιος statt ομοιως",
+        "Sujektives",
+        "Moralistes francais l838",
+        "ni le dégout est une marque",
         "Χειλεα μεν τ εδιην",
         "de11a Causa",
         "nicht andersist es mir",
@@ -1053,10 +1057,31 @@ def main() -> None:
             or quote["german"].startswith("Brunus (ed. Wagner")
             or quote["german"].startswith("Dei, L. XI, c. 23.);")
             or quote["german"].startswith("L. II. c. 6, §. 7 et 8.).")
+            or quote["german"].startswith("Tom. 142) das Leben")
+            or quote["german"].startswith("(Nachlaß, Bd. 17. p. 297.)")
         )
         for quote in quotes
     ):
         fail("Parerga bibliographic citation split into an orphan quote")
+
+    pp_style_citations = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-23"
+        and quote["section"] == "291"
+    ]
+    if not any(
+        "sqq. Tom. 142) das Leben des Benvenuto Cellini" in quote["german"]
+        for quote in pp_style_citations
+    ):
+        fail("Parerga § 291 Italian bibliography split inside its volume citation")
+    if not any(
+        "Der Edle strebt nach Ordnung und Gesetz. (Nachlaß, Bd. 17. p. 297.)"
+        in quote["german"]
+        for quote in pp_style_citations
+    ):
+        fail("Parerga § 291 Goethe source detached from its quotation")
 
     if any(
         quote["work"] == "pp"

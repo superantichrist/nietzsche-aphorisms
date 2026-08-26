@@ -6194,6 +6194,51 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA558",
       "reason": "The supplied EPUB drops the clearly printed Greek breathing and accents in Hesiod's maxim."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 291, p. 563",
+      "from": "ομοιος statt ομοιως, απλους statt απλως",
+      "to": "ὅμοιος statt ὁμοίως, ἁπλοῦς statt ἁπλῶς",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA563",
+      "reason": "The supplied EPUB drops the clearly printed Greek breathings and accents from both adjective/adverb pairs."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 291, p. 565",
+      "from": "ein Sujektives, d. h. vom Subjekt Ausgehendes",
+      "to": "ein Subjektives, d. h. vom Subjekt Ausgehendes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA565",
+      "reason": "The supplied EPUB drops the clearly printed b in Subjektives."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary056.xhtml",
+      "page": "Band II, Kapitel XXIX, § 390, p. 671",
+      "from": "irgend etwas Sujektives sich einmischt",
+      "to": "irgend etwas Subjektives sich einmischt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA671",
+      "reason": "The supplied EPUB drops the clearly printed b in Subjektives."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 291, p. 568",
+      "from": "Moralistes francais l838",
+      "to": "Moralistes français 1838",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA568",
+      "reason": "The supplied EPUB drops the cedilla in français and mistakes the clearly printed numeral 1 for lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 291, p. 568",
+      "from": "ni le dégout est une marque de santé",
+      "to": "ni le dégoût est une marque de santé",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA568",
+      "reason": "The supplied EPUB drops the clearly printed circumflex in dégoût."
     }
   ]
 }

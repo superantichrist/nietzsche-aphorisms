@@ -1271,6 +1271,7 @@ def sentence_units(
     )
     if protect_citation_initials:
         protected = re.sub(r"(?<!\w)([dv])[.](?=\s+[A-ZÄÖÜ])", r"\1∯", protected)
+        protected = re.sub(r"\bsqq[.](?=\s+Tom(?:[.]|∯))", "sqq∯", protected)
         protected = re.sub(
             r"\bKap[.]\s+44[.](?=\s+S∯\s+550\b)",
             "Kap∯ 44∯",

@@ -711,6 +711,43 @@ def parse_parerga() -> list[dict]:
         )
     religion_section["paragraphs"] = dialogue_paragraphs
 
+    # In § 291 the EPUB begins a new XHTML paragraph with the source of the
+    # immediately preceding Goethe quotation.  The 1874 print sets that
+    # parenthetical directly beneath the verse, before the next prose
+    # paragraph.  Move only the citation back so neither reader unit starts
+    # with an orphaned source reference.
+    style_section = next(
+        (
+            section
+            for section in sections
+            if section["part"] == "II-23" and section["section"] == "291"
+        ),
+        None,
+    )
+    if style_section is None:
+        raise ValueError("Missing chapter XXIII § 291")
+    goethe_citation = "(Nachlaß, Bd. 17. p. 297.)"
+    style_pairs = [
+        index
+        for index, (head, tail) in enumerate(
+            zip(style_section["paragraphs"], style_section["paragraphs"][1:])
+        )
+        if head["text"].endswith("Der Edle strebt nach Ordnung und Gesetz.")
+        and tail["text"].startswith(f"{goethe_citation} Die aus")
+    ]
+    if len(style_pairs) != 1:
+        raise ValueError(
+            "Unexpected chapter XXIII § 291 Goethe citation boundary count: "
+            f"{len(style_pairs)}"
+        )
+    style_index = style_pairs[0]
+    style_head = style_section["paragraphs"][style_index]
+    style_tail = style_section["paragraphs"][style_index + 1]
+    style_head["text"] = normalize_space(f"{style_head['text']} {goethe_citation}")
+    style_tail["text"] = normalize_space(
+        style_tail["text"][len(goethe_citation) :]
+    )
+
     numbered = {
         section["section"]
         for section in sections
