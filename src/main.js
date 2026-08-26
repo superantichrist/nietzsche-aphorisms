@@ -472,9 +472,9 @@ function bindEvents() {
     const elapsed = Date.now() - swipeStart.at;
     swipeStart = null;
     if (
-      elapsed <= 900
-      && Math.abs(deltaX) >= 64
-      && Math.abs(deltaX) > Math.abs(deltaY) * 1.4
+      elapsed <= 1200
+      && Math.abs(deltaX) >= 44
+      && Math.abs(deltaX) > Math.abs(deltaY) * 1.2
     ) {
       move(deltaX < 0 ? 1 : -1);
     }

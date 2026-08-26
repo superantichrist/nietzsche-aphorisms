@@ -348,9 +348,9 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
 .modal-open { overflow: hidden; }
 
 @media (min-width: 621px) {
-  .quote-korean { font-size: 32px; line-height: 1.56; }
-  .quote-korean.german-fallback { font-size: 30px; line-height: 1.48; }
-  .quote-german { font-size: 16px; }
+  .quote-korean { font-size: 28px; line-height: 1.62; }
+  .quote-korean.german-fallback { font-size: 27px; line-height: 1.54; }
+  .quote-german { font-size: 15px; }
   .about h2 { font-size: 40px; }
 }
 
@@ -369,9 +369,9 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
   .desktop-label { display: none; }
   .icon-button { padding: 0 11px; }
   .quote-card { padding: 26px 22px 22px; }
-  .quote-korean { font-size: 23px; line-height: 1.57; }
-  .quote-korean.german-fallback { font-size: 22px; line-height: 1.48; }
-  .quote-german { font-size: 14px; }
+  .quote-korean { font-size: 21px; line-height: 1.62; }
+  .quote-korean.german-fallback { font-size: 20px; line-height: 1.54; }
+  .quote-german { font-size: 13px; line-height: 1.7; }
   .source-row { align-items: flex-start; flex-direction: column; gap: 14px; }
   .source-links { width: 100%; justify-content: space-between; }
   .ornament { margin-top: 36px; }
@@ -395,7 +395,7 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
     backdrop-filter: blur(14px);
   }
   .mobile-quote-nav button {
-    min-height: 43px;
+    min-height: 46px;
     border: 0;
     border-radius: 8px;
     background: transparent;
