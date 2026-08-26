@@ -4070,6 +4070,195 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
       "reason": "The supplied EPUB replaces the printed full stop after vergehn with a comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, Anhang verwandter Stellen, p. 310",
+      "from": "im Bewußtsein anderer Dinge",
+      "to": "im Bewußtseyn anderer Dinge",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB modernizes the printed historical spelling Bewußtseyn."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, Anhang verwandter Stellen, p. 310",
+      "from": "im Gegensatz, der Dinge an sich",
+      "to": "im Gegensatz der Dinge an sich",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma inside the printed genitive phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, Anhang verwandter Stellen, p. 310",
+      "from": "der beständige Ab-und Zufluß",
+      "to": "der beständige Ab- und Zufluß",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Ab-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, Anhang verwandter Stellen, p. 310",
+      "from": "aller Körper-und Geisteskräfte",
+      "to": "aller Körper- und Geisteskräfte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Körper-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 150, p. 313",
+      "from": "ist das Negative nämlich das bloße Aufheben",
+      "to": "ist das Negative, nämlich das bloße Aufheben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed comma after Negative."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 153, p. 314",
+      "from": "der Druck der Atmosphäre von ihr genommen wäre",
+      "to": "der Druck der Atmosphäre von ihm genommen wäre",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB misreads the printed masculine pronoun ihm as ihr."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 153, p. 314",
+      "from": "eines gewissen Quatums Sorge",
+      "to": "eines gewissen Quantums Sorge",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed n in Quantums."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 153, p. 314",
+      "from": "kein anderes Dasseyn",
+      "to": "kein anderes Daseyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB inserts a spurious second s in the printed Daseyn."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, pp. 314–315",
+      "from": "zum Verfolgen oder Fliehen, anregt",
+      "to": "zum Verfolgen, oder Fliehen, anregt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed comma after Verfolgen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, p. 315",
+      "from": "das Abwesende und zukünftige",
+      "to": "das Abwesende und Zukünftige",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB lowercases the printed substantivized adjective Zukünftige."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, p. 315",
+      "from": "seines Glückes und Unglücks",
+      "to": "seines Glücks und Unglücks",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB inserts a spurious e in the printed genitive Glücks."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, p. 316",
+      "from": "nach den Resourcen des Ortes",
+      "to": "nach den Ressourcen des Ortes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed second s in Ressourcen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, p. 318",
+      "from": "η προσδοκιατων κακων",
+      "to": "ἡ προσδοκία τῶν κακῶν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed space, accents, and breathings from the Greek phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, p. 318",
+      "from": "durch das blosse Daseyn befriedigt",
+      "to": "durch das bloße Daseyn befriedigt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB replaces the printed ß in bloße with ss."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, p. 318",
+      "from": "außer dem blossen kahlen Daseyn",
+      "to": "außer dem bloßen kahlen Daseyn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB replaces the printed ß in bloßen with ss."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 154, p. 318",
+      "from": "er wollte damit sagen: Du bist nicht mein Herr, sondern mein Teufel, der mir mein kurzes Daseyn zur Hölle macht.",
+      "to": "er wollte damit sagen: „Du bist nicht mein Herr, sondern mein Teufel, der mir mein kurzes Daseyn zur Hölle macht.“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the chained dog's imagined speech."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 155, p. 319",
+      "from": "(Bd. l. §. 56)",
+      "to": "(Bd. 1, §. 56)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB reads the printed numeral 1 as lowercase l and drops the following comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 155, p. 319",
+      "from": "die Erkenntniß der Ressonanzboden",
+      "to": "die Erkenntniß der Resonanzboden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB inserts a spurious second s in Resonanzboden."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 156, p. 320",
+      "from": "darin es heißt: es ist heute schlecht und wird nun täglich schlechter werden, — bis das Schlimmste kommt.",
+      "to": "darin es heißt: „es ist heute schlecht und wird nun täglich schlechter werden, — bis das Schlimmste kommt.“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the description of old age."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 157, p. 321",
+      "from": "gar nicht ein mal nöthig erachten",
+      "to": "gar nicht einmal nöthig erachten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB separates the printed adverb einmal."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary039.xhtml",
+      "page": "Band II, Kapitel XII, § 155, p. 319",
+      "from": "seine Durchkreuzung, oder Änderung, deren Vibration",
+      "to": "seine Durchkreuzung, oder Hinderung, deren Vibration",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891362.pdf",
+      "reason": "The supplied EPUB misreads the printed Hinderung as Änderung, changing the string metaphor."
     }
   ]
 }
