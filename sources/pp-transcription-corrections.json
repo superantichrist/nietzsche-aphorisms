@@ -6284,6 +6284,15 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA586",
       "reason": "The supplied EPUB inserts a second s before the clearly printed auszumerzen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary052.xhtml",
+      "page": "Band II, Kapitel XXV, § 309, p. 601",
+      "from": "bei συλληφις und conceptio",
+      "to": "bei συλληψις und conceptio",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA601",
+      "reason": "The supplied EPUB mistakes the clearly printed Greek psi in συλληψις for phi."
     }
   ]
 }

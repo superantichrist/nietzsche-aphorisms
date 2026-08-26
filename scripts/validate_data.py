@@ -1031,6 +1031,7 @@ def main() -> None:
         "Ornamente, Gefässe, Möbeln",
         "Boisseree’sche jetzt in München",
         "ausszumerzen",
+        "συλληφις",
     )
     pp_transcription_texts = [
         "\n".join(
