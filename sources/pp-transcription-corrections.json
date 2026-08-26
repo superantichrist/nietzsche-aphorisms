@@ -558,6 +558,60 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
       "reason": "The supplied EPUB misreads Latin suae as suac and depellentem as depellentum; the independent transcription and grammar preserve the accusative feminine forms."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary025.xhtml",
+      "page": "Band I, Kapitel VI",
+      "from": "wo Alles, Alles, mir dem Reize der Neuheit überfirnißt ist",
+      "to": "wo Alles, Alles, mit dem Reize der Neuheit überfirnißt ist",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads German mit as mir; the independent transcription and sentence grammar read mit dem Reize der Neuheit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary025.xhtml",
+      "page": "Band I, Kapitel VI",
+      "from": "meistens sogar Beiber, ihm in Rückstand bleiben",
+      "to": "meistens sogar Beider, ihm in Rückstand bleiben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the second Fraktur d in Beider as b; the independent transcription and the paired Kopf oder Herz construction read beider."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary025.xhtml",
+      "page": "Band I, Kapitel VI",
+      "from": "nachmals sehr gewöhnliche Kopfe",
+      "to": "nachmals sehr gewöhnliche Köpfe",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB drops the umlaut in Köpfe; the independent transcription reads gewöhnliche Köpfe."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary025.xhtml",
+      "page": "Band I, Kapitel VI",
+      "from": "Greifen wird die Zeit stets zu kurz",
+      "to": "Greisen wird die Zeit stets zu kurz",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the medial Fraktur s in Greisen as f; the independent transcription and the age contrast read Greisen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary025.xhtml",
+      "page": "Band I, Kapitel VI",
+      "from": "zur Einsicht in die Richtigkeit aller irdischen Dinge gekommen ist",
+      "to": "zur Einsicht in die Nichtigkeit aller irdischen Dinge gekommen ist",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB reads the contextually impossible Richtigkeit; independent German editions and the surrounding argument about vanity read Nichtigkeit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary025.xhtml",
+      "page": "Band I, Kapitel VI",
+      "from": "er hat seinen eigenen Heerd, kraft der Besta",
+      "to": "er hat seinen eigenen Heerd, kraft der Vesta",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.gutenberg.org/cache/epub/47406/pg47406-images.html",
+      "reason": "The supplied EPUB misreads the initial Fraktur V in Vesta as B; independent transcriptions and the named set of four planetoids read Vesta."
     }
   ]
 }
