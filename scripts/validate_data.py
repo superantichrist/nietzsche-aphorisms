@@ -680,6 +680,20 @@ def main() -> None:
         "Shakespear’s Dramen",
         "moralische νουτεθησις",
         "durch die strenge Notwendigkeit",
+        "gänzlichen Notwendigkeit, mit der",
+        "le medesime cose, che bora",
+        "Das Fatum, die ειμαρμενη",
+        "nicht des Geringste thun sie",
+        "Ueberhanpt wirkt das Beispiel",
+        "quantum Potentiâ valet",
+        "Eth. IV. pr. 37. sch. l",
+        "de cive e. l. §. l4",
+        "il ne sagit que de voler",
+        "Moral-und Rechtslehre",
+        "Ως κρειττον εστι δεσποτου",
+        "Fabrik-vοrsteher",
+        "dem Namen der Skaverei",
+        "Millionen Negerskaven",
     )
     pp_transcription_texts = [
         "\n".join(

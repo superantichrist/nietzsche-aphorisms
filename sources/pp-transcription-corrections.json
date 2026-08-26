@@ -3413,6 +3413,132 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
       "reason": "The supplied EPUB modernizes the printed historical spelling Nothwendigkeit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 251",
+      "from": "gänzlichen Notwendigkeit, mit der",
+      "to": "gänzlichen Nothwendigkeit, mit der",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB modernizes another instance of the printed historical spelling Nothwendigkeit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 251",
+      "from": "le medesime cose, che bora.",
+      "to": "le medesime cose, che hora.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB misreads the printed Italian word hora as bora."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 119, p. 251",
+      "from": "Das Fatum, die ειμαρμενη der Alten",
+      "to": "Das Fatum, die εἱμαρμένη der Alten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB drops the printed Greek breathing and accents from εἱμαρμένη."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 120, p. 254",
+      "from": "nicht des Geringste thun sie",
+      "to": "nicht das Geringste thun sie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB misreads the printed article das as des."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary035.xhtml",
+      "page": "Band II, Kapitel VIII, § 120, p. 255",
+      "from": "Ueberhanpt wirkt das Beispiel",
+      "to": "Ueberhaupt wirkt das Beispiel",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891295.pdf",
+      "reason": "The supplied EPUB misreads the printed u in Ueberhaupt as n."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 125, p. 258",
+      "from": "quantum Potentiâ valet",
+      "to": "quantum potentiâ valet",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB capitalizes the printed Latin word potentiâ."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 125, p. 258",
+      "from": "Eth. IV. pr. 37. sch. l",
+      "to": "Eth. IV. pr. 37. sch. 1",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB misreads the printed numeral 1 in the Spinoza citation as lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 125, p. 258",
+      "from": "namentlich de cive e. l. §. l4",
+      "to": "namentlich de cive c. 1. §. 14",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB misreads both the chapter abbreviation and numerals in the printed Hobbes citation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 125, p. 259",
+      "from": "Dans toutes les guerres il ne sagit que de voler.",
+      "to": "Dans toutes les guerres il ne s’agit que de voler.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed apostrophe in the French contraction s’agit."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 125, p. 259",
+      "from": "Moral-und Rechtslehre",
+      "to": "Moral- und Rechtslehre",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Moral-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 126, p. 260",
+      "from": "Ως κρειττον εστι δεσποτου χρηστου τυχειν, η ζην ταπεινως και κακως ελευθερον.",
+      "to": "Ὡς κρεῖττον ἐστὶ δεσπότου χρηστοῦ τυχεῖν, ἢ ζῆν ταπεινῶς καὶ κακῶς ἐλευθέρον.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed Greek breathing and accents from the Menander quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 126, pp. 260–261",
+      "from": "Fabrik-vοrsteher",
+      "to": "Fabrikvorsteher",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB retains a line-end hyphen and misreads the printed Latin o as Greek omicron."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 126, p. 261",
+      "from": "dem Namen der Skaverei",
+      "to": "dem Namen der Sklaverei",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed l from Sklaverei."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary036.xhtml",
+      "page": "Band II, Kapitel IX, § 126, p. 262",
+      "from": "Millionen Negerskaven",
+      "to": "Millionen Negersklaven",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891306.pdf",
+      "reason": "The supplied EPUB drops the printed l from Negersklaven."
     }
   ]
 }
