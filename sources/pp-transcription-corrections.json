@@ -2639,6 +2639,96 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
       "reason": "The supplied EPUB substitutes u for n in the printed word Entdeckung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 98, p. 179",
+      "from": "angehäuften, montentanen Ueberschuß",
+      "to": "angehäuften, momentanen Ueberschuß",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts t in the printed word momentanen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 98, p. 179",
+      "from": "die sensibelen Nerven",
+      "to": "die sensibeln Nerven",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts e in the printed adjective sensibeln."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 98, p. 180",
+      "from": "Medulla ablongata",
+      "to": "Medulla oblongata",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes a for o in the printed anatomical term oblongata."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 99, p. 181",
+      "from": "im scharfem Zickzack, nicht in geründeter Biegung",
+      "to": "im scharfen Zickzack, nicht in gerundeter Biegung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB corrupts the printed case ending in scharfen and adds an umlaut to gerundeter."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 100, p. 182",
+      "from": "nach Wagenbie, Physiol.",
+      "to": "nach Magendie, Physiol.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB misreads the printed name of the physiologist Magendie."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 100, p. 182",
+      "from": "das tentoicum cerebelli",
+      "to": "das tentorium cerebelli",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB corrupts the printed anatomical term tentorium cerebelli."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 101, p. 183",
+      "from": "äußern Haut paralpsirt",
+      "to": "äußern Haut paralysirt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes p for y in the printed word paralysirt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 101, p. 185",
+      "from": "peu de médecin, peu de médecin",
+      "to": "peu de médecin, peu de médecine",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops final e from the second printed French word médecine."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 103 b, p. 187",
+      "from": "verschiedenen Thiergesta1ten",
+      "to": "verschiedenen Thiergestalten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB reads lowercase l as the numeral 1 in Thiergestalten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 103 b, p. 187",
+      "from": "nicht so besimmt angeben",
+      "to": "nicht so bestimmt angeben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops t from the printed word bestimmt."
     }
   ]
 }

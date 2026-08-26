@@ -591,6 +591,17 @@ def main() -> None:
         "die rüstigen Affekt wie Freude",
         "mit dem Blutumlauß",
         "schöne Entdeckuug der Reflexbewegungen",
+        "angehäuften, montentanen Ueberschuß",
+        "die sensibelen Nerven",
+        "Medulla ablongata",
+        "im scharfem Zickzack",
+        "geründeter Biegung",
+        "nach Wagenbie, Physiol.",
+        "das tentoicum cerebelli",
+        "äußern Haut paralpsirt",
+        "peu de médecin, peu de médecin.",
+        "verschiedenen Thiergesta1ten",
+        "nicht so besimmt angeben",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
