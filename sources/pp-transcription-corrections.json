@@ -6239,6 +6239,42 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA568",
       "reason": "The supplied EPUB drops the clearly printed circumflex in dégoût."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 295, p. 578",
+      "from": "affektirte σεμνοτης anzubringen",
+      "to": "affektirte σεμνότης anzubringen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA578",
+      "reason": "The supplied EPUB drops the clearly printed Greek accent in σεμνότης."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 295, p. 579",
+      "from": "wird eigentlich zunächst das Gedächtsniß in Anspruch genommen",
+      "to": "wird eigentlich zunächst das Gedächtniß in Anspruch genommen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA579",
+      "reason": "The supplied EPUB inserts a spurious s into the clearly printed Gedächtniß."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 297, p. 581",
+      "from": "πολυ δε μεγιστον το μεταφορικον μονον γαρ τουτο οτυε παρ αλλου εστι λαβειν, ευφυιας τε σημειον εστιν το γαρ ευ μεταφερειν το ομοιον θεωρειν εστιν",
+      "to": "πολὺ δὲ μέγιστον τὸ μεταφορικὸν εἶναι· μόνον γὰρ τοῦτο οὔτε παρ’ ἄλλου ἔστι λαβεῖν, εὐφυΐας τε σημεῖόν ἐστιν· τὸ γὰρ εὖ μεταφέρειν τὸ ὅμοιον θεωρεῖν ἐστιν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA581",
+      "reason": "The supplied EPUB drops the printed word εἶναι, misreads οὔτε, and strips the Greek breathings, accents, apostrophe, and punctuation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 297, p. 581",
+      "from": "και εν φιλοσοφια το ομοιον, και εν πολυ ριεχουσι, θεωρειν ευστοχου",
+      "to": "καὶ ἐν φιλοσοφίᾳ τὸ ὅμοιον, καὶ ἐν πολὺ διέχουσι, θεωρεῖν εὐστόχου",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA581",
+      "reason": "The supplied EPUB misreads the clearly printed delta in διέχουσι and strips all Greek breathings and accents."
     }
   ]
 }
