@@ -6158,6 +6158,42 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA545",
       "reason": "The supplied EPUB misreads the clearly printed e as a in the Latin passive subjunctive lauderis."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 291, p. 551",
+      "from": "κατ εξοχην",
+      "to": "κατ’ ἐξοχήν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA551",
+      "reason": "The supplied EPUB drops the clearly printed Greek apostrophe, breathing, and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary046.xhtml",
+      "page": "Band II, Kapitel XIX, § 238, p. 482",
+      "from": "κατ εξοχην",
+      "to": "κατ’ ἐξοχήν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA482",
+      "reason": "The supplied EPUB drops the clearly printed Greek apostrophe, breathing, and accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 291, p. 552",
+      "from": "nuscetur ridiculus mus",
+      "to": "nascetur ridiculus mus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA552",
+      "reason": "The supplied EPUB misreads the clearly printed a as u in Horace's Latin nascetur."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary050.xhtml",
+      "page": "Band II, Kapitel XXIII, § 291, p. 558",
+      "from": "πλεον ημισυ παντος",
+      "to": "πλέον ἥμισυ παντός",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA558",
+      "reason": "The supplied EPUB drops the clearly printed Greek breathing and accents in Hesiod's maxim."
     }
   ]
 }
