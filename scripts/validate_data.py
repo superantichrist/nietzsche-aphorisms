@@ -533,6 +533,17 @@ def main() -> None:
         "znsammenstoßen",
         "Glimmer-und Gypsspath-Blättchen",
         "beim Ein-und Ausgange",
+        "p. l56, 57. ed. Bip.",
+        "Im, Jahr 1815",
+        "Januar l853",
+        "ungeschenen Ursache",
+        "Ptolemäer-und Römer-Zeit",
+        "Glühehitze",
+        "Fourrier",
+        "astronomisehe Gründe",
+        "selhst die im luftleeren Raume",
+        "Quanität Wärme",
+        "systême du monde",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]

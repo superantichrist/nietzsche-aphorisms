@@ -2126,6 +2126,105 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
       "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 82, p. 134",
+      "from": "de Rep. L. VII. p. l56, 57. ed. Bip.",
+      "to": "de Rep. L. VII. p. 156, 57. ed. Bip.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes lowercase l for the printed numeral 1 in the page reference."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 82, p. 134",
+      "from": "Im, Jahr 1815 ist",
+      "to": "Im Jahr 1815 ist",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma after Im; the fixed German scan has none."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 82, p. 134",
+      "from": "Galignani vom 11. Januar l853",
+      "to": "Galignani vom 11. Januar 1853",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes lowercase l for the printed numeral 1 in the year."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 82, p. 134",
+      "from": "einer noch ungeschenen Ursache",
+      "to": "einer noch ungesehenen Ursache",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops e in ungesehenen; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 83, p. 136",
+      "from": "zwischen der Ptolemäer-und Römer-Zeit",
+      "to": "zwischen der Ptolemäer- und Römer-Zeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 85, p. 136",
+      "from": "im Zustande der Glühehitze und Schmelzung",
+      "to": "im Zustande der Glühhitze und Schmelzung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts e in Glühhitze; the fixed German scan preserves the compound noun."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 86, pp. 137–138",
+      "from": "Fourrier",
+      "to": "Fourier",
+      "expectedOccurrences": 2,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB duplicates r in both occurrences of Fourier's name; the fixed German scan preserves the spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 86, p. 139",
+      "from": "astronomisehe Gründe",
+      "to": "astronomische Gründe",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes e for c in astronomische; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 86, p. 141",
+      "from": "jede Verdünstung, selhst die im luftleeren Raume",
+      "to": "jede Verdünstung, selbst die im luftleeren Raume",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes h for b in selbst; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 86, p. 141",
+      "from": "latent werdenden, Quanität Wärme",
+      "to": "latent werdenden, Quantität Wärme",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops t in Quantität; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 87, p. 143",
+      "from": "expos. du systême du monde V, 2",
+      "to": "expos. du système du monde V, 2",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB gives système a circumflex instead of the printed grave accent."
     }
   ]
 }
