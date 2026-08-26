@@ -6428,6 +6428,42 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA636",
       "reason": "The EPUB extractor also joins τι and των across adjacent inline elements, while the transcription strips the Greek breathings and accents printed in Plato's sentence."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 364, p. 643",
+      "from": "Der Name Mnemonik gebürt nicht",
+      "to": "Der Name Mnemonik gebührt nicht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA643",
+      "reason": "The supplied EPUB drops the clearly printed h in gebührt."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 371, p. 645",
+      "from": "αναισθησια και βραδυτης φυχης",
+      "to": "ἀναισθησία καὶ βραδύτης ψυχῆς",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA645",
+      "reason": "The EPUB transcription strips the printed Greek breathings and accents and mistakes psi in ψυχῆς for phi."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary054.xhtml",
+      "page": "Band II, Kapitel XXVII, § 375, p. 649",
+      "from": "et la fin de concolation",
+      "to": "et la fin de consolation",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA649",
+      "reason": "The supplied EPUB mistakes the clearly printed s in consolation for c."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary054.xhtml",
+      "page": "Band II, Kapitel XXVII, § 375, p. 649",
+      "from": "im Sardanapal, Akt l, Sc. 2",
+      "to": "im Sardanapal, Akt 1, Sc. 2",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA649",
+      "reason": "The supplied EPUB mistakes the clearly printed act numeral 1 for lowercase l."
     }
   ]
 }

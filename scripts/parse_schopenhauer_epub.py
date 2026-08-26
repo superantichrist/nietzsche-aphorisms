@@ -748,6 +748,87 @@ def parse_parerga() -> list[dict]:
         style_tail["text"][len(goethe_citation) :]
     )
 
+    # § 371 is one continuous printed paragraph, but the EPUB inserts a
+    # boundary between the abbreviated Theophrastus reference and
+    # "Charact., c. 27".  Rejoin that citation before segmentation; changing
+    # the global abbreviation table would also reshuffle already translated
+    # occurrences of "Theophr." in other chapters.
+    laughter_section = next(
+        (
+            section
+            for section in sections
+            if section["part"] == "II-26" and section["section"] == "371"
+        ),
+        None,
+    )
+    if laughter_section is None:
+        raise ValueError("Missing chapter XXVI § 371")
+    theophrastus_pairs = [
+        index
+        for index, (head, tail) in enumerate(
+            zip(
+                laughter_section["paragraphs"],
+                laughter_section["paragraphs"][1:],
+            )
+        )
+        if head["text"].endswith("wie Theophr.")
+        and tail["text"].startswith("Charact., c. 27 sagt)")
+    ]
+    if len(theophrastus_pairs) != 1:
+        raise ValueError(
+            "Unexpected chapter XXVI § 371 Theophrastus boundary count: "
+            f"{len(theophrastus_pairs)}"
+        )
+    theophrastus_index = theophrastus_pairs[0]
+    theophrastus_head = laughter_section["paragraphs"][theophrastus_index]
+    theophrastus_tail = laughter_section["paragraphs"][theophrastus_index + 1]
+    theophrastus_head["text"] = normalize_space(
+        f"{theophrastus_head['text']} {theophrastus_tail['text']}"
+    )
+    theophrastus_head["source_notes"].update(
+        theophrastus_tail["source_notes"]
+    )
+    laughter_section["paragraphs"][
+        theophrastus_index : theophrastus_index + 2
+    ] = [theophrastus_head]
+
+    # In § 375 the EPUB sets the continuation of Byron's first verse line as
+    # a separate blockquote paragraph, leaving "The very first" stranded at
+    # the end of the introduction.  The 1874 page prints one continuous line,
+    # "The very first / Of human life ..."; join the display block before
+    # quote segmentation so the English sentence remains readable.
+    women_section = next(
+        (
+            section
+            for section in sections
+            if section["part"] == "II-27" and section["section"] == "375"
+        ),
+        None,
+    )
+    if women_section is None:
+        raise ValueError("Missing chapter XXVII § 375")
+    byron_pairs = [
+        index
+        for index, (head, tail) in enumerate(
+            zip(women_section["paragraphs"], women_section["paragraphs"][1:])
+        )
+        if head["text"].endswith("The very first")
+        and tail["text"].startswith("Of human life must spring")
+    ]
+    if len(byron_pairs) != 1:
+        raise ValueError(
+            "Unexpected chapter XXVII § 375 Byron boundary count: "
+            f"{len(byron_pairs)}"
+        )
+    byron_index = byron_pairs[0]
+    byron_head = women_section["paragraphs"][byron_index]
+    byron_tail = women_section["paragraphs"][byron_index + 1]
+    byron_head["text"] = normalize_space(
+        f"{byron_head['text']} {byron_tail['text']}"
+    )
+    byron_head["source_notes"].update(byron_tail["source_notes"])
+    women_section["paragraphs"][byron_index : byron_index + 2] = [byron_head]
+
     numbered = {
         section["section"]
         for section in sections

@@ -1047,6 +1047,10 @@ def main() -> None:
         "ein Vorkehrendes es ist kein Nicht-ich",
         "hier skitzirten Extremen",
         "ουδε τιτων ανθρωπινων αξιον εστι μεγαλης σπουδης",
+        "Mnemonik gebürt nicht",
+        "αναισθησια και βραδυτης φυχης",
+        "fin de concolation",
+        "Sardanapal, Akt l, Sc. 2",
     )
     pp_transcription_texts = [
         "\n".join(
