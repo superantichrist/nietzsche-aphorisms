@@ -834,6 +834,16 @@ def main() -> None:
         "Bändigungs-und Besänftigungsmittel",
         "execellentes",
         "Zähmungs-und Abrichtungsmittel",
+        "Trost-und Beruhigungsgründe",
+        "Uederdies",
+        "Länder-und Völkerkunde",
+        "qu’on ee permet",
+        "laisser an peuple",
+        "expérer qu’une agonie",
+        "(ep 5)",
+        "Im ganzes Verlaufe",
+        "Arisioteles",
+        "Bändigungs-und Zähmungsmittel",
     )
     pp_transcription_texts = [
         "\n".join(

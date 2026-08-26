@@ -4799,6 +4799,69 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
       "reason": "The supplied EPUB inserts a spurious e in excellentes and drops the printed word space after Zähmungs-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 367",
+      "from": "Trost-und Beruhigungsgründe",
+      "to": "Trost- und Beruhigungsgründe",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed word space after Trost-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 369",
+      "from": "Uederdies hat, seitdem",
+      "to": "Ueberdies hat, seitdem",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed b in Ueberdies as d."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 369",
+      "from": "Länder-und Völkerkunde",
+      "to": "Länder- und Völkerkunde",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed word space after Länder-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 370",
+      "from": "qu’on ee permet de défendre comme une croyance qu’il est utile de laisser an peuple, ne peut plus expérer qu’une agonie plus ou moins prolongée (ep 5)",
+      "to": "qu’on se permet de défendre comme une croyance qu’il est utile de laisser au peuple, ne peut plus espérer qu’une agonie plus ou moins prolongée (ep. 5)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB corrupts four clearly printed words or punctuation marks in the Condorcet quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 370",
+      "from": "Im ganzes Verlaufe des beschriebenen Hergangs",
+      "to": "Im ganzen Verlaufe des beschriebenen Hergangs",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed n in ganzen as s."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 371",
+      "from": "Arisioteles sämmtliche Tugenden",
+      "to": "Aristoteles sämmtliche Tugenden",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious i in the clearly printed Aristoteles."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 374",
+      "from": "Bändigungs-und Zähmungsmittel",
+      "to": "Bändigungs- und Zähmungsmittel",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed word space after Bändigungs-."
     }
   ]
 }
