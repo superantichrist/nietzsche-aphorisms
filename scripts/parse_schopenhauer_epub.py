@@ -609,6 +609,48 @@ def parse_parerga() -> list[dict]:
         *affirmation_appendix["paragraphs"][2:],
     ]
 
+    # Chapter XV has one artificial paragraph break at the p. 355/356 page
+    # turn.  In the 1878 print the Apuleius citation still belongs to the
+    # sentence about the Roman household gods; only the following sentence
+    # begins a new thought.  Rejoin the source payloads before segmentation so
+    # the citation cannot become an orphan reader record.
+    religion_section = next(
+        (
+            section
+            for section in sections
+            if section["part"] == "II-15" and section["section"] == "175"
+        ),
+        None,
+    )
+    if religion_section is None:
+        raise ValueError("Missing chapter XV § 175")
+    religion_pairs = [
+        index
+        for index, (head, tail) in enumerate(
+            zip(
+                religion_section["paragraphs"],
+                religion_section["paragraphs"][1:],
+            )
+        )
+        if head["text"].endswith("Bilder seiner Ahnen waren.")
+        and tail["text"].startswith("(Apulejus de Deo Socratis")
+    ]
+    if len(religion_pairs) != 1:
+        raise ValueError(
+            "Unexpected chapter XV § 175 Apuleius boundary count: "
+            f"{len(religion_pairs)}"
+        )
+    religion_index = religion_pairs[0]
+    religion_head = religion_section["paragraphs"][religion_index]
+    religion_tail = religion_section["paragraphs"][religion_index + 1]
+    religion_head["text"] = normalize_space(
+        f"{religion_head['text']} {religion_tail['text']}"
+    )
+    religion_head["source_notes"].update(religion_tail["source_notes"])
+    religion_section["paragraphs"][religion_index : religion_index + 2] = [
+        religion_head
+    ]
+
     numbered = {
         section["section"]
         for section in sections

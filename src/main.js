@@ -25,6 +25,7 @@ const elements = Object.fromEntries(
     "quote-card", "quote-number", "translation-badge", "quote-korean", "quote-german",
     "german-wrap", "toggle-german", "source-work", "source-location", "source-edition", "source-link",
     "footnotes-wrap", "footnotes", "previous", "next", "random", "copy-quote",
+    "mobile-previous", "mobile-next", "mobile-random",
     "copy-question", "share", "permalink-status", "open-search", "open-toc",
     "open-current-toc", "close-toc", "toc-panel", "toc-works", "toc-summary", "toc-content",
     "close-search", "search-panel", "search-input", "search-count", "search-results",
@@ -432,6 +433,9 @@ function bindEvents() {
   elements.previous.addEventListener("click", () => move(-1));
   elements.next.addEventListener("click", () => move(1));
   elements.random.addEventListener("click", () => showQuote(randomQuote(), { historyMode: "push" }));
+  elements["mobile-previous"].addEventListener("click", () => move(-1));
+  elements["mobile-next"].addEventListener("click", () => move(1));
+  elements["mobile-random"].addEventListener("click", () => showQuote(randomQuote(), { historyMode: "push" }));
   elements["copy-quote"].addEventListener("click", () => copyCurrent(false));
   elements["copy-question"].addEventListener("click", () => copyCurrent(true));
   elements.share.addEventListener("click", shareCurrent);
@@ -451,6 +455,33 @@ function bindEvents() {
   elements["search-panel"].addEventListener("click", (event) => {
     if (event.target === elements["search-panel"]) closeSearch();
   });
+  let swipeStart = null;
+  elements["quote-card"].addEventListener("touchstart", (event) => {
+    if (event.touches.length !== 1) {
+      swipeStart = null;
+      return;
+    }
+    const touch = event.touches[0];
+    swipeStart = { x: touch.clientX, y: touch.clientY, at: Date.now() };
+  }, { passive: true });
+  elements["quote-card"].addEventListener("touchend", (event) => {
+    if (!swipeStart || event.changedTouches.length !== 1) return;
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - swipeStart.x;
+    const deltaY = touch.clientY - swipeStart.y;
+    const elapsed = Date.now() - swipeStart.at;
+    swipeStart = null;
+    if (
+      elapsed <= 900
+      && Math.abs(deltaX) >= 64
+      && Math.abs(deltaX) > Math.abs(deltaY) * 1.4
+    ) {
+      move(deltaX < 0 ? 1 : -1);
+    }
+  }, { passive: true });
+  elements["quote-card"].addEventListener("touchcancel", () => {
+    swipeStart = null;
+  }, { passive: true });
   let searchTimer;
   elements["search-input"].addEventListener("input", (event) => {
     clearTimeout(searchTimer);

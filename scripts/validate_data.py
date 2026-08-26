@@ -813,6 +813,20 @@ def main() -> None:
         "von allen Dem zurück",
         "Dein Wesen an sich Selbst",
         "von seiner Individualität ausgeschlossen",
+        "φιλοσοφον πληθος αδυνατον ειναι",
+        "Erimirten",
+        "Sprichtwörtern",
+        "Volksmethaphysik",
+        "unbefangenen urtheilen",
+        "d. h, in fast allen Fällen",
+        "auto de fè",
+        "(de incantat c. 7)",
+        "Zurichtuug",
+        "Pythagorrers",
+        "τσς φυχας",
+        "απειργομες φευδεσι",
+        "Gemüthe führen Doch, guter Freund",
+        "Gewalt-und Schandthaten",
     )
     pp_transcription_texts = [
         "\n".join(
@@ -855,6 +869,21 @@ def main() -> None:
         for quote in quotes
     ):
         fail("Parerga Buddhist reminder split inside quotation marks")
+
+    pp_apuleius = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-15"
+        and quote["section"] == "175"
+        and "Apulejus de Deo Socratis" in quote["german"]
+    ]
+    if (
+        len(pp_apuleius) != 1
+        or pp_apuleius[0]["german"].startswith("(Apulejus de Deo Socratis")
+        or "Laren und Penaten" not in pp_apuleius[0]["german"]
+    ):
+        fail("Parerga § 175 Apuleius citation detached from its printed sentence")
 
     pp_hamlet = [
         quote

@@ -4628,6 +4628,123 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891384.pdf",
       "reason": "The supplied EPUB drops the printed Greek accent."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 348 and later recurrence",
+      "from": "φιλοσοφον πληθος αδυνατον ειναι",
+      "to": "φιλόσοφον πλῆθος ἀδύνατον εἶναι",
+      "expectedOccurrences": 2,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed Greek accents and breathing marks in both occurrences."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 348 and later recurrence",
+      "from": "Erimirten",
+      "to": "Eximirten",
+      "expectedOccurrences": 2,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB misreads the printed x in Eximirten as r in both occurrences."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 348",
+      "from": "Sprichtwörtern",
+      "to": "Sprichwörtern",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious t in the printed Sprichwörtern."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 348",
+      "from": "Volksmethaphysik",
+      "to": "Volksmetaphysik",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB inserts a spurious h in the printed Volksmetaphysik."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 349",
+      "from": "unbefangenen urtheilen",
+      "to": "unbefangenen Urtheilen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB lowercases the printed substantivized Urtheilen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, pp. 349–350",
+      "from": "d. h, in fast allen Fällen",
+      "to": "d. h. in fast allen Fällen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB substitutes a comma for the printed abbreviation period."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 350",
+      "from": "auto de fè",
+      "to": "auto de fé",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB gives the printed Spanish phrase the wrong accent."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 353",
+      "from": "(de incantat c. 7)",
+      "to": "(de incantat. c. 7)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed abbreviation period after incantat."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 353",
+      "from": "metaphysische Zurichtuug",
+      "to": "metaphysische Zurichtung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed n in Zurichtung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 354",
+      "from": "Rath des Pythagorrers Timäus Lokrus",
+      "to": "Rath des Pythagoreers Timäus Lokrus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB corrupts the clearly printed Pythagoreers."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 354",
+      "from": "τσς φυχας απειργομες φευδεσι λογοις, ει κα μη αγηται αλαθεσι",
+      "to": "τὰς ψυχὰς ἀπείργομες ψευδέσι λόγοις, εἰ κα μὴ ἄγηται ἀλαθέσι",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB corrupts the first words and drops the printed Greek accents and breathings."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, pp. 354–355",
+      "from": "mir zu Gemüthe führen Doch, guter Freund, die Zeit kommt auch heran, Wo wir was Gut’s in Ruhe schmausen mögen, und deine Empfehlung",
+      "to": "mir zu Gemüthe führen „Doch, guter Freund, die Zeit kommt auch heran, Wo wir was Gut’s in Ruhe schmausen mögen“, und deine Empfehlung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the two-line Goethe quotation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary042.xhtml",
+      "page": "Band II, Kapitel XV, § 175, p. 354",
+      "from": "Gewalt-und Schandthaten",
+      "to": "Gewalt- und Schandthaten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891375.pdf",
+      "reason": "The supplied EPUB drops the printed word space after the hyphen."
     }
   ]
 }

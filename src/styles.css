@@ -133,6 +133,7 @@ a { color: inherit; }
 .quote-card {
   position: relative;
   overflow: hidden;
+  touch-action: pan-y;
   padding: clamp(24px, 6vw, 50px);
   border: 1px solid rgba(201, 163, 92, 0.3);
   border-radius: 4px;
@@ -265,6 +266,8 @@ blockquote { margin: 0; }
 .utility-row button { min-height: 38px; padding: 0 13px; border: 0; color: var(--muted); background: transparent; }
 #permalink-status { color: var(--gold); font: 11px Arial, sans-serif; }
 
+.mobile-quote-nav { display: none; }
+
 .about { margin-top: 112px; padding: 65px 0; border-top: 1px solid var(--line); }
 .about h2 { margin: 0; font-size: clamp(31px, 7vw, 52px); font-weight: 400; line-height: 1.27; letter-spacing: -0.055em; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; margin-top: 38px; align-items: start; }
@@ -344,7 +347,15 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
 .search-result strong { font-size: 14px; font-weight: 400; line-height: 1.65; }
 .modal-open { overflow: hidden; }
 
+@media (min-width: 621px) {
+  .quote-korean { font-size: 32px; line-height: 1.56; }
+  .quote-korean.german-fallback { font-size: 30px; line-height: 1.48; }
+  .quote-german { font-size: 16px; }
+  .about h2 { font-size: 40px; }
+}
+
 @media (max-width: 620px) {
+  body { padding-bottom: calc(66px + env(safe-area-inset-bottom, 0)); }
   .shell { width: min(100% - 24px, 760px); }
   .filters {
     flex-wrap: nowrap;
@@ -358,15 +369,45 @@ footer a { color: #c8bda9; font: 11px Arial, sans-serif; text-decoration: none; 
   .desktop-label { display: none; }
   .icon-button { padding: 0 11px; }
   .quote-card { padding: 26px 22px 22px; }
+  .quote-korean { font-size: 23px; line-height: 1.57; }
+  .quote-korean.german-fallback { font-size: 22px; line-height: 1.48; }
+  .quote-german { font-size: 14px; }
   .source-row { align-items: flex-start; flex-direction: column; gap: 14px; }
   .source-links { width: 100%; justify-content: space-between; }
   .ornament { margin-top: 36px; }
-  .quote-actions { grid-template-columns: 1fr 1fr; }
-  .quote-actions .random-button { grid-column: 1 / -1; grid-row: 1; }
+  .quote-actions { display: none; }
+  .mobile-quote-nav {
+    position: fixed;
+    z-index: 8;
+    right: 12px;
+    bottom: max(8px, env(safe-area-inset-bottom, 0));
+    left: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 5px;
+    width: min(calc(100% - 24px), 430px);
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid rgba(201, 163, 92, 0.3);
+    border-radius: 12px;
+    background: rgba(26, 20, 15, 0.94);
+    box-shadow: 0 12px 38px rgba(0,0,0,0.48);
+    backdrop-filter: blur(14px);
+  }
+  .mobile-quote-nav button {
+    min-height: 43px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #d8cdbb;
+    font: 12px Arial, sans-serif;
+  }
+  .mobile-quote-nav .random-button { background: #a57e3f; color: #17110b; font-weight: 700; }
   .utility-row { align-items: flex-start; flex-direction: column; padding-top: 6px; }
   .utility-actions { width: 100%; }
   .utility-actions button { flex: 1 1 auto; }
   .about { margin-top: 76px; }
+  .about h2 { font-size: 29px; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   footer { align-items: flex-start; flex-direction: column; }
   .toc-sheet { padding: 24px 18px; }
