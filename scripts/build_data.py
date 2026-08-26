@@ -1474,6 +1474,46 @@ def quote_units_for_work(
                 :comparison_at
             ].rstrip()
             unit = normalize_space(f"{comparison} {unit}")
+        french_language_appeal = "Ich wollte, daß die illustres confrères"
+        if (
+            work == "pp"
+            and part == "II-25"
+            and str(section) == "Anhang-verwandter-Stellen"
+            and citation_rejoined
+            and french_language_appeal in citation_rejoined[-1]
+            and unit.startswith("um so mehr,")
+        ):
+            # The long appeal is split after its semicolon.  Carry the entire
+            # second sentence so one record closes after the animal similes
+            # and the next presents the Academy appeal from its beginning.
+            appeal_at = citation_rejoined[-1].rfind(french_language_appeal)
+            appeal = citation_rejoined[-1][appeal_at:].strip()
+            citation_rejoined[-1] = citation_rejoined[-1][:appeal_at].rstrip()
+            unit = normalize_space(f"{appeal} {unit}")
+        waelsch_definition = "— Wälsch ist höchst wahrscheinlich"
+        if (
+            work == "pp"
+            and part == "II-25"
+            and str(section) == "Anhang-verwandter-Stellen"
+            and citation_rejoined
+            and waelsch_definition in citation_rejoined[-1]
+            and citation_rejoined[-1].endswith("d. i.")
+            and unit.startswith("Keltisch,")
+            and len(
+                normalize_space(
+                    f"{citation_rejoined[-1][citation_rejoined[-1].rfind(waelsch_definition):]} {unit}"
+                )
+            )
+            <= 820
+        ):
+            # Keep d. i. with its expansion and the complete Wälsch etymology;
+            # otherwise the next displayed unit starts with a stranded word.
+            definition_at = citation_rejoined[-1].rfind(waelsch_definition)
+            definition = citation_rejoined[-1][definition_at:].strip()
+            citation_rejoined[-1] = citation_rejoined[-1][
+                :definition_at
+            ].rstrip()
+            unit = normalize_space(f"{definition} {unit}")
         augustine_citation_stem = next(
             (
                 stem

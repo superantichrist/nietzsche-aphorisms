@@ -6293,6 +6293,69 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA601",
       "reason": "The supplied EPUB mistakes the clearly printed Greek psi in συλληψις for phi."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary052.xhtml",
+      "page": "Band II, Kapitel XXV, § 312, p. 609",
+      "from": "ουκ εστι παν γενομενονποιουμενον",
+      "to": "ουκ εστι παν γενομενον ποιουμενον",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA609",
+      "reason": "The EPUB text extractor drops the printed space between the two adjacent Greek inline elements."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary052.xhtml",
+      "page": "Band II, Kapitel XXV, § 312, p. 609",
+      "from": "nicht jedes Gewordene istein Gemachtes",
+      "to": "nicht jedes Gewordene ist ein Gemachtes",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA609",
+      "reason": "The EPUB text extractor drops the printed space at an inline-element boundary after ist."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary052.xhtml",
+      "page": "Band II, Kapitel XXV, § 313, p. 610",
+      "from": "Delrii disquisitionibus magicis, L. I, c. l,",
+      "to": "Delrii disquisitionibus magicis, L. I, c. 1,",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA610",
+      "reason": "The supplied EPUB mistakes the clearly printed chapter numeral 1 for lowercase l."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary052.xhtml",
+      "page": "Band II, Kapitel XXV, § 313, p. 610",
+      "from": "Das deutsche Wort LuftLuft kommt",
+      "to": "Das deutsche Wort Luft kommt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA610",
+      "reason": "The supplied EPUB duplicates Luft across an inline-element boundary; the scan prints it once."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary052.xhtml",
+      "page": "Band II, Kapitel XXV, Anhang verwandter Stellen, p. 612",
+      "from": "bradype, 0edype, Andromaque",
+      "to": "bradype, Oedype, Andromaque",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA612",
+      "reason": "The supplied EPUB mistakes the clearly printed capital O in Oedype for zero."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 314, p. 616",
+      "from": "je heftiger, ungestühmer und leidenschaftlicher",
+      "to": "je heftiger, ungestümer und leidenschaftlicher",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA616",
+      "reason": "The supplied EPUB inserts a spurious h into the clearly printed ungestümer."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary053.xhtml",
+      "page": "Band II, Kapitel XXVI, § 314, p. 617",
+      "from": "ohne je zu extravagiren Das Genie hingegen",
+      "to": "ohne je zu extravagiren. Das Genie hingegen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA617",
+      "reason": "The supplied EPUB drops the clearly printed full stop after extravagiren."
     }
   ]
 }

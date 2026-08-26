@@ -1032,6 +1032,13 @@ def main() -> None:
         "Boisseree’sche jetzt in München",
         "ausszumerzen",
         "συλληφις",
+        "γενομενονποιουμενον",
+        "Gewordene istein Gemachtes",
+        "Delrii disquisitionibus magicis, L. I, c. l,",
+        "LuftLuft kommt",
+        "bradype, 0edype, Andromaque",
+        "ungestühmer und leidenschaftlicher",
+        "extravagiren Das Genie hingegen",
     )
     pp_transcription_texts = [
         "\n".join(
@@ -1135,6 +1142,34 @@ def main() -> None:
         for quote in quotes
     ):
         fail("Parerga § 266 sentence split at a false EPUB paragraph boundary")
+
+    pp_language_etymology_appendix = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-25"
+        and quote["section"] == "Anhang-verwandter-Stellen"
+    ]
+    if any(
+        quote["german"].startswith("um so mehr,")
+        or quote["german"].startswith("Keltisch, und bedeutete")
+        or quote["german"].endswith("d. i.")
+        for quote in pp_language_etymology_appendix
+    ):
+        fail("Parerga language appendix contains an orphaned continuation")
+    if not any(
+        quote["german"].startswith("Ich wollte, daß die illustres confrères")
+        and "um so mehr, als man" in quote["german"]
+        and quote["german"].endswith("enträthseln.")
+        for quote in pp_language_etymology_appendix
+    ):
+        fail("Parerga French-language appeal split after its semicolon")
+    if not any(
+        quote["german"].startswith("— Wälsch ist höchst wahrscheinlich")
+        and "d. i. Keltisch" in quote["german"]
+        for quote in pp_language_etymology_appendix
+    ):
+        fail("Parerga Wälsch etymology split inside d. i. Keltisch")
 
     pp_278_opening = [
         quote
