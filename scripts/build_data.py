@@ -1087,7 +1087,7 @@ PP_CITATION_ABBREVIATIONS = (
     "St.", "V.", "Aufl.", "P.", "p.", "L.", "Art.", "Vol.",
     "Lib.", "lib.", "Liv.", "liv.", "Tom.", "C.", "c.", "ibid.",
     "Med.", "Part.", "publ.", "prop.", "pr.", "schol.", "seqq.",
-    "sq.", "Opp.", "opp.", "ed.", "edit.", "cap.", "ch.", "vierf.", "spekul.",
+    "sq.", "Opp.", "opp.", "ed.", "edit.", "cap.", "ch.", "institut.", "vierf.", "spekul.",
     "somn.", "Vergl.",
     "Arist.", "Cic.", "Clem.", "Alex.", "Apulej.", "Jambl.", "Pyth.",
     "Diog.", "Laert.", "Herod.", "Schol.", "vit.",
@@ -1324,11 +1324,29 @@ def quote_units_for_work(
     packed: list[str] = []
     current = ""
     pack_max_chars = 780 if pp_reflow else 500
+    pp_attach_leading_parentheticals = pp_reflow and (
+        int(part[3:]) > 3
+        or (part == "II-03" and re.fullmatch(r"\d+", str(section)) is not None and int(str(section)) >= 51)
+    )
     for unit in units:
         candidate = normalize_space(f"{current} {unit}")
         if current and len(candidate) > pack_max_chars:
-            packed.append(current)
-            current = unit
+            leading_parenthetical = (
+                re.match(r"^(\([^()]{1,240}\))\s+(.+)$", unit)
+                if pp_attach_leading_parentheticals
+                else None
+            )
+            current_with_citation = (
+                normalize_space(f"{current} {leading_parenthetical.group(1)}")
+                if leading_parenthetical
+                else ""
+            )
+            if leading_parenthetical and len(current_with_citation) <= 820:
+                packed.append(current_with_citation)
+                current = leading_parenthetical.group(2)
+            else:
+                packed.append(current)
+                current = unit
         else:
             current = candidate
     if current:

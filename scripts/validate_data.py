@@ -475,6 +475,16 @@ def main() -> None:
         "unschätz-barem",
         "Aussgangs politischer Angelegenheiten",
         "umfaßt, nützliche Kenntnisse heißen",
+        "un-bedeutendsten Vorgänge",
+        "auf das rein, Objektive",
+        "das Stämpel unsrer Armsäligkeit",
+        "3. Aufl. 433.) Demgemäß",
+        "anzukommem gleicht",
+        "institut. L. III, e. 5",
+        "Vollkommenheit und seine Empfänglichkeit",
+        "Abmessuug der Hierarchie",
+        "Auffassnng unterscheiden",
+        "als eine Parasit",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]

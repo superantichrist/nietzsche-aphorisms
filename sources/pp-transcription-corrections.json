@@ -1604,6 +1604,96 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
       "reason": "The supplied EPUB drops the printed quotation marks around nützliche Kenntnisse."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 71",
+      "from": "die un-bedeutendsten Vorgänge angaffend",
+      "to": "die unbedeutendsten Vorgänge angaffend",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB retains a print line-break hyphen inside unbedeutendsten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 72",
+      "from": "auf das rein, Objektive gerichteter Gebrauch",
+      "to": "auf das rein Objektive gerichteter Gebrauch",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts a comma between the printed adjective phrase rein Objektive."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 72",
+      "from": "trägt das Stämpel unsrer Armsäligkeit",
+      "to": "trägt das Stempel unsrer Armsäligkeit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes ä for the printed e in Stempel."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 73",
+      "from": "Bd. II, p. 380; 3. Aufl. 433.",
+      "to": "Bd. II, p. 380; 3. Aufl. 435.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB prints an incorrect third-edition page number; the fixed German scan clearly reads 435."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 74",
+      "from": "um anzukommem gleicht",
+      "to": "um anzukommen gleicht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes m for n at the end of anzukommen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 75",
+      "from": "(Lactant. divin. institut. L. III, e. 5.)",
+      "to": "(Lactant. divin. institut. L. III, c. 5.)",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the chapter abbreviation c. as e. in the Lactantius citation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 75",
+      "from": "die hohe Vollkommenheit und seine Empfänglichkeit des Intellekts",
+      "to": "die hohe Vollkommenheit und feine Empfänglichkeit des Intellekts",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the long-s form of feine as seine; the fixed German scan preserves the adjective."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 77",
+      "from": "Skala zur Abmessuug der Hierarchie",
+      "to": "Skala zur Abmessung der Hierarchie",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes u for n in Abmessung; the fixed German scan preserves the spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 51, p. 78",
+      "from": "immer allgemeiner Werden der Auffassnng",
+      "to": "immer allgemeiner Werden der Auffassung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes n for u in Auffassung; the fixed German scan preserves the spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary030.xhtml",
+      "page": "Band II, Kapitel III, § 53, p. 79",
+      "from": "Wie das Gehirn als eine Parasit",
+      "to": "Wie das Gehirn als ein Parasit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB gives the masculine noun Parasit the wrong article; the fixed German scan clearly reads ein."
     }
   ]
 }
