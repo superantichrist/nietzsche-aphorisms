@@ -492,6 +492,14 @@ def main() -> None:
         "die Werte großer Geister",
         "Ehr läßt es sich indirekt ausdrücken",
         "die füchtigen Gestalten dieser Welt",
+        "qualle sit vel non sit",
+        "deutliche uud bestimmte",
+        "metaphpysischen",
+        "Erkenntnis; des Dinges an sich",
+        "Selbstbeweußtseyn",
+        "Versständlichkeit eines Vorganges",
+        "mit dem Pantheimus",
+        "es doch ganz, anders gewohnt",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
@@ -517,6 +525,7 @@ def main() -> None:
         "Es ist leichter eine gute Tragödie, als eine gute Komödie zu schreiben.",
         "Das dem Bako von Verulam Nachgesprochene",
         "Knowledge is power. Den Teufel auch!",
+        "Του δε οντως οντος και καθ’ αυτο υφεστηκοτος αυτου",
         "daß Der, zu dem geredet wird, den Subjektbegriff",
         "weshalb denn auch Herr Prof. Rosas in Wien",
     )

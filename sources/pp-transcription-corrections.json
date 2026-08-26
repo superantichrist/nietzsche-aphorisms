@@ -1757,6 +1757,87 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
       "reason": "The supplied EPUB drops the l in flüchtigen; the fixed German scan preserves the complete word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary031.xhtml",
+      "page": "Band II, Kapitel IV, § 62, p. 96",
+      "from": "vere quidem nos, qualle sit vel non sit",
+      "to": "vere quidem nos, quale sit vel non sit",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB duplicates the l in the Latin quale; the fixed German scan clearly reads quale."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary031.xhtml",
+      "page": "Band II, Kapitel IV, § 62, p. 96",
+      "from": "Eine auffallend deutliche uud bestimmte Unterscheidung",
+      "to": "Eine auffallend deutliche und bestimmte Unterscheidung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB substitutes u for n in und; the fixed German scan preserves the conjunction."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary031.xhtml",
+      "page": "Band II, Kapitel IV, § 62, pp. 96–97",
+      "from": "το μεταβλητον ειναι etc.",
+      "to": "το μεταβλητον ειναι etc. Του δε οντως οντος και καθ’ αυτο υφεστηκοτος αυτου, το ειναι αει εν εαυτω ιδρυμενον· ωσαυτως το κατα ταυτα εχειν etc.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the second half of Porphyry's Greek contrast at the page break; the fixed German scan preserves the complete continuation."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary031.xhtml",
+      "page": "Band II, Kapitel IV, § 64, p. 97",
+      "from": "einer physischen und einer metaphpysischen",
+      "to": "einer physischen und einer metaphysischen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts a stray p in metaphysischen; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary031.xhtml",
+      "page": "Band II, Kapitel IV, § 65, p. 98",
+      "from": "so ist diese Erkenntnis; des Dinges an sich",
+      "to": "so ist diese Erkenntniß des Dinges an sich",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB misreads the printed final ß in Erkenntniß as a semicolon; the fixed German scan preserves the noun."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary031.xhtml",
+      "page": "Band II, Kapitel IV, § 65, p. 98",
+      "from": "vom cerebralen Selbstbeweußtseyn unzertrennliche",
+      "to": "vom cerebralen Selbstbewußtseyn unzertrennliche",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB transposes letters in Selbstbewußtseyn; the fixed German scan preserves the spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary031.xhtml",
+      "page": "Band II, Kapitel IV, § 65, p. 99",
+      "from": "je deutlicher die Versständlichkeit eines Vorganges",
+      "to": "je deutlicher die Verständlichkeit eines Vorganges",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts a stray s in Verständlichkeit; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary032.xhtml",
+      "page": "Band II, Kapitel V, § 69, p. 104",
+      "from": "wie die Philosophieprofessoren mit dem Pantheimus",
+      "to": "wie die Philosophieprofessoren mit dem Pantheismus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB drops the s in Pantheismus; the fixed German scan preserves the term."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary032.xhtml",
+      "page": "Band II, Kapitel V, § 70, p. 105",
+      "from": "der als solcher es doch ganz, anders gewohnt seyn müßte",
+      "to": "der als solcher es doch ganz anders gewohnt seyn müßte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891192.pdf",
+      "reason": "The supplied EPUB inserts a spurious comma between ganz and anders; the fixed German scan has no punctuation there."
     }
   ]
 }
