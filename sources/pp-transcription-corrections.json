@@ -6635,6 +6635,60 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA685",
       "reason": "The supplied EPUB mistakes the second u in the clearly printed Mechanismus for n."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary058.xhtml",
+      "page": "Band II, Kapitel XXXI, § 402, p. 685",
+      "from": "Wohl war, erwiderte die Tanne",
+      "to": "Wohl wahr, erwiderte die Tanne",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA685",
+      "reason": "The supplied EPUB drops the final h from the clearly printed wahr."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary058.xhtml",
+      "page": "Band II, Kapitel XXXI, § 402, p. 685",
+      "from": "wirst duentlaubt dastehn",
+      "to": "wirst du entlaubt dastehn",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA685",
+      "reason": "Adjacent inline emphasis tags in the EPUB make the extractor drop the printed space after du."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary058.xhtml",
+      "page": "Band II, Kapitel XXXI, § 406, p. 687",
+      "from": "allein muß ich bleiben!nirgends meines Gleichen",
+      "to": "allein muß ich bleiben! nirgends meines Gleichen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA687",
+      "reason": "The extractor drops the clearly printed space at an inline emphasis boundary after the exclamation mark."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary058.xhtml",
+      "page": "Band II, Kapitel XXXI, § 413, p. 689",
+      "from": "ist die Höflichkeit und seine Sitte",
+      "to": "ist die Höflichkeit und feine Sitte",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA689",
+      "reason": "The supplied EPUB mistakes the clearly printed Fraktur f in feine for s."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary059.xhtml",
+      "page": "Band II, Einige Verse, p. 691",
+      "from": "1813. Die Felsen im Thale bei Schwarzburg",
+      "to": "Rudolstadt, 1813. Die Felsen im Thale bei Schwarzburg",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA691",
+      "reason": "The supplied EPUB omits the clearly printed composition place Rudolstadt from the poem heading."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary059.xhtml",
+      "page": "Band II, Einige Verse, p. 692",
+      "from": "im Sturm des jammer-und angstvollen Lebens",
+      "to": "im Sturm des jammer- und angstvollen Lebens",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://books.google.com/books?id=T4lhAAAAcAAJ&pg=PA692",
+      "reason": "The EPUB extractor drops the clearly printed space after the suspended compound jammer-."
     }
   ]
 }

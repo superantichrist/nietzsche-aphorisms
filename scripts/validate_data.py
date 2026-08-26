@@ -1070,6 +1070,11 @@ def main() -> None:
         "von dem Strumpfsinn und der Gedankenlosigkeit",
         "3. Aufl. 463) des zweiten Bandes",
         "den Mechanismns der Maschinerien",
+        "Wohl war, erwiderte die Tanne",
+        "wirst duentlaubt dastehn",
+        "bleiben!nirgends meines Gleichen",
+        "Höflichkeit und seine Sitte",
+        "jammer-und angstvollen Lebens",
     )
     pp_transcription_texts = [
         "\n".join(
