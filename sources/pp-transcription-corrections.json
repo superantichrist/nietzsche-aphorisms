@@ -3863,6 +3863,213 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
       "reason": "The supplied EPUB misreads the printed keiner as seiner, reversing the sentence's meaning."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, § 142, p. 298",
+      "from": "Mir geht nun auf der Welt nichts über mich: Denn Gott ist Gott, und ich bin ich! Ich, ich, ich will daseyn!",
+      "to": "„Mir geht nun auf der Welt nichts über mich: Denn Gott ist Gott, und ich bin ich.“ Ich, ich, ich will daseyn!",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks and replaces the full stop closing the cited line with an exclamation mark."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary060.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, p. 300",
+      "from": "wie bei den folgenden Kaiteln",
+      "to": "wie bei den folgenden Kapiteln",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed syllable pi from Kapiteln."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, p. 301",
+      "from": "Aeußerungen - Fulgurationen —",
+      "to": "Aeußerungen — Fulgurationen —",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB replaces the printed em dash before Fulgurationen with a short hyphen."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, p. 301",
+      "from": "Vernichtuug",
+      "to": "Vernichtung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed n in Vernichtung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, pp. 301–302",
+      "from": "venichtet",
+      "to": "vernichtet",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed r in vernichtet."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, p. 302",
+      "from": "zu venichten",
+      "to": "zu vernichten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed r in vernichten."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, p. 301",
+      "from": "so würde er sagen: Siehe sie nur an, diese Individuen, siehe ihre Fehler, Lächerlichkeiten, Schlechtigkeiten und Abscheulichkeiten! Die sollte ich auf immer bestehn lassen?!",
+      "to": "so würde er sagen: „Siehe sie nur an, diese Individuen, siehe ihre Fehler, Lächerlichkeiten, Schlechtigkeiten und Abscheulichkeiten! Die sollte ich auf immer bestehn lassen?!“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around the World-Spirit's reply; the following printed dash is already present in the transcription."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, pp. 301–302",
+      "from": "Zum Demiurgos würde ich sagen: Warum, statt, durch ein halbes Wunder, unaufhörlich neue Menschen zu machen und die schon lebenden zu vernichten, läßt du es nicht, ein für alle Mal, bei den vorhandenen bewenden und diese fortbestehn, in alle Ewigkeit? — Wahrscheinlich würde er antworten: Sie wollen ja selbst immer neue machen, da muß ich für Platz sorgen.",
+      "to": "Zum Demiurgos würde ich sagen: „Warum, statt, durch ein halbes Wunder, unaufhörlich neue Menschen zu machen und die schon lebenden zu vernichten, läßt du es nicht, ein für alle Mal, bei den vorhandenen bewenden und diese fortbestehn, in alle Ewigkeit?“ — Wahrscheinlich würde er antworten: „Sie wollen ja selbst immer neue machen, da muß ich für Platz sorgen.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks opening the question to the Demiurge and his reply."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary037.xhtml",
+      "page": "Band II, Kapitel X, Anhang verwandter Stellen, p. 302",
+      "from": "Mal’ es dir nur aus! — Ich: Nun, sie könnten etwas vor sich bringen, in jeder Art.",
+      "to": "Mal’ es dir nur aus!“ — Ich: „Nun, sie könnten etwas vor sich bringen, in jeder Art“.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891336.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks closing the Demiurge's reply and enclosing the speaker's answer."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 143, p. 303",
+      "from": "steten Hemmung des Sterbens",
+      "to": "steten Hemmung des Strebens",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB misreads the printed Strebens as Sterbens, changing the sentence's meaning."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 145, p. 304",
+      "from": "Plato’s beständiges Werden und nie Seyn",
+      "to": "Plato’s „beständiges Werden und nie Seyn“",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the printed quotation marks around Plato's formula."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 145, p. 304",
+      "from": "Znvörderst",
+      "to": "Zuvörderst",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB misreads the printed u in Zuvörderst as n."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 145, p. 305",
+      "from": "entäuscht",
+      "to": "enttäuscht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the second printed t in enttäuscht."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 145, p. 305",
+      "from": "Menschen-und Thierwelt",
+      "to": "Menschen- und Thierwelt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Menschen-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 145, p. 305",
+      "from": "αει ωσαυτως ον, in ewiger Ruhe, ουτε γιγνομενον, ουτε απολλυμενον",
+      "to": "ἀεί ὡσαύτως ὄν, in ewiger Ruhe, οὔτε γιγνόμενον, οὔτε ἀπολλύμενον",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the Greek accents and breathings in Plato's formula."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 147, p. 306",
+      "from": "Jetzt και εξοχην",
+      "to": "Jetzt κατ’ ἐξοχήν",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB misreads the printed Greek phrase κατ’ ἐξοχήν and drops its accents."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 148, p. 308",
+      "from": "desengano",
+      "to": "desengaño",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the printed tilde from the Spanish word desengaño."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 148, p. 308",
+      "from": "kein οντως ον ist",
+      "to": "kein ὄντως ὄν ist",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the Greek accents and breathing from the phrase ὄντως ὄν."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 147, p. 307",
+      "from": "die so laugweilige, natürliche Ordnung",
+      "to": "die so langweilige, natürliche Ordnung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB misreads the printed n in langweilige as u."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 147, p. 307",
+      "from": "Masken-An-und Aufzüge",
+      "to": "Masken-An- und Aufzüge",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended compound Masken-An-."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 148, p. 308",
+      "from": "am Ende angenfällig der Venichtung anheim gegeben",
+      "to": "am Ende augenfällig der Vernichtung anheim gegeben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB misreads the printed words augenfällig and Vernichtung."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 148, p. 308",
+      "from": "Göthe’s schönem Liede Hoch auf dem alten Thurme steht Des Helden edler Geist, zum Grunde.",
+      "to": "Göthe’s schönem Liede: „Hoch auf dem alten Thurme steht Des Helden edler Geist“, zum Grunde.",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB drops the printed colon and quotation marks around the two-line quotation from Goethe."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary038.xhtml",
+      "page": "Band II, Kapitel XI, § 148, p. 308",
+      "from": "so könnte er nicht vergehn, Daß aber nur",
+      "to": "so könnte er nicht vergehn. Daß aber nur",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891364.pdf",
+      "reason": "The supplied EPUB replaces the printed full stop after vergehn with a comma."
     }
   ]
 }

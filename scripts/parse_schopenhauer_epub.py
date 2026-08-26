@@ -540,6 +540,28 @@ def parse_parerga() -> list[dict]:
                 f"{subject!r} expected={expected}, actual={occurrences}"
             )
 
+    # The EPUB inserts a paragraph boundary at the p. 301/302 page break in
+    # chapter X's related-passages appendix. The 1878 scan shows that the
+    # Demiurge's reply continues in the same printed paragraph, so rejoin the
+    # two payloads before quote segmentation.
+    death_appendix = next(
+        (
+            section
+            for section in sections
+            if section["part"] == "II-10"
+            and section["section"] == "Anhang-verwandter-Stellen"
+        ),
+        None,
+    )
+    if death_appendix is None or len(death_appendix["paragraphs"]) != 2:
+        raise ValueError("Unexpected chapter X related-passages appendix structure")
+    appendix_head, appendix_tail = death_appendix["paragraphs"]
+    appendix_head["text"] = normalize_space(
+        f"{appendix_head['text']} {appendix_tail['text']}"
+    )
+    appendix_head["source_notes"].update(appendix_tail["source_notes"])
+    death_appendix["paragraphs"] = [appendix_head]
+
     numbered = {
         section["section"]
         for section in sections

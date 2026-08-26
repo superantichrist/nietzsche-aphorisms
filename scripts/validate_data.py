@@ -651,6 +651,26 @@ def main() -> None:
         "seine Stammverwandschaft mit dem",
         "und ihn seyn ließe, wie wenig",
         "dieses Gottes και εξοχην",
+        "ich bin ich! Ich, ich, ich will daseyn",
+        "folgenden Kaiteln",
+        "Aeußerungen - Fulgurationen",
+        "Vernichtuug",
+        "zu venichten",
+        "steten Hemmung des Sterbens",
+        "Plato’s beständiges Werden und nie Seyn",
+        "Znvörderst",
+        "entäuscht",
+        "Menschen-und Thierwelt",
+        "αει ωσαυτως ον",
+        "ουτε γιγνομενον",
+        "Jetzt και εξοχην",
+        "desengano",
+        "kein οντως ον ist",
+        "so laugweilige",
+        "Masken-An-und Aufzüge",
+        "angenfällig der Venichtung",
+        "schönem Liede Hoch auf dem alten Thurme",
+        "nicht vergehn, Daß aber nur",
         "sufficit irae, Iuv. Sat. XIII",
         "το οργιζεσθαι ηδυ",
         "sie sogleich zer-trat",
@@ -794,6 +814,25 @@ def main() -> None:
     ]
     if missing_pp_list_fragments:
         fail(f"Parerga XHTML list content missing: {missing_pp_list_fragments[:3]}")
+
+    pp_death_appendix = [
+        quote
+        for quote in quotes
+        if quote["work"] == "pp"
+        and quote["part"] == "II-10"
+        and quote["section"] == "Anhang-verwandter-Stellen"
+    ]
+    if (
+        len(pp_death_appendix) != 6
+        or {quote["paragraphCount"] for quote in pp_death_appendix} != {1}
+        or [quote["sentence"] for quote in pp_death_appendix] != list(range(6))
+    ):
+        fail("Parerga chapter X printed appendix paragraph was split incorrectly")
+    if any(
+        quote["german"].count("„") != quote["german"].count("“")
+        for quote in pp_death_appendix
+    ):
+        fail("Parerga chapter X appendix contains a quote cut inside direct speech")
 
     eh_venice = [
         quote for quote in quotes

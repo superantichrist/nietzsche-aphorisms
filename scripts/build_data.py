@@ -1147,6 +1147,29 @@ def protect_ordinal_continuations(text: str) -> str:
     )
 
 
+INNER_QUOTE_BOUNDARY_MARKERS = {
+    ".": "\ue000",
+    "!": "\ue001",
+    "?": "\ue002",
+    "…": "\ue003",
+}
+
+
+def protect_inner_german_quote_boundaries(text: str) -> str:
+    """Protect non-final sentence marks inside a complete German quotation."""
+
+    def protect_match(match: re.Match[str]) -> str:
+        content = match.group(1)
+        content = re.sub(
+            r"([.!?…])(?=\s+(?:[—–-]\s*)?(?:[„‚\"(\[])?[A-ZÄÖÜ])",
+            lambda boundary: INNER_QUOTE_BOUNDARY_MARKERS[boundary.group(1)],
+            content,
+        )
+        return f"„{content}“"
+
+    return re.sub(r"„([^„“]*?)“", protect_match, text)
+
+
 def split_long(
     text: str,
     max_chars: int = 500,
@@ -1236,6 +1259,7 @@ def sentence_units(
     min_words: int = 4,
     lone_min_chars: int = 28,
     lone_min_words: int = 4,
+    protect_inner_german_quotes: bool = False,
 ) -> list[str]:
     normalized = normalize_space(paragraph)
     if normalized in PRESERVE_SHORT_UNITS:
@@ -1259,8 +1283,20 @@ def sentence_units(
         )
     if protect_ordinals:
         protected = protect_ordinal_continuations(protected)
-    raw = re.split(r"(?<=[.!?…])(?:[”’\"])?\s+(?=(?:[„‚\"(\[])?[A-ZÄÖÜ—–-])", protected)
-    restored = [part.replace("∯", ".") for part in raw]
+    if protect_inner_german_quotes:
+        protected = protect_inner_german_quote_boundaries(protected)
+    sentence_boundary = (
+        r"(?:(?<=[.!?…])|(?<=[.!?…][”’\"“]))\s+(?=(?:[„‚\"(\[])?[A-ZÄÖÜ—–-])"
+        if protect_inner_german_quotes
+        else r"(?<=[.!?…])(?:[”’\"])?\s+(?=(?:[„‚\"(\[])?[A-ZÄÖÜ—–-])"
+    )
+    raw = re.split(sentence_boundary, protected)
+    restored = []
+    for part in raw:
+        restored_part = part.replace("∯", ".")
+        for punctuation, marker in INNER_QUOTE_BOUNDARY_MARKERS.items():
+            restored_part = restored_part.replace(marker, punctuation)
+        restored.append(restored_part)
     expanded: list[str] = []
     for part in restored:
         expanded.extend(
@@ -1325,6 +1361,11 @@ def quote_units_for_work(
         require_abbreviation_token_boundaries=pp_untranslated_chapter,
         min_chars=40 if work == "pp" else 28,
         min_words=5 if work == "pp" else 4,
+        protect_inner_german_quotes=(
+            work == "pp"
+            and part == "II-10"
+            and section == "Anhang-verwandter-Stellen"
+        ),
     )
     packed: list[str] = []
     current = ""
