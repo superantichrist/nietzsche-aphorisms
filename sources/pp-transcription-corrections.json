@@ -1937,6 +1937,195 @@
       "expectedOccurrences": 1,
       "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
       "reason": "The supplied EPUB again substitutes the digit 1 for l in Pouillet; the fixed German scan preserves the physicist's name."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 78, p. 119",
+      "from": "unter sehr starker Licht-und Wärme-Entwickelung",
+      "to": "unter sehr starker Licht- und Wärme-Entwickelung",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 78, p. 119",
+      "from": "das Innerste jener beiden Gemengeheile",
+      "to": "das Innerste jener beiden Gemengtheile",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops t in Gemengtheile; the fixed German scan preserves the compound noun."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 122",
+      "from": "Newton selbst hat Dies ale Hypothese aufgestellt",
+      "to": "Newton selbst hat Dies als Hypothese aufgestellt",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes e for s in als; the fixed German scan preserves the conjunction."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 122",
+      "from": "welche Careil 1854 her-ausgegeben",
+      "to": "welche Careil 1854 herausgegeben",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB retains a line-break hyphen inside herausgegeben; the fixed scan shows one continuous word across the line break."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 122",
+      "from": "Dissertation de principio vituli, p. 17",
+      "to": "Dissertation de principio vitali, p. 17",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB misreads the Latin vitali as vituli; the fixed German scan preserves the title."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 123",
+      "from": "kommt der Wahrheit um nächsten",
+      "to": "kommt der Wahrheit am nächsten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes u for a in am; the fixed German scan preserves the phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 123",
+      "from": "Materie imponderabilis,, wie man sie richtig benannt hat",
+      "to": "Materie imponderabilis, wie man sie richtig benannt hat",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB duplicates the comma after imponderabilis; the fixed German scan has a single comma."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 124",
+      "from": "daher schmilzt l lb Wasser von 60°",
+      "to": "daher schmilzt 1 lb Wasser von 60°",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes lowercase l for the printed numeral 1 in the weight; the fixed German scan preserves the numeral."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 78, p. 120",
+      "from": "die Aenderung der Qualität nicht ohne Aenderung der Quanität",
+      "to": "die Aenderung der Qualität nicht ohne Aenderung der Quantität",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops t in Quantität; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 78, p. 121",
+      "from": "z. B. das Strick, mit welchem man einen Körper zieht",
+      "to": "z. B. der Strick, mit welchem man einen Körper zieht",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB misreads the masculine article der as das; the fixed German scan preserves the construction."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 126",
+      "from": "unter den ihm offen-stehenden, also den durchsichtigen Körpern",
+      "to": "unter den ihm offenstehenden, also den durchsichtigen Körpern",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB retains a line-break hyphen inside offenstehenden; the fixed scan shows one continuous word across the line break."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 126",
+      "from": "beim Hinein-und Herausfahren",
+      "to": "beim Hinein- und Herausfahren",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 126",
+      "from": "also fährt das Licht legelförmig aus",
+      "to": "also fährt das Licht kegelförmig aus",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB misreads the initial k in kegelförmig as l; the fixed German scan preserves the optical description."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 126",
+      "from": "des Abprallens elasitscher Körper",
+      "to": "des Abprallens elastischer Körper",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB transposes letters in elastischer; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 127",
+      "from": "des (ganz, hypothetischen, Aethers beruhten",
+      "to": "des (ganz hypothetischen) Aethers beruhten",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB turns the printed closing parenthesis into a comma and inserts another spurious comma; the fixed scan preserves the parenthetical phrase."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 128",
+      "from": "où le calcul commence, l’intelligence des phénomênes cesse",
+      "to": "où le calcul commence, l’intelligence des phénomènes cesse",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB gives the French plural phénomènes a circumflex instead of the printed grave accent."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 128",
+      "from": "fieng an zu radotiren",
+      "to": "fing an zu radotiren",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts an e in fing; the fixed German scan preserves the printed spelling."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 128",
+      "from": "sich sthwach und schlaff",
+      "to": "sich schwach und schlaff",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB inserts t in schwach; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 129",
+      "from": "wie ein x, znsammenstoßen",
+      "to": "wie ein x, zusammenstoßen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB substitutes n for u in zusammenstoßen; the fixed German scan preserves the word."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 129",
+      "from": "Glimmer-und Gypsspath-Blättchen",
+      "to": "Glimmer- und Gypsspath-Blättchen",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
+    },
+    {
+      "sourceFile": "OEBPS/Text/TheVirtualLibrary033.xhtml",
+      "page": "Band II, Kapitel VI, § 80, p. 126",
+      "from": "beim Ein-und Ausgange",
+      "to": "beim Ein- und Ausgange",
+      "expectedOccurrences": 1,
+      "evidenceUrl": "https://www.e-rara.ch/download/pdf/28891285.pdf",
+      "reason": "The supplied EPUB drops the printed space after the suspended hyphen; the fixed German scan preserves it."
     }
   ]
 }

@@ -1351,6 +1351,20 @@ def quote_units_for_work(
             current = candidate
     if current:
         packed.append(current)
+    # Keep a trailing bibliographic parenthesis attached when an author
+    # abbreviation caused the citation to split at the packing boundary.
+    # The quoted sentence and its source belong to one readable unit.
+    citation_rejoined: list[str] = []
+    for unit in packed:
+        if (
+            citation_rejoined
+            and citation_rejoined[-1].endswith("(S. Ed.")
+            and unit.startswith("Boas, Schiller und Göthe im Xenienkampf")
+        ):
+            citation_rejoined[-1] = normalize_space(f"{citation_rejoined[-1]} {unit}")
+        else:
+            citation_rejoined.append(unit)
+    packed = citation_rejoined
     return packed
 
 

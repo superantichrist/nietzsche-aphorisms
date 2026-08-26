@@ -210,7 +210,9 @@ def main() -> None:
             and quote["id"] not in preserved_short_ids
         ):
             fail(f"too-short German unit {quote['id']}: {quote['german']!r}")
-        max_german_chars = 780 if quote["work"] == "pp" else 700
+        # Parerga occasionally needs the complete quoted sentence plus its
+        # parenthetical source; the reflow packer deliberately permits 820.
+        max_german_chars = 820 if quote["work"] == "pp" else 700
         if len(quote["german"]) > max_german_chars:
             fail(f"too-long German unit {quote['id']}: {len(quote['german'])} chars")
         valid_source = (
@@ -510,6 +512,27 @@ def main() -> None:
         "chromatolgische Theil",
         "Quanitativen",
         "Pouil1et",
+        "Licht-und Wärme-Entwickelung",
+        "Gemengeheile",
+        "Dies ale Hypothese",
+        "Careil 1854 her-ausgegeben",
+        "principio vituli",
+        "Wahrheit um nächsten",
+        "imponderabilis,,",
+        "schmilzt l lb Wasser",
+        "Aenderung der Quanität",
+        "z. B. das Strick",
+        "offen-stehenden",
+        "Hinein-und Herausfahren",
+        "legelförmig",
+        "elasitscher",
+        "(ganz, hypothetischen, Aethers",
+        "phénomênes",
+        "fieng an zu radotiren",
+        "sthwach",
+        "znsammenstoßen",
+        "Glimmer-und Gypsspath-Blättchen",
+        "beim Ein-und Ausgange",
     )
     if any(
         quote["work"] == "pp" and token in quote["german"]
@@ -517,6 +540,13 @@ def main() -> None:
         for token in pp_stale_ocr_tokens
     ):
         fail("known Parerga transcription OCR error remains in German corpus")
+
+    if any(
+        quote["work"] == "pp"
+        and quote["german"].startswith("Boas, Schiller und Göthe im Xenienkampf")
+        for quote in quotes
+    ):
+        fail("Parerga bibliographic citation split into an orphan quote")
 
     pp_text = "\n".join(quote["german"] for quote in quotes if quote["work"] == "pp")
     pp_required_list_fragments = (
