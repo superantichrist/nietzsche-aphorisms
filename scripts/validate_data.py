@@ -402,6 +402,21 @@ def main() -> None:
         "ex haustus est calor", "quotiens superaverat et dignum",
         "aha cogitavimus", "putre sorti tis", "sustinentes Deus est",
         "fili sanguinem", "eum inferiore sordidum",
+        "Quod maxime desiderasti. Novate", "Accusanda est.apud nos",
+        "impotentia una est malum publicum", "nune loco",
+        "quibusque parans ipse", "successisse miremur,",
+        "corporis vitia transibunt", "sine adversario desit",
+        "aeria concitat", "iucundiores sunt valetudine",
+        "in lusum meumque", "quando eum galea",
+        "aut humanum sit aut humile", "eum illos conferre",
+        "animadversione^", "emendationemque proficiant",
+        "tanto opere admirans", "perseverans domo sua interdixit",
+        "te ipse succendens", "qualia quae pueros",
+        "tam tristes agimus, senum est", "spem supremam captatis",
+        "servum indignans", "Quid vociferans?",
+        "pretiosiora calcari", "Contigit iam nobis. Novate",
+        "quomodo alienam leniamus", "custodit, ne reddat",
+        "palam admoto,.",
     )
     if any(artifact in di_text for artifact in di_transcription_artifacts):
         fail("known De ira transcription error remains")
