@@ -94,6 +94,13 @@ WORK_TEXT_CORRECTIONS = {
         ("exhauriet'numquam", "exhauriet numquam"),
         ("Aristoteli'nullum", "Aristoteli 'nullum"),
     ),
+    "dvb": (
+        ("Nostram autem eum dico", "Nostram autem cum dico"),
+        ("parva ae fragilia", "parva ac fragilia"),
+        ("si e vagari velis", "si evagari velis"),
+        ("in iliis qui summum", "in illis qui summum"),
+        ("non honestaquaedam vero", "non honesta; quaedam vero"),
+    ),
 }
 
 
