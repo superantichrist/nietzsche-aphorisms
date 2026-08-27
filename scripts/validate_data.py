@@ -356,7 +356,13 @@ def main() -> None:
     dvb_text = " ".join(quote["german"] for quote in quotes if quote["work"] == "dvb")
     dvb_transcription_artifacts = (
         "Nostram autem eum dico", "parva ae fragilia", "si e vagari velis",
-        "in iliis qui summum", "honestaquaedam",
+        "in iliis qui summum", "honestaquaedam", "quae eum cursum suum",
+        "delicias fluentis", "aurem pervenit", "quod dest aliquid tibi",
+        "Quod arte alligati sunt", "eximiam laudent virorum",
+        "Quid mirum, eum loquantur", "in ahenam contumeliam",
+        "donabit eum summo consilio", "deprenditur diei bonum",
+        "superbi ae feri", "tela vestra Agantur", "Otiosi divitiis Inditis",
+        "ipsam ut deos ae professores", "invicem mutum alentes stuporem",
     )
     if any(artifact in dvb_text for artifact in dvb_transcription_artifacts):
         fail("known De vita beata transcription error remains")

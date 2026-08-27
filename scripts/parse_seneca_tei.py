@@ -70,8 +70,8 @@ WORK_CONFIG = {
 
 
 # The pinned Basore TEI is our reproducible source, but a handful of obvious
-# character-recognition errors remain in its DTA transcription.  Keep the raw
-# XML untouched and apply only context-specific corrections to reading text.
+# character-recognition errors remain in its transcription. Keep the raw XML
+# untouched and apply only context-specific corrections to reading text.
 WORK_TEXT_CORRECTIONS = {
     "dta": (
         ("nostrum eum quodam", "nostrum cum quodam"),
@@ -100,8 +100,36 @@ WORK_TEXT_CORRECTIONS = {
         ("si e vagari velis", "si evagari velis"),
         ("in iliis qui summum", "in illis qui summum"),
         ("non honestaquaedam vero", "non honesta; quaedam vero"),
+        ("quae eum cursum suum", "quae cum cursum suum"),
+        ("delicias fluentis", "deliciis fluentis"),
+        ("aurem pervenit", "aurem pervellit"),
+        ("quod dest aliquid tibi", "quod deest aliquid tibi"),
+        ("Quod arte alligati sunt", "Quod arcte alligati sunt"),
+        ("ob aliquam eximiam laudent virorum", "ob aliquam eximiam laudem virorum"),
+        ("Quid mirum, eum loquantur", "Quid mirum, cum loquantur"),
+        ("in ahenam contumeliam", "in alienam contumeliam"),
+        ("donabit eum summo consilio", "donabit cum summo consilio"),
+        ("deprenditur diei bonum", "deprenditur dici bonum"),
+        ("superbi ae feri", "superbi ac feri"),
+        ("tela vestra Agantur", "tela vestra agantur"),
+        ("Otiosi divitiis Inditis", "Otiosi divitiis luditis"),
+        ("ipsam ut deos ae professores", "ipsam ut deos ac professores"),
+        ("invicem mutum alentes stuporem", "invicem mutuum alentes stuporem"),
     ),
 }
+
+
+def _repair_cross_section_breaks(work: str, citation: str, paragraphs: list[dict]) -> None:
+    """Move an editorially stranded phrase to the section it grammatically opens."""
+    if work != "dvb" or citation != "25":
+        return
+    left = next(item for item in paragraphs if item["source_section"] == "1")
+    right = next(item for item in paragraphs if item["source_section"] == "2")
+    stranded = "Pone in"
+    if not left["text"].endswith(stranded) or not right["text"].startswith("instrumentis"):
+        raise ValueError("unexpected De vita beata 25 cross-section text")
+    left["text"] = left["text"][: -len(stranded)].rstrip()
+    right["text"] = normalize_latin(f"{stranded} {right['text']}")
 
 
 def local_name(element: ET.Element) -> str:
@@ -282,6 +310,8 @@ def parse_seneca(path: Path, work: str) -> list[dict]:
                             "source_paragraph_count": len(paragraph_nodes),
                         }
                     )
+
+            _repair_cross_section_breaks(work, citation_number, paragraphs)
 
             if not paragraphs:
                 continue
