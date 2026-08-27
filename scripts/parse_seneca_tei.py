@@ -116,6 +116,18 @@ WORK_TEXT_CORRECTIONS = {
         ("ipsam ut deos ae professores", "ipsam ut deos ac professores"),
         ("invicem mutum alentes stuporem", "invicem mutuum alentes stuporem"),
     ),
+    "dp": (
+        ("quibus virium cura est, eum fortissimis", "quibus virium cura est, cum fortissimis"),
+        ("quibus e veniunt ista", "quibus eveniunt ista"),
+        ("bellum tam eum Pyrrho quam eum divitiis", "bellum tam cum Pyrrho quam cum divitiis"),
+        ("quibus parcere, molles Venturis malis", "quibus parcere, molles venturis malis"),
+        ("in vanas mentes imagines evocat", "in vanas mentem imagines evocat"),
+        ("agilia Sunt membra", "agilia sunt membra"),
+        ("bonis viris tribu erit", "bonis viris tribuerit"),
+        ("et Elius leno", "et Aelius leno"),
+        ("in campo Otium suum Oblectet", "in campo otium suum oblectet"),
+        ("fortiter Omne patiendum", "fortiter omne patiendum"),
+    ),
 }
 
 

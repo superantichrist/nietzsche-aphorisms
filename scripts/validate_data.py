@@ -367,6 +367,16 @@ def main() -> None:
     if any(artifact in dvb_text for artifact in dvb_transcription_artifacts):
         fail("known De vita beata transcription error remains")
 
+    dp_text = " ".join(quote["german"] for quote in quotes if quote["work"] == "dp")
+    dp_transcription_artifacts = (
+        "quibus virium cura est, eum fortissimis", "quibus e veniunt ista",
+        "bellum tam eum Pyrrho quam eum divitiis", "molles Venturis malis",
+        "in vanas mentes imagines", "agilia Sunt membra", "tribu erit",
+        "Elius leno", "campo Otium suum Oblectet", "fortiter Omne patiendum",
+    )
+    if any(artifact in dp_text for artifact in dp_transcription_artifacts):
+        fail("known De providentia transcription error remains")
+
     cache_ids = set(translation_cache)
     pp_long_clause_splits: list[tuple[dict, dict]] = []
     for current, following in zip(quotes, quotes[1:]):
