@@ -142,6 +142,19 @@ WORK_TEXT_CORRECTIONS = {
         ("Agricolas bonos mutabitur", "Agricolas bonos imitabitur"),
         ("in rectum prava Sectantur", "in rectum prava flectantur"),
     ),
+    "di": (
+        ("Exegisti a me. Novate,", "Exegisti a me, Novate,"),
+        ("fundamenta vix notabili a;", "fundamenta vix notabilia;"),
+        ("si ne adhoc quidem", "si ne ad hoc quidem"),
+        ("provehitur,tam inutilis", "provehitur, tam inutilis"),
+        ("desit ira esse", "desinit ira esse"),
+        ("placidior sonitusque affectibus", "placidior solutusque affectibus"),
+        ("in exilium et loca ignota mittens", "in exilium et loca ignota mitteris"),
+        ("etiam eum vulnus sanatum est", "etiam cum vulnus sanatum est"),
+        ("Nam eum iudicavit aliquid", "Nam cum iudicavit aliquid"),
+        ("alter alterum eum magno gaudio", "alter alterum cum magno gaudio"),
+        ("ἤ μ'ἀνάειρ'ἐγὼ σέ", "ἤ μ’ ἀνάειρ’, ἢ ἐγὼ σέ"),
+    ),
 }
 
 
