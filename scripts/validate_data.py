@@ -15,7 +15,10 @@ from translation_sources import load_translations
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-WORKS = ("jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv", "em")
+WORKS = (
+    "jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp",
+    "dbv", "em", "dta", "dvb", "di", "dc", "dp",
+)
 SENECA_WORKS = {"dbv", "em", "dta", "dvb", "di", "dc", "dp"}
 LEGACY_REVIEWED_WORKS = {"jgb", "gm", "ac", "gd", "fw"}
 ORDINAL_CONTINUATION_RE = re.compile(
@@ -171,6 +174,22 @@ def check_section_coverage(sections: dict[str, set[tuple[str, str]]]) -> None:
         fail("Epistulae Morales letter coverage mismatch")
     if len({part for part, _ in sections["em"]}) != 17:
         fail("Epistulae Morales book coverage mismatch")
+
+    seneca_dialogue_expected = {
+        "dta": {"Text": 17},
+        "dvb": {"Text": 28},
+        "di": {"Liber-1": 21, "Liber-2": 36, "Liber-3": 43},
+        "dc": {"Liber-1": 26, "Liber-2": 7},
+        "dp": {"Text": 6},
+    }
+    for work, expected_parts in seneca_dialogue_expected.items():
+        found_parts = {part for part, _ in sections[work]}
+        if found_parts != set(expected_parts):
+            fail(f"{work.upper()} book coverage mismatch")
+        for part, chapter_count in expected_parts.items():
+            found = {section for found_part, section in sections[work] if found_part == part}
+            if found != numbered(1, chapter_count):
+                fail(f"{work.upper()} {part} chapter coverage mismatch")
 
 
 def main() -> None:

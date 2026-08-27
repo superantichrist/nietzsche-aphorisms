@@ -100,6 +100,10 @@ def _text_without_apparatus(element: ET.Element) -> str:
 
 def normalize_latin(text: str) -> str:
     text = text.replace("\u00a0", " ")
+    # The Basore TEI snapshots retain some print line-end hyphenation as
+    # ``num- quam``.  A hyphen followed by layout whitespace inside two
+    # alphabetic runs is therefore a broken word, not Latin punctuation.
+    text = re.sub(r"(?<=[^\W\d_])-\s+(?=[^\W\d_])", "", text)
     text = re.sub(r"\s+", " ", text).strip()
     text = re.sub(r"\s+([,.;:!?])", r"\1", text)
     text = re.sub(r"([‘'\"])[ ]+", r"\1", text)

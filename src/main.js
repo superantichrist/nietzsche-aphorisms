@@ -10,7 +10,10 @@ const state = {
   showGerman: localStorage.getItem("showGerman") !== "false",
 };
 
-const WORK_ORDER = ["jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp", "dbv", "em"];
+const WORK_ORDER = [
+  "jgb", "gm", "ac", "gd", "fw", "za", "eh", "nf", "pp",
+  "dbv", "em", "dta", "dvb", "di", "dc", "dp",
+];
 const UNNUMBERED_SECTIONS = new Set(["Vorrede", "Nachgesang", "Wahre-Welt", "Hammer", "Gesetz"]);
 const SECTION_LABELS = {
   Vorrede: "서문",
@@ -30,7 +33,8 @@ const elements = Object.fromEntries(
     "open-current-toc", "close-toc", "toc-panel", "toc-works", "toc-summary", "toc-content",
     "close-search", "search-panel", "search-input", "search-count", "search-results",
     "stat-total", "stat-author-nietzsche", "stat-author-schopenhauer", "stat-author-seneca",
-    "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw", "stat-za", "stat-eh", "stat-nf", "stat-pp", "stat-dbv", "stat-em",
+    "stat-jgb", "stat-gm", "stat-ac", "stat-gd", "stat-fw", "stat-za", "stat-eh", "stat-nf", "stat-pp",
+    "stat-dbv", "stat-em", "stat-dta", "stat-dvb", "stat-di", "stat-dc", "stat-dp",
     "stat-translated", "stat-reviewed", "stat-pending",
   ].map((id) => [id, document.getElementById(id)])
 );
@@ -560,6 +564,11 @@ async function init() {
     elements["stat-pp"].textContent = state.manifest.works.pp.count.toLocaleString("ko-KR");
     elements["stat-dbv"].textContent = state.manifest.works.dbv.count.toLocaleString("ko-KR");
     elements["stat-em"].textContent = state.manifest.works.em.count.toLocaleString("ko-KR");
+    elements["stat-dta"].textContent = state.manifest.works.dta.count.toLocaleString("ko-KR");
+    elements["stat-dvb"].textContent = state.manifest.works.dvb.count.toLocaleString("ko-KR");
+    elements["stat-di"].textContent = state.manifest.works.di.count.toLocaleString("ko-KR");
+    elements["stat-dc"].textContent = state.manifest.works.dc.count.toLocaleString("ko-KR");
+    elements["stat-dp"].textContent = state.manifest.works.dp.count.toLocaleString("ko-KR");
     elements["stat-translated"].textContent = state.manifest.translatedCount.toLocaleString("ko-KR");
     elements["stat-reviewed"].textContent = state.manifest.reviewedCount.toLocaleString("ko-KR");
     elements["stat-pending"].textContent = state.manifest.pendingTranslationCount.toLocaleString("ko-KR");

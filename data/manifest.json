@@ -1,17 +1,17 @@
 {
   "schemaVersion": 4,
-  "corpusVersion": "a0ed7bc5ae19a03e",
-  "dataVersion": "8f4fa58277f062d9",
-  "quoteCount": 26783,
+  "corpusVersion": "fee65b4193284d53",
+  "dataVersion": "fd721a4007e3aef3",
+  "quoteCount": 27767,
   "translatedCount": 26783,
-  "widgetQuoteCount": 26783,
+  "widgetQuoteCount": 27767,
   "reviewedCount": 5749,
-  "pendingTranslationCount": 0,
+  "pendingTranslationCount": 984,
   "widgetShards": {
     "schemaVersion": 1,
     "basePath": "data/widget-shards",
     "shardSize": 256,
-    "totalCount": 26783,
+    "totalCount": 27767,
     "workOrder": [
       "jgb",
       "gm",
@@ -23,7 +23,12 @@
       "nf",
       "pp",
       "dbv",
-      "em"
+      "em",
+      "dta",
+      "dvb",
+      "di",
+      "dc",
+      "dp"
     ],
     "works": {
       "jgb": {
@@ -80,6 +85,31 @@
         "offset": 24407,
         "count": 2376,
         "shardCount": 10
+      },
+      "dta": {
+        "offset": 26783,
+        "count": 141,
+        "shardCount": 1
+      },
+      "dvb": {
+        "offset": 26924,
+        "count": 127,
+        "shardCount": 1
+      },
+      "di": {
+        "offset": 27051,
+        "count": 488,
+        "shardCount": 2
+      },
+      "dc": {
+        "offset": 27539,
+        "count": 158,
+        "shardCount": 1
+      },
+      "dp": {
+        "offset": 27697,
+        "count": 70,
+        "shardCount": 1
       }
     }
   },
@@ -113,10 +143,15 @@
       "nameDe": "Lucius Annaeus Seneca",
       "nameOriginal": "Lucius Annaeus Seneca",
       "nameKo": "루키우스 안나이우스 세네카",
-      "count": 2485,
+      "count": 3469,
       "works": [
         "dbv",
-        "em"
+        "em",
+        "dta",
+        "dvb",
+        "di",
+        "dc",
+        "dp"
       ]
     }
   },
@@ -252,20 +287,80 @@
       "transcriptionStatus": "Perseus TEI 구조 검증 완료",
       "count": 2376,
       "reviewedCount": 0
+    },
+    "dta": {
+      "author": "seneca",
+      "titleDe": "De tranquillitate animi",
+      "titleOriginal": "De tranquillitate animi",
+      "titleKo": "마음의 평정에 관하여",
+      "originalLanguage": "la",
+      "edition": "Moral Essays, vol. II (1932)",
+      "editor": "John William Basore",
+      "transcriptionStatus": "Perseus TEI 구조 검증 완료",
+      "count": 141,
+      "reviewedCount": 0
+    },
+    "dvb": {
+      "author": "seneca",
+      "titleDe": "De vita beata",
+      "titleOriginal": "De vita beata",
+      "titleKo": "행복한 삶에 관하여",
+      "originalLanguage": "la",
+      "edition": "Moral Essays, vol. II (1932)",
+      "editor": "John William Basore",
+      "transcriptionStatus": "Perseus TEI 구조 검증 완료",
+      "count": 127,
+      "reviewedCount": 0
+    },
+    "di": {
+      "author": "seneca",
+      "titleDe": "De ira",
+      "titleOriginal": "De ira",
+      "titleKo": "분노에 관하여",
+      "originalLanguage": "la",
+      "edition": "Moral Essays, vol. I (1928)",
+      "editor": "John William Basore",
+      "transcriptionStatus": "Perseus TEI 구조 검증 완료",
+      "count": 488,
+      "reviewedCount": 0
+    },
+    "dc": {
+      "author": "seneca",
+      "titleDe": "De clementia",
+      "titleOriginal": "De clementia",
+      "titleKo": "관용에 관하여",
+      "originalLanguage": "la",
+      "edition": "Moral Essays, vol. I (1928)",
+      "editor": "John William Basore",
+      "transcriptionStatus": "Perseus TEI 구조 검증 완료",
+      "count": 158,
+      "reviewedCount": 0
+    },
+    "dp": {
+      "author": "seneca",
+      "titleDe": "De providentia",
+      "titleOriginal": "De providentia",
+      "titleKo": "섭리에 관하여",
+      "originalLanguage": "la",
+      "edition": "Moral Essays, vol. I (1928)",
+      "editor": "John William Basore",
+      "transcriptionStatus": "Perseus TEI 구조 검증 완료",
+      "count": 70,
+      "reviewedCount": 0
     }
   },
   "files": {
     "quotes": {
       "path": "data/quotes.json",
-      "count": 26783,
-      "bytes": 40972608,
-      "sha256": "7b74d2e07a9e54f28f4177e8fb4faf75afbe654085ba5e7a7e2c9ce91dc69b37"
+      "count": 27767,
+      "bytes": 42687315,
+      "sha256": "da6630a26ae39ca3461b645a94fe119db1b7d70f6cc9d981d92a0870e96aec49"
     },
     "widget": {
       "path": "data/widget.json",
-      "count": 26783,
-      "bytes": 26956224,
-      "sha256": "30a174878fc7017b51331558e05e9ceb7239f9212d615115c0b7d6ecd3593ab1"
+      "count": 27767,
+      "bytes": 28051319,
+      "sha256": "9c6cf97ce658a5bfd6aed41eb36f89e640bf8d0542ed55361c765244a5929169"
     },
     "jgb": {
       "path": "data/jgb.json",
@@ -324,14 +419,44 @@
     "dbv": {
       "path": "data/dbv.json",
       "count": 109,
-      "bytes": 269935,
-      "sha256": "0af95ee00b5fec4f03091ff70db08a6aa5587156566e759c01ae8ad9fb6383fb"
+      "bytes": 269823,
+      "sha256": "62d3e046dbffa90e145e7eea9f40d0b06f42cf4213ac6130cb6ba022424393df"
     },
     "em": {
       "path": "data/em.json",
       "count": 2376,
       "bytes": 5609189,
       "sha256": "6dc5c9a7df290461a3d813c8da6637deac8a10463b7460da778c497cbc71be3a"
+    },
+    "dta": {
+      "path": "data/dta.json",
+      "count": 141,
+      "bytes": 258192,
+      "sha256": "fcf6d8bbb503214d900556006a9ad75cc3ad23122a22b285a1a7df74e0ad5ee9"
+    },
+    "dvb": {
+      "path": "data/dvb.json",
+      "count": 127,
+      "bytes": 234332,
+      "sha256": "16df220ba2466d709bada516ab2f45fac84344498a7a412f630615bb12988ac0"
+    },
+    "di": {
+      "path": "data/di.json",
+      "count": 488,
+      "bytes": 811923,
+      "sha256": "210caa68941b9d62ac38d9893e117abc3829c8a6c395a2dd5ba64143d55befcf"
+    },
+    "dc": {
+      "path": "data/dc.json",
+      "count": 158,
+      "bytes": 280134,
+      "sha256": "4bf8a14c305ec413f02c9d12ba821aa1ff0a8ee20ea12ac39042ab206e612197"
+    },
+    "dp": {
+      "path": "data/dp.json",
+      "count": 70,
+      "bytes": 130253,
+      "sha256": "d87182c4dbc959a931d620518b8a851d2ff7bdc1e12ddda1f9c7f3e047a9efe3"
     }
   },
   "sources": "sources/sources.json"
