@@ -69,6 +69,34 @@ WORK_CONFIG = {
 }
 
 
+# The pinned Basore TEI is our reproducible source, but a handful of obvious
+# character-recognition errors remain in its DTA transcription.  Keep the raw
+# XML untouched and apply only context-specific corrections to reading text.
+WORK_TEXT_CORRECTIONS = {
+    "dta": (
+        ("nostrum eum quodam", "nostrum cum quodam"),
+        ("in fidem eum armis", "in fidem cum armis"),
+        ("exemplar, eum inter", "exemplar, cum inter"),
+        ("qui eum amicorum officiis", "qui cum amicorum officiis"),
+        ("patientiam, eum iis", "patientiam, cum iis"),
+        ("eum monstraretur", "cum monstraretur"),
+        ("praesertim eum in", "praesertim cum in"),
+        ("quae eum sciret", "quae cum sciret"),
+        ("Nee enim is solus", "Nec enim is solus"),
+        ("in Corinthia pietasque tabulas", "in Corinthia pictasque tabulas"),
+        ("formicis per arbusta Tepentibus", "formicis per arbusta repentibus"),
+        ("nomeneulatores", "nomenclatores"),
+        ("natus est, eum Gaio", "natus est, cum Gaio"),
+        ("Cane, nune cogitas", "Cane, nunc cogitas"),
+        ("nisi eum expedit", "nisi cum expedit"),
+        ("non flere, eum omnes", "non flere, cum omnes"),
+        ("ut nune mos est", "ut nunc mos est"),
+        ("exhauriet'numquam", "exhauriet numquam"),
+        ("Aristoteli'nullum", "Aristoteli 'nullum"),
+    ),
+}
+
+
 def local_name(element: ET.Element) -> str:
     return element.tag.rsplit("}", 1)[-1]
 
@@ -235,6 +263,8 @@ def parse_seneca(path: Path, work: str) -> list[dict]:
                     paragraph_nodes = [source_section]
                 for source_paragraph, node in enumerate(paragraph_nodes):
                     text = normalize_latin(_text_without_apparatus(node))
+                    for before, after in WORK_TEXT_CORRECTIONS.get(work, ()):
+                        text = text.replace(before, after)
                     if not text:
                         continue
                     paragraphs.append(

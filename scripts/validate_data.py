@@ -342,6 +342,17 @@ def main() -> None:
             if reconstructed != expected_text:
                 fail(f"{work.upper()} source text reconstruction mismatch at {key}")
 
+    dta_text = " ".join(quote["german"] for quote in quotes if quote["work"] == "dta")
+    dta_transcription_artifacts = (
+        "nostrum eum quodam", "in fidem eum armis", "exemplar, eum inter",
+        "qui eum amicorum officiis", "patientiam, eum iis", "eum monstraretur",
+        "praesertim eum in", "quae eum sciret", "Nee enim is solus",
+        "pietasque tabulas", "Tepentibus", "nomeneulatores", "natus est, eum Gaio",
+        "nune", "nisi eum expedit", "non flere, eum omnes", "exhauriet'numquam",
+    )
+    if any(artifact in dta_text for artifact in dta_transcription_artifacts):
+        fail("known De tranquillitate animi transcription error remains")
+
     cache_ids = set(translation_cache)
     pp_long_clause_splits: list[tuple[dict, dict]] = []
     for current, following in zip(quotes, quotes[1:]):
