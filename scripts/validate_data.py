@@ -396,6 +396,12 @@ def main() -> None:
         "provehitur,tam", "desit ira esse", "sonitusque affectibus",
         "loca ignota mittens", "etiam eum vulnus", "Nam eum iudicavit",
         "alter alterum eum magno", "ἤ μ'ἀνάειρ'ἐγὼ σέ",
+        "magne imperatori", "adsidua observabo", "peior is delictis",
+        "Quotiens processere domo", "videbatur senum eorum",
+        "sapienti diei velim", "mergi ae sine", "sed eum occasio",
+        "ex haustus est calor", "quotiens superaverat et dignum",
+        "aha cogitavimus", "putre sorti tis", "sustinentes Deus est",
+        "fili sanguinem", "eum inferiore sordidum",
     )
     if any(artifact in di_text for artifact in di_transcription_artifacts):
         fail("known De ira transcription error remains")
