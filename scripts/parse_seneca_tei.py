@@ -128,20 +128,53 @@ WORK_TEXT_CORRECTIONS = {
         ("in campo Otium suum Oblectet", "in campo otium suum oblectet"),
         ("fortiter Omne patiendum", "fortiter omne patiendum"),
     ),
+    "dc": (
+        ("nisi quod iudex severus absolvent", "nisi quod iudex severus absolverit"),
+        ("constat, eum hanc poenam", "constat, cum hanc poenam"),
+        ("Hoc est ignoscere, eum scias", "Hoc est ignoscere, cum scias"),
+        ("Magnos et Felices et Angustos diximus", "Magnos et Felices et Augustos diximus"),
+        ("filio adulescentulo impulse in id scelus", "filio adulescentulo impulso in id scelus"),
+        ("bonitatem tuam eum fortuna tua litigantem", "bonitatem tuam cum fortuna tua litigantem"),
+        ("par error est a vero recedendum", "par error est a vero recedentium"),
+        ("liquidum socerumque ex turbido", "liquidum sincerumque ex turbido"),
+        ("quae, qui miserentur, volo facere", "quae, qui miserentur, volunt facere"),
+        ("ob erus alicuius aridum", "ob crus alicuius aridum"),
+        ("Agricolas bonos mutabitur", "Agricolas bonos imitabitur"),
+        ("in rectum prava Sectantur", "in rectum prava flectantur"),
+    ),
 }
 
 
-def _repair_cross_section_breaks(work: str, citation: str, paragraphs: list[dict]) -> None:
+def _repair_cross_section_breaks(
+    work: str,
+    book: str,
+    citation: str,
+    paragraphs: list[dict],
+) -> None:
     """Move an editorially stranded phrase to the section it grammatically opens."""
-    if work != "dvb" or citation != "25":
-        return
-    left = next(item for item in paragraphs if item["source_section"] == "1")
-    right = next(item for item in paragraphs if item["source_section"] == "2")
-    stranded = "Pone in"
-    if not left["text"].endswith(stranded) or not right["text"].startswith("instrumentis"):
-        raise ValueError("unexpected De vita beata 25 cross-section text")
-    left["text"] = left["text"][: -len(stranded)].rstrip()
-    right["text"] = normalize_latin(f"{stranded} {right['text']}")
+    moves: tuple[tuple[str, str, str, str], ...] = ()
+    if work == "dvb" and citation == "25":
+        moves = (("1", "2", "Pone in", "instrumentis"),)
+    elif work == "dc" and book == "1":
+        moves = {
+            "1": (("5", "6", "nemo iam divum Augustum nec Ti.", "Caesaris"),),
+            "2": (("1", "2", "Non tamen vulgo ignoscere decet;", "nam"),),
+            "18": (("1", "2", "Servis ad statuam licet confugere;", "cum"),),
+        }.get(citation, ())
+    elif work == "dc" and book == "2" and citation == "5":
+        moves = (("4", "5", "Maeror contundit mentes, abicit, contrahit;", "hoc"),)
+
+    for left_section, right_section, stranded, right_start in moves:
+        left = next(item for item in paragraphs if item["source_section"] == left_section)
+        right = next(item for item in paragraphs if item["source_section"] == right_section)
+        if not left["text"].endswith(stranded) or not right["text"].startswith(right_start):
+            raise ValueError(
+                f"unexpected {work.upper()} {book}.{citation} cross-section text"
+            )
+        left["text"] = left["text"][: -len(stranded)].rstrip()
+        right["text"] = normalize_latin(f"{stranded} {right['text']}")
+        if right["text"]:
+            right["text"] = right["text"][0].upper() + right["text"][1:]
 
 
 def local_name(element: ET.Element) -> str:
@@ -323,7 +356,7 @@ def parse_seneca(path: Path, work: str) -> list[dict]:
                         }
                     )
 
-            _repair_cross_section_breaks(work, citation_number, paragraphs)
+            _repair_cross_section_breaks(work, book_number, citation_number, paragraphs)
 
             if not paragraphs:
                 continue

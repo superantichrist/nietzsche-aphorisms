@@ -377,6 +377,19 @@ def main() -> None:
     if any(artifact in dp_text for artifact in dp_transcription_artifacts):
         fail("known De providentia transcription error remains")
 
+    dc_text = " ".join(quote["german"] for quote in quotes if quote["work"] == "dc")
+    dc_transcription_artifacts = (
+        "iudex severus absolvent", "constat, eum hanc poenam",
+        "Hoc est ignoscere, eum scias", "Felices et Angustos",
+        "adulescentulo impulse in id scelus",
+        "bonitatem tuam eum fortuna tua litigantem",
+        "par error est a vero recedendum", "liquidum socerumque",
+        "qui miserentur, volo facere", "ob erus alicuius aridum",
+        "Agricolas bonos mutabitur", "in rectum prava Sectantur",
+    )
+    if any(artifact in dc_text for artifact in dc_transcription_artifacts):
+        fail("known De clementia transcription error remains")
+
     cache_ids = set(translation_cache)
     pp_long_clause_splits: list[tuple[dict, dict]] = []
     for current, following in zip(quotes, quotes[1:]):
